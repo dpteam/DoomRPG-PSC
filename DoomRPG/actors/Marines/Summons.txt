@@ -57,7 +57,9 @@ ACTOR DRPGMarineGuardPistolSummoned
     Goto FollowPlayer
   CheckIfPlayerSee:
     TNT1 A 0
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 1)
     NMA2 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_FastChase
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 0)
     TNT1 A 0 A_JumpIfCloser(1000, 2)
     TNT1 AAA 0
     Goto FollowPlayer
@@ -165,6 +167,7 @@ ACTOR DRPGMarineGuardPistolSummoned
     TNT1 A 0
     Goto RetreatReload+1
   Missile:
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 0)
     TNT1 A 0 A_Jump (32, "TacticStrafe")
     TNT1 A 0 A_JumpIfInventory ("DRPGMarinePistolShotCounter", 6, "RetreatReload")
     NMA2 EEEEEE 1 A_FaceTarget (10)
@@ -345,7 +348,9 @@ ACTOR DRPGMarineBattleRifleSummoned
     Goto FollowPlayer
   CheckIfPlayerSee:
     TNT1 A 0
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 1)
     NMA1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_FastChase
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 0)
     TNT1 A 0 A_JumpIfCloser(1000, 2)
     TNT1 AAA 0
     Goto FollowPlayer
@@ -453,6 +458,7 @@ ACTOR DRPGMarineBattleRifleSummoned
     TNT1 A 0
     Goto RetreatReload+1
   Missile:
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 0)
     TNT1 A 0 A_JumpIfCloser (220, 7)
     NMA1 EEEEEEEEEE 1 A_FaceTarget (10)
   MissileCheck:
@@ -671,7 +677,9 @@ ACTOR DRPGMarineShotgunSummoned
     Goto FollowPlayer
   CheckIfPlayerSee:
     TNT1 A 0
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 1)
     NMA3 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_FastChase
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 0)
     TNT1 A 0 A_JumpIfCloser(1000, 2)
     TNT1 AAA 0
     Goto FollowPlayer
@@ -760,6 +768,7 @@ ACTOR DRPGMarineShotgunSummoned
     NMA3 AAAAABBBBBCCCCCDDDDD 1 A_Chase ("", "Reload")
     Goto RetreatReload
   Missile:
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 0)
     TNT1 A 0 A_Jump (32, "TacticStrafe")
     TNT1 A 0 A_JumpIfInventory ("DRPGMarineShotgunShotCounter", 1, "RetreatReload")
     TNT1 A 0 A_JumpIfHealthLower (30, 2)
@@ -974,7 +983,9 @@ ACTOR DRPGMarineDoubleShotgunSummoned
     Goto FollowPlayer
   CheckIfPlayerSee:
     TNT1 A 0
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 1)
     NMA4 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_FastChase
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 0)
     TNT1 A 0 A_JumpIfCloser(1000, 2)
     TNT1 AAA 0
     Goto FollowPlayer
@@ -1063,6 +1074,7 @@ ACTOR DRPGMarineDoubleShotgunSummoned
     NMA4 AAAAABBBBBCCCCCDDDDD 1 A_Chase ("", "Reload")
     Goto RetreatReload
   Missile:
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 0)
     TNT1 A 0 A_Jump (64, "TacticStrafe")
     TNT1 A 0 A_JumpIfInventory ("DRPGMarineShotgunShotCounter", 1, "RetreatReload")
     NMA4 EEEEEEEEEEEE 1 A_FaceTarget (10)
@@ -1242,7 +1254,9 @@ ACTOR DRPGMarineChaingunSummoned
     Goto FollowPlayer
   CheckIfPlayerSee:
     TNT1 A 0
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 1)
     NMA6 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_FastChase
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 0)
     TNT1 A 0 A_JumpIfCloser(1000, 2)
     TNT1 AAA 0
     Goto FollowPlayer
@@ -1350,6 +1364,7 @@ ACTOR DRPGMarineChaingunSummoned
     TNT1 A 0
     Goto RetreatReload+1
   Missile:
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 0)
     NMA6 XXXXX 1 A_FaceTarget (10)
     TNT1 A 0 A_Jump (4, "TacticStrafe")
     TNT1 A 0 A_FaceTarget
@@ -1535,7 +1550,9 @@ ACTOR DRPGMarineRocketLauncherSummoned
     Goto FollowPlayer
   CheckIfPlayerSee:
     TNT1 A 0
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 1)
     NMA7 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_FastChase
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 0)
     TNT1 A 0 A_JumpIfCloser(1000, 2)
     TNT1 AAA 0
     Goto FollowPlayer
@@ -1624,6 +1641,7 @@ ACTOR DRPGMarineRocketLauncherSummoned
     NMA7 AAAAABBBBBCCCCCDDDDD 1 A_Chase ("", "Reload")
     Goto RetreatReload
   Missile:
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 0)
     TNT1 A 0 A_Jump (64, "TacticStrafe")
     TNT1 A 0 A_Jump (128, "TacticStrafeLeft1")
     TNT1 A 0 A_Jump (128, "TacticStrafeRight1")
@@ -1811,7 +1829,9 @@ ACTOR DRPGMarinePlasmaRifleSummoned
     Goto FollowPlayer
   CheckIfPlayerSee:
     TNT1 A 0
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 1)
     NMA8 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_FastChase
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 0)
     TNT1 A 0 A_JumpIfCloser(1000, 2)
     TNT1 AAA 0
     Goto FollowPlayer
@@ -1919,6 +1939,7 @@ ACTOR DRPGMarinePlasmaRifleSummoned
     TNT1 A 0
     Goto RetreatReload+1
   Missile:
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 0)
     TNT1 A 0 A_JumpIfCloser (700, 1)
     Goto MissileCrouch
     NMA8 EEEEEEEEEE 1 A_FaceTarget (10)
@@ -2137,7 +2158,9 @@ ACTOR DRPGMarineBFG9000Summoned
     Goto FollowPlayer
   CheckIfPlayerSee:
     TNT1 A 0
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 1)
     NMA9 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_FastChase
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 0)
     TNT1 A 0 A_JumpIfCloser(1000, 2)
     TNT1 AAA 0
     Goto FollowPlayer
@@ -2220,6 +2243,7 @@ ACTOR DRPGMarineBFG9000Summoned
     TNT1 A 0 A_JumpIfCloser (1024, "SeeScared")
     Goto Overwatch
   Missile:
+    TNT1 A 0 A_ChangeFlag ("THRUACTORS", 0)
     TNT1 A 0 A_Jump (64, "TacticStrafe")
     TNT1 A 0 A_Jump (128, "TacticStrafeLeft1")
     TNT1 A 0 A_Jump (128, "TacticStrafeRight1")
