@@ -778,6 +778,16 @@ OptionMenu "DoomRPGStart"
     StaticText ""
 }
 
+OptionMenu "DoomRPGDebug"
+{
+    Title "Debug Options"
+
+    StaticText "Delay for start level", 1
+    Option "Enable Delay", "drpg_starting_delay_enable", "YesNo"
+    Slider "Delay Duration", "drpg_starting_delay_duration", 0, 10, 1
+    StaticText ""
+}
+
 OptionMenu "DoomRPG"
 {
     Title "Doom RPG Options"
@@ -804,6 +814,7 @@ OptionMenu "DoomRPG"
     SubMenu "Performance",                  "DoomRPGPerformance"
     SubMenu "Character",                    "DoomRPGCharacter"
     SubMenu "Starting Options",             "DoomRPGStart"
+    SubMenu "Debug Options",                "DoomRPGDebug"
 
     StaticText ""
     StaticText "---------------"

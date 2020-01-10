@@ -9,6 +9,7 @@ extern const str Version;
 // Flags
 extern bool Transported;
 extern bool GlobalsInitialized;
+extern bool LoadingComplete;
 extern int CompatMode;
 extern int CompatMonMode;
 extern bool WadSmoosh;
@@ -47,6 +48,7 @@ NamedScript void GiveTip();
 
 NamedScript Type_OPEN void GlobalInit();
 NamedScript Type_ENTER void Init();
+NamedScript void LoadingScript();
 NamedScript void Loop();
 NamedScript void WeaponSpeed();
 NamedScript void PlayerHealth();

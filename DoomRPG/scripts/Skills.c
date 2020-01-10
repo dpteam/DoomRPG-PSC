@@ -641,6 +641,12 @@ Skill RPGGlobal SkillData[MAX_CATEGORIES][MAX_SKILLS] =
 // Skill Wheel
 NamedScript Type_ENTER void SkillWheel()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     bool Close = false;
     int Radius = 128;
     int CurrentRadius = 0;
@@ -2156,7 +2162,7 @@ NamedScript Console bool Summon(SkillLevelInfo *SkillLevel, void *Data)
 
     if (Index == 0) // Marines
     {
-        if (CompatMode == COMPAT_DRLA)
+        if (CompatMonMode == COMPAT_DRLA)
         {
             switch (SkillLevel->CurrentLevel)
             {
@@ -3104,7 +3110,7 @@ void CheckSkills()
     }
 
     // Summoning Skills - Marines Descriptions
-    if (CompatMode == COMPAT_DRLA)
+    if (CompatMonMode == COMPAT_DRLA)
     {
         if ((Player.Level + Player.EnergyTotal) < 50)
         {

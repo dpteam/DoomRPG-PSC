@@ -388,6 +388,12 @@ TurretUpgrade RPGMap TurretUpgradeData[MAX_UPGRADES] =
 
 NamedScript Type_ENTER void TurretLoop()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     int PlayerNum = PlayerNumber();
     int Health;
     int PrevHealth;
@@ -606,6 +612,12 @@ Start:
 
 NamedScript Type_ENTER void TurretLoopMaintenance()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     int MaintCost = 0;
 
 Start:
@@ -729,6 +741,12 @@ Start:
 
 NamedScript Type_ENTER void TurretCommandWheel()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     int const Commands[MAX_COMMANDS] =
     {
         TU_BUILD,

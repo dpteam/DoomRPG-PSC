@@ -120,6 +120,15 @@ NamedScript Type_OPEN void GlobalInit()
 // Init Script
 NamedScript Type_ENTER void Init()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        FadeRange(0, 0, 0, 1.0, 0, 0, 0, 1.0, 0);
+        Delay(1);
+        LoadingScript();
+        while (!LoadingComplete) Delay(1);
+    }
+
     // Wait until globals are initialized
     while (!GlobalsInitialized) Delay(1);
 
@@ -271,7 +280,7 @@ NamedScript Type_ENTER void Init()
         RemoveAura();
 
     // Transport FX
-    if (Transported)
+    if (!GetCVar("drpg_starting_delay_enable") && Transported)
     {
         for (int i = 0; i < MAX_PLAYERS; i++)
         {
@@ -303,6 +312,11 @@ NamedScript Type_ENTER void Init()
     if (CompatMode == COMPAT_DRLA)
         AssignTIDs();
 
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        LoadingComplete = false;
+    }
+
     // Execute Game Loops
     Loop();
     PlayerHealth();
@@ -315,6 +329,51 @@ NamedScript Type_ENTER void Init()
     HealthBars();
     AutosaveHandler();
     ShopItemAutoHandler();
+}
+
+// Script waiting for loading
+NamedScript void LoadingScript()
+{
+    if (!LoadingComplete)
+    {
+        Delay(4);
+
+        fixed WaitLoading = GetCVar("drpg_starting_delay_duration");
+
+        GiveInventory("DRPGTransportSetNonShootable", 1);
+        SetPlayerProperty(TRUE, ON, PROP_TOTALLYFROZEN);
+        if(CheckActorInventory(0, "PowerTimeFreezer") == 0)
+            GiveActorInventory(0, "PowerTimeFreezer", 1);
+
+        SetHudSize(0, 0, false);
+        SetFont("BIGFONT");
+        HudMessage("%S", "Teleporting process");
+        EndHudMessage(HUDMSG_FADEOUT, MAKE_ID('1','T','I','P'), "White", 0.5, 0.7, WaitLoading, 3.0);
+        SetFont("SMALLFONT");
+        HudMessage("%S", "Return of the quantum state");
+        EndHudMessage(HUDMSG_FADEOUT, MAKE_ID('2','T','I','P'), "White", 1.5, -0.725, WaitLoading, 3.0);
+
+        Delay(35 * WaitLoading);
+
+        SetHudSize(0, 0, false);
+        SetFont("BIGFONT");
+        HudMessage("%S", "Teleporting complete");
+        EndHudMessage(HUDMSG_FADEOUT, MAKE_ID('1','T','I','P'), "Green", 0.5, 0.7, 1.0, 3.0);
+        SetFont("SMALLFONT");
+        HudMessage("%S", "Thank you for using UAC teleportation services");
+        EndHudMessage(HUDMSG_FADEOUT, MAKE_ID('2','T','I','P'), "Green", 1.5, -0.725, 1.0, 3.0);
+
+        FadeRange(0, 0, 0, 1.0, 0, 0, 0, 0, 1.0);
+        SetPlayerProperty(TRUE, OFF, PROP_TOTALLYFROZEN);
+        TakeActorInventory(0, "PowerTimeFreezer", 0x7fffffff);
+        PlaySound(0, "misc/transport");
+        SpawnForced("DRPGTransportEffect", GetActorX(0), GetActorY(0), GetActorZ(0), 0, 0);
+        GiveInventory("DRPGTransportUnsetNonShootable", 1);
+
+        LoadingComplete = true;
+
+        Delay(1);
+    }
 }
 
 // Loop Script
@@ -966,6 +1025,13 @@ NamedScript Type_OPEN void ShopSpecialHandler()
 {
     bool ValidItem;
     int Tries, MinValue, MaxValue, Category, Index;
+
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
 Start:
 
     // Reset the item

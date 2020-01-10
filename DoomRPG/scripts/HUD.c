@@ -37,6 +37,12 @@ str StatusNumerals[6] =
 
 NamedScript Type_ENTER void StatusEffectHUD()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     str const StatusColors[SE_MAX] =
     {
         "Gray",
@@ -176,6 +182,12 @@ Start:
 
 NamedScript Type_ENTER void OverviewHUD()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     str const CreditSprites[6] =
     {
         "CREDA0",
@@ -309,6 +321,12 @@ Start:
 
 NamedScript Type_ENTER void ComboHUD()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     int TimerPercent;
 
     // Interpolators
@@ -401,6 +419,12 @@ Start:
 
 NamedScript Type_ENTER void SkillHUD()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     fixed X, Y;
     int Cost;
     str Color;
@@ -453,6 +477,12 @@ Start:
 
 NamedScript Type_ENTER void StimHUD()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     fixed X, Y;
     int TimerPercent;
 
@@ -526,6 +556,12 @@ Start:
 
 NamedScript Type_ENTER void MissionHUD()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     int OldAmount;
     fixed X, Y;
 
@@ -597,6 +633,12 @@ Start:
 
 NamedScript Type_ENTER void AuraTimerHUD()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     fixed Offset, X, Y, Angle, XOff, YOff;
     int AuraCount, AuraAdd, Radius;
 
@@ -670,6 +712,12 @@ Start:
 
 NamedScript Type_ENTER void PowerupHUD()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     fixed BaseX, BaseY, X, Y;
     int GridCount, InvulnTime, InvisTime, ShadowTime, GhostTime, ActualInvisTime, Lives;
     int FreezeTime, LightAmpPowerupTime, LightAmpTime, IronFeetPowerTime, IronFeetTime;
@@ -883,6 +931,12 @@ Start:
 
 NamedScript Type_ENTER void EventHUD()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     str const KeySprites[MAX_NUKE_KEYS] =
     {
         "NKEYA0",
@@ -997,6 +1051,12 @@ Start:
 
 NamedScript Type_ENTER void CoopViewHUD()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     fixed X, Y;
 
 Start:
@@ -1029,6 +1089,12 @@ Start:
 
 NamedScript Type_ENTER void MultiplayerHUD()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     fixed X, Y, Alpha;
     int HealthPercent, ShieldPercent;
 
@@ -1096,6 +1162,12 @@ Start:
 
 NamedScript Type_ENTER void TurretHUD()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     str const AmmoColors[5] =
     {
         "Brick",
@@ -1203,6 +1275,12 @@ Start:
 
 NamedScript Type_ENTER void StatHUD()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     int *Stats[STAT_MAX] =
     {
         &Player.StrengthTotal,
@@ -1351,6 +1429,12 @@ NamedScript void DamageHUD(int Amount, bool Critical)
 
 NamedScript Type_ENTER void DRLAHUD()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     str const RaritySuffix[6] =
     {
         " \Ct[Exotic]\C-",
@@ -1846,6 +1930,12 @@ Start:
 
 NamedScript Type_ENTER void LegenDoomHUD()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     if (CompatMode != COMPAT_LEGENDOOM)
         return;
 

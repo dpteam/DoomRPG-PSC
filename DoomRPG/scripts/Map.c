@@ -287,6 +287,12 @@ NamedScript Type_OPEN void MapInit()
         return; // [KS] These maps set themselves up, so nothing more to do.
     }
 
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     // Flag to run monster replacements
     WaitingForReplacements = true;
 

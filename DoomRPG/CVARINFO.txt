@@ -353,6 +353,9 @@ user    int     drpg_start_drla_boots = -2;
 user    int     drpg_start_drla_modpacks = 0;
 user    int     drpg_start_drla_modpacks_amount = 0;
 
+// Debug
+server    bool     drpg_starting_delay_enable = true;
+server    int      drpg_starting_delay_duration = 3;
 // --------------------------------------------------
 // Skill Wheel
 //

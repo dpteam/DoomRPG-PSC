@@ -24,6 +24,12 @@ RPGMap CrateInfo Crates[CRATE_MAX];
 
 NamedScript Type_OPEN void CrateLoop()
 {
+    // Waiting for Level Loading
+    if (GetCVar("drpg_starting_delay_enable") && !InTitle)
+    {
+        while (!LoadingComplete) Delay(1);
+    }
+
     while (true)
     {
         for (int i = 0; i < CrateID; i++)
