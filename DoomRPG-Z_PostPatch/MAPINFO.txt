@@ -1,0 +1,101 @@
+clearepisodes
+defaultmap
+{
+	allowrespawn
+}
+episode OUTPOST
+{
+	name = "UAC Outpost"
+	noskillmenu
+	optional
+}
+episode HUBMAP
+{
+	name = "COMPENDIUM"
+	optional
+}
+episode VR
+{
+	name = "The Sentinel's Lexicon"
+	optional
+}
+episode JUKEBOX
+{
+	name = "JUKEBOX"
+	optional
+}
+episode e1m1
+{
+	name = "Knee-Deep in the Dead"
+	optional
+}
+episode e2m1
+{
+	name = "The Shores of Hell"
+	optional
+}
+episode e3m1
+{
+	name = "Inferno"
+	optional
+}
+episode e4m1
+{
+	name = "Thy Flesh Consumed"
+	optional
+}
+episode e5m1
+{
+	name = "Sigil"
+	optional
+}
+episode map01
+{
+	name = "Hell on Earth"
+	optional
+}
+episode nv_map01
+{
+	name = "No Rest for the Living"
+	optional
+}
+episode ml_map01
+{
+	name = "The Master Levels"
+	optional
+}
+episode tn_map01
+{
+	name = "TNT Evilution"
+	optional
+}
+episode pl_map01
+{
+	name = "The Plutonia Experiment"
+	optional
+}
+episode C1M1
+{
+	name = "FreeDOOM: Phase 1"
+	optional
+}
+episode FAP01
+{
+	name = "FreeDOOM: Phase 2"
+	optional
+}
+episode TAP01
+{
+	name = "FreeDOOM: Test Phase"
+	optional
+}
+episode FFA01
+{
+	name = "FreeDM"
+	optional
+}
+episode ZAP01
+{
+	name = "ZAP MISSIONS (Mobius)"
+	optional
+}
