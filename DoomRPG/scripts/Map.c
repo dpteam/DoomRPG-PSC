@@ -520,7 +520,7 @@ Start:
 
             FadeRange(255, 255, 0, 0.25, 255, 255, 0, 0, 1.0);
 
-            RankBonus = (long int)(RankTable[Players(i).RankLevel]) / 200l;
+            RankBonus = (((long int)(RankTable[Players(i).RankLevel]) / 200l) + 250) / 250 * 250;
             Players(i).Rank += RankBonus;
 
             if (Players(i).Mission.Type != MT_SECRETS)
@@ -563,7 +563,7 @@ Start:
 
             FadeRange(255, 0, 0, 0.25, 255, 0, 0, 0, 1.0);
 
-            XPBonus = XPTable[Players(i).Level] / 80l;
+            XPBonus = ((XPTable[Players(i).Level] / 40l) + 50) / 50 * 50;
             Player.XP += XPBonus;
 
             HudMessage("Monsters Killed Bonus!\n%ld XP Bonus", XPBonus);
@@ -609,7 +609,7 @@ Start:
 
             FadeRange(255, 255, 0, 0.25, 255, 255, 0, 0, 1.0);
 
-            RankBonus = RankTable[Players(i).RankLevel] / 40l;
+            RankBonus = ((RankTable[Players(i).RankLevel] / 80l) + 250) / 250 * 250;
             Players(i).Rank += RankBonus;
 
             HudMessage("Secrets Found Bonus!\n%ld Rank Bonus", RankBonus);
@@ -632,8 +632,8 @@ Start:
 
             FadeRange(255, 255, 255, 0.25, 255, 255, 255, 0, 1.0);
 
-            XPBonus = XPTable[Players(i).Level] / 80l;
-            RankBonus = RankTable[Players(i).RankLevel] / 40l;
+            XPBonus = ((XPTable[Players(i).Level] / 40l) + 50) / 50 * 50;
+            RankBonus = ((RankTable[Players(i).RankLevel] / 80l) + 250) / 250 * 250;
 
             Players(i).XP += XPBonus;
             Players(i).Rank += RankBonus;
@@ -838,7 +838,7 @@ NumberedScript(MAP_EXIT_SCRIPTNUM) MapSpecial void MapExit(bool Secret, bool Tel
             if (!PlayerInGame(i)) continue;
 
             SetActivator(Players(i).TID);
-            long int RankBonus = RankTable[Players(i).RankLevel] / 20;
+            long int RankBonus = ((RankTable[Players(i).RankLevel] / 40) + 250) / 250 * 250;
 
             SetFont("SMALLFONT");
             FadeRange(255, 255, 0, 0.25, 255, 255, 0, 0.0, 1.0);
@@ -3339,17 +3339,77 @@ NamedScript void InitWadSmoosh()
         "drpg_ws_nerve",
         "drpg_ws_plut",
         "drpg_ws_tnt",
+        "drpg_ws_vr",
+        "drpg_ws_aa1",
+        "drpg_ws_aaa1",
+        "drpg_ws_aaa2",
         "drpg_ws_av",
-        "drpg_ws_sc2",
-        "drpg_ws_pl2",
-        "drpg_ws_mm1",
-        "drpg_ws_mm2",
-        "drpg_ws_req",
-        "drpg_ws_jen",
+        "drpg_ws_bx1",
+        "drpg_ws_cc1",
+        "drpg_ws_cc2",
+        "drpg_ws_cc3",
+        "drpg_ws_cc4",
+        "drpg_ws_chx",
+        "drpg_ws_coc",
+        "drpg_ws_cs",
+        "drpg_ws_cs2",
+        "drpg_ws_cw",
+        "drpg_ws_dc",
+        "drpg_ws_dib",
+        "drpg_ws_dke",
+        "drpg_ws_du1",
+        "drpg_ws_dv",
+        "drpg_ws_dv2",
+        "drpg_ws_ep1",
+        "drpg_ws_ep2",
+        "drpg_ws_est",
+        "drpg_ws_eye",
+        "drpg_ws_fsw",
+        "drpg_ws_gd",
+        "drpg_ws_hc",
+        "drpg_ws_hlb",
+        "drpg_ws_hp1",
+        "drpg_ws_hp3",
+        "drpg_ws_hph",
         "drpg_ws_hr",
         "drpg_ws_hr2",
+        "drpg_ws_int",
+        "drpg_ws_ks",
+        "drpg_ws_kss",
+        "drpg_ws_may",
+        "drpg_ws_moc",
+        "drpg_ws_mom",
+        "drpg_ws_ng1",
+        "drpg_ws_ng2",
+        "drpg_ws_nv1",
+        "drpg_ws_piz",
+        "drpg_ws_rdx",
+        "drpg_ws_sc2",
+        "drpg_ws_sd6",
+        "drpg_ws_sd7",
+        "drpg_ws_sde",
+        "drpg_ws_sf2",
+        "drpg_ws_sf3",
+        "drpg_ws_sl",
+        "drpg_ws_slu",
+        "drpg_ws_snd",
         "drpg_ws_sod",
-        "drpg_ws_van"
+        "drpg_ws_sw1",
+        "drpg_ws_tat",
+        "drpg_ws_tsp",
+        "drpg_ws_tsp2",
+        "drpg_ws_tt1",
+        "drpg_ws_tt2",
+        "drpg_ws_tt3",
+        "drpg_ws_tu",
+        "drpg_ws_uac",
+        "drpg_ws_uhr",
+        "drpg_ws_val",
+        "drpg_ws_van",
+        "drpg_ws_wid",
+        "drpg_ws_wos",
+        "drpg_ws_zth",
+        "drpg_ws_zof"
     };
 
     str LumpNames[MAX_WSMAPPACKS] =
@@ -3360,17 +3420,77 @@ NamedScript void InitWadSmoosh()
         "NV_MAP01",
         "PL_MAP01",
         "TN_MAP01",
+        "VR",
+        "AA101",
+        "AAA01",
+        "AAA02",
         "AV01",
-        "SC201",
-        "PL201",
-        "MM101",
-        "MM201",
-        "REQ01",
-        "JEN01",
+        "BX101",
+        "CC101",
+        "CC201",
+        "CC301",
+        "CC401",
+        "CHX01",
+        "COC01",
+        "CS01",
+        "CS201",
+        "CW101",
+        "DC01",
+        "DIB01",
+        "DKE01",
+        "DU101",
+        "DV01",
+        "DV201",
+        "EP101",
+        "EP201",
+        "EST01",
+        "EYE01",
+        "FSW01",
+        "GD01",
+        "HC01",
+        "HLB01",
+        "HP101",
+        "HP103",
+        "HPH",
         "HR01",
         "HR201",
+        "INT01",
+        "KS01",
+        "KSS01",
+        "MAY01",
+        "MOC01",
+        "MOM01",
+        "NG101",
+        "NG201",
+        "NV101",
+        "PIZ01",
+        "RDX01",
+        "SC201",
+        "SD601",
+        "SD701",
+        "SDE01",
+        "SF201",
+        "SF301",
+        "SL20",
+        "SLU01",
+        "SND01",
         "SOD01",
-        "VAN01"
+        "SW101",
+        "TAT01",
+        "TSP01",
+        "TSP201",
+        "TT101",
+        "TT201",
+        "TT301",
+        "TU01",
+        "USC01",
+        "UHR01",
+        "VAL01",
+        "VAN01",
+        "WID01",
+        "WOS01",
+        "ZTH01",
+        "ZOF01",
     };
     int i;
     bool BlankStart;

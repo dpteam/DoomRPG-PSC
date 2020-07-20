@@ -1,2 +1,0 @@
-Name=WadSmoosh Expansion Pack
-Mods=doom_complete_exp.pk3

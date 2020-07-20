@@ -161,10 +161,10 @@ NamedScript DECORATE void SoulEffect(int Type)
 {
     Player.Aura.Type[Type].Active = true;
 
-    if (Player.SoulsCount < 60)
-        Player.Aura.Time += (35 * 30) * (1 - (Player.SoulsCount / 100));
+    if (Player.SoulsCount < 40)
+        Player.Aura.Time += (35 * 30) * (1 - (Player.SoulsCount / 50));
     else
-        Player.Aura.Time += 35 * 12;
+        Player.Aura.Time += 35 * 6;
 
     // Cap Aura Timer - 10 min
     if (Player.Aura.Time > 35 * 600)
@@ -2421,8 +2421,8 @@ NamedScript Console void Cheat(int StatBoost)
     }
 
     // Max Level/Rank
-    Player.XP = XPTable[MAX_LEVEL - 1];
-    Player.Rank = RankTable[MAX_RANK - 1];
+    Player.Level = MAX_LEVEL;
+    Player.RankLevel = MAX_RANK;
 
     // Stats
     Player.Strength = StatBoost;

@@ -333,8 +333,8 @@ NamedScript void CrateHack()
         if (CheckInput(BT_USE, KEY_ONLYPRESSED, false, PlayerNumber()))
         {
             bool HitNothing = true;
-            XPBonus = XPTable[Player.Level] / 100l;
-            RankBonus = RankTable[Player.RankLevel] / 100l;
+            XPBonus = ((XPTable[Player.Level] / 100l) + 50) / 50 * 50;
+            RankBonus = ((RankTable[Player.RankLevel] / 200l) + 250) / 250 * 250;
 
             // Check Nodes
             for (int i = 0; i < MAX_NODES; i++)

@@ -195,7 +195,7 @@ NamedScript MapSpecial void ArenaLoop()
 // Stop the Arena session
 NamedScript MapSpecial void ArenaStop()
 {
-    if (InMultiplayer && ArenaWave > 1)
+    if (ArenaWave > 1)
         ArenaState = ARENA_WAITING;
     else
         ArenaState = ARENA_READY;

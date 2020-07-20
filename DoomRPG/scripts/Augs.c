@@ -47,7 +47,7 @@ AugInfo RPGMap AugData[AUG_MAX] =
         .Description =
         {
             "1.5x Max Health",
-            "2x Health Regen",
+            "1.5x Health Regen",
             "+10% Status Effect Resist",
             "+15% Status Effect Resist",
             "+20% Status Effect Resist",
@@ -61,9 +61,9 @@ AugInfo RPGMap AugData[AUG_MAX] =
         .Description =
         {
             "1.5x Max EP",
-            "2x EP Regen",
-            "2x Aura Timer",
-            "2x Aura Range",
+            "1.5x EP Regen",
+            "1.5x Aura Timer",
+            "1.5x Aura Range",
             "10% Skill Cost Refund",
             "15% Skill Cost Refund",
             "20% Skill Cost Refund",
@@ -76,10 +76,10 @@ AugInfo RPGMap AugData[AUG_MAX] =
         .MaxLevel = 8,
         .Description =
         {
-            "2x HP/EP Regen Amounts",
-            "1/2 HP/EP Regen Timers",
-            "3x HP/EP Regen Amounts",
-            "1/3 HP/EP Regen Timers",
+            "1/2 HP Regen Timers",
+            "1/2 EP Regen Timers",
+            "2x HP Regen Amounts",
+            "2x EP Regen Amounts",
             "-5 Seconds Toxicity Regen Timer",
             "-10 Seconds Toxicity Regen Timer",
             "-15 Seconds Toxicity Regen Timer",
@@ -115,12 +115,10 @@ AugInfo RPGMap AugData[AUG_MAX] =
     },
     {
         .Name = "Precognition Unit",
-        .MaxLevel = 6,
+        .MaxLevel = 4,
         .Description =
         {
-            "1.25x Luck Drop Chances",
             "1.5x Luck Drop Chances",
-            "1.75x Luck Drop Chances",
             "2x Luck Drop Chances",
             "3x Luck Drop Chances",
             "4x Luck Drop Chances"
@@ -368,7 +366,7 @@ void CheckAugs()
         if (Player.Augs.Level[AUG_VITALITY] >= 1)
             Player.HealthMax *= 1.5;
         if (Player.Augs.Level[AUG_VITALITY] >= 2)
-            Player.HPAmount *= 2;
+            Player.HPAmount *= 1.5;
         if (Player.Augs.Level[AUG_VITALITY] == 3)
             Player.StatusEffectResist += 10;
         if (Player.Augs.Level[AUG_VITALITY] == 4)
@@ -385,9 +383,9 @@ void CheckAugs()
         if (Player.Augs.Level[AUG_ENERGY] >= 1)
             Player.EPMax *= 1.5;
         if (Player.Augs.Level[AUG_ENERGY] >= 2)
-            Player.EPAmount *= 2;
+            Player.EPAmount *= 1.5;
         if (Player.Augs.Level[AUG_ENERGY] >= 4)
-            Player.Aura.Range *= 2;
+            Player.Aura.Range *= 1.5;
     }
     if (Player.Augs.Active[AUG_ENERGY] && Player.Augs.Level[AUG_ENERGY] >= 3)
         Player.AuraBonus = true;
@@ -399,23 +397,19 @@ void CheckAugs()
     {
         if (Player.Augs.Level[AUG_REGENERATION] >= 1)
         {
-            Player.HPAmount *= 2;
-            Player.EPAmount *= 2;
+            Player.HPTime /= 2;
         }
         if (Player.Augs.Level[AUG_REGENERATION] >= 2)
         {
-            Player.HPTime /= 2;
             Player.EPTime /= 2;
         }
         if (Player.Augs.Level[AUG_REGENERATION] >= 3)
         {
-            Player.HPAmount *= 1.5;
-            Player.EPAmount *= 1.5;
+            Player.HPAmount *= 2;
         }
         if (Player.Augs.Level[AUG_REGENERATION] >= 4)
         {
-            Player.HPTime /= 1.5;
-            Player.EPTime /= 1.5;
+            Player.EPAmount *= 2;
         }
         if (Player.Augs.Level[AUG_REGENERATION] == 5)
             Player.ToxicityRegenBonus += 5;
@@ -470,16 +464,12 @@ void CheckAugs()
         fixed LuckMult;
 
         if (Player.Augs.Level[AUG_LUCK] == 1)
-            LuckMult = 1.25;
-        if (Player.Augs.Level[AUG_LUCK] == 2)
             LuckMult = 1.5;
-        if (Player.Augs.Level[AUG_LUCK] == 3)
-            LuckMult = 1.75;
-        if (Player.Augs.Level[AUG_LUCK] == 4)
+        if (Player.Augs.Level[AUG_LUCK] == 2)
             LuckMult = 2;
-        if (Player.Augs.Level[AUG_LUCK] == 5)
+        if (Player.Augs.Level[AUG_LUCK] == 3)
             LuckMult = 3;
-        if (Player.Augs.Level[AUG_LUCK] >= 6)
+        if (Player.Augs.Level[AUG_LUCK] >= 4)
             LuckMult = 4;
 
         Player.HealthChance *= LuckMult;

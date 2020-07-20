@@ -472,12 +472,10 @@ NamedScript MenuEntry void LoadCharacter()
     if (Info.Level > 0)
     {
         Player.Level = Info.Level;
-        Player.XP = XPTable[Player.Level - 1];
     }
     if (Info.RankLevel > 0)
     {
         Player.RankLevel = Info.RankLevel;
-        Player.Rank = RankTable[Player.RankLevel - 1];
     }
 
     // Misc
@@ -526,18 +524,8 @@ NamedScript MenuEntry void LoadCharacter()
     Player.CapacityTotal = Player.Capacity + Player.CapacityNat;
     Player.LuckTotal = Player.Luck + Player.LuckNat;
 
-    // Stat XP
-    Player.StrengthXP = StatTable[Info.StatsNat[0] - 1];
-    Player.DefenseXP = StatTable[Info.StatsNat[1] - 1];
-    Player.VitalityXP = StatTable[Info.StatsNat[2] - 1];
-    Player.EnergyXP = StatTable[Info.StatsNat[3] - 1];
-    Player.RegenerationXP = StatTable[Info.StatsNat[4] - 1];
-    Player.AgilityXP = StatTable[Info.StatsNat[5] - 1];
-    Player.CapacityXP = StatTable[Info.StatsNat[6] - 1];
-    Player.LuckXP = StatTable[Info.StatsNat[7] - 1];
-
-    Player.EP = Player.EnergyTotal * 10;
-    Player.HealthMax = Player.VitalityTotal * 10;
+    Player.EP = 50 + ((Player.Level + 1) / 2) * 5 + Player.EnergyTotal * 5;
+    Player.HealthMax = 50 + ((Player.Level + 1) / 2) * 5 + Player.VitalityTotal * 5;
     Player.ActualHealth = Player.HealthMax;
     SetActorProperty(0, APROP_Health, Player.HealthMax);
 

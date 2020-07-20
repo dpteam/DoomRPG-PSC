@@ -68,9 +68,20 @@ actor DRPGAura : Inventory
 }
 
 // Aura Skills
-actor DRPGGreenAuraIronFeet : PowerIronFeet             { Powerup.Duration 5 }
-actor DRPGPinkAuraDrain : PowerDrain                    { Powerup.Duration 5 }
-actor DRPGDarkBlueAuraInfiniteAmmo2 : PowerupGiver {
+actor DRPGGreenAuraIronFeet : PowerIronFeet
+{
+    Powerup.Duration 5
+    Powerup.Color 0, 0, 0, 0
+}
+
+actor DRPGPinkAuraDrain : PowerDrain
+{
+    Powerup.Duration 5
+    Powerup.Strength 0.06
+}
+
+actor DRPGDarkBlueAuraInfiniteAmmo2 : PowerupGiver 
+{
     +Inventory.AutoActivate
     Powerup.Type PowerInfiniteAmmo
     Powerup.Duration 5

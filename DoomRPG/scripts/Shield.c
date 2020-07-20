@@ -129,7 +129,7 @@ ShieldAccessory const ShieldAccessories[MAX_ACCESSORIES] =
     {
         "DRPGShieldAccessory1",
         "\CgX-7",       "SHACA0",   18000,
-        "\Cg2x Melee Damage",
+        "\Cg+50% Melee Damage",
         SHIELD_PASS_NONE,
         X7Mod, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
     },
@@ -178,7 +178,7 @@ ShieldAccessory const ShieldAccessories[MAX_ACCESSORIES] =
     {
         "DRPGShieldAccessory8",
         "\CfREK-T50",   "SHACH0",   15000,
-        "\Cd+100% Damage Taken\C-\nTriples the amount of \CfCredits\C- dropped by monsters",
+        "\Cd+50% Damage Taken\C-\nDoubles the amount of \CfCredits\C- dropped by monsters",
         SHIELD_PASS_EPICMEGACASH,
         RektMod, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
     },
@@ -247,7 +247,7 @@ ShieldAccessory const ShieldAccessories[MAX_ACCESSORIES] =
     },
     {
         "DRPGShieldAccessory18",
-        "\ChSHVR-Z7",   "SHACR0",   35000,
+        "\ChSHVR-Z7",   "SHACR0",   40000,
         "\CfConverter\C-: When full, produces \CcClips\C- and \CiShells\C-",
         SHIELD_PASS_NONE,
         NULL, NULL, NULL, NULL, NULL, NULL, AmmoConversion, NULL, NULL,
@@ -262,7 +262,7 @@ ShieldAccessory const ShieldAccessories[MAX_ACCESSORIES] =
     {
         "DRPGShieldAccessory20",
         "\CgMRTE-KRAR", "SHACT0",   38000,
-        "\Cv-50% Capacity\n\Cg1.5x Damage",
+        "\Cv-50% Capacity\n\Cg+25% Damage",
         SHIELD_PASS_NONE,
         TheKillingBoosterMod, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
     },
@@ -283,7 +283,7 @@ ShieldAccessory const ShieldAccessories[MAX_ACCESSORIES] =
     {
         "DRPGShieldAccessory23",
         "\CqE1N-T31",   "SHACW0",   90000,
-        "1 second \CqTime Freeze\C- when hit",
+        "1 in 4 chance of getting 1 second \CqTime Freeze\C- when hit",
         SHIELD_PASS_NONE,
         NULL, NULL, NULL, TimeyWimeyHurtyBall, NULL, NULL, NULL, NULL, NULL,
     },
@@ -388,7 +388,7 @@ ShieldAccessory const ShieldAccessories[MAX_ACCESSORIES] =
     {
         "DRPGShieldAccessory38",
         "\CgHA3-L1N",   "SHA2L0",   65000,
-        "Whenever you \Cgkill an enemy\C-, your shield recharges \Ct5x\C- as fast for 3 seconds",
+        "Whenever you \Cgkill an enemy\C-, your shield recharges \Ct2x\C- as fast for 3 seconds",
         SHIELD_PASS_BLOODYSHIELDSOREAL,
         BloodyShieldSoRealMod, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
     },
@@ -444,7 +444,7 @@ ShieldAccessory const ShieldAccessories[MAX_ACCESSORIES] =
     {
         "DRPGShieldAccessory46",
         "\CjOCD-MX90",  "SHA2T0",   108000,
-        "Every level you \Cd100% complete\C- gives you:\n\Cv+20 Capacity\n\Cd+0.5 Charge Rate\n\Ca-0.2 Delay",
+        "Every level you \Cd100% complete\C- gives you:\n\Cv+5 Capacity\n\Cd+0.1 Charge Rate\n\Ca-0.05 Delay",
         SHIELD_PASS_NONE,
         OCDShieldMod, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
     },
@@ -486,7 +486,7 @@ ShieldAccessory const ShieldAccessories[MAX_ACCESSORIES] =
     {
         "DRPGShieldAccessory52",
         "\CgREMI-500",  "SHA2Z0",   110000,
-        "\CgYour Shield does not recharge\nInstead, every kill charges \CvShield\C- for 10% of the enemy's \Camax health",
+        "\CgYour Shield does not recharge\nInstead, every kill charges \CvShield\C- for 5% of the enemy's \Camax health",
         SHIELD_PASS_KILLSCHARGE,
         NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
     },
@@ -507,7 +507,7 @@ ShieldAccessory const ShieldAccessories[MAX_ACCESSORIES] =
     {
         "DRPGShieldAccessory55",
         "\CcTRANS-EB2S2",   "SHA2]0",   40000,
-        "If your \CkAugmentation Battery\C- is full, \Cv2x Capacity\C-",
+        "If your \CkAugmentation Battery\C- is full, \Cv+50% Capacity\C-",
         SHIELD_PASS_NONE,
         TheAmazingBatteryShieldMod, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
     },
@@ -521,7 +521,7 @@ ShieldAccessory const ShieldAccessories[MAX_ACCESSORIES] =
     {
         "DRPGShieldAccessory57",
         "\CgMURD-BURD", "SHA3B0",   85000,
-        "Every \Cgkill\C- made on the current level grants \Cv+10 Capacity\C-",
+        "Every \Cgkill\C- made on the current level grants \Cv+5 Capacity\C-",
         SHIELD_PASS_NONE,
         MurderBurgerMod, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
     },
@@ -535,14 +535,14 @@ ShieldAccessory const ShieldAccessories[MAX_ACCESSORIES] =
     {
         "DRPGShieldAccessory59",
         "\CaHEL-FY20",  "SHA3D0",   52000,
-        "Every \Ca100 Health\C- you have adds \Cv+20 Capacity\C-",
+        "Every \Ca50 Health\C- you have adds \Cv+25 Capacity\C-",
         SHIELD_PASS_NONE,
         IronShieldMod, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
     },
     {
         "DRPGShieldAccessory60",
-        "\CnMUN3-MAG",  "SHA3E0",   33000,
-        "Triples the amount of \CfCredits\C- gained from using \CnMagnetize\C-",
+        "\CnMUN3-MAG",  "SHA3E0",   50000,
+        "Doubles the amount of \CfCredits\C- gained from using \CnMagnetize\C-",
         SHIELD_PASS_DOSHMAGNET,
         NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
     },
@@ -556,7 +556,7 @@ ShieldAccessory const ShieldAccessories[MAX_ACCESSORIES] =
     {
         "DRPGShieldAccessory62",
         "\CnSYN-C3P",   "SHA3G0",   95000,
-        "\CnEP Regen\C- is substituted for \CdCharge Rate\C-",
+        "\CnEP Regen\C- is increases by 50% from \CdCharge Rate\C-",
         SHIELD_PASS_NONE,
         EPRegenSwapperMod, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
     },
@@ -605,11 +605,11 @@ NamedScript void HealthConversion(int Charge)
 {
     Player.Shield.AccessoryBattery += Charge;
 
-    while (Player.Shield.AccessoryBattery >= 5)
+    while (Player.Shield.AccessoryBattery >= 8)
     {
         // FadeRange(255, 0, 255, 0.25, 255, 0, 255, 0, 0.25);
         AddHealthDirect(1, 100);
-        Player.Shield.AccessoryBattery -= 5;
+        Player.Shield.AccessoryBattery -= 8;
     }
 }
 
@@ -617,11 +617,11 @@ NamedScript void EPConversion(int Charge)
 {
     Player.Shield.AccessoryBattery += Charge;
 
-    while (Player.Shield.AccessoryBattery >= 2)
+    while (Player.Shield.AccessoryBattery >= 8)
     {
         // FadeRange(0, 255, 255, 0.25, 0, 255, 255, 0, 0.25);
         AddEP(1, true);
-        Player.Shield.AccessoryBattery -= 2;
+        Player.Shield.AccessoryBattery -= 8;
     }
 }
 
@@ -641,12 +641,12 @@ NamedScript void AmmoConversion(int Charge)
 {
     Player.Shield.AccessoryBattery += Charge;
 
-    while (Player.Shield.AccessoryBattery >= 4)
+    while (Player.Shield.AccessoryBattery >= 32)
     {
         // FadeRange(0, 0, 255, 0.25, 0, 0, 255, 0, 0.25);
-        GiveInventory("Clip", 2);
+        GiveInventory("Clip", 4);
         GiveInventory("Shell", 1);
-        Player.Shield.AccessoryBattery -= 4;
+        Player.Shield.AccessoryBattery -= 32;
     }
 }
 
@@ -723,11 +723,14 @@ NamedScript void TimeyWimeyHurtyBallZDoomSucks()
     // Note for future endeavours: PowerTimeFreezer will always work on an even tic, but never odd ones.
     // See: https://github.com/rheit/zdoom/blob/master/src/g_shared/a_artifacts.cpp#L1502
 
-    while (Timer() & 1) Delay(1);
+    if (Random(1, 4) == 1)
+    {
+        while (Timer() & 1) Delay(1);
 
-    GiveInventory("DRPGShieldTimePause", 1);
-    Delay(35);
-    TakeInventory("PowerShieldTimeFreezer", 1);
+        GiveInventory("DRPGShieldTimePause", 1);
+        Delay(35);
+        TakeInventory("PowerShieldTimeFreezer", 1);
+    }
 }
 
 NamedScript void TimeyWimeyHurtyBall(int DamageAmount)
@@ -858,7 +861,7 @@ NamedScript void X7Mod()
 {
     if (Player.Shield.Active)
         if (CheckWeapon("Fist") || CheckWeapon("Knuckle") || CheckWeapon("RLFistRedux"))
-            Player.TotalDamage *= 2;
+            Player.TotalDamage *= 1.5;
 }
 
 NamedScript void AmpShieldMod()
@@ -904,7 +907,7 @@ NamedScript void BlzutMod()
 
 NamedScript void RektMod()
 {
-    Player.DamageFactor *= 2;
+    Player.DamageFactor *= 1.5;
 }
 
 NamedScript void LightAmpMod()
@@ -955,7 +958,7 @@ NamedScript void TheKillingBoosterMod()
 {
     Player.Shield.Capacity /= 2;
     if (Player.Shield.Active)
-        Player.TotalDamage = Player.TotalDamage * 1.5;
+        Player.TotalDamage = Player.TotalDamage * 1.25;
 }
 
 NamedScript void MinuteMaidMod()
@@ -1040,7 +1043,7 @@ NamedScript void BloodyShieldSoRealMod()
 {
     if (Player.Shield.AccessoryBattery)
     {
-        Player.Shield.Interval /= 5;
+        Player.Shield.Interval /= 2;
         Player.Shield.AccessoryBattery--;
     }
 }
@@ -1097,9 +1100,9 @@ NamedScript void RussianRouletteMod()
 
 NamedScript void OCDShieldMod()
 {
-    Player.Shield.Capacity += AllBonusMaps * 20;
-    Player.Shield.ChargeRate += AllBonusMaps / 2;
-    Player.Shield.DelayRate -= (fixed)AllBonusMaps * 0.2;
+    Player.Shield.Capacity += AllBonusMaps * 5;
+    Player.Shield.ChargeRate += AllBonusMaps / 10;
+    Player.Shield.DelayRate -= (fixed)AllBonusMaps * 0.05;
 }
 
 NamedScript void ArenaShieldMod()
@@ -1166,7 +1169,7 @@ NamedScript void AmmoSpaceUnequip(bool EMP)
 NamedScript void TheAmazingBatteryShieldMod()
 {
     if (Player.Augs.Battery >= 100)
-        Player.Shield.Capacity *= 2;
+        Player.Shield.Capacity *= 1.5;
 }
 
 NamedScript void LilZiggyMod()
@@ -1177,9 +1180,9 @@ NamedScript void LilZiggyMod()
 NamedScript void MurderBurgerMod()
 {
     int MonstersKilled = GetLevelInfo(LEVELINFO_KILLED_MONSTERS);
-    if (MonstersKilled > 250)
-        MonstersKilled = 250;
-    Player.Shield.Capacity += MonstersKilled * 10;
+    if (MonstersKilled > 200)
+        MonstersKilled = 200;
+    Player.Shield.Capacity += MonstersKilled * 5;
 }
 
 NamedScript void LuckyBastardMod()
@@ -1200,13 +1203,13 @@ NamedScript void LuckyBastardMod()
 
 NamedScript void IronShieldMod()
 {
-    Player.Shield.Capacity += Player.ActualHealth / 100 * 20;
+    Player.Shield.Capacity += Player.ActualHealth / 50 * 25;
 }
 
 NamedScript void EPRegenSwapperMod()
 {
     if (Player.Shield.Active)
-        Player.EPAmount = Player.Shield.ChargeRate;
+        Player.EPAmount += Player.Shield.ChargeRate / 2;
 }
 
 NamedScript void HoarderMod()
@@ -1252,9 +1255,9 @@ NamedScript void ShieldTimer()
 
                 if (ChargeRate && (!Player.Shield.Accessory || Player.Shield.Accessory->PassiveEffect != SHIELD_PASS_KILLSCHARGE))
                 {
-                    if (Player.Shield.Charge < 1)
+                    if (GetCVar("drpg_shield_sound_charge_enable") && Player.Shield.Charge < 1)
                         PlaySound(0, "shield/restart", 5, 1.0, false, 1.0);
-                    else if (Player.Shield.Charge < Player.Shield.Capacity)
+                    else if (GetCVar("drpg_shield_sound_charge_enable") && Player.Shield.Charge < Player.Shield.Capacity)
                         PlaySound(0, "shield/charge", 5, 0.25, false, 2.0);
                     Player.Shield.Charge += ChargeRate;
                 }
@@ -1267,7 +1270,8 @@ NamedScript void ShieldTimer()
                     if (!Player.Shield.Full)
                     {
                         Player.Shield.Full = true;
-                        PlaySound(0, "shield/full", 5, 1.0, false, 1.0);
+                        if (GetCVar("drpg_shield_sound_full_enable"))
+                            PlaySound(0, "shield/full", 5, 1.0, false, 1.0);
                         if (Player.Shield.Accessory && Player.Shield.Accessory->FullCharge)
                             Player.Shield.Accessory->FullCharge();
                     }

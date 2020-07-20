@@ -774,7 +774,7 @@ OptionalArgs(1) NamedScript void MonsterInitStats(int StatFlags)
 
         // If the monster is friendly, it has the average level of all players in the game
         if (GetActorProperty(0, APROP_Friendly))
-            Stats->Level = ((AveragePlayerLevel() * LevelWeight) + (LevelNum * MapWeight)) * (0.4 + AveragePlayerEnergy() * 0.01);
+            Stats->Level = (int)((fixed)AveragePlayerLevel() * LevelWeight + (fixed)LevelNum * MapWeight);
 
         // Special case for Bosses
         if (Stats->Flags & MF_BOSS)
@@ -930,7 +930,7 @@ OptionalArgs(1) NamedScript void MonsterInitStats(int StatFlags)
 
         // Map Event - RAINBOWS!
         if (CurrentLevel->Event == MAPEVENT_BONUS_RAINBOWS)
-            Stats->Capacity *= Random(2, 4);
+            Stats->Capacity *= 2;
 
         // Apply Aura
         if (!GetActorProperty(0, APROP_Friendly) && !(Stats->Flags & MF_NOAURA) && !(Stats->Flags & MF_NOAURAGEN))
@@ -1499,7 +1499,7 @@ Start:
     {
         StatsChanged = true;
 
-        SetActorPropertyFixed(0, APROP_DamageMultiplier, 1.0 + (((fixed)(Stats->Strength * (fixed)GameSkill()) / 400.0) + (LevelNum / 200.0)));
+        SetActorPropertyFixed(0, APROP_DamageMultiplier, 1.0 + (((fixed)(Stats->Strength * (fixed)GameSkill()) / 400.0) + ((fixed)LevelNum / 200.0)));
         OldStrength = Stats->Strength;
     }
 
@@ -1508,10 +1508,10 @@ Start:
     {
         StatsChanged = true;
 
-        fixed DamageFactor = 1.0 - (((fixed)Stats->Defense / 400.0) + (LevelNum / 800.0));
+        fixed DamageFactor = 1.0 - (((fixed)Stats->Defense / 400.0) + ((fixed)LevelNum / 800.0));
 
-        if (DamageFactor < 0.05)
-            DamageFactor = 0.05;
+        if (DamageFactor < 0.251)
+            DamageFactor = 0.251;
 
         SetActorPropertyFixed(0, APROP_DamageFactor, DamageFactor);
 
@@ -1527,7 +1527,7 @@ Start:
         if (CheckInventory("DRPGCredits") > OldCapacity)
             StolenCredits = CheckInventory("DRPGCredits") - OldCapacity;
 
-        SetInventory("DRPGCredits", Stats->Capacity + StolenCredits);
+        SetInventory("DRPGCredits", (Stats->Capacity + StolenCredits) / 2);
         OldCapacity = Stats->Capacity;
     }
 
@@ -2331,7 +2331,58 @@ NamedScript DECORATE void MonsterRevive()
 
     // Account for monsters revived by friendly Archvile
     if (GetActorProperty(0, APROP_Friendly))
+    {
+        if (Random(0, 100) <= 80)
+        {
+            switch (Random(1, 8))
+            {
+            case 1:
+                if (Random(0, 100) <= 50) Spawn("DRPGMoneyDropper", GetActorX(0), GetActorY(0), GetActorZ(0) + 48, 0, 0);
+                break;
+            case 2:
+                if (Random(0, 100) <= 45) Spawn("DRPGStimpack", GetActorX(0), GetActorY(0), GetActorZ(0) + 48, 0, 0);
+                break;
+            case 3:
+                if (Random(0, 100) <= 40) Spawn("DRPGClip", GetActorX(0), GetActorY(0), GetActorZ(0) + 48, 0, 0);
+                break;
+            case 4:
+                if (Random(0, 100) <= 30) Spawn("DRPGShell", GetActorX(0), GetActorY(0), GetActorZ(0) + 48, 0, 0);
+                break;
+            case 5:
+                if (Random(0, 100) <= 25)
+                {
+                    if (CompatMode == COMPAT_DRLA)
+                    {
+                        Spawn("RLArmorBonusPickup", GetActorX(0), GetActorY(0), GetActorZ(0) + 48, 0, 0);
+                    }
+                    else
+                        Spawn("DRPGArmorBonus", GetActorX(0), GetActorY(0), GetActorZ(0) + 48, 0, 0);
+                }
+                break;
+            case 6:
+                if (Random(0, 100) <= 20) Spawn("DRPGEPCapsule", GetActorX(0), GetActorY(0), GetActorZ(0) + 48, 0, 0);
+                break;
+            case 7:
+                if (Random(0, 100) <= 15) Spawn("DRPGRocketAmmo", GetActorX(0), GetActorY(0), GetActorZ(0) + 48, 0, 0);
+                break;
+            case 8:
+                if (Random(0, 100) <= 10) Spawn("DRPGCell", GetActorX(0), GetActorY(0), GetActorZ(0) + 48, 0, 0);
+                break;
+
+            }
+
+            ActivatorSound("vile/firestrt", 127);
+            SpawnForced("SpawnFire", GetActorX(0), GetActorY(0), GetActorZ(0), 0, 0);
+            SpawnForced("DRPGBurnedCorpse", GetActorX(0), GetActorY(0), GetActorZ(0), 0, 0);
+            Thing_Remove(0);
+
+            return;
+        }
+
         SetActorPropertyString(0, APROP_Species, "Player");
+        GiveInventory("DRPGFriendlyReviveMonster", 1);
+        MonsterFriendlyTeleport();
+    }
     else
         SetActorPropertyString(0, APROP_Species, "None");
 
@@ -2339,11 +2390,12 @@ NamedScript DECORATE void MonsterRevive()
     DamageNumbers();
     MonsterStatsHandler();
     MonsterAuraDisplayHandler();
+    MonsterAggressionHandler();
     if (!(Stats->Flags & MF_NOSTATS))
         MonsterRegenerationHandler();
 
-    MonsterAggressionHandler();
-    MonsterFriendlyTeleport();
+    // Give full health
+    SetActorProperty(0, APROP_Health, Stats->HealthMax);
 }
 
 NamedScript DECORATE void MonsterDeathCheck()
@@ -2379,24 +2431,15 @@ NamedScript void MonsterDeath()
         ThreatMult = 1;
 
     int LevelNum = CurrentLevel->LevelNum;
-    long int XPAmount = Random(HealthXP / 2, HealthXP) * ThreatMult * (1 + (Stats->Level / 50) + (LevelNum / 100));
-    long int RankAmount = HealthXP * ThreatMult * (1 + (Stats->Level / 50) + (LevelNum / 100));
-
-    // Aura-Based XP/Rank Modifiers
-    if (MonsterHasShadowAura(Stats))
-    {
-        XPAmount *= 1;
-        RankAmount *= 1;
-    }
-    else if (Stats->Aura.Type[AURA_WHITE].Active)
-        XPAmount *= 1;
+    long int XPAmount = Random(HealthXP / 2, HealthXP) * ThreatMult * (long fixed)(1.0 + (Stats->Level / 50.0) + (LevelNum / 200.0));
+    long int RankAmount = HealthXP * ThreatMult * (long fixed)(1.0 + (Stats->Level / 50.0) + (LevelNum / 200.0));
 
     if (Players(Killer).Shield.Accessory)
     {
         switch (Players(Killer).Shield.Accessory->PassiveEffect)
         {
         case SHIELD_PASS_KILLSCHARGE:
-            AddRemoteShield(Players(Killer).TID, Stats->HealthMax / 10);
+            AddRemoteShield(Players(Killer).TID, Stats->HealthMax / 20);
             break;
         case SHIELD_PASS_BLOODYSHIELDSOREAL:
             Players(Killer).Shield.AccessoryBattery = 35 * 3;
@@ -2522,12 +2565,12 @@ NamedScript void MonsterDeath()
         // Luck-based Drops
         if (Killer > -1 && !(Stats->Flags & MF_MEGABOSS))
         {
-            if (Players(Killer).HealthDrop && RandomFixed(0.0, 100.0) < Players(Killer).HealthChance)    DropMonsterItem(Killer, 0, "DRPGHealthDropper", 256);
-            if (Players(Killer).EPDrop && RandomFixed(0.0, 100.0) < Players(Killer).EPChance)            DropMonsterItem(Killer, 0, "DRPGEPCapsule", 256);
-            if (Players(Killer).ArmorDrop && RandomFixed(0.0, 100.0) < Players(Killer).ArmorChance)      DropMonsterItem(Killer, 0, "DRPGAmmoDropper", 256);
-            if (Players(Killer).WeaponDrop && RandomFixed(0.0, 100.0) < Players(Killer).WeaponChance)    DropMonsterItem(Killer, 0, "DRPGTurretDropper", 256);
+            if (Players(Killer).HealthDrop && RandomFixed(0.0, 100.0) < Players(Killer).HealthChance)    DropMonsterItem(Killer, 0, "DRPGHealthMonsterDropper", 256);
+            if (Players(Killer).EPDrop && RandomFixed(0.0, 100.0) < Players(Killer).EPChance)            DropMonsterItem(Killer, 0, "DRPGEPMonsterDropper", 256);
+            if (Players(Killer).ArmorDrop && RandomFixed(0.0, 100.0) < Players(Killer).ArmorChance)      DropMonsterItem(Killer, 0, "DRPGAmmoMonsterDropper", 256);
+            if (Players(Killer).WeaponDrop && RandomFixed(0.0, 100.0) < Players(Killer).WeaponChance)    DropMonsterItem(Killer, 0, "DRPGTurretMonsterDropper", 256);
             if (Players(Killer).ModuleDrop && RandomFixed(0.0, 100.0) < Players(Killer).ModuleChance)    DropMonsterItem(Killer, 0, "DRPGModuleDropper", 256);
-            if (Players(Killer).StimDrop && RandomFixed(0.0, 100.0) < Players(Killer).StimChance)        DropMonsterItem(Killer, 0, "DRPGVialDropperRare", 256);
+            if (Players(Killer).StimDrop && RandomFixed(0.0, 100.0) < Players(Killer).StimChance)        DropMonsterItem(Killer, 0, "DRPGVialMonsterDropper", 256);
             if (Players(Killer).PowerupDrop && RandomFixed(0.0, 100.0) < Players(Killer).PowerupChance)  DropMonsterItem(Killer, 0, "DRPGPowerupDropper", 256);
             if (Players(Killer).ShieldDrop && RandomFixed(0.0, 100.0) < Players(Killer).ShieldChance)    DropMonsterItem(Killer, 0, "DRPGShieldDropper", 256);
             if (Players(Killer).AugDrop && RandomFixed(0.0, 100.0) < Players(Killer).AugChance)          DropMonsterItem(Killer, 0, "DRPGAugDropper", 256);
@@ -2651,18 +2694,18 @@ NamedScript void MonsterDeath()
         {
             for (int i = 0; i < MAX_PLAYERS; i++)
             {
-                LuckMult = 100 + (Players(i).LuckTotal / 2);
-                CreditsMin = (CheckInventory("DRPGCredits") * LuckMult) / 2000;
-                CreditsMax = (CheckInventory("DRPGCredits") * LuckMult) / 200;
-                CreditsTable[i] = (Random(CreditsMin, CreditsMax) * (Stats->DamageTable[i] * 100) / Stats->HealthMax) / 200;
+                LuckMult = 100 + Players(i).LuckTotal;
+                CreditsMin = (CheckInventory("DRPGCredits") * LuckMult) / 1000;
+                CreditsMax = (CheckInventory("DRPGCredits") * LuckMult) / 100;
+                CreditsTable[i] = (Random(CreditsMin, CreditsMax) * (Stats->DamageTable[i] * 100) / Stats->HealthMax) / 100;
 
                 // REK-T50 accessory
                 if (Players(i).Shield.Active && Players(i).Shield.Accessory && Players(i).Shield.Accessory->PassiveEffect == SHIELD_PASS_EPICMEGACASH)
-                    CreditsTable[i] *= 3;
+                    CreditsTable[i] *= 2;
 
                 // RAINBOWS Event
                 if (CurrentLevel->Event == MAPEVENT_BONUS_RAINBOWS)
-                    CreditsTable[i] *= 4;
+                    CreditsTable[i] *= 2;
 
                 // UAC Premium
                 if (GetCVar("drpg_uac_premium"))
@@ -2672,17 +2715,17 @@ NamedScript void MonsterDeath()
         else
         {
             LuckMult = 100 + Players(Killer).LuckTotal;
-            CreditsMin = (CheckInventory("DRPGCredits") * LuckMult) / 2000;
-            CreditsMax = (CheckInventory("DRPGCredits") * LuckMult) / 200;
+            CreditsMin = (CheckInventory("DRPGCredits") * LuckMult) / 1000;
+            CreditsMax = (CheckInventory("DRPGCredits") * LuckMult) / 100;
             CreditsAmount = Random(CreditsMin, CreditsMax);
 
             // REK-T50 accessory
             if (Players(Killer).Shield.Active && Players(Killer).Shield.Accessory && Players(Killer).Shield.Accessory->PassiveEffect == SHIELD_PASS_EPICMEGACASH)
-                CreditsAmount *= 3;
+                CreditsAmount *= 2;
 
             // RAINBOWS Event
             if (CurrentLevel->Event == MAPEVENT_BONUS_RAINBOWS)
-                CreditsAmount *= 4;
+                CreditsAmount *= 2;
 
             // UAC Premium
             if (GetCVar("drpg_uac_premium"))
@@ -2754,6 +2797,12 @@ NamedScript void MonsterDeath()
     // [SW] 10/22/2018 - This is an option now, yee.
     if (GetCVar("drpg_aura_removeondeath"))
         RemoveMonsterAura(Stats);
+
+    if (GetActorProperty(0, APROP_Friendly) && CheckInventory("DRPGFriendlyReviveMonster") && GetActorProperty(0, APROP_Health) <= 0)
+    {
+        SpawnForced("TeleportFog", GetActorX(0), GetActorY(0), GetActorZ(0), 0, 0);
+        Thing_Remove(0);
+    }
 }
 
 //[[alloc_Aut(16384)]]

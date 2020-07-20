@@ -188,6 +188,7 @@ OptionMenu "DoomRPGXPSystem"
     Title "XP System"
 
     Slider "XP Multiplier", "drpg_scalexp", 0.25, 8.0, 0.25
+    Slider "Combo XP Multiplier", "drpg_scalecomboxp", 0.25, 8.0, 0.25
     Slider "XP Curve", "drpg_xp_curve", 0, 500, 5
 //    Slider "Max Player Level", "drpg_max_player_level", 1, 1000, 1
     Slider "XP based on monster health", "drpg_xp_health_awareness", 0, 1, 0.1
@@ -307,7 +308,7 @@ OptionMenu "DoomRPGDifficulty"
 
     Slider "Starting Map Weight", "drpg_monster_mapweight", 1, 1000, 1
     Slider "Monster Population %", "drpg_monster_population", 10.0, 200.0, 1.0
-    Slider "Absolute Monster Limit", "drpg_monster_limit", 0.0, 16200.0, 200.0
+    Slider "Absolute Monster Limit", "drpg_monster_limit", 0.0, 16200.0, 50.0
     Option "Map-based monster spawns", "drpg_monster_adaptive_spawns", "OnOff"
     StaticText ""
 
@@ -654,6 +655,12 @@ OptionMenu "DoomRPGMisc"
     Option "Friendly Monsters Can Teleport Only If Don't Have Target", "drpg_monster_friendly_teleport_if_no_target", "OnOff"
     Option "Friendly Monsters Can Teleport Only If Don't Sight Player", "drpg_monster_friendly_teleport_if_no_sight", "OnOff"
     Slider "Minimum Distance For Teleport", "drpg_monster_friendly_teleport_distance", 0, 10, 1
+    StaticText ""
+
+    Option "Sound Empty Enegry Shield", "drpg_shield_sound_empty_enable", "OnOff"
+    Option "Sound Charging Enegry Shield", "drpg_shield_sound_charge_enable", "OnOff"
+    Option "Sound Full Enegry Shield", "drpg_shield_sound_full_enable", "OnOff"
+    Option "Sound and Effect of Hitting Enegry Shield", "drpg_shield_effect_hit_enable", "OnOff"
     StaticText ""
 }
 

@@ -735,7 +735,7 @@ typedef enum
 #define LUCK_SHIELDINC          0.0005
 #define LUCK_AUGINC             0.00025
 
-#define AURA_CALCTIME           (((35 * 30) + (Player.EnergyTotal * 35) + (Player.Level * 35)) * (Player.AuraBonus + 1))
+#define AURA_CALCTIME           (((35 * 30) + (35 * Player.EnergyTotal) + (35 * Player.Level * 2)) * (1 + Player.AuraBonus * 0.5))
 #define DRLA_WEAPON_MAX         6
 #define DRLA_ARMOR_MAX          2 + (Player.CapacityTotal / 25)
 #define DRLA_SKULL_MAX          DRLA_ARMOR_MAX
@@ -1032,7 +1032,7 @@ typedef struct LegendaryDef_S       LegendaryDef;
 // WadSmoosh Compatibility
 //
 
-#define MAX_WSMAPPACKS  17
+#define MAX_WSMAPPACKS  77
 
 typedef enum
 {
@@ -1042,17 +1042,77 @@ typedef enum
     WS_NERVE,
     WS_PLUT,
     WS_TNT,
+    WS_VR,
+    WS_AA1,
+    WS_AAA1,
+    WS_AAA2,
     WS_AV,
-    WS_SC2,
-    WS_PL2,
-    WS_MM1,
-    WS_MM2,
-    WS_REQ,
-    WS_JEN,
+    WS_BX1,
+    WS_CC1,
+    WS_CC2,
+    WS_CC3,
+    WS_CC4,
+    WS_CHX,
+    WS_COC,
+    WS_CS,
+    WS_CS2,
+    WS_CW,
+    WS_DC,
+    WS_DIB,
+    WS_DKE,
+    WS_DU1,
+    WS_DV,
+    WS_DV2,
+    WS_EP1,
+    WS_EP2,
+    WS_EST,
+    WS_EYE,
+    WS_FSW,
+    WS_GD,
+    WS_HC,
+    WS_HLB,
+    WS_HP1,
+    WS_HP103,
+    WS_HPH,
     WS_HR,
     WS_HR2,
+    WS_INT,
+    WS_KS,
+    WS_KSS,
+    WS_MAY,
+    WS_MOC,
+    WS_MOM,
+    WS_NG1,
+    WS_NG2,
+    WS_NV1,
+    WS_PIZ,
+    WS_RDX,
+    WS_SC2,
+    WS_SD6,
+    WS_SD7,
+    WS_SDE,
+    WS_SF2,
+    WS_SF3,
+    WS_SL,
+    WS_SLU,
+    WS_SND,
     WS_SOD,
-    WS_VAN
+    WS_SW1,
+    WS_TAT,
+    WS_TSP,
+    WS_TSP2,
+    WS_TT1,
+    WS_TT2,
+    WS_TT3,
+    WS_TU,
+    WS_UAC,
+    WS_UHR,
+    WS_VAL,
+    WS_VAN,
+    WS_WID,
+    WS_WOS,
+    WS_ZTH,
+    WS_ZOF
 } EnumWSMapSets;
 
 // --------------------------------------------------

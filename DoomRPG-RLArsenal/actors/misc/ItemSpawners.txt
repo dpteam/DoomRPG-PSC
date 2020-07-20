@@ -135,10 +135,7 @@ actor ReplaceRLBerserkSpawner : RandomSpawner 2023  // At the moment, Berserk is
 
 actor RLClipBoxSpawner : RandomSpawner replaces ClipBox
 {
-    DropItem "RLClipBox"           255 183
-    DropItem "DRPGTurretPart"      255 10
-    DropItem "RLModPackSpawner"    255 6
-    DropItem "RLBlueprintComputer" 255 1
+    DropItem "RLClipBox"           255 100
 }
 
 actor RLShellBoxSpawner : RandomSpawner replaces ShellBox
@@ -206,13 +203,18 @@ actor RLRandomHealthSpawner : RandomSpawner
 
 actor RLRandomBackpackSpawner : RandomSpawner replaces Backpack
 {
-    DropItem "RLBackpack" 255 80
-//    DropItem "RLSupplyCrate" 255 40 // Backpacks are no longer replaced by crates
-    DropItem "RLCombatBackpackPickup" 255 4
-    DropItem "RLSpecialistBackpackPickup" 255 3
-    DropItem "RLScroungerBackpackPickup" 255 2
-    DropItem "RLDedicatedBackpackPickup" 255 1
+    DropItem "RLBackpack" 255 800
+	// Assembled backpacks
+	// Exotic backpacks
+    DropItem "RLCombatBackpackPickup" 255 50
+    DropItem "RLSpecialistBackpackPickup" 255 50
+    DropItem "RLScroungerBackpackPickup" 255 50
+    DropItem "RLDedicatedBackpackPickup" 255 50
+	// Superior backpacks
+	// Unique backpacks
     DropItem "RLNuclearBackpackPickup" 255 1
+	// Demonic backpacks
+	// Legendary backpacks
 }
 
 actor RLRandomPowerupSpawner : RandomSpawner
@@ -841,13 +843,13 @@ actor RLModPackSpawner : RandomSpawner 16700
     DropItem "RLPowerModItem" 255 180
     DropItem "RLAgilityModItem" 255 260
     DropItem "RLTechnicalModItem" 255 140
-    DropItem "RLNanoModItem" 255 30
+    DropItem "RLNanoModItem" 255 10
     DropItem "RLSniperModItem" 255 30
     DropItem "RLFirestormModItem" 255 30
     DropItem "RLOnyxModItem" 255 10
     DropItem "RLArmorModItem" 255 60
     DropItem "RLBlueprintComputer" 255 20
-    DropItem "RLArtiModItem" 255 1
+//    DropItem "RLArtiModItem" 255 1 // banned for breaking the game, honestly should've expected that from him
 }
 
 actor RLBasicModPackSpawner : RandomSpawner 16701
@@ -894,7 +896,7 @@ actor RLUniqueItemSpawner : RandomSpawner 16727
     DropItem "RLSussGunWorldSpawnPickup" 255 1
     DropItem "RLMIRVLauncherWorldSpawnPickup" 255 1
     DropItem "RLMarathonAssaultRifleWorldSpawnPickup" 255 1
-    DropItem "RLMarathonsShotgunsWorldSpawnPickup" 255 1
+    DropItem "RLMarathonShotgunsWorldSpawnPickup" 255 1
     DropItem "RLChameleonRifleWorldSpawnPickup" 255 1
     DropItem "RLNuclearOnslaughtWorldSpawnPickup" 255 1
     DropItem "RLLuciferCannonWorldSpawnPickup" 255 1

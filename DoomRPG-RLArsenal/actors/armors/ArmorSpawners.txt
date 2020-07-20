@@ -192,19 +192,19 @@ actor RLOnyxArmorSpawner : RandomSpawner 16715
 {
   Tag "Random O-Mod Armor"
     //$category "DRLA Spawners"
-    DropItem "RLOModGreenArmorPickup" 255 14
-    DropItem "RLOModBlueArmorPickup" 255 13
-    DropItem "RLOModRedArmorPickup" 255 12
-    DropItem "RLOModBallisticVestArmorPickup" 255 10
-    DropItem "RLOModBulletProofVestArmorPickup" 255 9
-    DropItem "RLOModDuelistArmorPickup" 255 7
-    DropItem "RLOModEnergyShieldedVestArmorPickup" 255 8
-    DropItem "RLOModGothicArmorPickup" 255 1
-    DropItem "RLOModMedicalArmorPickup" 255 10
-    DropItem "RLOModPhaseshiftArmorPickup" 255 2
-    DropItem "RLOModCyberwarriorArmorPickup" 255 2
-    DropItem "RLOModRepulsionWaveSuitArmorPickup" 255 8
-    DropItem "RLOModSurvivalMediArmorPickup" 255 7
+    DropItem "RLOModGreenArmorPickup" 255 120
+    DropItem "RLOModBlueArmorPickup" 255 110
+    DropItem "RLOModRedArmorPickup" 255 100
+    DropItem "RLOModBallisticVestArmorPickup" 255 80
+    DropItem "RLOModBulletProofVestArmorPickup" 255 50
+    DropItem "RLOModDuelistArmorPickup" 255 60
+    DropItem "RLOModEnergyShieldedVestArmorPickup" 255 40
+    DropItem "RLOModGothicArmorPickup" 255 10
+    DropItem "RLOModMedicalArmorPickup" 255 70
+    DropItem "RLOModPhaseshiftArmorPickup" 255 8
+    DropItem "RLOModCyberwarriorArmorPickup" 255 10
+    DropItem "RLOModRepulsionWaveSuitArmorPickup" 255 50
+    DropItem "RLOModSurvivalMediArmorPickup" 255 40
 }
 
 actor RLUniqueArmorSpawner : RandomSpawner 16716

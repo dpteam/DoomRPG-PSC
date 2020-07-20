@@ -2,7 +2,8 @@
 
 // XP System
 server  float   drpg_scalexp = 0.25;
-server  int     drpg_xp_curve = 250;
+server  float   drpg_scalecomboxp = 0.25;
+server  int     drpg_xp_curve = 25;
 //server  int     drpg_max_player_level = 100;
 server  float   drpg_xp_health_awareness = 0.5;
 server  int     drpg_xp_summon_percent = 100;
@@ -240,7 +241,7 @@ server  int     drpg_debug_drla = 0;
 user    bool    drpg_tips = false;
 server  bool    drpg_regen_movement = false;
 server  int     drpg_move_aug_battery_regen = 0;
-server  int     drpg_autosave = 0;
+server  int     drpg_autosave = 10;
 server  float   drpg_monster_dropdist = 4.0;
 server  bool    drpg_transport_on_new_map = false;
 server  bool    drpg_shotguns = false;
@@ -250,6 +251,10 @@ server  bool    drpg_monster_friendly_teleport_enable = false;
 server  bool    drpg_monster_friendly_teleport_if_no_target = true;
 server  bool    drpg_monster_friendly_teleport_if_no_sight = true;
 server  int     drpg_monster_friendly_teleport_distance = 1;
+user    bool    drpg_shield_sound_empty_enable = true;
+user    bool    drpg_shield_sound_charge_enable = true;
+user    bool    drpg_shield_sound_full_enable = true;
+user    bool    drpg_shield_effect_hit_enable = true;
 
 // Performance
 user    bool    drpg_toaster = false;

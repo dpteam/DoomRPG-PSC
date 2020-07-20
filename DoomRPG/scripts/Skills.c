@@ -160,7 +160,7 @@ Skill RPGGlobal SkillData[MAX_CATEGORIES][MAX_SKILLS] =
     {
         {
             .Name = "Red Aura",
-            .Cost = 100,
+            .Cost = 125,
             .MaxLevel = 6,
             .Use = UseAura,
             .Description =
@@ -175,7 +175,7 @@ Skill RPGGlobal SkillData[MAX_CATEGORIES][MAX_SKILLS] =
         },
         {
             .Name = "Green Aura",
-            .Cost = 100,
+            .Cost = 125,
             .MaxLevel = 5,
             .Use = UseAura,
             .Description =
@@ -200,7 +200,7 @@ Skill RPGGlobal SkillData[MAX_CATEGORIES][MAX_SKILLS] =
         },
         {
             .Name = "Pink Aura",
-            .Cost = 100,
+            .Cost = 150,
             .MaxLevel = 3,
             .Use = UseAura,
             .Description =
@@ -212,7 +212,7 @@ Skill RPGGlobal SkillData[MAX_CATEGORIES][MAX_SKILLS] =
         },
         {
             .Name = "Blue Aura",
-            .Cost = 100,
+            .Cost = 150,
             .MaxLevel = 4,
             .Use = UseAura,
             .Description =
@@ -225,19 +225,19 @@ Skill RPGGlobal SkillData[MAX_CATEGORIES][MAX_SKILLS] =
         },
         {
             .Name = "Purple Aura",
-            .Cost = 100,
+            .Cost = 150,
             .MaxLevel = 3,
             .Use = UseAura,
             .Description =
             {
+                "1.5x HP Regen Amount",
                 "2x HP Regen Amount",
-                "3x HP Regen Amount",
-                "3x HP Regen Amount\n1/2 HP Regen Timer"
+                "2x HP Regen Amount\n1/2 HP Regen Timer"
             }
         },
         {
             .Name = "Orange Aura",
-            .Cost = 100,
+            .Cost = 150,
             .MaxLevel = 3,
             .Use = UseAura,
             .Description =
@@ -249,27 +249,24 @@ Skill RPGGlobal SkillData[MAX_CATEGORIES][MAX_SKILLS] =
         },
         {
             .Name = "Dark Blue Aura",
-            .Cost = 100,
-            .MaxLevel = 6,
+            .Cost = 150,
+            .MaxLevel = 4,
             .Use = UseAura,
             .Description =
             {
                 "Clip Regen",
                 "Clip Regen\nShell Regen",
                 "Clip Regen\nShell Regen\nRocket Regen",
-                "Clip Regen\nShell Regen\nRocket Regen\nCell Regen",
-                "Clip Regen\nShell Regen\nRocket Regen\nCell Regen\n2x Regen Speed",
-                "Clip Regen\nShell Regen\nRocket Regen\nCell Regen\n4x Regen Speed"
+                "Clip Regen\nShell Regen\nRocket Regen\nCell Regen"
             }
         },
         {
             .Name = "Yellow Aura",
-            .Cost = 100,
-            .MaxLevel = 5,
+            .Cost = 150,
+            .MaxLevel = 4,
             .Use = UseAura,
             .Description =
             {
-                "1.25x Drop Chances",
                 "1.5x Drop Chances",
                 "2x Drop Chances",
                 "3x Drop Chances",
@@ -334,7 +331,7 @@ Skill RPGGlobal SkillData[MAX_CATEGORIES][MAX_SKILLS] =
             .Use = SoulSteal,
             .Description =
             {
-                "Kill a target below 25% health, stealing their health and soul"
+                "Kill a target below 25% (+0.25% for each soul up to 50%) health, stealing their health and soul"
             }
         },
         {
@@ -410,7 +407,7 @@ Skill RPGGlobal SkillData[MAX_CATEGORIES][MAX_SKILLS] =
         },
         {
             .Name = "Summon Former Sergeant",
-            .Cost = 75,
+            .Cost = 80,
             .MaxLevel = 1,
             .Use = Summon,
             .Description =
@@ -430,7 +427,7 @@ Skill RPGGlobal SkillData[MAX_CATEGORIES][MAX_SKILLS] =
         },
         {
             .Name = "Summon Imp",
-            .Cost = 75,
+            .Cost = 80,
             .MaxLevel = 1,
             .Use = Summon,
             .Description =
@@ -440,7 +437,7 @@ Skill RPGGlobal SkillData[MAX_CATEGORIES][MAX_SKILLS] =
         },
         {
             .Name = "Summon Demon",
-            .Cost = 75,
+            .Cost = 80,
             .MaxLevel = 1,
             .Use = Summon,
             .Description =
@@ -1671,8 +1668,13 @@ NamedScript Console bool SoulSteal(SkillLevelInfo *SkillLevel, void *Data)
         return false;
     }
 
-    // Refund - If the target is not weak enough (Below 25% Health)
-    if (CalcPercent(GetActorProperty(0, APROP_Health), Stats->HealthMax) > 25)
+    // Refund - If the target is not weak enough (Below 25% (+0.25% for each soul up to 50%) Health)
+    int HealthCap = 25 + (Players(PlayerNum).SoulsCount * 0.25);
+
+    if (HealthCap > 50)
+        HealthCap = 50;
+
+    if (CalcPercent(GetActorProperty(0, APROP_Health), Stats->HealthMax) > HealthCap)
     {
         SetActivator(Players(PlayerNum).TID);
         PrintError("Target is not weak enough");
@@ -1687,7 +1689,7 @@ NamedScript Console bool SoulSteal(SkillLevelInfo *SkillLevel, void *Data)
     RealMonsterTID = ActivatorTID();
     Thing_ChangeTID(0, UniqueMonsterTID);
 
-    int LeechAmount = GetActorProperty(0, APROP_Health);
+    int LeechAmount = GetActorProperty(0, APROP_Health) * (0.05 + (Players(PlayerNum).SoulsCount / 200));
 
     // Kill it
     SetActivator(Players(PlayerNum).TID);
@@ -1711,7 +1713,7 @@ NamedScript Console bool SoulSteal(SkillLevelInfo *SkillLevel, void *Data)
     Thing_ChangeTID(UniqueMonsterTID, RealMonsterTID);
 
     // Heal the user
-    AddHealthDirect(LeechAmount, (Player.HealthMax / 10));
+    AddHealthDirect(LeechAmount, 100);
 
     FadeRange(0, 0, 0, 0.5, 0, 0, 0, 0.0, 0.25);
     ActivatorSound("skills/soulsteal", 127);
@@ -1889,7 +1891,6 @@ NamedScript Console bool Summon(SkillLevelInfo *SkillLevel, void *Data)
     bool Success;
     fixed Radius;
     str Name;
-    int LevelNum = CurrentLevel->LevelNum;
 
     str const Summons[] =
     {
@@ -2279,7 +2280,7 @@ NamedScript Console bool Summon(SkillLevelInfo *SkillLevel, void *Data)
         Delay(4); // We need this initial delay to make sure the ID is valid
         MonsterStatsPtr Stats = &Monsters[GetMonsterID(NewID)];
         int Modifier = Player.Level / 5.0 + (fixed)Player.EnergyTotal / 2.0;
-        Stats->LevelAdd += (LevelNum * 0.3 + Player.Level * 0.7) - Player.Level;
+        Stats->Level *= 1.0 + (fixed)Player.EnergyTotal * 0.001;
         Stats->Strength += Random(0, (Modifier * 1.0));
         Stats->Defense += Random(0, (Modifier * 1.0));
         Stats->Vitality += Random(0, (Modifier * 1.0));
@@ -2520,7 +2521,7 @@ NamedScript Console bool Magnetize(SkillLevelInfo *SkillLevel, void *Data)
     if (CreditCount > 0)
     {
         if (Player.Shield.Accessory && Player.Shield.Accessory->PassiveEffect == SHIELD_PASS_DOSHMAGNET)
-            CreditCount *= 3;
+            CreditCount *= 2;
 
         GiveInventory("DRPGCredits", CreditCount);
         ActivatorSound("credits/pickup", 127);
@@ -3046,15 +3047,15 @@ void CheckSkills()
     {
         Skills[3][4].Cost = 50; // Standart EP cost of skill "Soul Steal"
 
-        Skills[2][0].Cost = 100; // Standart EP cost of Red Aura
-        Skills[2][1].Cost = 100; // Standart EP cost of Green Aura
+        Skills[2][0].Cost = 125; // Standart EP cost of Red Aura
+        Skills[2][1].Cost = 125; // Standart EP cost of Green Aura
         Skills[2][2].Cost = 150; // Standart EP cost of White Aura
-        Skills[2][3].Cost = 100; // Standart EP cost of Pink Aura
-        Skills[2][4].Cost = 100; // Standart EP cost of Blue Aura
-        Skills[2][5].Cost = 100; // Standart EP cost of Purple Aura
-        Skills[2][6].Cost = 100; // Standart EP cost of Orange Aura
-        Skills[2][7].Cost = 100; // Standart EP cost of Dark Blue Aura
-        Skills[2][8].Cost = 100; // Standart EP cost of Yellow Aura
+        Skills[2][3].Cost = 150; // Standart EP cost of Pink Aura
+        Skills[2][4].Cost = 150; // Standart EP cost of Blue Aura
+        Skills[2][5].Cost = 150; // Standart EP cost of Purple Aura
+        Skills[2][6].Cost = 150; // Standart EP cost of Orange Aura
+        Skills[2][7].Cost = 150; // Standart EP cost of Dark Blue Aura
+        Skills[2][8].Cost = 150; // Standart EP cost of Yellow Aura
     }
 
     // Increase the cost of skills associated with "Summoning" depending on the number of summoned allies
@@ -3063,12 +3064,20 @@ void CheckSkills()
         Skills[0][1].Cost = 150 + ((Player.Summons - 1) * 75); // Increase EP cost of skill "Heal Summon"
         Skills[5][2].Cost = 5 + ((Player.Summons - 1) * 5); // Increase EP cost of skill "Rally"
 
-        Skills[4][0].Cost = 60 + (Player.Summons * 30);    // Increase EP cost of Summon Marine
+        if (Player.SkillLevel[4][0].CurrentLevel <= 1)
+        {
+            Skills[4][0].Cost = 60 + (Player.Summons * 60);    // Increase EP cost of Summon Marine
+        }
+        else
+        {
+            Skills[4][0].Cost = 60 + (Player.Summons * 30);    // Increase EP cost of Summon Marine
+        }
+
         Skills[4][1].Cost = 100 + (Player.Summons * 50);   // Increase EP cost of Summon Former Human
-        Skills[4][2].Cost = 75 + (Player.Summons * 30);    // Increase EP cost of Summon Former Sergeant
+        Skills[4][2].Cost = 80 + (Player.Summons * 40);    // Increase EP cost of Summon Former Sergeant
         Skills[4][3].Cost = 175 + (Player.Summons * 75);   // Increase EP cost of Summon Former Commando
-        Skills[4][4].Cost = 75 + (Player.Summons * 30);    // Increase EP cost of Summon Imp
-        Skills[4][5].Cost = 75 + (Player.Summons * 30);    // Increase EP cost of Summon Demon
+        Skills[4][4].Cost = 80 + (Player.Summons * 40);    // Increase EP cost of Summon Imp
+        Skills[4][5].Cost = 80 + (Player.Summons * 40);    // Increase EP cost of Summon Demon
         Skills[4][6].Cost = 175 + (Player.Summons * 75);   // Increase EP cost of Summon Cacodemon
         Skills[4][7].Cost = 200 + (Player.Summons * 100);  // Increase EP cost of Summon Hell Knight
         Skills[4][8].Cost = 300 + (Player.Summons * 150);  // Increase EP cost of Summon Baron of Hell
@@ -3088,10 +3097,10 @@ void CheckSkills()
 
         Skills[4][0].Cost = 60;   // Standart EP cost of Summon Marine
         Skills[4][1].Cost = 100;  // Standart EP cost of Summon Former Human
-        Skills[4][2].Cost = 75;   // Standart EP cost of Summon Former Sergeant
+        Skills[4][2].Cost = 80;   // Standart EP cost of Summon Former Sergeant
         Skills[4][3].Cost = 175;  // Standart EP cost of Summon Former Commando
-        Skills[4][4].Cost = 75;   // Standart EP cost of Summon Imp
-        Skills[4][5].Cost = 75;   // Standart EP cost of Summon Demon
+        Skills[4][4].Cost = 80;   // Standart EP cost of Summon Imp
+        Skills[4][5].Cost = 80;   // Standart EP cost of Summon Demon
         Skills[4][6].Cost = 175;  // Standart EP cost of Summon Cacodemon
         Skills[4][7].Cost = 200;  // Standart EP cost of Summon Hell Knight
         Skills[4][8].Cost = 300;  // Standart EP cost of Summon Baron of Hell
@@ -3141,7 +3150,7 @@ void CheckSkills()
         }
         if ((Player.Level + Player.EnergyTotal) >= 80)
         {
-            Skills[4][0].Description[0] = "Dual Combat Pistols";
+            Skills[4][0].Description[0] = "Uzi";
             Skills[4][0].Description[3] = "Quad Shotgun";
         }
 
@@ -3369,13 +3378,13 @@ void CheckAuras()
         // Blue Aura
         if (Player.Aura.Type[AURA_BLUE].Active)
         {
-            if (Player.SoulBlueCount >= 3 && Player.SoulBlueCount < 9 && Player.Aura.Type[AURA_BLUE].Level < 1)
+            if (Player.SoulBlueCount >= 5 && Player.SoulBlueCount < 15 && Player.Aura.Type[AURA_BLUE].Level < 1)
                 Player.Aura.Type[AURA_BLUE].Level = 1;
             if (Player.SoulBlueCount >= 15 && Player.SoulBlueCount < 30 && Player.Aura.Type[AURA_BLUE].Level < 2)
                 Player.Aura.Type[AURA_BLUE].Level = 2;
             if (Player.SoulBlueCount >= 30 && Player.SoulBlueCount < 50 && Player.Aura.Type[AURA_BLUE].Level < 3)
                 Player.Aura.Type[AURA_BLUE].Level = 3;
-            if (Player.SoulBlueCount >= 40 && Player.Aura.Type[AURA_BLUE].Level < 4)
+            if (Player.SoulBlueCount >= 50 && Player.Aura.Type[AURA_BLUE].Level < 4)
                 Player.Aura.Type[AURA_BLUE].Level = 4;
 
             if (Player.Aura.Type[AURA_BLUE].Level == 1)
@@ -3400,15 +3409,15 @@ void CheckAuras()
 
             if (Player.Aura.Type[AURA_PURPLE].Level == 1)
             {
-                Player.HPAmount *= 2.00;
+                Player.HPAmount *= 1.50;
             }
             if (Player.Aura.Type[AURA_PURPLE].Level == 2)
             {
-                Player.HPAmount *= 3.00;
+                Player.HPAmount *= 2.00;
             }
             if (Player.Aura.Type[AURA_PURPLE].Level >= 3)
             {
-                Player.HPAmount *= 3.00;
+                Player.HPAmount *= 2.00;
                 Player.HPTime /= 2.00;
             }
         }
@@ -3434,31 +3443,23 @@ void CheckAuras()
         // Dark Blue Aura
         if (Player.Aura.Type[AURA_DARKBLUE].Active && (!CurrentLevel->UACBase || ArenaActive || MarinesHostile))
         {
-            if (Player.SoulDarkBlueCount >= 3 && Player.SoulDarkBlueCount < 9 && Player.Aura.Type[AURA_DARKBLUE].Level < 1)
+            if (Player.SoulDarkBlueCount >= 5 && Player.SoulDarkBlueCount < 15 && Player.Aura.Type[AURA_DARKBLUE].Level < 1)
                 Player.Aura.Type[AURA_DARKBLUE].Level = 1;
-            if (Player.SoulDarkBlueCount >= 9 && Player.SoulDarkBlueCount < 15 && Player.Aura.Type[AURA_DARKBLUE].Level < 2)
+            if (Player.SoulDarkBlueCount >= 15 && Player.SoulDarkBlueCount < 30 && Player.Aura.Type[AURA_DARKBLUE].Level < 2)
                 Player.Aura.Type[AURA_DARKBLUE].Level = 2;
-            if (Player.SoulDarkBlueCount >= 15 && Player.SoulDarkBlueCount < 30 && Player.Aura.Type[AURA_DARKBLUE].Level < 3)
+            if (Player.SoulDarkBlueCount >= 30 && Player.SoulDarkBlueCount < 50 && Player.Aura.Type[AURA_DARKBLUE].Level < 3)
                 Player.Aura.Type[AURA_DARKBLUE].Level = 3;
-            if (Player.SoulDarkBlueCount >= 30 && Player.SoulDarkBlueCount < 40 && Player.Aura.Type[AURA_DARKBLUE].Level < 4)
+            if (Player.SoulDarkBlueCount >= 50 && Player.Aura.Type[AURA_DARKBLUE].Level < 4)
                 Player.Aura.Type[AURA_DARKBLUE].Level = 4;
-            if (Player.SoulDarkBlueCount >= 40 && Player.SoulDarkBlueCount < 50 && Player.Aura.Type[AURA_DARKBLUE].Level < 5)
-                Player.Aura.Type[AURA_DARKBLUE].Level = 5;
-            if (Player.SoulDarkBlueCount >= 50 && Player.Aura.Type[AURA_DARKBLUE].Level < 6)
-                Player.Aura.Type[AURA_DARKBLUE].Level = 6;
 
-            if (Player.Aura.Type[AURA_DARKBLUE].Level == 5)
-                AmmoRegenMult = 2;
-            if (Player.Aura.Type[AURA_DARKBLUE].Level >= 6)
-                AmmoRegenMult = 4;
             if (Player.Aura.Type[AURA_DARKBLUE].Level >= 1)
-                if ((Timer() % 25) == 0)
+                if ((Timer() % (10000 / (400 + (Player.Aura.Type[AURA_DARKBLUE].Level - 1) * 100))) == 0)
                     GiveInventory("Clip", AmmoRegenMult);
             if (Player.Aura.Type[AURA_DARKBLUE].Level >= 2)
-                if ((Timer() % (35 * 3)) == 1)
+                if ((Timer() % (10500 / (100 + (Player.Aura.Type[AURA_DARKBLUE].Level - 2) * 40))) == 1)
                     GiveInventory("Shell", AmmoRegenMult);
             if (Player.Aura.Type[AURA_DARKBLUE].Level >= 3)
-                if ((Timer() % (35 * 20)) == 0)
+                if ((Timer() % (35 * 15)) == 0)
                     GiveInventory("RocketAmmo", AmmoRegenMult);
             if (Player.Aura.Type[AURA_DARKBLUE].Level >= 4)
                 if ((Timer() % (35 / 2)) == 0)
@@ -3468,26 +3469,22 @@ void CheckAuras()
         // Yellow Aura
         if (Player.Aura.Type[AURA_YELLOW].Active && (!CurrentLevel->UACBase || ArenaActive || MarinesHostile))
         {
-            if (Player.SoulYellowCount >= 5 && Player.SoulYellowCount < 10 && Player.Aura.Type[AURA_YELLOW].Level < 1)
+            if (Player.SoulYellowCount >= 5 && Player.SoulYellowCount < 15 && Player.Aura.Type[AURA_YELLOW].Level < 1)
                 Player.Aura.Type[AURA_YELLOW].Level = 1;
-            if (Player.SoulYellowCount >= 10 && Player.SoulYellowCount < 20 && Player.Aura.Type[AURA_YELLOW].Level < 2)
+            if (Player.SoulYellowCount >= 15 && Player.SoulYellowCount < 30 && Player.Aura.Type[AURA_YELLOW].Level < 2)
                 Player.Aura.Type[AURA_YELLOW].Level = 2;
-            if (Player.SoulYellowCount >= 20 && Player.SoulYellowCount < 30 && Player.Aura.Type[AURA_YELLOW].Level < 3)
+            if (Player.SoulYellowCount >= 30 && Player.SoulYellowCount < 50 && Player.Aura.Type[AURA_YELLOW].Level < 3)
                 Player.Aura.Type[AURA_YELLOW].Level = 3;
-            if (Player.SoulYellowCount >= 30 && Player.SoulYellowCount < 50 && Player.Aura.Type[AURA_YELLOW].Level < 4)
+            if (Player.SoulYellowCount >= 50 && Player.Aura.Type[AURA_YELLOW].Level < 4)
                 Player.Aura.Type[AURA_YELLOW].Level = 4;
-            if (Player.SoulYellowCount >= 50 && Player.Aura.Type[AURA_YELLOW].Level < 5)
-                Player.Aura.Type[AURA_YELLOW].Level = 5;
 
             if (Player.Aura.Type[AURA_YELLOW].Level == 1)
-                LuckMult = 1.25;
-            if (Player.Aura.Type[AURA_YELLOW].Level == 2)
                 LuckMult = 1.5;
-            if (Player.Aura.Type[AURA_YELLOW].Level == 3)
+            if (Player.Aura.Type[AURA_YELLOW].Level == 2)
                 LuckMult = 2.0;
-            if (Player.Aura.Type[AURA_YELLOW].Level == 4)
+            if (Player.Aura.Type[AURA_YELLOW].Level == 3)
                 LuckMult = 3.0;
-            if (Player.Aura.Type[AURA_YELLOW].Level >= 5)
+            if (Player.Aura.Type[AURA_YELLOW].Level >= 4)
                 LuckMult = 4.0;
 
             Player.HealthChance *= LuckMult;

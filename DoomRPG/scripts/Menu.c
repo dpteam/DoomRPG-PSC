@@ -721,7 +721,7 @@ void DrawStatsMenu()
         SetFont("SMALLFONT");
         if (Player.LuckTotal > 0)
         {
-            HudMessage("\CfCredit\C- Drop Rate: \Cf+%d%%", (Player.LuckTotal / 2));
+            HudMessage("\CfCredit\C- Drop Rate: \Cf+%d%%", Player.LuckTotal);
             EndHudMessage(HUDMSG_PLAIN, 0, "White", 230.1, 292.0, 0.05);
         }
         if (Player.HealthDrop)
@@ -853,11 +853,8 @@ void DrawStatsMenu()
 
             // Bar
             long int CurrentXP = *StatXP[i];
-            long int LastXP = StatTable[*Stats[i] - 1];
             long int NextXP = StatTable[*Stats[i]];
-            if (*Stats[i] == 0)
-                LastXP = 0;
-            long int StatPercent = ((CurrentXP - LastXP) * 100) / (NextXP - LastXP);
+            long int StatPercent = (CurrentXP * 100) / NextXP;
             if (*Stats[i] >= NATURALCAP)
                 StatPercent = 100;
             if (StatPercent > 100)

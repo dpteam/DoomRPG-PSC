@@ -119,8 +119,6 @@ NamedScript void AddXP(int PlayerNum, long int XP, long int Rank)
     {
         if (Players(PlayerNum).Aura.Time > 0)
             Players(PlayerNum).Combo++;
-        if (Player.Aura.Type[AURA_WHITE].Level >= 3 && XP > 0 && Rank > 0)
-            Players(PlayerNum).BonusGained += XP + Rank;
     }
 }
 
@@ -170,31 +168,31 @@ NamedScript KeyBind void UseMedkit()
 
 void InitXPTable()
 {
-    XPTable[0] = 200l + XPCurve;
+    XPTable[0] = 475l + XPCurve;
     for (int i = 1; i < MAX_LEVEL; i++)
-        XPTable[i] = (long int)((((long long int)XPTable[i - 1] / 2000ll) + 1ll) * (200ll + (long long int)XPCurve) + (long long int)XPTable[i - 1]);
+        XPTable[i] = (((long int)(((long long int)XPTable[i - 1] * (long fixed)(1.0 + i / (i * 8.0))) + ((i * (long long int)XPCurve) * (long fixed)(1.0 + i / (101.0 - i))))) + 50) / 100 * 100;
 }
 
 void InitStatXPTable()
 {
     StatTable = &RealStatTable[101];
 
-    StatTable[0] = 200 + XPCurve;
+    StatTable[0] = 475 + XPCurve;
     for (int i = 1; i < MAX_LEVEL * 2; i++)
-        StatTable[i] = (long int)((((long long int)StatTable[i - 1] / 2000ll) + 1l) * (200ll + (long long int)XPCurve) + (long long int)StatTable[i - 1]);
+        StatTable[i] = (((long int)(((long long int)StatTable[i - 1] * (long fixed)(1.0 + i / (i * 8.0))) + ((i * (long long int)XPCurve) * (long fixed)(1.0 + i / (201.0 - i * 2))))) + 50) / 100 * 100;
 }
 
 void InitNegativeStatXPTable()
 {
     for (int i = 1; i <= MAX_LEVEL + 1; i++)
-        StatTable[-i] = (long int)((((long long int)StatTable[i - 1] / 2000ll) + 1ll) * (200ll + (long long int)XPCurve) + (long long int)StatTable[i - 1] * -1ll);
+        StatTable[-i] = (((long int)(((long long int)StatTable[i - 1] * (long fixed)(1.0 + i / (i * 8.0)) * -1ll) + ((i * (long long int)XPCurve) * (long fixed)(1.0 + i / (201.0 - i * 2))))) + 50) / 100 * 100;
 }
 
 void InitRankTable()
 {
-    RankTable[0] = 7500 + (XPCurve * 50);
+    RankTable[0] = 5000 + (XPCurve * 600);
     for (int i = 1; i < MAX_RANK; i++)
-        RankTable[i] = (long int)((((long long int)RankTable[i - 1] / 20000ll) + 1ll) * (7500ll + ((long long int)XPCurve * 50ll)) + (long long int)RankTable[i - 1]);
+        RankTable[i] = (((long int)((long long int)RankTable[i - 1] + ((i * (long long int)XPCurve * 600ll) * (1 + i)))) + 500) / 1000 * 1000;
 }
 
 void CheckCombo()
@@ -219,6 +217,8 @@ void CheckCombo()
     if (Player.ComboTimer == COMBO_STOP || (Player.Aura.Type[AURA_WHITE].Active && Player.Aura.Type[AURA_WHITE].Level >= 2 && Timer() == 4))
     {
         long int ComboBonus = ((Player.XPGained + Player.RankGained) / 100 * Player.Combo);
+        // Don't forget to remove stupid fixed-point avoidance code after migration (if it happens)
+        ComboBonus = (ComboBonus * (int)(GetCVarFixed("drpg_scalecomboxp") * 100)) / 100;
 
         // You cannot gain Negative XP, but you can lose Rank
         if (Player.XPGained < 0) Player.XPGained = 0;
@@ -266,6 +266,9 @@ void CheckLevel()
     {
         int Modules = (int)((((fixed)Player.Level + 1) * 100.0) * GetCVarFixed("drpg_module_levelfactor"));
 
+        // Take XP
+        Player.XP -= XPTable[Player.Level];
+
         // Level Up
         Player.Level++;
         GiveInventory("DRPGModule", Modules);
@@ -291,6 +294,8 @@ void CheckLevel()
 // Keeps current Rank updated
 void CheckRank()
 {
+    bool RankPromotion;
+
     Player.RankString = Ranks[Player.RankLevel];
 
     if (Player.RankLevel < MAX_RANK)
@@ -303,19 +308,31 @@ void CheckRank()
     }
 
     // Rank Demotion
-    if (Player.RankLevel > 0 && Player.Rank < RankTable[Player.RankLevel - 1])
+    if (!RankPromotion && Player.RankLevel > 0 && Player.Rank < 0)
     {
+        // Take Rank Level
         Player.RankLevel--;
+
+        // Take negative Rank
+        Player.Rank = RankTable[Player.RankLevel] + Player.Rank;
+
         FadeRange(255, 0, 64, 0.25, 255, 0, 64, 0, 2.0);
 
         PrintMessage(StrParam("\CaYou have been demoted to rank %d: %S", Player.RankLevel, LongRanks[Player.RankLevel]), RANKUP_ID, 32);
     }
+
+    // Necessary check the status Rank level
+    if (RankPromotion && Player.Rank > 0) RankPromotion = false;
 
     // Rank Promotion
     if (Player.Rank >= RankTable[Player.RankLevel] && Player.RankLevel < MAX_RANK)
     {
         int NewItems;
 
+        // Take Rank
+        Player.Rank -= RankTable[Player.RankLevel];
+
+        // Rank Up
         Player.RankLevel++;
 
         ActivatorSound("misc/rankup", 96);
@@ -334,6 +351,8 @@ void CheckRank()
         // Tells you if you've unlocked new items in the Shop
         if (NewItems > 0)
             PrintMessage(StrParam("\CcYou have unlocked \Cf%d\Cc new items in the shop", NewItems), RANKUP_ID + 1, 96);
+
+        RankPromotion = true;
     }
 }
 
@@ -395,7 +414,7 @@ void CheckStats()
     Player.Aura.Range = Player.EnergyTotal * 16;
     Player.ToxicityRegenBonus = Player.RegenerationTotal / 10;
     Player.Speed = 1.0 + 0.25 * ((fixed)Player.AgilityTotal / 100);
-    Player.JumpHeight = 8.0 + (8.0 * ((fixed)Player.AgilityTotal / 400));
+    Player.JumpHeight = 8.0;
     Player.WeaponSpeed = Player.AgilityTotal / 2;
     SetAmmoCapacity("Clip", 60 + Player.CapacityTotal * 10);
     SetAmmoCapacity("Shell", 20 + Player.CapacityTotal * 2);
@@ -417,57 +436,65 @@ void CheckStats()
     // Per-stat leveling
     if (GetCVar("drpg_levelup_natural"))
     {
-        if (Player.StrengthXP >= StatTable[Player.StrengthNat] && Player.StrengthXP < (StatTable[Player.StrengthNat] * (2 + GetCVarFixed("drpg_strength_scalexp"))) && Player.StrengthNat < NATURALCAP)
+        if (Player.StrengthXP >= StatTable[Player.StrengthNat] && Player.StrengthNat < NATURALCAP)
         {
+            Player.StrengthXP -= StatTable[Player.StrengthNat];
             Player.StrengthNat++;
             ActivatorSound("misc/statup", 127);
             DrawStatUp(STAT_STRENGTH);
         }
 
-        if (Player.DefenseXP >= StatTable[Player.DefenseNat] && Player.DefenseXP < (StatTable[Player.DefenseNat] * (2 + GetCVarFixed("drpg_defense_scalexp"))) && Player.DefenseNat < NATURALCAP)
+        if (Player.DefenseXP >= StatTable[Player.DefenseNat] && Player.DefenseNat < NATURALCAP)
         {
+            Player.DefenseXP -= StatTable[Player.DefenseNat];
             Player.DefenseNat++;
             ActivatorSound("misc/statup", 127);
             DrawStatUp(STAT_DEFENSE);
         }
 
-        if (Player.VitalityXP >= StatTable[Player.VitalityNat] && Player.VitalityXP < (StatTable[Player.VitalityNat] * (2 + GetCVarFixed("drpg_vitality_scalexp"))) && Player.VitalityNat < NATURALCAP)
+        if (Player.VitalityXP >= StatTable[Player.VitalityNat] && Player.VitalityNat < NATURALCAP)
         {
+            Player.VitalityXP -= StatTable[Player.VitalityNat];
             Player.VitalityNat++;
             ActivatorSound("misc/statup", 127);
             DrawStatUp(STAT_VITALITY);
         }
 
-        if (Player.EnergyXP >= StatTable[Player.EnergyNat] && Player.EnergyXP < (StatTable[Player.EnergyNat] * (2 + GetCVarFixed("drpg_energy_scalexp"))) && Player.EnergyNat < NATURALCAP)
+        if (Player.EnergyXP >= StatTable[Player.EnergyNat] && Player.EnergyNat < NATURALCAP)
         {
+            Player.EnergyXP -= StatTable[Player.EnergyNat];
             Player.EnergyNat++;
             ActivatorSound("misc/statup", 127);
             DrawStatUp(STAT_ENERGY);
         }
 
-        if (Player.RegenerationXP >= StatTable[Player.RegenerationNat] && Player.RegenerationXP < (StatTable[Player.RegenerationNat] * (2 + GetCVarFixed("drpg_regeneration_scalexp"))) && Player.RegenerationNat < NATURALCAP)
+        if (Player.RegenerationXP >= StatTable[Player.RegenerationNat] && Player.RegenerationNat < NATURALCAP)
         {
+            Player.RegenerationXP -= StatTable[Player.RegenerationNat];
             Player.RegenerationNat++;
             ActivatorSound("misc/statup", 127);
             DrawStatUp(STAT_REGENERATION);
         }
 
-        if (Player.AgilityXP >= StatTable[Player.AgilityNat] && Player.AgilityXP < (StatTable[Player.AgilityNat] * (2 + GetCVarFixed("drpg_agility_scalexp"))) && Player.AgilityNat < NATURALCAP)
+        if (Player.AgilityXP >= StatTable[Player.AgilityNat] && Player.AgilityNat < NATURALCAP)
         {
+            Player.AgilityXP -= StatTable[Player.AgilityNat];
             Player.AgilityNat++;
             ActivatorSound("misc/statup", 127);
             DrawStatUp(STAT_AGILITY);
         }
 
-        if (Player.CapacityXP >= StatTable[Player.CapacityNat] && Player.CapacityXP < (StatTable[Player.CapacityNat] * (2 + GetCVarFixed("drpg_capacity_scalexp"))) && Player.CapacityNat < NATURALCAP)
+        if (Player.CapacityXP >= StatTable[Player.CapacityNat] && Player.CapacityNat < NATURALCAP)
         {
+            Player.CapacityXP -= StatTable[Player.CapacityNat];
             Player.CapacityNat++;
             ActivatorSound("misc/statup", 127);
             DrawStatUp(STAT_CAPACITY);
         }
 
-        if (Player.LuckXP >= StatTable[Player.LuckNat] && Player.LuckXP < (StatTable[Player.LuckNat] * (2 + GetCVarFixed("drpg_luck_scalexp"))) && Player.LuckNat < NATURALCAP)
+        if (Player.LuckXP >= StatTable[Player.LuckNat] && Player.LuckNat < NATURALCAP)
         {
+            Player.LuckXP -= StatTable[Player.LuckNat];
             Player.LuckNat++;
             ActivatorSound("misc/statup", 127);
             DrawStatUp(STAT_LUCK);
@@ -544,7 +571,7 @@ void CheckStats()
     {
         if (Player.ActualHealth <= Player.HealthMax)
         {
-            int HealthMax = Player.VitalityTotal * 10;
+            int HealthMax = 50 + ((Player.Level + 1) / 2) * 5 + Player.VitalityTotal * 5;
             fixed Ratio = ((fixed)Player.ActualHealth + 0.5) / ((fixed)Player.PrevVitality * 10);
             Player.ActualHealth = Ratio * HealthMax;
         }
@@ -557,7 +584,7 @@ void CheckStats()
     {
         if (Player.EP <= Player.EPMax)
         {
-            int EPMax = Player.EnergyTotal * 10;
+            int EPMax = 50 + ((Player.Level + 1) / 2) * 5 + Player.EnergyTotal * 5;
             fixed Ratio = ((fixed)Player.EP + 0.5) / ((fixed)Player.PrevEnergy * 10);
             Player.EP = Ratio * EPMax;
         }
@@ -624,8 +651,8 @@ void CheckRegen()
         Player.EPTime = 35;
 
     // Determine the max regen amounts
-    Player.HPAmount = 1 + Player.VitalityTotal / 50;
-    Player.EPAmount = 1 + Player.EnergyTotal / 50;
+    Player.HPAmount = 1 + Player.RegenerationTotal / 25 + Player.VitalityTotal / 25;
+    Player.EPAmount = 1 + Player.RegenerationTotal / 25 + Player.EnergyTotal / 25;
 }
 
 // Regeneration
@@ -1035,7 +1062,7 @@ void CheckStimImmunity()
         Player.StimImmunity = 100;
 
     if (!CurrentLevel->UACBase || ArenaActive || MarinesHostile)
-        if ((Timer() % (35 * GameSkill())) == 0 && Player.StimImmunity > 0)
+        if ((Timer() % (35 * 6)) == 0 && Player.StimImmunity > 0)
             Player.StimImmunity--;
 }
 
@@ -1180,7 +1207,7 @@ void StatusDamage(int Amount, fixed Chance, bool Critical)
     if (RandomFixed(0.0, 100.0) >= Chance) return;
 
     // Calculate the intensity
-    Intensity = ((LevelNum / 6.0) / (1.0 + (Player.VitalityTotal / 10.0) + (Player.Level / 15.0)));
+    Intensity = ((LevelNum / 8.0) / (1.0 + (Player.VitalityTotal / 10.0) + (Player.Level / 10.0)));
     if (Intensity < 1)
         Intensity = 1;
     if (Intensity > 5)
