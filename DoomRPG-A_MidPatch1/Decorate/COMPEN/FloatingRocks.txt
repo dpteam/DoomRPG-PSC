@@ -1,0 +1,198 @@
+ACTOR FloatingRock1 12051
+{
+	Radius 16
+	Height 24
+	-SOLID
+	+NOGRAVITY
+	+FLOAT
+	+FLOATBOB
+	//$Category "World"
+	//$Title "Floating Rock 1"
+	States
+	{
+	Spawn:
+		UNRL A -1
+		Stop
+	}
+}
+
+ACTOR FloatingRock2 12052
+{
+	Radius 16
+	Height 24
+	-SOLID
+	+NOGRAVITY
+	+FLOAT
+	+FLOATBOB
+	//$Category "World"
+	//$Title "Floating Rock 2"
+	States
+	{
+	Spawn:
+		UNRL B -1
+		Stop
+	}
+}
+
+ACTOR FloatingRock3 12053
+{
+	Radius 16
+	Height 24
+	-SOLID
+	+NOGRAVITY
+	+FLOAT
+	+FLOATBOB
+	//$Category "World"
+	//$Title "Floating Rock 3"
+	States
+	{
+	Spawn:
+		UNRL C -1
+		Stop
+	}
+}
+
+ACTOR FloatingRock4 12054
+{
+	Radius 16
+	Height 24
+	-SOLID
+	+NOGRAVITY
+	+FLOAT
+	+FLOATBOB
+	//$Category "World"
+	//$Title "Floating Rock 4"
+	States
+	{
+	Spawn:
+		UNRL D -1
+		Stop
+	}
+}
+
+ACTOR FloatingRock5 12055
+{
+	Radius 16
+	Height 24
+	-SOLID
+	+NOGRAVITY
+	+FLOAT
+	+FLOATBOB
+	//$Category "World"
+	//$Title "Floating Rock 5"
+	States
+	{
+	Spawn:
+		UNRL E -1
+		Stop
+	}
+}
+
+ACTOR FloatingRock6 12056
+{
+	Radius 16
+	Height 24
+	-SOLID
+	+NOGRAVITY
+	+FLOAT
+	+FLOATBOB
+	//$Category "World"
+	//$Title "Floating Rock 6"
+	States
+	{
+	Spawn:
+		UNRL F -1
+		Stop
+	}
+}
+
+ACTOR FloatingRock7 12057
+{
+	Radius 16
+	Height 24
+	-SOLID
+	+NOGRAVITY
+	+FLOAT
+	+FLOATBOB
+	//$Category "World"
+	//$Title "Floating Rock 7"
+	States
+	{
+	Spawn:
+		UNRL G -1
+		Stop
+	}
+}
+
+ACTOR FloatingRock8 12058
+{
+	Radius 16
+	Height 24
+	-SOLID
+	+NOGRAVITY
+	+FLOAT
+	+FLOATBOB
+	//$Category "World"
+	//$Title "Floating Rock 8"
+	States
+	{
+	Spawn:
+		UNRL H -1
+		Stop
+	}
+}
+
+ACTOR FloatingRock9 12059
+{
+	Radius 16
+	Height 24
+	-SOLID
+	+NOGRAVITY
+	+FLOAT
+	+FLOATBOB
+	//$Category "World"
+	//$Title "Floating Rock 9"
+	States
+	{
+	Spawn:
+		UNRL I -1
+		Stop
+	}
+}
+
+ACTOR FloatingRock10 12060
+{
+	Radius 16
+	Height 24
+	-SOLID
+	+NOGRAVITY
+	+FLOAT
+	+FLOATBOB
+	//$Category "World"
+	//$Title "Floating Rock 10"
+	States
+	{
+	Spawn:
+		UNRL J -1
+		Stop
+	}
+}
+
+ACTOR FloatingRock11 12061
+{
+	Radius 16
+	Height 24
+	-SOLID
+	+NOGRAVITY
+	+FLOAT
+	+FLOATBOB
+	//$Category "World"
+	//$Title "Floating Rock 11"
+	States
+	{
+	Spawn:
+		UNRL K -1
+		Stop
+	}
+}
+

@@ -1,0 +1,53 @@
+ACTOR AllHellFlyingBaron 18562 // 3003
+{
+	Health 1000
+	Radius 24
+	Height 64
+	Mass 1000
+	Speed 8
+	PainChance 50
+	BloodColor darkolivegreen
+	Monster
+	+FLOORCLIP
+	+BOSSDEATH
+	+FLOAT 
+	+NOGRAVITY
+	SeeSound "baron/sight"
+	PainSound "baron/pain"
+	DeathSound "baron/death"
+	ActiveSound "baron/active"
+	Obituary "$OB_BARON"
+	HitObituary "$OB_BARONHIT"
+	States
+	{
+	Spawn:
+		ALH4 AB 10 A_Look 
+		Loop
+	See:
+		ALH4 AABBCCDD 3 A_Chase
+		Loop
+	Melee:
+	Missile:
+		ALH4 EF 8 A_FaceTarget
+		ALH4 G 8 A_BruisAttack
+		Goto See
+	Pain:
+		ALH4 H  2
+		ALH4 H  2 A_Pain
+		Goto See
+	Death:
+		ALH4 I  8
+		ALH4 J  8 A_Scream
+		ALH4 K  8
+		ALH4 L  8 A_NoBlocking
+		ALH4 M  8
+		ALH4 N  7
+		ALH4 N  1 A_BossDeath
+		ALH4 O -1 A_SetFloorClip   
+		Stop
+	Raise:
+		ALH4 O 8 A_UnSetFloorClip
+		ALH4 NMLKJI  8
+		Goto See
+	}
+}

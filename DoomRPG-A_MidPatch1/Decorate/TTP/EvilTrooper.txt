@@ -1,0 +1,42 @@
+ACTOR TTPEvilTrooper 18507
+{
+	Health 200
+	Radius 20
+	Height 56
+	Speed 10
+	PainChance 40
+	ReactionTime 20
+	Mass 150
+	Monster
+	+FLOORCLIP
+	SeeSound "grunt/sight"
+	PainSound "grunt/pain"
+	DeathSound "grunt/death"
+	ActiveSound "grunt/active"
+	AttackSound "spider/attack"
+	Obituary "%o was killed by the Evil Trooper"
+	Dropitem "Clip"
+	States
+	{
+	Spawn:
+		TTP0 AB 10 A_Look
+		Loop
+	See:
+		TTP0 AABBCCDD 3 A_Chase
+		Loop
+	Missile:
+		TTP0 HG 4 BRIGHT A_SPosAttackUseAtkSound
+		TTP0 G 1 A_CPosRefire
+		Goto Missile
+	Pain:
+		TTP0 P 3
+		TTP0 P 3 A_Pain
+		Goto See
+	Death:
+		TTP0 J 20 A_Scream
+		TTP0 K 10 A_NoBlocking
+		TTP0 LMN 10
+		TTP0 O -1
+		Stop
+	}
+}

@@ -1,0 +1,7 @@
+include "xlat/doom.txt"
+
+274 = WALK,    		Light_RaiseByValue(tag, 15)
+275 = WALK,    		Light_LowerByValue(tag, 15)
+
+sector 18 = Damage_InstantDeath;
+sector 19 = Sector_Heal;

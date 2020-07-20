@@ -1,0 +1,172 @@
+ACTOR AllHellWingedDemon1 18565 // 23
+{
+	Health 1000
+	Radius 38
+	Height 64
+	Mass 5000
+	Speed 12
+	PainChance 50
+	Monster
+	+FLOORCLIP
+	+FLOAT 
+	+NOGRAVITY
+	SeeSound "allhell/wingdemon0"
+	PainSound "baron/pain"
+	DeathSound "allhell/wingdemon3"
+	ActiveSound "allhell/wingdemact"
+	Obituary "%o was destroyed by a Winged Demon"
+	States
+	{
+	Spawn:
+		ALH7 AB 10 A_Look 
+		Loop
+	See:
+		ALH7 AABBCC 3 A_Chase
+		TNT1 A 0 A_PlaySound ("allhell/wingdemon5")
+		ALH7 DDCCBB 3 A_Chase
+		Loop
+	Missile:
+		ALH7 EF 8 BRIGHT A_FaceTarget
+		ALH7 G 8 BRIGHT A_CustomMissile("AllHellWingedDemonAtk", 32.0, 0.0, 0, 0)
+		Goto See
+	Pain:
+		ALH7 H  2
+		ALH7 H  2 A_Pain
+		Goto See
+	Death:
+		ALH7 I  8
+		ALH7 J  8 A_Scream
+		ALH7 K  8
+		ALH7 L  8 A_NoBlocking
+		ALH7 M  8
+		ALH7 NOPQR 8
+		ALH7 S 16
+		ALH7 T -1 A_SetFloorClip   
+		Stop
+	Raise:
+		ALH7 T 8 A_UnSetFloorClip
+		ALH7 SRQPONMLKJI  6
+		Goto See
+	}
+}
+
+ACTOR AllHellWingedDemonAtk
+{
+	Radius 6
+	Height 8
+	Speed 20
+	Damage 8
+	Projectile 
+	+RANDOMIZE
+	RenderStyle Add
+	Alpha 1
+	SeeSound "allhell/wingdemon4"
+	DeathSound "fatso/shotx"
+	States
+	{
+	Spawn:
+		ALH7 UV 4 BRIGHT
+		Loop
+	Death:
+		ALH7 W 8 BRIGHT
+		ALH7 X 6 BRIGHT
+		ALH7 Y 5 BRIGHT
+		Stop
+	}
+}
+
+ACTOR AllHellWingedDemon2 18566 // 69
+{
+	Health 2500
+	Radius 38
+	Height 64
+	Mass 5000
+	Speed 12
+	PainChance 50
+	Monster
+	+FLOORCLIP
+	+FLOAT 
+	+NOGRAVITY
+	SeeSound "allhell/wingdemon0"
+	PainSound "baron/pain"
+	DeathSound "allhell/wingdemon3"
+	ActiveSound "allhell/wingdemact"
+	Obituary "%o was destroyed by a Winged Demon"
+	States
+	{
+	Spawn:
+		ALHA AB 10 A_Look 
+		Loop
+	See:
+		ALHA AABBCC 3 A_Chase
+		TNT1 A 0 A_PlaySound ("allhell/wingdemon5")
+		ALHA DDCCBB 3 A_Chase
+		Loop
+	Missile:
+		ALHA EF 8 BRIGHT A_FaceTarget
+		ALHA G 8 BRIGHT A_CustomMissile("AllHellWingedDemonAtk", 32.0, 0.0, 0, 0)
+		Goto See
+	Pain:
+		ALHA H  2
+		ALHA H  2 A_Pain
+		Goto See
+	Death:
+		ALHA I  8
+		ALHA J  8 A_Scream
+		ALHA K  8
+		ALHA L  8 A_NoBlocking
+		ALHA M  8
+		ALHA NOPQR 8
+		ALHA S 16
+		ALHA T -1 A_SetFloorClip   
+		Stop
+	}
+}
+
+ACTOR AllHellWingedDemon3 18567 // 72
+{
+	Health 5000
+	Radius 38
+	Height 64
+	Mass 5000
+	Speed 12
+	PainChance 50
+	Monster
+	+FLOORCLIP
+	+FLOAT 
+	+NOGRAVITY
+	SeeSound "allhell/wingdemon0"
+	PainSound "baron/pain"
+	DeathSound "allhell/wingdemon3"
+	ActiveSound "allhell/wingdemact"
+	Obituary "%o was destroyed by a Winged Demon"
+	States
+	{
+	Spawn:
+		ALHB AB 10 A_Look 
+		Loop
+	See:
+		ALHB AABBCC 3 A_Chase
+		TNT1 A 0 A_PlaySound ("allhell/wingdemon5")
+		ALHB DDCCBB 3 A_Chase
+		Loop
+	Missile:
+		ALHB EF 8 BRIGHT A_FaceTarget
+		ALHB G 8 BRIGHT A_CustomMissile("AllHellWingedDemonAtk", 32.0, 0.0, 0, 0)
+		Goto See
+	Pain:
+		ALHB H  2
+		ALHB H  2 A_Pain
+		Goto See
+	Death:
+		ALHB I  8
+		ALHB J  8 A_Scream
+		ALHB K  8
+		ALHB L  8 A_NoBlocking
+		ALHB M  8
+		ALHB NOPQR 8
+		ALHB S 16
+		ALHB T -1 A_SetFloorClip   
+		Stop
+	}
+}

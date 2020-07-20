@@ -1,0 +1,58 @@
+ACTOR AllHellArachnotron 18561 //68
+{
+	Health 800
+	Radius 64
+	Height 64
+	Mass 600
+	Speed 12
+	PainChance 128
+	Monster
+	+FLOORCLIP
+	+BOSSDEATH
+	+DONTRIP
+	SeeSound "baby/sight"
+	PainSound "baby/pain"
+	DeathSound "baby/death"
+	ActiveSound "baby/active"
+	AttackSound "allhell/streetsweeper"
+	Obituary "%o was blasted by a mounted Arachnotron"
+	DropItem "AllHellTwoFace"
+	States
+	{
+	Spawn:
+		ALH3 AB 10 A_Look
+		Loop
+	See:
+		ALH3 A 20
+		ALH3 A 3 A_BabyMetal
+		ALH3 ABBCC 3 A_Chase
+		ALH3 D 3 A_BabyMetal
+		ALH3 DEEFF 3 A_Chase
+		Goto See+1
+	Missile:
+		ALH3 A 20 BRIGHT A_FaceTarget
+		TNT1 A 0 BRIGHT A_SPosAttackUseAtkSound
+		ALH3 G 4 BRIGHT A_BspiAttack
+		ALH3 H 4 BRIGHT
+		ALH3 H 1 BRIGHT A_SpidRefire
+		Goto Missile+1
+	Pain:
+		ALH3 I 3
+		ALH3 I 3 A_Pain
+		Goto See+1
+	Death:
+		BSPI J 20 A_Scream
+		BSPI K 7 A_NoBlocking
+		BSPI LMNO 7
+		BSPI P -1 A_BossDeath
+		Stop
+    Raise:
+		BSPI P 5
+		BSPI ONMLK 5
+		BSPI J 5
+		TNT1 A 0 A_UnsetSolid
+		TNT1 A 0 A_SpawnItemEx("Arachnotron",0,0,0)
+		TNT1 A 0
+		Stop
+	}
+}

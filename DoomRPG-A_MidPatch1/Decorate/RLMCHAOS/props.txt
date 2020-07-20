@@ -1,0 +1,29 @@
+
+
+ACTOR realmofchaosprop1 18552 // 34
+{
+	Radius 20
+	Height 14
+	ProjectilePassHeight -16
+	States
+	{
+	Spawn:
+		RLM0 A -1 BRIGHT
+		Stop
+	}
+}
+
+ACTOR realmofchaosprop2 18553 // 79
+{
+	Radius 20
+	Height 4
+	+NOBLOCKMAP
+	+MOVEWITHSECTOR
+	States
+	{
+	Spawn:
+		RLM0 B -1
+		Stop
+	}
+}
+

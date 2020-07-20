@@ -1,0 +1,57 @@
+ACTOR Obituary_HitechGuy 18503
+{
+	Health 60
+	Radius 20
+	Height 56
+	Mass 100
+	Speed 6
+	PainChance 200
+	ReactionTime 6
+	Monster
+	+FLOORCLIP
+	SeeSound "obituary/hitechguy/sight"
+	PainSound "wolfss/pain"
+	DeathSound "obituary/hitechguy/death"
+	ActiveSound "wolfss/active"
+	AttackSound "wolfss/attack"
+	Obituary "%o was ambushed by a Hitech Guy"
+	States
+	{
+	Spawn:
+		OBT3 AB 10 A_Look
+		Loop
+	See:
+		OBT3 AABBCCDD 1 A_Chase
+		Loop
+	Missile:
+		OBT3 E 10 A_FaceTarget
+		OBT3 F 7 A_FaceTarget
+		OBT3 G 2 BRIGHT A_CPosAttack
+		OBT3 F 2 A_FaceTarget
+		OBT3 G 2 BRIGHT A_CPosAttack
+		OBT3 F 2 A_CPosRefire
+		Goto Missile+1
+	Pain:
+		OBT3 H 3
+		OBT3 H 3 A_Pain
+		Goto See
+	Death:
+		OBT3 I 5
+		OBT3 J 5 A_Scream
+		OBT3 K 5 A_NoBlocking
+		OBT3 L 5
+		OBT3 M -1
+		Stop
+	XDeath:
+		OBT3 N 5 
+		OBT3 O 5 A_XScream
+		OBT3 P 5 A_NoBlocking
+		OBT3 QRSTU 5
+		OBT3 V -1
+		Stop
+	Raise:
+		OBT3 M 5
+		OBT3 LKJI 5
+		Goto See 
+	}
+}

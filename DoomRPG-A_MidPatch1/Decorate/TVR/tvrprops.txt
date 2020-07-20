@@ -1,0 +1,126 @@
+ACTOR TVRProp1 18523 // 72
+{
+	Health 100
+	Radius 16
+	Height 72
+	Mass 10000000
+	PainChance 256
+	+SOLID 
+	+SPAWNCEILING 
+	+NOGRAVITY 
+	+SHOOTABLE 
+	+COUNTKILL 
+	+NOICEDEATH
+	+ISMONSTER
+	PainSound "grunt/pain"
+	DeathSound "misc/gibbed"
+	States
+	{
+	Spawn:
+		TVR1 A   -1
+		Loop
+	Death:
+		TVR1 BC	6
+		TVR1 D	6 A_Scream
+		TVR1 EFGHI	6
+		TVR1 J	6 A_KeenDie
+		TVR1 K	-1
+		Stop
+	Pain:
+		TVR1 B	4
+		TVR1 B	8 A_Pain
+		Goto Spawn
+	}
+}
+
+
+ACTOR TVRProp2 18524 // 35
+{
+	Radius 16
+	Height 60
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		TVR1 L -1 BRIGHT
+		Stop
+	}
+}
+
+ACTOR TVRProp3 18525 // 63
+{
+	Radius 20
+	Height 68
+	-SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		TVR1 Q 10
+		TVR1 R 15
+		TVR1 S 8
+		TVR1 R 6
+		Loop
+	}
+}
+
+ACTOR TVRProp4 18526 // 78
+{
+	Radius 16
+	Height 64
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		TVR1 T -1
+		Stop
+	}
+}
+
+ACTOR TVRProp5 18527 // 73
+{
+	Radius 16
+	Height 88
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		TVR1 U -1
+		Stop
+	}
+}
+
+ACTOR TVRProp6 18528 // 33
+{
+	Radius 16
+	Height 40
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		TVR1 M -1
+		Stop
+	}
+}
+
+ACTOR TVRProp7 18529 // 41
+{
+	Radius 16
+	Height 54
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		TVR1 NOPO 6
+		Loop
+	}
+}
+

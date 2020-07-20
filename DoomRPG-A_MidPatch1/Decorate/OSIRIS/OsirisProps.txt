@@ -1,0 +1,242 @@
+// All props from OSIRIS
+
+ACTOR OsirisProp1 18642 // 47
+{
+	Radius 16
+	Height 40
+	ProjectilePassHeight -16
+	+SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		OSI1 A -1
+		Stop
+	}
+}
+
+ACTOR OsirisProp2 18643 // 43
+{
+	Radius 16
+	Height 56
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		OSI1 B -1
+		Stop
+	}
+}
+
+ACTOR OsirisProp3 18644 // 55
+{
+	Radius 16
+	Height 37
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		OSI1 CDEF 4 BRIGHT
+		Loop
+	}
+}
+
+ACTOR OsirisProp4 18645 // 49
+{
+	Radius 16
+	Height 68
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		OSI1 G 7
+		OSI1 H 7
+		OSI1 I 7
+		OSI1 J 7
+		OSI1 K 7
+		Loop
+	}
+}
+
+ACTOR OsirisProp5 : OsirisProp4 18646 // 63
+{
+	-SOLID
+	Radius 20
+}
+
+ACTOR OsirisProp6 18647 // 52
+{
+	Radius 16
+	Height 30
+	-SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		OSI1 L -1
+		Stop
+	}
+}
+
+ACTOR OsirisProp7 : OsirisProp6 18648 // 60
+{
+	-SOLID
+	Radius 20
+}
+
+ACTOR OsirisProp8 18649 // 53
+{
+	Radius 16
+	Height 25
+	-SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		OSI1 M -1
+		Stop
+	}
+}
+
+ACTOR OsirisProp9 : OsirisProp8 18650 // 62
+{
+	-SOLID
+	Radius 20
+}
+
+ACTOR OsirisProp10 18651 // 30
+{
+	Radius 16
+	Height 52
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		OSI1 N -1
+		Stop
+	}
+}
+
+ACTOR OsirisProp11 18652 // 32
+{
+	Radius 16
+	Height 52
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		OSI1 O -1
+		Stop
+	}
+}
+
+ACTOR OsirisProp12 18653 // 29
+{
+	Radius 16
+	Height 42
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		OSI1 PQ 6 BRIGHT
+		Loop
+	}
+}
+
+ACTOR OsirisProp13 18654 // 85
+{
+	Radius 16
+	Height 80
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		OSI1 RSTU 4 BRIGHT
+		Loop
+	}
+}
+
+ACTOR OsirisProp14 18655 // 70
+{
+	SpawnID 149
+	Radius 16
+	Height 32
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		OSI1 VWX 4 BRIGHT
+		Loop
+	}
+}
+
+ACTOR OsirisProp15 18656 // 48
+{
+	Radius 16
+	Height 128
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		OSI1 Y -1
+		Stop
+	}
+}
+
+ACTOR OsirisProp16 18657 // 27
+{
+	Radius 16
+	Height 56
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		OSI1 Z -1
+		Stop
+	}
+}
+
+ACTOR OsirisProp17 18658 // 2035
+{
+	Health 20
+	Radius 10
+	Height 34
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
+	+ACTIVATEMCROSS
+	+DONTGIB
+	+NOICEDEATH
+	+OLDRADIUSDMG
+	DeathSound "world/barrelx"
+	Obituary "$OB_BARREL"
+	States
+	{
+	Spawn:
+		OSI2 LM 6
+		Loop
+	Death:
+		OSI2 N 5 BRIGHT
+		OSI2 O 5 BRIGHT A_Scream
+		OSI2 P 5 BRIGHT
+		OSI2 Q 5 BRIGHT A_Explode
+		OSI2 R 10 BRIGHT
+		Stop
+	}
+}
+
+

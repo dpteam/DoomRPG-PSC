@@ -1,0 +1,191 @@
+// COMPENDIUM'S OWN STUFF
+
+#include "Decorate/COMPEN/Keys.txt"
+#include "Decorate/COMPEN/Torches.txt"
+#include "Decorate/COMPEN/Waterfall.txt"
+#include "Decorate/COMPEN/Cameras.txt"
+#include "Decorate/COMPEN/Powerups.txt"
+#include "Decorate/COMPEN/FloatingRocks.txt"
+#include "Decorate/COMPEN/MachinegunGuy.txt"
+#include "Decorate/COMPEN/RappellingZombie.txt"
+#include "Decorate/COMPEN/Splashes.txt"
+#include "Decorate/COMPEN/D64Lamps.txt"
+#include "Decorate/COMPEN/RoofLights.txt"
+#include "Decorate/COMPEN/SmokeEffect1.txt"
+
+// OBITUARY
+
+#include "Decorate/OBITUARY/HarderImp.txt"
+#include "Decorate/OBITUARY/BazookaMan.txt"
+#include "Decorate/OBITUARY/HitechGuy.txt"
+#include "Decorate/OBITUARY/HangingMarine.txt"
+
+// STRAIN
+
+#include "Decorate/STRAIN/cyberjunior.txt"
+#include "Decorate/STRAIN/demonlord.txt"
+#include "Decorate/STRAIN/polydrone.txt"
+#include "Decorate/STRAIN/bfgtrooper.txt"
+#include "Decorate/STRAIN/daemon.txt"
+#include "Decorate/STRAIN/fastimp.txt"
+#include "Decorate/STRAIN/holobot.txt"
+#include "Decorate/STRAIN/doppleganger.txt"
+#include "Decorate/STRAIN/chaingunner.txt"
+#include "Decorate/STRAIN/demon.txt"
+#include "Decorate/STRAIN/deadmarine.txt"
+#include "Decorate/STRAIN/deaddemon.txt"
+
+//BIOWAR
+
+#include "Decorate/BIOWAR/thunder.txt"
+#include "Decorate/BIOWAR/monsters.txt"
+
+// THE TROOPER'S PLAYGROUND
+
+#include "Decorate/TTP/EvilTrooper.txt"
+
+// POST
+
+#include "Decorate/POST/postprops.txt"
+
+// REVOLUTION!
+
+#include "Decorate/TVR/tvrprops.txt"
+
+// SCIENTIST 2
+
+#include "Decorate/SCI2/scientist.txt"
+#include "Decorate/SCI2/sci2props.txt"
+
+// HELL TO PAY
+
+#include "Decorate/HTP/Enemy1.txt"
+#include "Decorate/HTP/Enemy2.txt"
+#include "Decorate/HTP/Enemy3.txt"
+#include "Decorate/HTP/Enemy4.txt"
+#include "Decorate/HTP/Enemy5.txt"
+#include "Decorate/HTP/Enemy6.txt"
+#include "Decorate/HTP/Props.txt"
+
+// THE TALOSIAN INCIDENT
+
+#include "Decorate/TALOS/TalosMarine.txt"
+#include "Decorate/TALOS/TalosMachinery.txt"
+
+// REALM OF CHAOS
+
+#include "Decorate/RLMCHAOS/props.txt"
+
+// ALL HELL IS BREAKING LOOSE!
+
+#include "Decorate/ALLHELL/allhellprops.txt"
+#include "Decorate/ALLHELL/allhelldemon.txt"
+#include "Decorate/ALLHELL/allhelltwoface.txt"
+#include "Decorate/ALLHELL/allhellarachnotron.txt"
+#include "Decorate/ALLHELL/allhellflyingbaron.txt"
+#include "Decorate/ALLHELL/allhellevilmarine.txt"
+#include "Decorate/ALLHELL/allhellhelicopter.txt"
+#include "Decorate/ALLHELL/allhellwingeddemon.txt"
+#include "Decorate/ALLHELL/allhellhugecyber.txt"
+#include "Decorate/ALLHELL/allhellmorphers.txt"
+
+// ETERNAL DOOM
+
+#include "Decorate/ETERNAL/eternalprops.txt"
+
+// REBIRTH
+
+#include "Decorate/REBIRTH/EvilSnowman.txt"
+#include "Decorate/REBIRTH/Mario.txt"
+#include "Decorate/REBIRTH/RebirthProps.txt"
+
+// CAVERNS OF DARKNESS
+
+#include "Decorate/COD/CODDecorate.txt"
+
+// EQUINOX
+
+#include "Decorate/EQUINOX/Equinoxprops.txt"
+
+// MARSDOOM
+
+#include "Decorate/MARSDOOM/MarsDoomProps.txt"
+#include "Decorate/MARSDOOM/MarsDoomEffects.txt"
+#include "Decorate/MARSDOOM/MarsDoomEnemies.txt"
+
+// OSIRIS
+
+#include "Decorate/OSIRIS/OsirisProps.txt"
+#include "Decorate/OSIRIS/OsirisEnemies.txt"
+
+// BROTHERHOOD OF RUIN
+
+#include "Decorate/RUINBROS/Ruinbrosprop.txt"
+
+// ENJAY ZDOOM
+
+#include "Decorate/NJZD/SuperImp.txt"
+#include "Decorate/NJZD/ZombieGunner.txt"
+#include "Decorate/NJZD/BurningBarrel.txt"
+
+// DAEDALUS
+
+#include "Decorate/DAEDALUS/Daedalus.txt"
+
+// CLEIMOS
+
+#include "Decorate/CLEIMOS/CleimosDecorate.txt"
+
+// PLEIADES
+
+#include "Decorate/PLEIADES/PleiadesProps.txt"
+
+// CYBERDREAMS
+
+#include "Decorate/CYBDREAM/Helpers.txt"
+
+// DOOM RESURRECTION
+
+#include "Decorate/DOOMRES/DResDecorate.txt"
+
+// ENSLAVEMENT
+
+#include "Decorate/ENSLAVE/EnslaveDecorate.txt"
+
+// BIOTECH
+
+#include "Decorate/BIOTECH/BiotechDecorate.txt"
+
+// PROJECT SLIPGATE
+
+#include "Decorate/SLIPGATE/SlipgateSounds.txt"
+
+// DISSOLUTION OF ETERNITY
+
+#include "Decorate/DISTION/DistionSounds.txt"
+#include "Decorate/DISTION/DistionProps.txt"
+
+// TWILIGHT ZONE II
+
+#include "Decorate/TWZONE2/TWZ2Enemies.txt"
+
+// NEODOOM (Vaccinated Edition)
+
+#include "Decorate/NEODOOM/NeoDoomVE.txt"
+
+// TITAN
+
+
+
+// DAMNATIO MEMORIAE
+
+#include "Decorate/DM/DMDecorations.txt"
+#include "Decorate/DM/DMEffects.txt"
+
+// MISC
+
+ACTOR SpectreBlood : Blood
+{
+	RenderStyle OptFuzzy
+	Alpha 0.5
+}

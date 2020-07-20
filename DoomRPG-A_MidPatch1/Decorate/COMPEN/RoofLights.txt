@@ -1,0 +1,50 @@
+ACTOR TechLanternBig 500
+{
+	Radius 10
+	Height 80
+	+SPAWNCEILING
+	+NOGRAVITY
+	+SOLID
+	//$Category "World"
+	//$Title "Roof Lantern Big"
+	States
+	{
+	Spawn:
+		HLMP ABCD 6 bright //Light("BIGLANTERN")
+		Loop
+	}
+}
+
+ACTOR TechLanternSmall 501
+{
+	Radius 6
+	Height 45
+	+SPAWNCEILING
+	+NOGRAVITY
+	+SOLID
+	//$Category "World"
+	//$Title "Roof Lantern Small"
+	States
+	{
+	Spawn:
+		HLMP EFGH 6 bright //Light("SMALLLANTERN")
+		Loop
+	}
+}
+
+ACTOR BlackCandleChandelier 502
+{
+	Radius 20
+	Height 55
+	+SPAWNCEILING
+	+NOGRAVITY
+	+SOLID
+	//$Category "World"
+	//$Title "Candle Chandelier"
+	States
+	{
+	Spawn:
+		HLMP I -1 bright //Light("BLACKCHANDELIER")
+		Stop
+	}
+}

@@ -1,0 +1,222 @@
+ACTOR POSTProp1 18508 //52
+{
+	Radius 16
+	Height 68
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		P0ST A -1
+		Stop
+	}
+}
+
+ACTOR POSTProp2 18509 //53
+{
+	Radius 16
+	Height 52
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		P0ST B -1
+		Stop
+	}
+}
+
+ACTOR POSTProp3 : POSTProp1 18510 //59
+{
+	-SOLID
+	Radius 20
+}
+
+ACTOR POSTProp4 : POSTProp2 18511 //61
+{
+	-SOLID
+	Radius 20
+}
+
+ACTOR POSTProp5 18512 //43
+{
+	Radius 16
+	Height 56
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		P0ST C -1
+		Stop
+	}
+}
+
+ACTOR POSTProp6 18513 //37
+{
+	Radius 16
+	Height 40
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		P0ST D -1
+		Stop
+	}
+}
+
+ACTOR POSTProp7 18514 //32
+{
+	Radius 16
+	Height 52
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		P0ST E -1
+		Stop
+	}
+}
+
+ACTOR POSTProp8 18515 //25
+{
+	Radius 16
+	Height 64
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		P0ST F -1
+		Stop
+	}
+}
+
+ACTOR POSTProp9 18516 //45
+{
+	Radius 16
+	Height 68
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		P0ST GHIJ 4
+		Loop
+	}
+}
+
+ACTOR POSTProp10 18517 //73
+{
+	Radius 16
+	Height 88
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		P0ST K -1
+		Stop
+	}
+}
+
+ACTOR POSTProp11 18518 //74
+{
+	Radius 16
+	Height 88
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		P0ST L -1
+		Stop
+	}
+}
+
+ACTOR POSTProp12 18519 //75
+{
+	Radius 16
+	Height 64
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		P0ST M -1
+		Stop
+	}
+}
+
+ACTOR POSTProp13 18520 //42
+{
+	Radius 16
+	Height 26
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		P0ST NOP 6
+		Loop
+	}
+}
+
+ACTOR POSTProp14 18521 //49
+{
+	Radius 16
+	Height 68
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		P0ST Q 10
+		P0ST R 15
+		P0ST S 8
+		Loop
+	}
+}
+
+ACTOR POSTProp15 18522 // 72
+{
+	Health 100
+	Radius 16
+	Height 72
+	Mass 10000000
+	+SOLID 
+	+NOGRAVITY 
+	+SHOOTABLE 
+	-COUNTKILL 
+	+NOICEDEATH
+	+ISMONSTER
+	+NOBLOOD
+	DeathSound "post/burnt"
+	States
+	{
+	Spawn:
+		PST1 A   -1
+		Loop
+	Death:
+		PST1 AB	6
+		PST1 C	6 A_Scream
+		PST1 DEFGH	6
+		PST1 I	6
+		PST1 J	6
+		PST1 K	6 A_KeenDie
+		PST1 L   -1
+		Stop
+	Pain:
+		PST1 M	4
+		PST1 M	8
+		Goto Spawn
+	}
+}

@@ -1,0 +1,45 @@
+texture "CODSKY2X", 512, 512
+{
+xscale 2.0
+yscale 2.0
+patch "CODSKY2", 0, 0
+}
+
+texture "FPORTX13", 400, 400
+{
+xscale 2.0
+yscale 2.0
+patch "FPORTX12", 0, 0
+}
+
+Graphic "ARTITU1", 32, 32
+{
+Offset 8, 14
+Patch "TURBA0", 0, 0
+}
+
+Graphic "ARTITU2", 32, 32
+{
+Offset 8, 14
+Patch "TURBB0", 0, 0
+}
+
+Graphic "ARTITU3", 32, 32
+{
+Offset 8, 14
+Patch "TURBC0", 0, 0
+}
+
+Graphic "ARTITU4", 32, 32
+{
+Offset 8, 14
+Patch "TURBD0", 0, 0
+}
+
+Graphic "M_DOOM", 320, 63
+{
+Offset 55, -35
+xscale 1.50
+yscale 1.50
+patch "M_DOOMY", 0, 0
+}

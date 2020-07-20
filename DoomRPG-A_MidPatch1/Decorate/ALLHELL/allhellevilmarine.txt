@@ -1,0 +1,59 @@
+ACTOR AllHellEvilMarine 18563 // 12
+{
+	Health 100
+	Radius 16
+	Height 56
+	Mass 100
+	Speed 14
+	Painchance 100
+	ReactionTime 4
+	MONSTER
+	+FLOORCLIP
+	DeathSound "allhell/evilmarine2"
+	PainSound "allhell/evilmarine1"
+	ActiveSound "allhell/evilmarine3"
+	Obituary "%o was overwhelmed by an evil marine."
+	States
+	{
+	Spawn:
+		ALH5 A 4 A_Look
+		Loop
+	See:
+		ALH5 ABCD 3 A_Chase
+		Loop
+	Missile:
+		ALH5 E 2 A_FaceTarget
+		ALH5 E 0 A_FaceTarget
+		ALH5 E 2 A_FaceTarget
+		ALH5 F 3 BRIGHT A_BspiAttack
+		ALH5 AB 2 A_Chase("","")
+		ALH5 E 2 A_FaceTarget
+		ALH5 F 3 BRIGHT A_BspiAttack
+		ALH5 CD 2 A_Chase("","")
+		ALH5 A 0 A_CPosRefire
+		Goto Missile+1
+		ALH5 A 0
+		Goto See
+	Pain:
+		ALH5 G 4
+		ALH5 G 4 A_Pain
+		Goto See
+	Death:
+		ALH5 H 10
+		ALH5 I 10 A_Scream
+		ALH5 J 10 A_NoBlocking
+		ALH5 KLM 10
+		ALH5 N -1
+		Stop
+	XDeath:
+		ALH5 O 5
+		ALH5 P 5 A_XScream
+		ALH5 Q 5 A_NoBlocking
+		ALH5 RSTUV 5
+		ALH5 W -1
+		Stop
+	Raise:
+		ALH5 MLKJIH 5
+		Goto See
+	}
+}

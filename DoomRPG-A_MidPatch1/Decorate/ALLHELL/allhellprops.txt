@@ -1,0 +1,86 @@
+ACTOR Allhellprop1 18554 // 2035
+{
+	Health 20
+	Radius 10
+	Height 42
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
+	+ACTIVATEMCROSS
+	+DONTGIB
+	+NOICEDEATH
+	+OLDRADIUSDMG
+	DeathSound "world/barrelx"
+	Obituary "$OB_BARREL"
+	States
+	{
+	Spawn:
+		ALH0 A 6
+		Loop
+	Death:
+		ALH0 A 5 BRIGHT
+		ALH0 B 5 BRIGHT A_Scream
+		ALH0 C 5 BRIGHT
+		ALH0 D 5 BRIGHT A_Explode
+		ALH0 E 10 BRIGHT
+		TNT1 A 1050 BRIGHT A_BarrelDestroy
+		TNT1 A 5 A_Respawn
+		Wait
+	}
+}
+
+ACTOR Allhellprop2 18555 // 29
+{
+	Radius 16
+	Height 42
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		ALH0 FG 6
+		Loop
+	}
+}
+
+ACTOR Allhellprop3 18556 // 25
+{
+	Radius 16
+	Height 64
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		ALH0 H -1
+		Stop
+	}
+}
+
+ACTOR Allhellprop4 18557 // 47
+{
+	Radius 32
+	Height 108
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		ALH0 I -1
+		Stop
+	}
+}
+
+ACTOR Allhellprop5 18558 // 80
+{
+	Radius 20
+	Height 1
+	+NOBLOCKMAP
+	+MOVEWITHSECTOR
+	States
+	{
+	Spawn:
+		ALH0 J -1
+		Stop
+	}
+}

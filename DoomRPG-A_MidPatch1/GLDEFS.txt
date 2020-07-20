@@ -1,0 +1,480 @@
+//BRIGHTMAPS
+
+#include "Brightmaps/DOOM.bm"
+#include "Brightmaps/LIQUIDS.bm"
+#include "Brightmaps/MM1.bm"
+#include "Brightmaps/MM2.bm"
+#include "Brightmaps/REQUIEM.bm"
+#include "Brightmaps/OBITUARY.bm"
+#include "Brightmaps/STRAIN.bm"
+#include "Brightmaps/BIOWAR.bm"
+#include "Brightmaps/DARKEN.bm"
+#include "Brightmaps/TTP.bm"
+#include "Brightmaps/PGATE.bm"
+#include "Brightmaps/POST.bm"
+#include "Brightmaps/TVR.bm"
+#include "Brightmaps/SCI2.bm"
+#include "Brightmaps/ICARUS.bm"
+#include "Brightmaps/HTP.bm"
+#include "Brightmaps/ABYSS.bm"
+#include "Brightmaps/ENIGMA.bm"
+#include "Brightmaps/RLMCHAOS.bm"
+#include "Brightmaps/DYST3.bm"
+#include "Brightmaps/ETERNAL.bm"
+#include "Brightmaps/REBIRTH.bm"
+#include "Brightmaps/CITYOD.bm"
+#include "Brightmaps/SCYTHE.bm"
+#include "Brightmaps/TWZONE2.bm"
+#include "Brightmaps/TNT.bm"
+#include "Brightmaps/EQUINOX.bm"
+#include "Brightmaps/COD.bm"
+#include "Brightmaps/DARKEN2.bm"
+#include "Brightmaps/MARSDOOM.bm"
+#include "Brightmaps/OSIRIS.bm"
+#include "Brightmaps/RUINBROS.bm"
+#include "Brightmaps/NJZD.bm"
+#include "Brightmaps/DAEDALUS.bm"
+#include "Brightmaps/CLEIMOS.bm"
+#include "Brightmaps/ENDGAME.bm"
+#include "Brightmaps/LASTDAY.bm"
+#include "Brightmaps/PLEIADES.bm"
+#include "Brightmaps/RECL.bm"
+#include "Brightmaps/SID.bm"
+#include "Brightmaps/NEODOOM.bm"
+#include "Brightmaps/DOOMRES.bm"
+
+// SKYBOXES
+
+//TOH
+skybox TOHSKY
+{
+TOH_RT
+TOH_FT
+TOH_LF
+TOH_BK
+TOH_UP
+TOH_DN
+}
+
+//MARVELOUS
+skybox MARVSKY
+{
+MARV_RT
+MARV_FT
+MARV_LF
+MARV_BK
+MARV_UP
+MARV_DN
+}
+
+//////////////////////////////////////////////
+////////////// DYNAMIC LIGHTS ////////////////
+//////////////////////////////////////////////
+
+//  KEYS
+
+object BlueCard
+{
+    frame BKEY { light HEALTHPOTION }
+}
+
+object BlueSkull
+{
+    frame BSKU { light HEALTHPOTION }
+}
+
+pulselight YELLOWKEY
+{
+    color 0.6 0.6 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object YellowCard
+{
+    frame YKEY { light YELLOWKEY }
+}
+
+object YellowSkull
+{
+    frame YSKU { light YELLOWKEY }
+}
+
+pulselight REDKEY
+{
+    color 0.6 0.0 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object RedCard
+{
+    frame RKEY { light REDKEY }
+}
+
+object RedSkull
+{
+    frame RSKU { light REDKEY }
+}
+
+
+pulselight GREENKEY
+{
+    color 0.0 1.0 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object GreenCard
+{
+    frame GKEY { light GREENKEY }
+}
+
+object GreenSkull
+{
+    frame GSKU { light GREENKEY }
+}
+
+pulselight ORANGEKEY
+{
+    color 1.0 0.5 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object OrangeCard
+{
+    frame OKEY { light ORANGEKEY }
+}
+
+object OrangeSkull
+{
+    frame OSKU { light ORANGEKEY }
+}
+
+pulselight PURPLEKEY
+{
+    color 1.0 0.0 0.5
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object PurpleCard
+{
+    frame PKEY { light PURPLEKEY }
+}
+
+object PurpleSkull
+{
+    frame PSKU { light PURPLEKEY }
+}
+
+pulselight BLACKKEY
+{
+    color 1.0 1.0 1.0 
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object BlackCard
+{
+    frame BKKY { light BLACKKEY }
+}
+
+object BlackSkull
+{
+    frame BKSK { light BLACKKEY }
+}
+
+// ITEMS
+
+pulselight HEALTHPOTION
+{
+    color 0.0 0.0 0.6
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object HealthBonus
+{
+    frame BON1 { light HEALTHPOTION }
+}
+
+pulselight ARMORBONUS
+{
+    color 0.0 0.6 0.0
+    size 16
+    secondarySize 14
+    interval 1.0
+	dontlightself 1
+}
+
+object ArmorBonus
+{
+    frame BON2 { light ARMORBONUS }
+}
+
+// POWERUPS
+
+pulselight SOULSPHERE
+{
+    color 0.0 0.0 1.0
+    size 40
+    secondarySize 42
+    interval 2.0
+    offset 0 16 0
+}
+
+object SoulSphere
+{
+    frame SOUL { light SOULSPHERE }
+}
+
+pulselight INVULN
+{
+    color 0.0 1.0 0.0
+    size 40
+    secondarySize 42
+    interval 2.0
+    offset 0 16 0
+}
+
+object InvulnerabilitySphere
+{
+    frame PINV { light INVULN }
+}
+
+pointlight BLURSPHERE1
+{
+    color 1.0 0.0 0.0
+    size 40
+    offset 0 16 0
+}
+
+pointlight BLURSPHERE2
+{
+    color 0.0 0.0 1.0
+    size 32
+    offset 0 16 0
+}
+
+pointlight BLURSPHERE3
+{
+    color 0.0 0.0 1.0
+    size 24
+    offset 0 16 0
+}
+
+pointlight BLURSPHERE4
+{
+    color 0.0 0.0 1.0
+    size 16
+    offset 0 16 0
+}
+
+pointlight BLURSPHERE5
+{
+    color 0.0 0.0 1.0
+    size 8
+    offset 0 16 0
+}
+
+object BlurSphere
+{
+    frame PINS { light BLURSPHERE1 }
+
+    frame PINSA { light BLURSPHERE2 }
+    frame PINSB { light BLURSPHERE3 }
+    frame PINSC { light BLURSPHERE4 }
+    frame PINSD { light BLURSPHERE5 }
+}
+
+pointlight MEGASPHERE1
+{
+    color 0.7 0.59 0.51
+    size 40
+    offset 0 16 0
+}
+
+pointlight MEGASPHERE2
+{
+    color 0.7 0.59 0.51
+    size 32
+    offset 0 16 0
+}
+
+pointlight MEGASPHERE3
+{
+    color 0.7 0.59 0.51
+    size 24
+    offset 0 16 0
+}
+
+pointlight MEGASPHERE4
+{
+    color 0.7 0.59 0.51
+    size 16
+    offset 0 16 0
+}
+
+object MegaSphere
+{
+    frame MEGAA0 { light MEGASPHERE1 }
+
+    frame MEGAB0 { light MEGASPHERE2 }
+    frame MEGAC0 { light MEGASPHERE3 }
+    frame MEGAD0 { light MEGASPHERE4 }
+}
+
+pointlight BIOSPHERE1
+{
+    color 0.0 1.0 0.0
+    size 40
+    offset 0 16 0
+}
+
+pointlight BIOSPHERE2
+{
+    color 0.0 1.0 0.0
+    size 20
+    offset 0 16 0
+}
+
+object BioSphere
+{
+    frame BIOSA { light BIOSPHERE1 }
+    frame BIOSB { light BIOSPHERE2 }
+}
+
+Pulselight VisionSphere
+{
+Color 0.8 0.0 0.0
+Size 32
+SecondarySize 48
+Interval 3.0
+Offset 0 18 0
+}
+
+Object VisionSphere
+{
+Frame VISN { Light VisionSphere }
+}
+
+PulseLight GUARDSPHERE
+{
+Color 0.1 0.5 0.0
+Size 40
+SecondarySize 42
+Interval 2.0
+Offset 0 16 0
+}
+
+object GuardSphereST
+{
+Frame GARD { Light GUARDSPHERE }
+}
+
+PulseLight TURBOSPHERE
+{
+Color 0.8 0.3 0.0
+Size 40
+SecondarySize 42
+Interval 2.0
+Offset 0 16 0
+}
+
+Object TurboSphereST
+{
+Frame TURB { Light TURBOSPHERE }
+}
+
+PulseLight DOOMSPHERE
+{
+Color 0.5 0.0 0.0
+Size 40
+SecondarySize 42
+Interval 2.0
+Offset 0 16 0
+}
+
+Object DoomSphereST
+{
+Frame DOOM { Light DOOMSPHERE }
+}
+
+PulseLight RAGESPHERE
+{
+Color 1.0 0.0 0.0
+Size 40
+SecondarySize 42
+interval 2.0
+Offset 0 16 0
+}
+
+Object RageSphere
+{
+Frame BLDS { Light RAGESPHERE }
+}
+
+Pulselight TerrorSphere
+{
+Color 0.3 0.3 0.0
+Size 32
+SecondarySize 48
+Interval 3.0
+Offset 0 18 0
+}
+
+Object TerrorSphere
+{
+Frame TERR { Light TerrorSphere }
+}
+
+PulseLight RegenSphere
+{
+Color 1.0 0.0 0.0
+Size 40
+SecondarySize 56
+Interval 5.0
+}
+
+Object RegenSphere
+{
+Frame REGN { Light RegenSphere }
+}
+
+Pulselight TIMEFREEZESPHERE
+{
+Color 0.8 0.8 0.8
+Size 40
+SecondarySize 42
+Interval 2.0
+Offset 0 16 0
+}
+
+Object TimefreezeSphereST
+{
+Frame TIME { Light TIMEFREEZESPHERE }
+}
+
+PulseLight INVISIBILITYSPHERE
+{
+Color 0.0 0.0 0.8
+Size 40
+SecondarySize 42
+Interval 2.0
+Offset 0 16 0
+}
+
+Object InvisibilitySphereST
+{
+Frame INVS { Light INVISIBILITYSPHERE }
+}
+

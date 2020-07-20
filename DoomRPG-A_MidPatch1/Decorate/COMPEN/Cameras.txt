@@ -1,0 +1,16 @@
+ACTOR Camera1 12041
+{
+	Radius 16
+	Height 24
+	-SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	//$Category "World"
+	//$Title "Camera"
+	States
+	{
+	Spawn:
+		0CAM A -1
+		Stop
+	}
+}

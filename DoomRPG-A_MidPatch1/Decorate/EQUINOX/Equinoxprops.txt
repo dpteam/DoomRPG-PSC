@@ -1,0 +1,177 @@
+// EQUINOX PROPS
+
+ACTOR EquinoxProp1 18601 // 46
+{
+	Radius 16
+	Height 68
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		EQUX ABCD 4 BRIGHT
+		Loop
+	}
+}
+
+ACTOR EquinoxProp2 18602 // 29
+{
+	Radius 16
+	Height 42
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		EQUX EF 6 BRIGHT
+		Loop
+	}
+}
+
+ACTOR EquinoxProp3 18603 // 31
+{
+	Radius 16
+	Height 40
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		EQUX G -1
+		Stop
+	}
+}
+
+ACTOR EquinoxProp4 18604 // 36
+{
+	Radius 16
+	Height 40
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		EQUX H 14
+		EQUX I 14 BRIGHT
+		Loop
+	}
+}
+
+ACTOR EquinoxProp5 18605 // 45
+{
+	Radius 16
+	Height 68
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		EQUX JKLM 4 BRIGHT
+		Loop
+	}
+}
+
+ACTOR EquinoxProp6 18606 // 44
+{
+	Radius 16
+	Height 68
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		EQUX NOPQ 4 BRIGHT
+		Loop
+	}
+}
+
+ACTOR EquinoxProp7 18607 // 85
+{
+	Radius 16
+	Height 80
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		EQUX RSTU 4
+		Loop
+	}
+}
+
+ACTOR EquinoxProp8 18608 // 41
+{
+	Radius 16
+	Height 54
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		EQUX VWXW 6 BRIGHT
+		Loop
+	}
+}
+
+ACTOR EquinoxProp9 18609 // 56
+{
+	Radius 16
+	Height 37
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		EQUX YZ 4 BRIGHT
+		EQUX "[" 4 BRIGHT
+		EQUX "]" 4 BRIGHT
+		Loop
+	}
+}
+
+ACTOR EquinoxProp0 18610 // 30
+{
+	Radius 16
+	Height 52
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		EQUX "^" -1
+		Stop
+	}
+}
+
+ACTOR EquinoxExplosion 18611 // 88
+{
+	Health 250
+	Mass 10000000
+	PainChance 255
+	+SOLID 
+	+SHOOTABLE
+	+NOICEDEATH
+	+OLDRADIUSDMG
+	+BOSS
+	PainSound "equinox/warning"
+	DeathSound "equinox/explode"
+	States
+	{
+	BrainExplode:
+		MISL BC 10 Bright
+		MISL D 10 A_BrainExplode
+		Stop
+	Spawn:
+		BBRN A -1
+		Stop
+	Pain:
+		BBRN B 36 A_PlaySound("equinox/warning",CHAN_VOICE,1.0,0,ATTN_NONE)
+		Goto Spawn
+	Death:
+		BBRN A 0 A_BrainScream
+        BBRN A 100 A_Scream
+		BBRN AA 10
+		BBRN A -1 A_BrainDie
+		Stop
+	}
+}

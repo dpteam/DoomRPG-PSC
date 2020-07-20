@@ -1,0 +1,17 @@
+
+// DAEDALUS
+
+alias daedalus_no "puke 216"
+alias daedalus_yes "puke 217"
+alias daedalus_msgspeed "puke 218"
+
+defaultbind "n" "daedalus_no"
+defaultbind "y" "daedalus_yes"
+defaultbind "m" "daedalus_msgspeed"
+ 
+addkeysection "Daedalus interactive" daedalus_keysection
+addmenukey "Respond Y to question" daedalus_yes
+addmenukey "Respond N to question" daedalus_no
+addmenukey "Cycle message speed" daedalus_msgspeed
+
+

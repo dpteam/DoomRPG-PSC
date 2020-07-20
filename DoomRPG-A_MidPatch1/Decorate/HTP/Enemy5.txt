@@ -1,0 +1,45 @@
+ACTOR HTP_Enemy5 18539 // 71
+{
+	Health 400
+	Radius 31
+	Height 56
+	Mass 400
+	Speed 8
+	PainChance 128
+	Monster
+	+FLOAT 
+	+NOGRAVITY
+	BloodColor Gold
+	SeeSound "HTP/Enemy5/Sight"
+	PainSound "HTP/Enemy5/Pain"
+	DeathSound "HTP/Enemy5/Death"
+	States
+	{
+	Spawn:
+		HTP5 A 10 BRIGHT A_Look
+		Loop
+	See:
+		HTP5 AABBCC 3 BRIGHT A_Chase
+		Loop
+	Missile:
+		HTP5 D 5 BRIGHT A_FaceTarget
+		HTP5 E 5 BRIGHT A_FaceTarget
+		HTP5 F 5 BRIGHT A_FaceTarget
+		HTP5 F 0 BRIGHT A_PainAttack ("HTP_Enemy3")
+		Goto See
+	Pain:
+		HTP5 G 6 BRIGHT
+		HTP5 G 6 BRIGHT A_Pain
+		Goto See
+	Death:
+		HTP5 H 8 BRIGHT
+		HTP5 I 8 BRIGHT A_Scream
+		HTP5 JK 8 BRIGHT
+		HTP5 L 8 BRIGHT A_PainDie ("HTP_Enemy3")
+		HTP5 M -1 
+		Stop
+	Raise:
+		HTP5 MLKJIH 8 BRIGHT
+		Goto See
+	}
+}

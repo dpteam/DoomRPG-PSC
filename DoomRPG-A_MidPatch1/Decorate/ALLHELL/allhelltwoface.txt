@@ -1,0 +1,54 @@
+ACTOR AllHellTwoFace 18560 // 84
+{
+	Health 150
+	Radius 20
+	Height 56
+	Mass 100
+	Speed 8
+	PainChance 170
+	Monster
+	+FLOORCLIP
+	SeeSound "chainguy/sight"
+	PainSound "chainguy/pain"
+	DeathSound "chainguy/death"
+	ActiveSound "chainguy/active"
+	AttackSound "allhell/streetsweeper"
+	Obituary "%o was decimated by a two-headed chaingunner"
+	States
+	{
+	Spawn:
+		ALH2 AB 10 A_Look
+		Loop
+	See:
+		ALH2 AABBCCDD 3 A_Chase
+		Loop
+	Missile:
+		ALH2 E 10 A_FaceTarget
+		ALH2 F 4 BRIGHT A_SPosAttackUseAtkSound
+		ALH2 E 4 BRIGHT A_FaceTarget
+		ALH2 E 1 A_CPosRefire
+		Goto Missile+1
+	Pain:
+		ALH2 G 3
+		ALH2 G 3 A_Pain
+		Goto See
+	Death:
+		ALH2 H 5
+		ALH2 I 5 A_Scream
+		ALH2 J 5 A_NoBlocking
+		ALH2 KLM 5
+		ALH2 N -1
+		Stop
+	XDeath:
+		CPOS O 5 
+		CPOS P 5 A_XScream
+		CPOS Q 5 A_NoBlocking
+		CPOS RS 5
+		CPOS T -1
+		Stop
+	Raise:
+		ALH2 N 5
+		ALH2 MLKJIH 5
+		Goto See
+	}
+}

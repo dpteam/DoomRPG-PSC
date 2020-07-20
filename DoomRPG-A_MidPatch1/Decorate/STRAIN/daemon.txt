@@ -1,0 +1,47 @@
+actor Daemon 20005 {
+	obituary "%o choked to death."
+	hitobituary "%o choked to death."
+	health 8000
+	radius 15
+	height 56
+	mass 100
+	speed 100
+	painchance 0
+	damage 1000
+	seesound "daemon/sight"
+	attacksound "daemon/attack"
+	painsound "daemon/pain"
+	deathsound "daemon/death"
+	activesound "daemon/active"
+	MONSTER
+	+SOLID
+	+INVISIBLE
+	+NOGRAVITY
+	+FLOAT
+	states {
+		Spawn:
+			SARG AB 10 A_Look
+			loop
+		See:
+			SARG AABBCCDD 2 A_Chase
+			loop
+		Missile:
+			SARG A 1 A_SkullAttack
+			goto See
+		Pain:
+			SARG H 2
+			SARG H 2 A_Pain
+			goto See
+		Death:
+			SARG I 8
+			SARG J 8 A_Scream
+			SARG K 4
+			SARG K 4 A_Fall
+			SARG L 4
+			SARG M -1
+			stop
+		Raise:
+			SARG NMLKJI 5
+			goto See
+	}
+}

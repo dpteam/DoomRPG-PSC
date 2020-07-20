@@ -1,0 +1,354 @@
+ACTOR DistionProp1 18860 // 73
+{
+	Radius 16
+	Height 88
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		D1ST A -1
+		Stop
+	}
+}
+
+ACTOR DistionProp2 18837 // 74
+{
+	Radius 16
+	Height 88
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		D1ST B -1
+		Stop
+	}
+}
+
+ACTOR DistionProp3 18838 // 75
+{
+	Radius 16
+	Height 64
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		D1ST C -1
+		Stop
+	}
+}
+
+ACTOR DistionProp4 18839 // 76
+{
+	Radius 16
+	Height 64
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		D1ST D -1
+		Stop
+	}
+}
+
+ACTOR DistionProp5 18840 // 45
+{
+	Radius 16
+	Height 68
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		D1ST EFGH 4 BRIGHT
+		Loop
+	}
+}
+
+ACTOR DistionProp6 18841 // 44
+{
+	Radius 16
+	Height 68
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		D1ST IJKL 4 BRIGHT
+		Loop
+	}
+}
+
+ACTOR DistionProp7 18842 // 46
+{
+	Radius 16
+	Height 68
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		D1ST MNOP 4 BRIGHT
+		Loop
+	}
+}
+
+ACTOR DistionProp8 18843 // 57
+{
+	Radius 16
+	Height 37
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		D1ST QRST 4 BRIGHT
+		Loop
+	}
+}
+
+ACTOR DistionProp9 18844 // 55
+{
+	Radius 16
+	Height 37
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		D1ST UVWX 4 BRIGHT
+		Loop
+	}
+}
+
+ACTOR DistionProp10 18845 // 56
+{
+	Radius 16
+	Height 37
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		D1ST YZ 4 BRIGHT
+		D2ST AB 4 BRIGHT
+		Loop
+	}
+}
+
+ACTOR DistionProp11 18846 // 81
+{
+	Radius 20
+	Height 4
+	+NOBLOCKMAP
+	+MOVEWITHSECTOR
+	States
+	{
+	Spawn:
+		D2ST C -1
+		Stop
+	}
+}
+
+ACTOR DistionProp12 18847 // 79
+{
+	Radius 20
+	Height 4
+	+NOBLOCKMAP
+	+MOVEWITHSECTOR
+	States
+	{
+	Spawn:
+		D2ST D -1
+		Stop
+	}
+}
+
+ACTOR DistionProp13 18848 // 80
+{
+	Radius 20
+	Height 1
+	+NOBLOCKMAP
+	+MOVEWITHSECTOR
+	States
+	{
+	Spawn:
+		D2ST E -1
+		Stop
+	}
+}
+
+ACTOR DistionProp14 18849 // 24
+{
+	Radius 20
+	Height 1
+	+NOBLOCKMAP
+	+MOVEWITHSECTOR
+	States
+	{
+	Spawn:
+		D2ST F -1
+		Stop
+	}
+}
+
+ACTOR DistionProp15 18850 // 26
+{
+	Radius 16
+	Height 64
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		D2ST H 6
+		D2ST I 8
+		Loop
+	}
+}
+
+ACTOR DistionProp16 18851 // 25
+{
+	Radius 16
+	Height 64
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		D2ST J -1
+		Stop
+	}
+}
+
+ACTOR DistionProp17 18852 // 27
+{
+	Radius 16
+	Height 56
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		D2ST K -1
+		Stop
+	}
+}
+
+ACTOR DistionProp18 18853 // 34
+{
+	Radius 20
+	Height 14
+	ProjectilePassHeight -16
+	States
+	{
+	Spawn:
+		D2ST LM 8 BRIGHT
+		Loop
+	}
+}
+
+ACTOR DistionProp19 18854 // 49
+{
+	Radius 16
+	Height 68
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		D2ST N -1
+		Stop
+	}
+}
+
+ACTOR DistionProp20 18855 // 50
+{
+	Radius 16
+	Height 84
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		D2ST O -1
+		Stop
+	}
+}
+
+ACTOR DistionProp21 18856 // 51
+{
+	Radius 16
+	Height 84
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		D2ST P -1
+		Stop
+	}
+}
+
+ACTOR DistionProp22 18857 // 52
+{
+	Radius 16
+	Height 68
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		D2ST Q -1
+		Stop
+	}
+}
+
+ACTOR DistionProp23 18858 // 53
+{
+	Radius 16
+	Height 52
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		D2ST R -1
+		Stop
+	}
+}
+
+ACTOR DistionProp24 18859 // 48
+{
+	Radius 16
+	Height 128
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		D2ST S -1
+		Stop
+	}
+}
+
+
+
+
+
+
+
+
+

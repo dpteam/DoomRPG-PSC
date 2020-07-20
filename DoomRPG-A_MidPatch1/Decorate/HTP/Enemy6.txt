@@ -1,0 +1,76 @@
+ACTOR HTP_Enemy6 18540 // 67
+{
+	Health 600
+	Radius 48
+	Height 64
+	Mass 1000
+	Speed 8
+	PainChance 80
+	Monster
+	+FLOORCLIP
+	+NOBLOOD
+	SeeSound "HTP/Enemy6/Sight"
+	PainSound "HTP/Enemy6/Pain"
+	DeathSound "HTP/Enemy6/Death"
+	ActiveSound "HTP/Enemy2/Active"
+	Obituary "%o was killed by a Robot"
+	States
+	{
+	Spawn:
+		HTP6 AB 15 A_Look
+		Loop
+	See:
+		HTP6 AABBCCDDEEFF 4 A_Chase
+		Loop
+	Missile:
+		HTP6 G 1 A_PlaySound("HTP/Enemy6/Attack")
+		HTP6 G 19 A_FaceTarget
+		HTP6 H 10 BRIGHT A_FatAttack1("HTP_Enemy6Fireball")
+		HTP6 IG 5 A_FaceTarget
+		HTP6 H 10 BRIGHT A_FatAttack2("HTP_Enemy6Fireball")
+		HTP6 IG 5 A_FaceTarget
+		HTP6 H 10 BRIGHT A_FatAttack3("HTP_Enemy6Fireball")
+		HTP6 IG 5 A_FaceTarget
+		Goto See
+	Pain:
+		HTP6 J 3
+		HTP6 J 3 A_Pain
+		Goto See
+    Death:
+		HTP6 K 6 BRIGHT
+		HTP6 L 6 BRIGHT A_Scream
+		HTP6 M 6 BRIGHT A_NoBlocking
+		HTP6 NOPQRS 6 BRIGHT
+		HTP6 T -1
+	     Stop
+	 Raise:
+		HTP6 R 5 BRIGHT
+		HTP6 QPONMLK 5 BRIGHT
+		Goto See
+	}
+}
+
+ACTOR HTP_Enemy6Fireball
+{
+	Radius 6
+	Height 8
+	Speed 20
+	Damage 8
+	Projectile 
+	+RANDOMIZE
+	RenderStyle Add
+	Alpha 1
+	SeeSound "HTP/Enemy6/Fireball"
+	DeathSound "fatso/shotx"
+	States
+	{
+	Spawn:
+		HTP6 UV 4 BRIGHT
+		Loop
+	Death:
+		HTP6 W 8 BRIGHT
+		HTP6 X 6 BRIGHT
+		HTP6 Y 4 BRIGHT
+		Stop
+	}
+}

@@ -1,0 +1,74 @@
+ACTOR HTP_Enemy4 18538 // 3005
+{
+	Health 400
+	Radius 31
+	Height 56
+	Mass 400
+	Speed 8
+	PainChance 128
+	Monster
+	+FLOAT 
+	+NOGRAVITY
+	+NOBLOOD
+	SeeSound "HTP/Enemy4/Sight"
+	PainSound "HTP/Enemy2/Pain"
+	DeathSound "HTP/Enemy4/Death"
+	ActiveSound "HTP/Enemy2/Active"
+	Obituary "%o was killed by a Robot"
+	HitObituary "%o was killed by a Robot"
+	States
+	{
+	Spawn:
+		HTP4 A 10 A_Look
+		Loop
+	See:
+		HTP4 A 3 A_Chase
+		Loop
+	Missile:
+		HTP4 B 5 A_FaceTarget
+		HTP4 C 5 A_FaceTarget
+		HTP4 D 5 BRIGHT A_CustomMissile("HTP_Enemy4Fireball", 32.0, 0.0, 0, 0)
+		Goto See
+	Pain:
+		HTP4 E 3
+		HTP4 E 3 A_Pain
+		HTP4 F 6
+		Goto See
+	Death:
+		HTP4 G 8
+		HTP4 H 8 A_Scream
+		HTP4 I 8
+		HTP4 J 8
+		HTP4 K 8 A_NoBlocking
+		HTP4 L -1 A_SetFloorClip
+		Stop
+	Raise:
+		HTP4 L 8 A_UnSetFloorClip
+		HTP4 KJIHG 8
+		Goto See
+	}
+}
+
+ACTOR HTP_Enemy4Fireball
+{
+	Radius 6
+	Height 8
+	Speed 10
+	FastSpeed 20
+	Damage 5
+	Projectile 
+	+RANDOMIZE
+	RenderStyle Add
+	Alpha 1
+	SeeSound "HTP/Enemy4/Attack"
+	DeathSound "caco/shotx"
+	States
+	{
+	Spawn:
+		HTP4 MN 4 BRIGHT
+		Loop
+	Death:
+		HTP4 OPQ 6 BRIGHT
+		Stop
+	}
+}

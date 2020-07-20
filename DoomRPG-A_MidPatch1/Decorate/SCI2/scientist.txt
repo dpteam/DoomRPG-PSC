@@ -1,0 +1,122 @@
+ACTOR SCI2_ScientistBase 18530 // 84
+{
+	Health 50
+	Radius 20
+	Height 56
+	Speed 8
+	PainChance 170
+	Monster
+	+FLOORCLIP
+	PainSound "wolfss/pain"
+	DeathSound "misc/teleport"
+	AttackSound "scientist2/attack1"
+	Obituary "% was shot dead by the Scientist!"
+	Dropitem "Clip"
+	States
+	{
+	Spawn:
+		SCI1 AB 10 A_Look
+		Loop
+	See:
+		SCI1 AABBCCDD 3 A_Chase
+		Loop
+	Missile:
+		SCI1 E 10 A_FaceTarget
+		SCI1 F 10 A_FaceTarget
+		SCI1 G 4 BRIGHT A_CPosAttack
+		SCI1 F 6 A_FaceTarget
+		SCI1 G 4 BRIGHT A_CPosAttack
+		SCI1 F 1 A_CPosRefire
+		Goto Missile+1
+	Pain:
+		SCI1 H 3
+		SCI1 H 3 A_Pain
+		Goto See
+	Death:
+		SCI1 I 5 BRIGHT A_Scream
+		SCI1 J 5 BRIGHT
+		SCI1 K 5 BRIGHT A_NoBlocking
+		SCI1 L 5 BRIGHT
+		SCI1 M 5 BRIGHT
+		Stop
+	}
+}
+
+ACTOR SCI2_ScientistBoss 18531 // 16
+{
+	Health 4000
+	Radius 40
+	Height 110
+	Mass 1000
+	Speed 16
+	PainChance 20
+	Monster
+	MinMissileChance 160
+	+BOSS 
+	+MISSILEMORE
+	+FLOORCLIP
+	+NORADIUSDMG
+	+DONTMORPH
+	+BOSSDEATH
+	PainSound "wolfss/pain"
+	DeathSound "scientist2/die"
+	Obituary "%o was blown up by the Scientist!"
+	States
+	{
+	Spawn:
+		SCI2 AB 10 A_Look
+		Loop
+	See:
+		SCI2 A 3 A_Chase
+		SCI2 ABBCC 3 A_Chase
+		SCI2 D 3 A_Chase
+		SCI2 D 3 A_Chase
+		Loop
+	Missile:
+		SCI2 E 6 A_FaceTarget
+		SCI2 F 12 A_CustomMissile("SCI2_XBolt", 32.0, 0.0, 0, 0)
+		SCI2 E 12 A_FaceTarget
+		SCI2 F 12 A_CustomMissile("SCI2_XBolt", 32.0, 0.0, 0, 0)
+		SCI2 E 12 A_FaceTarget
+		SCI2 F 12 A_CustomMissile("SCI2_XBolt", 32.0, 0.0, 0, 0)
+		Goto See
+	Pain:
+		SCI2 G 10 A_Pain
+		Goto See
+	Death:
+		SCI2 H 10
+		SCI2 I 10 A_Scream
+		SCI2 JKL 10
+		SCI2 M 10 A_NoBlocking
+		SCI2 NO 10
+		SCI2 P 30
+		SCI2 P -1 A_BossDeath
+		Stop
+	}
+}
+
+ACTOR SCI2_XBolt
+{
+	Radius 11
+	Height 8
+	Speed 20
+	Damage 20
+	Projectile
+	+RANDOMIZE
+	+DEHEXPLOSION
+	+ROCKETTRAIL
+	SeeSound "scientist2/attack2"
+	DeathSound "weapons/rocklx"
+	Obituary "$OB_MPROCKET"
+	States
+	{
+	Spawn:
+		SCI2 Q 1 Bright
+		Loop
+	Death:
+		MISL B 8 Bright A_Explode
+		MISL C 6 Bright
+		MISL D 4 Bright
+		Stop
+	}
+}

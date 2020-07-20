@@ -1,0 +1,288 @@
+// OSIRIS Enemies
+
+ACTOR OSIRISBat 18660 // 3006
+{
+	Health 70
+	Radius 16
+	Height 56
+	Mass 50
+	Speed 8
+	Damage 3
+	PainChance 256
+	Monster
+	+FLOAT
+	+NOGRAVITY
+	+MISSILEMORE
+	+DONTFALL
+	+NOICEDEATH
+	AttackSound "osirisbat/attack"
+	PainSound "osirisbat/pain"
+	DeathSound "osirisbat/death"
+	ActiveSound "osirisbat/active"
+	Obituary "%o was bitten by a bat"
+	States
+	{
+	Spawn:
+		OSI2 AB 10 A_Look
+		Loop
+	See:
+		OSI2 AB 5 A_Chase
+		Loop
+	Missile:
+		OSI2 C 10 A_FaceTarget
+		OSI2 D 4 A_SkullAttack
+		OSI2 CD 4
+		Goto Missile+2
+	Pain:
+		OSI2 E 3
+		OSI2 E 3 A_Pain
+		Goto See
+	Death:
+		OSI2 F 5 A_NoGravity
+		OSI2 G 5 A_Scream
+		OSI2 H 5
+		OSI2 I 5 A_NoBlocking
+		OSI2 J 5
+		OSI2 K 5
+		Stop
+	}
+}
+
+ACTOR OSIRISArcheologist 18661 // 9
+{
+	Health 40
+	Radius 20
+	Height 56
+	Mass 100
+	Speed 10
+	PainChance 170
+	Monster
+	+FLOORCLIP
+	SeeSound "osirisarcheologist/sight"
+	AttackSound "osirisarcheologist/attack"
+	PainSound "osirisarcheologist/pain"
+	DeathSound "osirisarcheologist/death"
+	ActiveSound "osirisarcheologist/active"
+	Obituary "%o was shot by an archeologist"
+	DropItem "Shotgun"
+	States
+	{
+	Spawn:
+		OSI3 AB 10 A_Look
+		Loop
+	See:
+		OSI3 AABBCCDD 3 A_Chase
+		Loop
+	Missile:
+		OSI3 E 10 A_FaceTarget
+		OSI3 F 10 BRIGHT A_SposAttackUseAtkSound
+		OSI3 E 10
+		Goto See
+	Pain:
+		OSI3 G 3
+		OSI3 G 3 A_Pain
+		Goto See
+	Death:
+		OSI3 H 5
+		OSI3 I 5 A_Scream
+		OSI3 J 5 A_NoBlocking
+		OSI3 K 5
+		OSI3 L -1
+		Stop
+	XDeath:
+		OSI3 M 5
+		OSI3 N 5 A_XScream
+		OSI3 O 5 A_NoBlocking
+		OSI3 PQRST 5
+		OSI3 U -1
+		Stop
+	Raise:
+		OSI3 L 5
+		OSI3 KJIH 5
+		Goto See
+	}
+}
+
+ACTOR OSIRISAnubis 18662 // 3001
+{
+	Health 50
+	Radius 20
+	Height 56
+	Mass 124
+	Speed 12
+	PainChance 200
+	ReactionTime 6
+	Monster
+	+FLOORCLIP
+	SeeSound "osirismonster/sight"
+	PainSound "osirismonster/pain"
+	DeathSound "osirismonster/death"
+	ActiveSound "osirismonster/active"
+	HitObituary "%o was killed by an egyptian monster"
+	Obituary "%o was killed by an egyptian monster"
+	States
+	{
+	Spawn:
+		OSI4 AB 10 A_Look
+		Loop
+	See:
+		OSI4 AABBCCDD 3 A_Chase
+		Loop
+	Melee:
+	Missile:
+		OSI4 EF 8 A_FaceTarget
+		OSI4 G 6 A_CustomComboAttack("CacodemonBall", 32, 3 * random(1, 8), "imp/melee")
+		Goto See
+	Pain:
+		OSI4 H 2
+		OSI4 H 2 A_Pain
+		Goto See
+	Death:
+		OSI4 I 8
+		OSI4 J 8 A_Scream
+		OSI4 K 6
+		OSI4 L 6 A_NoBlocking
+		OSI4 M -1
+		Stop
+	XDeath:
+		OSI4 N 5
+		OSI4 O 5 A_XScream
+		OSI4 P 5
+		OSI4 Q 5 A_NoBlocking
+		OSI4 RST 5
+		OSI4 U -1
+		Stop
+	Raise:
+		OSI4 MLKJI 8
+		Goto See
+	}
+}
+
+ACTOR OSIRISReaper 18663 // 3002
+{
+	Health 150
+	PainChance 180
+	Speed 10
+	Radius 20
+	Height 56
+	Mass 160
+	Monster
+	+FLOORCLIP
+	SeeSound "osirisreaper/sight"
+	AttackSound "osirisreaper/attack"
+	PainSound "osirisreaper/pain"
+	DeathSound "osirisreaper/death"
+	ActiveSound "osirisreaper/active"
+	Obituary "%o was slashed by a reaper"
+	States
+	{
+	Spawn:
+		OSI5 AB 10 A_Look
+		Loop
+	See:
+		OSI5 AABBCCDD 3 A_Chase
+		Loop
+	Melee:
+		OSI5 EF 8 A_FaceTarget
+		OSI5 G 8 A_SargAttack
+		Goto See
+	Pain:
+		OSI5 H 2
+		OSI5 H 2 A_Pain
+		Goto See
+	Death:
+		OSI5 I 8
+		OSI5 J 8 A_Scream
+		OSI5 K 4
+		OSI5 L 4 A_NoBlocking
+		OSI5 M 4
+		OSI5 N -1
+		Stop
+	Raise:
+		OSI5 N 5
+		OSI5 MLKJI 5
+		Goto See
+	}
+}
+
+Actor OSIRISReaperStealth : OSIRISReaper 18664 // 58
+{
+}
+
+ACTOR OSIRISPharaoh 18665 // 68
+{
+	Health 750
+	Radius 30
+	Height 56
+	Mass 200
+	Speed 9
+	PainChance 40
+	ReactionTime 6
+	Monster
+	+FLOORCLIP
+	SeeSound "vile/sight"
+    PainSound "vile/pain"
+    DeathSound "vile/death"
+    ActiveSound "vile/active"
+	Obituary "%o was killed by a pharaoh"
+	States
+	{
+	Spawn:
+		OSI6 AB 10 A_Look
+		Loop
+	See:
+		OSI6 A 2 A_Chase
+		OSI6 ABBCC 2 A_Chase
+		OSI6 D 2 A_Chase
+		OSI6 DEEFF 2 A_Chase
+		Loop
+	Missile:
+		OSI6 A 10 A_FaceTarget
+		OSI6 G 10 A_FaceTarget
+		OSI6 H 6 BRIGHT A_CustomMissile("OsirisPharaohShot", 32.0, 0.0, 0, 0)
+		OSI6 G 20 A_FaceTarget
+		OSI6 G 1 A_SpidRefire
+		Goto Missile+2
+	Pain:
+		OSI6 I 3
+		OSI6 I 3 A_Pain
+		Goto See
+	Death:
+		OSI6 J 20 A_Scream
+		OSI6 K 7 A_NoBlocking
+		OSI6 LMNO 7
+		OSI6 P -1 
+		Stop
+    Raise:
+		OSI6 P 5
+		OSI6 ONMLKJ 5
+		Goto See
+	}
+}
+
+ACTOR OSIRISPharaohShot
+{
+	Radius 6
+	Height 8
+	Speed 30
+	Damage 14
+	Projectile 
+	+RANDOMIZE
+	RenderStyle Add
+	Scale 0.75
+	Alpha 1
+	SeeSound "osirispharaoh/attack"
+	DeathSound "fatso/shotx"
+	States
+	{
+	Spawn:
+		MANF AB 4 BRIGHT
+		Loop
+	Death:
+		MISL B 8 BRIGHT
+		MISL C 6 BRIGHT
+		MISL D 4 BRIGHT
+		Stop
+	}
+}
+

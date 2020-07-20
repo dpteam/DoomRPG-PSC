@@ -1,2 +1,1 @@
 Name=WadSmoosh
-Mods=doom_complete.pk3

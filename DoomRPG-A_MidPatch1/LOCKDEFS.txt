@@ -1,0 +1,102 @@
+//locks that require a specific-colored keycard
+Lock 7 Doom
+{
+	GreenCard
+	Message "You need a green keycard to open this door"
+	RemoteMessage "You need a green keycard to activate this object"
+	Mapcolor 0 255 0
+}
+
+Lock 8 Doom
+{
+	OrangeCard
+	Message "You need an orange keycard to open this door"
+	RemoteMessage "You need an orange keycard to activate this object"
+	Mapcolor 255 128 0
+}
+
+Lock 9 Doom
+{
+	PurpleCard
+	Message "You need a purple keycard to open this door"
+	RemoteMessage "You need a purple keycard to activate this object"
+	Mapcolor 255 0 128
+}
+
+Lock 10 Doom
+{
+	BlackCard
+	Message "You need a black keycard to open this door"
+	RemoteMessage "You need a black keycard to activate this object"
+	Mapcolor 64 64 64
+}
+
+//locks that require a specific-colored skull key
+
+Lock 13 Doom
+{
+	GreenSkull
+	Message "You need a green skull key to open this door"
+	RemoteMessage "You need a green skull key to activate this object"
+	Mapcolor 0 255 0
+}
+
+Lock 14 Doom
+{
+	OrangeSkull
+	Message "You need an orange skull key to open this door"
+	RemoteMessage "You need an orange skull key to activate this object"
+	Mapcolor 255 128 0
+}
+
+Lock 15 Doom
+{
+	PurpleSkull
+	Message "You need a purple skull key to open this door"
+	RemoteMessage "You need a purple skull key to activate this object"
+	Mapcolor 255 0 128
+}
+
+Lock 16 Doom
+{
+	BlackSkull
+	Message "You need a black skull key to open this door"
+	RemoteMessage "You need a black skull key to activate this object"
+	Mapcolor 64 64 64
+}
+
+//locks that work for either key type of the right color
+
+Lock 20 Doom
+{
+	Any { GreenCard GreenSkull }
+	Message "You need a green key to open this door"
+	RemoteMessage "You need a green key to activate this object"
+	Mapcolor 0 255 0
+}
+
+
+Lock 21 Doom
+{
+	Any { OrangeCard OrangeSkull }
+	Message "You need an orange key to open this door"
+	RemoteMessage "You need an orange key to activate this object"
+	Mapcolor 255 128 0
+}
+
+
+Lock 22 Doom
+{
+	Any { PurpleCard PurpleSkull }
+	Message "You need a purple key to open this door"
+	RemoteMessage "You need a purple key to activate this object"
+	Mapcolor 255 0 128
+}
+
+Lock 23 Doom
+{
+	Any { BlackCard BlackSkull }
+	Message "You need a black key to open this door"
+	RemoteMessage "You need a black key to activate this object"
+	Mapcolor 64 64 64
+}

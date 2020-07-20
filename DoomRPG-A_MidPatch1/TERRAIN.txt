@@ -1,0 +1,525 @@
+// Splashes for Compendium, why not...
+
+splash Water2
+{
+	smallclass		WaterSplash2Base
+	smallclip		12
+	smallsound		world/drip0
+
+	baseclass		WaterSplash2Base
+	chunkclass		WaterSplash2
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	2
+	sound			world/water2splash
+	NoAlert
+}
+
+splash Nuke
+{
+	smallclass		NukeSplashBase
+	smallclip		12
+	smallsound		world/drip0
+
+	baseclass		NukeSplashBase
+	chunkclass		NukeSplash
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	2
+	sound			world/nukagesplash
+	NoAlert
+}
+
+splash Slime
+{
+	smallclass		MudSplashBase
+	smallclip		12
+	smallsound		world/drip0
+
+	baseclass		MudSplashBase
+	chunkclass		MudSplash
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	2
+	sound			world/slimesplash
+	NoAlert
+}
+
+splash Lava2
+{
+	smallclass		Lava2SplashBase
+	smallclip		12
+	smallsound		world/drip0
+
+	baseclass		Lava2SplashBase
+	chunkclass		Lava2Splash
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	2
+	sound			world/lavasplash
+	NoAlert
+}
+
+splash Blood
+{
+	smallclass		BloodSplash2Base
+	smallclip		12
+	smallsound		world/drip0
+
+	baseclass		BloodSplash2Base
+	chunkclass		Bloodsplash2
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	2
+	sound			world/bloodsplash
+	NoAlert
+}
+
+splash Whiteliquid
+{
+	smallclass		WhiteSplashBase
+	smallclip		12
+	smallsound		world/drip0
+
+	baseclass		WhiteSplashBase
+	chunkclass		WhiteSplash
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	2
+	sound			world/slimesplash
+	NoAlert
+}
+
+splash Whiteliquid2
+{
+	smallclass		WhiteSplashBase
+	smallclip		12
+	smallsound		world/drip0
+
+	baseclass		WhiteSplashBase
+	chunkclass		WhiteSplash
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	2
+	sound			world/water2splash
+	NoAlert
+}
+
+splash Darkliquid
+{
+	smallclass		DarkSplashBase
+	smallclip		12
+	smallsound		world/drip0
+
+	baseclass		DarkSplashBase
+	chunkclass		DarkSplash
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	2
+	sound			world/slimesplash
+	NoAlert
+}
+
+splash Rustliquid
+{
+	smallclass		RustSplashBase
+	smallclip		12
+	smallsound		world/drip0
+
+	baseclass		RustSplashBase
+	chunkclass		RustSplash
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	2
+	sound			world/slimesplash
+	NoAlert
+}
+
+splash WaterSound
+{
+	smallclass		None
+	baseclass		None
+	chunkclass		None
+	sound			world/watersplash
+	noalert
+}
+
+// Terrain types -----------------------------------------------------------
+
+terrain Water2
+{
+	splash			Water2
+	footclip		8
+	liquid
+}
+
+terrain Nuke
+{
+	splash			Nuke
+	footclip		8
+	liquid
+}
+
+terrain Slime
+{
+	splash			Slime
+	footclip		8
+	liquid
+}
+
+terrain Lava2
+{
+	splash			Lava2
+	footclip		8
+	liquid
+}
+
+
+terrain Blood
+{
+	splash			Blood
+	footclip		8
+	liquid
+}
+
+terrain Whiteliquid
+{
+	splash			Whiteliquid
+	footclip		8
+	liquid
+}
+
+terrain Whiteliquid2
+{
+	splash			Whiteliquid2
+	footclip		8
+	liquid
+}
+
+terrain Darkliquid
+{
+	splash			Darkliquid
+	footclip		8
+	liquid
+}
+
+terrain Rustliquid
+{
+	splash			Rustliquid
+	footclip		8
+	liquid
+}
+
+// Floor -> terrain mappings -----------------------------------------------
+
+//ifdoom
+floor CMP_WTR1 Whiteliquid2
+floor CMP_WTR2 Whiteliquid2
+floor CMP_WTR3 Whiteliquid2
+floor CMP_WTR4 Whiteliquid2
+floor CMP_WTR5 Whiteliquid2
+floor CMP_WTR6 Whiteliquid2
+floor DKTX3032 Lava2
+floor DKTX3033 Lava2
+floor DKTX3034 Lava2
+floor DKTX3035 Lava2
+floor WTR_3_01 Water2
+floor WTR_3_02 Water2
+floor WTR_3_03 Water2
+floor WTR_3_04 Water2
+floor WTR_3_05 Water2
+floor WTR_3_06 Water2
+floor WTR_3_07 Water2
+floor WTR_3_08 Water2
+floor WTR_3_09 Water2
+floor WTR_3_10 Water2
+floor WTR_3_11 Water2
+floor WTR_3_12 Water2
+floor WTR_3_13 Water2
+floor WTR_3_14 Water2
+floor WTR_3_15 Water2
+floor WTR_4_1 Water2
+floor WTR_4_2 Water2
+floor WTR_4_3 Water2
+floor WTR_4_4 Water2
+floor WTR_4_5 Water2
+floor WTR_4_6 Water2
+floor WTR_4_7 Water2
+floor WTR_4_8 Water2
+floor FWATER1 Water2
+floor FWATER2 Water2
+floor FWATER3 Water2
+floor FWATER4 Water2
+floor NUKAGE1 Nuke
+floor NUKAGE2 Nuke
+floor NUKAGE3 Nuke
+floor SLIME01 Slime
+floor SLIME02 Slime
+floor SLIME03 Slime
+floor SLIME04 Slime
+floor SLIME05 Slime
+floor SLIME06 Slime
+floor SLIME07 Slime
+floor SLIME08 Slime
+floor BLOOD1  Blood
+floor BLOOD2  Blood
+floor BLOOD3  Blood
+floor LAVA1   Lava2
+floor LAVA2   Lava2
+floor LAVA3   Lava2
+floor LAVA4   Lava2
+floor BIOLV01 Lava2
+floor BIOLV02 Lava2
+floor BIOLV03 Lava2
+floor BIOLV04 Lava2
+floor BIONK01 Nuke
+floor BIONK02 Nuke
+floor BIONK03 Nuke
+floor BIONK04 Nuke
+floor BIONK05 Nuke
+floor BIONK06 Nuke
+floor BIONK07 Nuke
+floor BIONK08 Nuke
+floor BIONK09 Nuke
+floor BIONK10 Nuke
+floor BIONK11 Nuke
+floor BIONK12 Nuke
+floor BIONK13 Nuke
+floor BIONK14 Nuke
+floor BIONK15 Nuke
+floor BIONK16 Nuke
+floor BIONK17 Nuke
+floor BIONK18 Nuke
+floor BIONK19 Nuke
+floor BIONK20 Nuke
+floor BIONK21 Nuke
+floor BIONK22 Nuke
+floor BIONK23 Nuke
+floor BIONK24 Nuke
+floor BIONK25 Nuke
+floor BIONK26 Nuke
+floor BIONK27 Nuke
+floor BIOBL01 Blood
+floor BIOBL02 Blood
+floor BIOBL03 Blood
+floor ETEFL066 Water2
+floor ETEFL067 Water2
+floor ETEFL068 Water2
+floor ETEFL069 Water2
+floor ETEFL070 Lava2
+floor ETEFL071 Lava2
+floor ETEFL072 Lava2
+floor ETEFL073 Lava2
+floor ETEFL086 Blood
+floor ETEFL087 Blood
+floor ETEFL088 Blood
+floor ETEFL131 Nuke
+floor ETEFL132 Nuke
+floor ETEFL133 Nuke
+floor ETEFL134 Nuke
+floor ETEFL135 Slime
+floor ETEFL136 Slime
+floor ETEFL137 Slime
+floor ETEFL138 Slime
+floor SCYFL1 Darkliquid
+floor SCYFL2 Darkliquid
+floor SCYFL3 Darkliquid
+floor SCYFL4 Darkliquid
+floor EQUAF08 Darkliquid
+floor EQUAF09 Darkliquid
+floor EQUAF10 Darkliquid
+floor EQUAF11 Darkliquid
+floor FLATHUH1 Lava2
+floor FLATHUH2 Lava2
+floor FLATHUH3 Lava2
+floor FLATHUH4 Lava2
+floor FLTFLWW1 Water2
+floor FLTFLWW2 Water2
+floor FLTFLWW3 Water2
+floor FLTLAVA1 Lava2
+floor FLTLAVA2 Lava2
+floor FLTLAVA3 Lava2
+floor FLTLAVA4 Lava2
+floor FLTSLUD1 Whiteliquid
+floor FLTSLUD2 Whiteliquid
+floor FLTSLUD3 Whiteliquid
+floor FLTWAWA1 Water2
+floor FLTWAWA2 Water2
+floor FLTWAWA3 Water2
+floor SWATER1 Water2
+floor SWATER2 Water2
+floor SWATER3 Water2
+floor SWATER4 Water2
+floor RUINFL67 Water2
+floor RUINFL68 Water2
+floor RUINFL69 Water2
+floor RUINFL70 Water2
+floor RUINFL71 Lava2
+floor RUINFL72 Lava2
+floor RUINFL73 Lava2
+floor RUINFL74 Lava2
+floor RUINFL75 Nuke
+floor RUINFL76 Nuke
+floor RUINFL77 Nuke
+floor 2FL_AQ01 Lava2
+floor 2FL_AQ02 Lava2
+floor 2FL_AQ03 Lava2
+floor 2FL_AQ04 Lava2
+floor 2FL_AT01 Lava2
+floor 2FL_AT02 Lava2
+floor 2FL_AT03 Lava2
+floor 2FL_AT04 Lava2
+floor 2FX_AT21 Lava2
+floor 2FX_AT22 Lava2
+floor 2FX_AT23 Lava2
+floor 2FX_AT24 Lava2
+floor 2FL_AW01 Water2
+floor 2FL_AW02 Water2
+floor 2FL_AW03 Water2
+floor 2FL_AW04 Water2
+floor 0AFLUX7D Blood
+floor 0AFLUX4D Slime
+floor 0AFLUX5D Water2
+floor 0FLAVA Lava2
+floor 0FOOLD01 Slime
+floor 0AFLUX8D Nuke
+floor QWATER1 Water2
+floor RESFLR18 Rustliquid
+floor RESFLR19 Rustliquid
+floor RESFLR20 Rustliquid
+floor RESFLR21 Rustliquid
+floor QLAVA Lava2
+floor QSLIME1 Darkliquid
+floor QFLAVA1 Lava2
+floor QFWATER1 Darkliquid
+floor QFSLIME1 Darkliquid
+floor QWATER2 Darkliquid
+floor QWATER3 Darkliquid
+floor QWATER0 Water2
+floor QSLIME2 Darkliquid
+floor QLAVA01 Lava2
+floor QWATER01 Darkliquid
+floor QSLIME15 Darkliquid
+floor SIDFL079 Whiteliquid
+floor SIDFL080 Whiteliquid
+floor SIDFL081 Whiteliquid
+floor SIDFL082 Whiteliquid
+floor SIDFL083 Whiteliquid
+floor SIDFL084 Whiteliquid
+floor SIDFL085 Whiteliquid
+floor SIDFL086 Whiteliquid
+floor SIDFL087 Whiteliquid
+floor SIDFL088 Whiteliquid
+floor SIDFL089 Lava2
+floor SIDFL090 Lava2
+floor SIDFL091 Lava2
+floor SIDFL092 Lava2
+floor SIDFL093 Lava2
+floor SIDFL094 Lava2
+floor SIDFL095 Lava2
+floor SIDFL096 Lava2
+floor SIDFL097 Lava2
+floor SIDFL098 Lava2
+floor SIDFL099 Slime
+floor SIDFL100 Slime
+floor SIDFL101 Slime
+floor SIDFL102 Slime
+floor SIDFL103 Slime
+floor SIDFL104 Slime
+floor SIDFL105 Slime
+floor SIDFL106 Slime
+floor SIDFL107 Slime
+floor SIDFL108 Slime
+floor GTSLIME1 Darkliquid
+floor GTSLIME2 Darkliquid
+floor GTSLIME3 Darkliquid
+floor GTSLIME4 Darkliquid
+floor LEGO_SL1 Slime
+floor LEGO_SL2 Slime
+floor LEGO_SL3 Slime
+floor LEGO_SL4 Slime
+
+//// Extra definitions for better compatibility with maps that employ deep water effects.
+
+// Doom
+
+terrain SpecialWaterDoom
+{
+	splash			Water2
+	footclip		0
+	liquid
+}
+
+terrain SpecialBloodDoom
+{
+	splash			Blood
+	footclip		0
+	liquid
+}
+
+terrain SpecialNukeDoom
+{
+	splash			Nuke
+	footclip		0
+	liquid
+}
+
+terrain SpecialLavaDoom
+{
+	splash			Lava2
+	footclip		0
+	liquid
+}
+
+terrain SpecialSlimeDoom
+{
+	splash			Slime
+	footclip		0
+	liquid
+}
+
+floor SPCIAL01 SpecialWaterDoom
+floor SPCIAL02 SpecialWaterDoom
+floor SPCIAL03 SpecialWaterDoom
+floor SPCIAL04 SpecialWaterDoom
+floor SPCIAL05 SpecialBloodDoom
+floor SPCIAL06 SpecialBloodDoom
+floor SPCIAL07 SpecialBloodDoom
+floor SPCIAL08 SpecialNukeDoom
+floor SPCIAL09 SpecialNukeDoom
+floor SPCIAL10 SpecialNukeDoom
+floor SPCIAL11 SpecialLavaDoom
+floor SPCIAL12 SpecialLavaDoom
+floor SPCIAL13 SpecialLavaDoom
+floor SPCIAL14 SpecialLavaDoom
+floor SPCIAL15 SpecialSlimeDoom
+floor SPCIAL16 SpecialSlimeDoom
+floor SPCIAL17 SpecialSlimeDoom
+floor SPCIAL18 SpecialSlimeDoom
+floor SPCIAL19 SpecialSlimeDoom
+floor SPCIAL20 SpecialSlimeDoom
+floor SPCIAL21 SpecialSlimeDoom
+floor SPCIAL22 SpecialSlimeDoom
+
+// Eternal Doom
+
+terrain SpecialWaterEternal
+{
+	splash			Water2
+	footclip		0
+	liquid
+}
+
+floor SPCIAL23 SpecialWaterEternal
+floor SPCIAL24 SpecialWaterEternal
+floor SPCIAL25 SpecialWaterEternal
+floor SPCIAL26 SpecialWaterEternal

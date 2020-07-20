@@ -1,0 +1,650 @@
+// Ran out of space on sndinfo :P
+
+ACTOR SlipgateSound1 18751
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb1", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound2 18752
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb2", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound3 18753
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb3", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound4 18754
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb4", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound5 18755
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb5", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound6 18756
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb6", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound7 18757
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb7", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound8 18758
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb8", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound9 18759
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb9", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound10 18760
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb10", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound11 18761
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb11", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound12 18762
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb12", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound13 18763
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb13", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound14 18764
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb14", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound15 18765
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb15", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound16 18766
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb16", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound17 18767
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb17", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound18 18768
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb18", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound19 18769
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb19", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound20 18770
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb20", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound21 18771
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb21", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound22 18772
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb22", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound23 18773
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb23", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound24 18774
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb24", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound25 18775
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb25", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound26 18776
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb26", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound27 18777
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb27", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound28 18778
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb28", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound29 18779
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb29", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound30 18780
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb30", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound31 18781
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb31", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound32 18782
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb32", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound33 18783
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb33", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound34 18784
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb34", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound35 18785
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb35", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound36 18786
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb36", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound37 18787
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb37", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound38 18788
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb38", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound39 18789
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb39", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound40 18790
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb40", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound41 18791
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb41", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound42 18792
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb42", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound43 18793
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb43", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound44 18794
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb44", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound45 18795
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb45", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound46 18796
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb46", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound47 18797
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb47", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound48 18798
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb48", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound49 18799
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb49", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound50 18800
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb50", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound51 18801
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb51", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound52 18802
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb52", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound53 18803
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb53", "body", 1)
+		Wait
+	}
+}
+
+ACTOR SlipgateSound54 18804
+{
+	+NOSECTOR +NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 15
+		TNT1 A 10 A_PlaySoundEx("slpamb54", "body", 1)
+		Wait
+	}
+}
+

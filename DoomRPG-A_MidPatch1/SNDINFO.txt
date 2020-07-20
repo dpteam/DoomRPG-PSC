@@ -1,0 +1,1054 @@
+//////// COMPENDIUM'S OWN STUFF ////////
+
+DSNONE	DSNONE
+
+menu/activate			MENUSND1	// Activate a new menu
+menu/backup			MENUSND5	// Backup to previous menu
+menu/prompt			MENUSND1	// Activate a prompt "menu"
+menu/cursor			MENUSND2		// Move cursor up/down
+menu/change			MENUSND7 // Select new value for option
+menu/invalid			dsoof		// Menu not available
+menu/dismiss			MENUSND5	// Dismiss a prompt message
+menu/choose			MENUSND6	// Choose a menu item
+menu/clear			MENUSND5	// Close top menu
+intermission/tick			SCORSND2
+intermission/nextstage		SCORSND1
+
+$pitchshift menu/activate 0
+$pitchshift menu/backup 0
+$pitchshift menu/prompt 0
+$pitchshift menu/change 0
+$pitchshift menu/invalid 0
+$pitchshift menu/dismiss 0
+$pitchshift menu/choose 0
+$pitchshift menu/clear 0
+$pitchshift menu/cursor 0
+$pitchshift intermission/tick 0
+$pitchshift intermission/nextstage 0
+
+// Ambient
+
+ambient/waterfall A_WFALL
+polyobject/move1  POLYMOV1
+$random ambient/wreck01		{ ambient/wreck01A  ambient/wreck01B }
+ambient/wreck01A  WRECK01
+ambient/wreck01B  WRECK01
+$random world/drip0		{ world/drip01  world/drip02  world/drip03 }
+world/drip01			dsdrip01
+world/drip02			dsdrip02
+world/drip03			dsdrip03
+world/nukagesplash     NUKAGESP
+world/lavasplash       LAVASP
+world/slimesplash      SLIMESP
+world/watersplash      WATERSP
+world/water2splash     WATERSP
+world/bloodsplash      BLOODSP
+
+$ambient 100 ambient/waterfall point continuous 1.0
+
+chainguy/attack			        DSPISTOL
+riflezombie/fire                DSPISTOL
+$Limit riflezombie/fire 0
+
+
+// OBITUARY
+
+obituary/hitechguy/sight        OBT3SIT
+obituary/hitechguy/death        OBT3DTH
+
+obituary/marine/pain            OBT4PN
+obituary/marine/death           OBT4DT
+
+// STRAIN
+
+bfgtrooper/sight		dsposit1
+bfgtrooper/active		dsposact
+bfgtrooper/pain			dspopain
+bfgtrooper/death		dspodth1
+bfgtrooper/attack		dsbfg
+
+cyberjr/sight			dscjrsit
+cyberjr/active			dsdmact
+cyberjr/pain			dsdmpain
+cyberjr/death			dscybdth
+cyberjr/hoof			dsjrhoof
+
+daemon/sight			dsbospit
+daemon/attack			dsboscub
+daemon/pain			dsboscub
+daemon/death			dsboscub
+daemon/active			dsboscub
+
+demonlord/sight			dsdmlsit
+demonlord/active		dsdmlact
+demonlord/pain			dsdmpain
+demonlord/death			dsdmldth
+demonlord/attack		dsfirsht
+demonlord/shotx			dsfirxpl
+
+doppleganger/active		dsdmact
+doppleganger/pain		dsdmpain
+doppleganger/death		dsfirxpl
+doppleganger/attack		dsdgatk
+
+$random fastimp/death		{ fastimp/death1  fastimp/death2 }
+fastimp/sight			dsfsisit
+fastimp/active			dsbgact
+fastimp/pain			dspopain
+fastimp/death1			dsbgdth1
+fastimp/death2			dsbgdth2
+fastimp/attack			dsfirsht
+fastimp/shotx			dsfirxpl
+
+holobot/sight			dshbtsit
+holobot/active			dshbtact
+holobot/melee			dshbtpch
+holobot/death			dshbtdth
+holobot/attack			dsskeatk
+holobot/tracex			dsbarexp
+
+polydrone/sight			dspolsit
+polydrone/active		dsboscub
+polydrone/death			dsbarexp
+polydrone/attack		dssaweds
+
+chaingunner/attack		dssaweds
+
+// BIOWAR
+
+biowar/null             BIONULL
+biowar/thunder          BIOTHNDR
+biowar/monsters         BIOMONS
+
+// POST
+
+post/burnt               POSTBRN
+
+// SCIENTIST 2
+
+scientist2/attack1       SCI2ATK1
+scientist2/attack2       SCI2ATK2
+scientist2/die           DSPDIEHI
+
+// HELL TO PAY
+
+$random HTP/Enemy1/Sight { HTP/Enemy1/Sight1 HTP/Enemy1/Sight2 }
+HTP/Enemy1/Sight1        HTP1SIT1
+HTP/Enemy1/Sight2        HTP1SIT2
+HTP/Enemy1/Active        HTP1ACT
+$random HTP/Enemy1/Death { HTP/Enemy1/Death1 HTP/Enemy1/Death2 }
+HTP/Enemy1/Death1        HTP1DTH1
+HTP/Enemy1/Death2        HTP1DTH2
+HTP/Enemy1/Melee         HTP1ATK
+
+HTP/Enemy2/Sight         HTP2SIT
+HTP/Enemy2/Active        HTP2ACT
+HTP/Enemy2/Attack        HTP2ATK
+HTP/Enemy2/Pain          HTP2PAI
+HTP/Enemy2/Death         HTP2DTH
+
+HTP/Enemy3/Attack        HTP3ATK
+HTP/Enemy3/Pain          HTP3PAI
+HTP/Enemy3/Death         HTP3DTH
+
+HTP/Enemy4/Sight         HTP4SIT
+HTP/Enemy4/Attack        HTP4ATK
+HTP/Enemy4/Death         HTP4DTH
+
+HTP/Enemy5/Sight         HTP5SIT
+HTP/Enemy5/Pain          HTP5PAI
+HTP/Enemy5/Death         HTP5DTH
+
+HTP/Enemy6/Sight         HTP6SIT
+HTP/Enemy6/Attack        HTP6ATK
+HTP/Enemy6/Fireball      HTP6FBL
+HTP/Enemy6/Pain          HTP6PAI
+HTP/Enemy6/Death         HTP6DTH
+
+HTP/Enemy7/Pain          HTP7PAI
+HTP/Enemy7/Death         HTP7DTH
+
+HTP/Planetpain           HTPPLAN1
+HTP/Planetexpl           HTPPLAN2
+$Limit HTP/Planetexpl 0
+
+// THE TALOSIAN INCIDENT
+
+TALOS/mpain              DSPLPAIN
+TALOS/mdeath             DSPLDETH
+
+// ALL HELL IS BREAKING LOOSE!
+
+allhell/ambient/wind     ALHSND1
+allhell/ambient/frogs    ALHSND2
+allhell/ambient/water    ALHSND3
+
+$AMBIENT 241 allhell/ambient/wind POINT RANDOM 20.0 38.0 1.0
+$AMBIENT 242 allhell/ambient/frogs POINT RANDOM 30.0 45.0 1.0
+$AMBIENT 243 allhell/ambient/water POINT CONTINUOUS 20.0 35.0 1.0
+
+allhell/streetsweeper    ALHATK1
+allhell/evilmarine1      DSPLPAIN
+allhell/evilmarine2      DSPLDETH
+allhell/evilmarine3      ALHACT1
+allhell/helicopter1      ALHHESI
+allhell/helicopter2      ALHHEAC
+allhell/helicopter3      ALHHEXP
+allhell/wingdemon0       ALHWD00
+$random allhell/wingdemact { allhell/wingdemon1 allhell/wingdemon2 }
+allhell/wingdemon1       ALHWD01
+allhell/wingdemon2       ALHWD02
+allhell/wingdemon3       ALHWD03
+allhell/wingdemon4       ALHWD04
+allhell/wingdemon5       ALHWD05
+
+// REBIRTH
+
+rebirth/snowman1         REBSND1
+rebirth/snowman2         REBSND2
+rebirth/mario1           REBSND3
+rebirth/mario2           REBSND4
+
+// CAVERNS OF DARKNESS
+
+ambient/buzz		dsbuzz
+ambient/comp		dscomp
+ambient/drip		dsdrip
+ambient/fire		dsfire
+ambient/lava		dslava
+ambient/river		dsriver
+ambient/waterfall	dswfall
+ambient/wind		dswind
+ambient/wind2		dswind1
+
+// EQUINOX
+
+equinox/warning          EQUINOX1
+equinox/explode          EQUINOX2
+$Limit equinox/explode 0
+
+// MARSDOOM
+
+marsdoom/explosion       MARSSND1
+
+marsdoom/dronepain       MARSSND2
+marsdoom/dronefire       MARSSND3
+marsdoom/dronesight      MARSSND4
+
+marsdoomevilgirl/sight   MARSSND7
+marsdoomevilgirl/active  MARSSND8
+$random marsdoomevilgirl/pain { marsdoomevilgirl/pain1  marsdoomevilgirl/pain2 }
+marsdoomevilgirl/pain1   MARSSND9
+marsdoomevilgirl/pain2   MARSSNDA
+$random marsdoomevilgirl/death { marsdoomevilgirl/death1 marsdoomevilgirl/death2 marsdoomevilgirl/death3 }
+marsdoomevilgirl/death1  MARSSNDB
+marsdoomevilgirl/death2  MARSSNDC
+marsdoomevilgirl/death3  MARSSNDD
+marsdoomevilgirl/whip    MARSSND5
+marsdoomevilgirl/hit     MARSSND6
+
+marsdoomeileen/sight     MARSSNDE
+$random marsdoomeileen/active { marsdoomeileen/active1 marsdoomeileen/active2 }
+marsdoomeileen/active1   MARSSNDF
+marsdoomeileen/active2   MARSSNDG
+
+marsdoommarine/sight     MARSSNDL
+marsdoommarine/active    MARSSNDK
+marsdoommarine/pain      MARSSNDM
+$random marsdoommarine/death { marsdoommarine/death1 marsdoommarine/death2 marsdoommarine/death3 }
+marsdoommarine/death1    MARSSNDH
+marsdoommarine/death2    MARSSNDI
+marsdoommarine/death3    MARSSNDJ
+
+marsdoomheretic/sight    MARSSNDN
+marsdoomheretic/pain     MARSSNDO
+
+// OSIRIS
+
+osirisbat/attack           OSIRSND1
+osirisbat/pain             OSIRSND2
+osirisbat/death            OSIRSND3
+osirisbat/active           OSIRSND4
+
+osirisarcheologist/attack  OSIRSND5
+osirisarcheologist/sight   OSIRSND6
+osirisarcheologist/active  OSIRSND7
+osirisarcheologist/pain    OSIRSND8
+osirisarcheologist/death   OSIRSND9
+
+$random osirismonster/sight { osirismonster/sight1 osirismonster/sight2 }
+osirismonster/sight1       OSIRSNDA
+osirismonster/sight2       OSIRSNDB
+osirismonster/pain         OSIRSNDD
+$random osirismonster/death { osirismonster/death1 osirismonster/death2 }
+osirismonster/death1       OSIRSNDE
+osirismonster/death2       OSIRSNDF
+osirismonster/active       OSIRSNDC
+
+osirisreaper/sight         OSIRSNDG
+osirisreaper/attack        OSIRSNDJ
+osirisreaper/active        OSIRSNDH
+osirisreaper/pain          OSIRSNDI
+$random osirisreaper/death { osirisreaper/death1 osirisreaper/death2 osirisreaper/death3 osirisreaper/death4 }
+osirisreaper/death1        OSIRSNDK
+osirisreaper/death2        OSIRSNDL
+osirisreaper/death3        OSIRSNDM
+osirisreaper/death4        OSIRSNDK
+
+osiris/ambient1            OSIRSNDN
+osiris/ambient2            OSIRSNDO
+osiris/ambient3            OSIRSNDP
+osiris/ambient4            OSIRSNDR
+
+$AMBIENT 244 osiris/ambient1 POINT RANDOM 40.0 28.0 1.0
+$AMBIENT 245 osiris/ambient2 POINT RANDOM 20.0 38.0 1.0
+$AMBIENT 246 osiris/ambient4 POINT RANDOM 20.0 38.0 1.0
+
+osirispharaoh/attack       OSIRSNDQ
+
+// ENJAY ZDOOM
+
+Bell	DSBELL
+BIRD	DSBIRD
+DRIP	DSDRIP
+ELEC	DSELEC
+GLASS	DSGLASS
+HUM		DSHUM
+HUM2	DSHUM2
+HUM3	DSHUM3
+HUM4	DSHUM4
+HUM5	DSHUM5
+HUM6	DSHUM6
+HUM7	DSHUM7
+LAVA	DSLAVA
+MOAN	DSMOAN
+QUAKE1	DSQKE1
+QUAKE2	DSQKE2
+Q2BATT	DSBATTLE
+SPOOK1	DSSPOOK1
+SPOOK2	DSSPOOK2
+SPOOK3	DSSPOOK3
+SPOOK4	DSSPOOK4
+STEEL	DSSTEEL
+THUNDER	DSTHUN
+WATER	DSWATER
+FLIES	DSFLIES
+VOICE	DSVOICE
+Radio	DSRADIO
+MET2	DSMET2
+GEIG	DSGEIG
+WDOOR	DSWDOR
+WSTOP	DSWSTOP
+REDFF	DSREDFF
+NJSPRK	SPARK2
+NJstart DSDOROPN
+NJmid	DSSTNMOV
+NJend	DSPSTOP
+NJMT	DSEMPTY
+PWRDN	DSPWRDN
+PWRUP	DSPWRUP
+DOORO2	dsbdopn
+
+
+$AMBIENT 201 Bell POINT periodic 10.0 1.0
+$AMBIENT 202 Bird POINT RANDOM 20.0 50.0 1.0
+$AMBIENT 203 Drip POINT RANDOM 10.0 30.0 1.0
+$AMBIENT 204 Drip SURROUND RANDOM 10.0 30.0 1.0
+$ambient 205 Hum POINT CONTINUOUS 1.0
+$ambient 206 Lava POINT RANDOM 10.0 20.0 1.0
+$ambient 207 Moan POINT RANDOM 10.0 30.0 1.0
+$ambient 208 Quake1 POINT RANDOM 10.0 20.0 1.0
+$ambient 209 Quake2 POINT RANDOM 10.0 20.0 1.0
+$ambient 210 Spook1 SURROUND RANDOM 15.0 40.0 1.0
+$ambient 211 Spook2 SURROUND RANDOM 15.0 40.0 1.0
+$ambient 212 Spook3 SURROUND RANDOM 15.0 40.0 1.0
+$ambient 213 Spook4 SURROUND RANDOM 15.0 40.0 1.0
+$ambient 214 Steel POINT RANDOM 10.0 30.0 1.0
+$ambient 215 Thunder POINT RANDOM 10.0 20.0 1.0
+$ambient 216 Thunder SURROUND RANDOM 10.0 20.0 1.0
+$ambient 217 Water POINT CONTINUOUS 1.0
+$ambient 218 Hum2 POINT CONTINUOUS 1.0
+$ambient 219 Hum3 POINT CONTINUOUS 1.0
+$ambient 220 Hum4 POINT CONTINUOUS 1.0
+$ambient 221 Hum5 POINT CONTINUOUS 1.0
+$ambient 222 Hum6 POINT CONTINUOUS 1.0
+$ambient 223 Hum7 POINT CONTINUOUS 1.0
+$ambient 224 Q2BATT POINT RANDOM 10.0 30.0 1.0
+$ambient 225 Flies POINT RANDOM 5.0 10.0 1.0
+$ambient 226 voice Surround RANDOM 15.0 40.0 1.0
+$ambient 227 Geig POINT RANDOM 5.0 15.0 1.0
+$ambient 228 Spook1 POINT RANDOM 10.0 30.0 1.0
+$ambient 229 Spook2 POINT RANDOM 10.0 30.0 1.0
+$ambient 230 Spook3 POINT RANDOM 10.0 30.0 1.0
+$ambient 231 Spook4 POINT RANDOM 10.0 30.0 1.0
+$ambient 232 Q2BATT SURROUND RANDOM 15.0 40.0 1.0
+$ambient 233 voice POINT RANDOM 15.0 40.0 1.0
+$ambient 234 Moan SURROUND RANDOM 15.0 40.0 1.0
+$ambient 235 NJSPRK POINT RANDOM 5.0 10.0 1.0
+
+// DAEDALUS
+
+door1_start     doorstr
+door1_mid       doormid
+door1_end       doorend
+air             air
+boiling         boiling
+fan1            fan1
+gratebrk        gratebrk
+glassbrk        glassbrk
+asteriod        asteriod
+asteroid        asteriod
+suck            suck
+switch          switch
+switch2         switches
+switchnop       gratebrk
+cement          cement
+hum1            hum1
+ALARM1          ALARM1
+ALARM2          ALARM2
+ALARM3          ALARM3
+ALARM4          ALARM4
+CRASH1          CRASH1
+CRASH2          CRASH2
+CRASH3          CRASH3
+CRASH4          CRASH4
+CRASH5          CRASH5
+DOORS1          DOORS1
+ELECT1          ELECT1
+ELECT2          ELECT2
+ELECT3          ELECT3
+ELECT4          ELECT4
+ELECT5          ELECT5
+ELECT6          ELECT6
+EQUIP1          EQUIP1
+EQUIP2          EQUIP2
+EQUIP3          EQUIP3
+EQUIP4          EQUIP4
+EQUIP5          EQUIP5
+EQUIP6          EQUIP6
+EQUIP7          EQUIP7
+EQUIP8          EQUIP8
+EQUIP9          EQUIP9
+FLUID1          FLUID1
+FLUID2          FLUID2
+FLUID3          FLUID3
+FLUID4          FLUID4
+FLUID7          FLUID7
+FLUID8          FLUID8
+PRESS1          PRESS1
+PRESS2          PRESS2
+PRESS3          PRESS3
+MOTOR1          MOTOR1
+MOTOR2          MOTOR2
+MOTOR3          MOTOR3
+MOTOR4          MOTOR4
+MOTOR5          MOTOR5
+MOTOR6          MOTOR6
+SPACE1          SPACE1
+SPACE2          SPACE2
+SPACE3          SPACE3
+SPACE4          SPACE4
+SPACE5          SPACE5
+SPACE6          SPACE6
+ALARM2H         ALARM2H
+ALARM2Q         ALARM2Q
+SPACE5H         SPACE5H
+SPACE5Q         SPACE5Q
+SPACE5E         SPACE5E
+SPACE5S         SPACE5S
+GAMEHIT         GAMEHIT
+GAMEREFL        GAMEREFL
+GAMEFAIL        GAMEFAIL
+GAMESTRT        GAMESTRT
+FLUSH           FLUSH
+ARACATTK        ARACATTK
+ARACDETH        ARACDETH
+ARACPAIN        ARACPAIN
+ARACWAKE        ARACWAKE
+TTUBE1		TTUBE1
+COMPAMB		COMPAMB
+MULTSHOT	MULTSHOT
+HARTBEAT	HARTBEAT
+BLEEP01		BLEEP01
+BLEEP02		BLEEP02
+BLEEP03		BLEEP03
+BLEEP04		BLEEP04
+BLEEP05		BLEEP05
+BLEEP06		BLEEP06
+BLEEP07		BLEEP07
+BLEEP08		BLEEP08
+BLEEP09		BLEEP09
+BLEEP10		BLEEP10
+BLEEP11		BLEEP11
+BLEEP12		BLEEP12
+BLEEP13		BLEEP13
+BLEEP14		BLEEP14
+COREEXPL	COREEXPL
+FIREBURN	FIREBURN
+PRIZE1		PRIZE1
+CLOSE1		CLOSE1
+CRACK1		CRACK1
+ENGINE1		ENGINE1
+ENGINE2		ENGINE2
+ENGINE3		ENGINE3
+WATRFALL	WATRFALL
+CONVEY	CONVEY
+DROPCARD	DROPCARD
+TREEBURN	TREEBURN
+GLOOP		GLOOP
+DGIDLE1		DGIDLE1
+DGIDLE2		DGIDLE2
+DGPOWER		DGPOWER
+DGLAUNCH	DGLAUNCH
+THUNDER		THUNDER
+
+// New ambient sounds - build 39
+1CAVE1		1CAVE1
+1CAVE2		1CAVE2
+1CAVE3		1CAVE3
+1CAVE4		1CAVE4
+1FANON		1FANON
+1FANRUN		1FANRUN
+1FANSTOP	1FANSTOP
+1GEN1		1GEN1
+1LASER1		1LASER1
+1LASER2		1LASER2
+1LASER3		1LASER3
+1LASER4		1LASER4
+1LASER5		1LASER5
+1WATER1		1WATER1
+1WATER2		1WATER2
+1WATER3		1WATER3
+
+ubahn/UP_0_1	up1
+ubahn/UP_1_2	up2
+ubahn/UP_2_3	up3
+ubahn/UP_3_4	up4
+ubahn/UP_4_5	up5
+ubahn/UP_5_6	up6
+ubahn/DN_6_5	dn5
+ubahn/DN_5_4	dn4
+ubahn/DN_4_3	dn3
+ubahn/DN_3_2	dn2
+ubahn/DN_2_1	dn1
+ubahn/DN_1_0	dn0
+ubahn/CONT_0	cont0
+ubahn/CONT_1	cont1
+ubahn/CONT_2	cont2
+ubahn/CONT_3	cont3
+ubahn/CONT_4	cont4
+ubahn/CONT_5	cont5
+ubahn/CONT_6	cont6
+ubahn/CONT_6X	cont6x
+ubahn/SP_CLATTER	clatter
+ubahn/SP_TURN		turn
+ubahn/SP_LASEROFF	laseroff
+ubahn/SP_CYBIE_HI	cybhi
+ubahn/SP_CYBIE_OK	cybok
+ubahn/SP_CYBIE_DIE	cybdie
+ubahn/SP_CYBIE_WALK     cybwalk
+
+al01 al01
+al02 al02
+al03 al03
+al04 al04
+al05 al05
+al06 al06
+al07 al07
+al08 al08
+al09 al09
+al10 al10
+al11 al11
+al12 al12
+al13 al13
+al14 al14
+al15 al15
+al16 al16
+al17 al17
+al18 al18
+al19 al19
+al20 al20
+al21 al21
+al22 al22
+al23 al23
+al24 al24
+al25 al25
+al26 al26
+al27 al27
+al28 al28
+al29 al29
+al30 al30
+al31 al31
+al32 al32
+al33 al33
+al34 al34
+al35 al35
+al36 al36
+al37 al37
+al101 al101
+al102 al102
+al103 al103
+al104 al104
+al105 al105
+al106 al106
+al107 al107
+
+//
+// Alien1 sounds
+//
+
+daedalus/alien1/sight			DAEMANT1
+daedalus/alien1/attack			DAEMANT2
+daedalus/alien1/death			DAEMANT3
+daedalus/alien1/pain			DAEMANT4
+daedalus/alien1/active1			DAEMANT5
+$random daedalus/alien1/active 		{ daedalus/alien1/sight daedalus/alien1/active1 }
+
+//
+// Alien2 sounds
+//
+
+daedalus/alien2/sight	rockwake
+daedalus/alien2/attack	rockattk
+daedalus/alien2/pain	anypain
+daedalus/alien2/death	rockdeth
+daedalus/alien2/active1	bgecho01
+daedalus/alien2/active2	bgecho02
+$random daedalus/alien2/active		{ daedalus/alien2/active1 daedalus/alien2/active2 }
+
+//
+// Alien3 sounds
+//
+
+
+
+$AMBIENT 1 boiling point continuous 0.25
+$AMBIENT 2 air point continuous 0.25
+$AMBIENT 3 fan1 point continuous 0.5
+$AMBIENT 4 ALARM1 point continuous 1.0
+$AMBIENT 5 ALARM2 point continuous 1.0
+$AMBIENT 6 ALARM3 point continuous 1.0
+$AMBIENT 7 ALARM4 point continuous 1.0
+$AMBIENT 8 ELECT1 point continuous 1.0
+$AMBIENT 9 ELECT2 point continuous 1.0
+$AMBIENT 10 ELECT3 point continuous 1.0
+$AMBIENT 11 ELECT4 point continuous 1.0
+$AMBIENT 12 ELECT5 point continuous 1.0
+$AMBIENT 13 ELECT6 point continuous 1.0
+$AMBIENT 14 EQUIP1 point continuous 1.0
+$AMBIENT 15 EQUIP2 point continuous 1.0
+$AMBIENT 16 EQUIP3 point continuous 1.0
+$AMBIENT 17 EQUIP4 point continuous 1.0
+$AMBIENT 18 EQUIP5 point continuous 1.0
+$AMBIENT 19 EQUIP6 point continuous 1.0
+$AMBIENT 20 EQUIP7 point continuous 1.0
+$AMBIENT 21 EQUIP8 point continuous 1.0
+$AMBIENT 22 FLUID1 point continuous 1.0
+$AMBIENT 23 FLUID2 point continuous 1.0
+$AMBIENT 24 FLUID3 point continuous 1.0
+$AMBIENT 25 FLUID4 point continuous 1.0
+$AMBIENT 26 FLUID7 point continuous 1.0
+$AMBIENT 27 FLUID8 point continuous 1.0
+$AMBIENT 28 PRESS1 point continuous 1.0
+$AMBIENT 29 PRESS2 point continuous 1.0
+$AMBIENT 30 PRESS3 point continuous 1.0
+$AMBIENT 31 MOTOR1 point continuous 1.0
+$AMBIENT 32 MOTOR2 point continuous 1.0
+$AMBIENT 33 MOTOR3 point continuous 1.0
+$AMBIENT 34 MOTOR4 point continuous 1.0
+$AMBIENT 35 MOTOR5 point continuous 1.0
+$AMBIENT 36 MOTOR6 point continuous 1.0
+$AMBIENT 37 SPACE1 point continuous 1.0
+$AMBIENT 38 SPACE2 point continuous 1.0
+$AMBIENT 39 SPACE3 point continuous 1.0
+$AMBIENT 40 SPACE4 point continuous 1.0
+$AMBIENT 41 SPACE5 point continuous 1.0
+$AMBIENT 42 SPACE6 point continuous 1.0
+$AMBIENT 43 ALARM2H point continuous 1.0
+$AMBIENT 44 ALARM2Q point continuous 1.0
+$AMBIENT 45 SPACE5H point continuous 1.0
+$AMBIENT 46 SPACE5Q point continuous 1.0
+$AMBIENT 47 SPACE5E point continuous 1.0
+$AMBIENT 48 SPACE5S point continuous 1.0
+$AMBIENT 49 TTUBE1 point continuous 1.0
+$AMBIENT 49 MULTSHOT point continuous 1.0
+$AMBIENT 49 COMPAMB point continuous 1.0
+$AMBIENT 50 EQUIP9 point continuous 1.0
+$AMBIENT 51 HARTBEAT point continuous 1.0
+$AMBIENT 52 BLEEP01 point continuous 1.0
+$AMBIENT 53 BLEEP02 point continuous 1.0
+$AMBIENT 54 BLEEP03 point continuous 1.0
+$AMBIENT 55 BLEEP04 point continuous 1.0
+$AMBIENT 56 BLEEP05 point continuous 1.0
+$AMBIENT 57 BLEEP06 point continuous 1.0
+$AMBIENT 58 BLEEP07 point continuous 1.0
+$AMBIENT 59 BLEEP08 point continuous 1.0
+$AMBIENT 60 BLEEP09 point continuous 1.0
+$AMBIENT 61 BLEEP10 point continuous 1.0
+$AMBIENT 62 BLEEP11 point continuous 1.0
+$AMBIENT 63 BLEEP12 point continuous 1.0
+$AMBIENT 64 BLEEP13 point continuous 1.0
+$AMBIENT 65 BLEEP14 point continuous 1.0
+$AMBIENT 66 COREEXPL point continuous 1.0
+$AMBIENT 67 FIREBURN point continuous 1.0
+$AMBIENT 68 PRIZE1 point continuous 1.0
+$AMBIENT 69 CLOSE1 point continuous 1.0
+$AMBIENT 70 CRACK1 point continuous 1.0
+$AMBIENT 71 ENGINE1 point continuous 1.0
+$AMBIENT 72 ENGINE2 point continuous 1.0
+$AMBIENT 73 ENGINE3 point continuous 1.0
+$AMBIENT 74 WATRFALL point continuous 1.0
+$AMBIENT 75 UBAHN point continuous 1.0
+$AMBIENT 76 CONVEY point continuous 1.0
+$AMBIENT 77 1CAVE1 point continuous 1.0
+$AMBIENT 78 1CAVE2 point continuous 1.0
+$AMBIENT 79 1CAVE3 point continuous 1.0
+$AMBIENT 80 1CAVE4 point continuous 1.0
+$AMBIENT 81 1FANON point continuous 1.0
+$AMBIENT 82 1FANRUN point continuous 1.0
+$AMBIENT 83 1FANSTOP point continuous 1.0
+$AMBIENT 84 1GEN1 point continuous 1.0
+$AMBIENT 85 1LASER1 point continuous 1.0
+$AMBIENT 86 1LASER2 point continuous 1.0
+$AMBIENT 87 1LASER3 point continuous 1.0
+$AMBIENT 88 1LASER4 point continuous 1.0
+$AMBIENT 89 1LASER5 point continuous 1.0
+$AMBIENT 90 1WATER1 point continuous 1.0
+$AMBIENT 91 1WATER2 point continuous 1.0
+$AMBIENT 92 1WATER3 point continuous 1.0
+$AMBIENT 93 GLOOP point continuous 1.0
+$AMBIENT 94 DGIDLE1 point continuous 1.0
+$AMBIENT 95 DGIDLE2 point continuous 1.0
+$AMBIENT 96 DGPOWER point continuous 1.0
+$AMBIENT 97 DGLAUNCH point continuous 1.0
+$AMBIENT 98 THUNDER point continuous 1.0
+
+$ifdoom
+world/watersplash		dssplash
+world/sludgegloop		dsploosh
+world/lavasizzle		dslvsiz
+world/drip			dsdrip
+world/hotsiz			dshtsiz
+
+// CLEIMOS
+
+CleimosSound1            CLEIMOS1
+CleimosSound2            CLEIMOS2
+CleimosSound3            CLEIMOS3
+CleimosSound4            CLEIMOS4
+
+// PLEIADES
+
+heavy_rocket          rocket
+heavy_rocket_nozzle   rocket1
+controls_ambience     comp1
+desolation_wind       wind2
+cave_dripping         drip
+floresent             fl_hum1
+drone                 drone6
+plefire1              fire
+plefire2              fire
+fan_motor             fan
+klaxon1               klaxon1
+klaxon2               klaxon2
+exposed_wind          wind3
+waterfall             waterfls
+canyon_scream	      dsbospn
+lava                  lava
+goo_blurp             goo
+lavaa                 lavaa
+plane_fly             plane
+break1                break1
+break2                break2
+sparks7	              sparks7
+electric_arc          arcs
+
+
+$ambient 151 heavy_rocket POINT CONTINUOUS 1.0
+$ambient 152 heavy_rocket_nozzle POINT CONTINUOUS 1.0
+$ambient 153 controls_ambience POINT CONTINUOUS 0.8
+$ambient 154 desolation_wind POINT CONTINUOUS 1.0
+$ambient 155 cave_dripping POINT CONTINUOUS 0.6
+$ambient 156 floresent POINT CONTINUOUS 1.0
+$ambient 157 drone POINT CONTINUOUS 1.0
+$ambient 158 plefire1 POINT CONTINUOUS 0.5
+$ambient 159 plefire2 POINT CONTINUOUS 1.0
+$ambient 160 fan_motor POINT CONTINUOUS 0.6
+$ambient 161 klaxon1 POINT CONTINUOUS 1.0
+$ambient 162 klaxon2 POINT CONTINUOUS 1.0
+$ambient 163 exposed_wind POINT CONTINUOUS 1.0
+$ambient 164 waterfall POINT CONTINUOUS 1.0
+$ambient 165 canyon_scream POINT RANDOM 30 70 1.0
+$ambient 166 lava POINT RANDOM 5 15 0.6
+$ambient 167 goo_blurp POINT RANDOM 5 15 0.7
+$ambient 168 lavaa POINT RANDOM 10 25 0.6
+$ambient 169 plane_fly POINT CONTINUOUS 1.0
+$ambient 170 exposed_wind POINT CONTINUOUS 0.3
+$ambient 171 electric_arc POINT RANDOM .1 2 0.7
+
+// HELL FACTORY
+
+cricket		cricket
+comp01		comp01
+comp02		comp02
+comp03		comp03
+drop01		drop01
+wate01		wate01
+lite_on		lite_on
+lite_out	lite_out
+laser1		laser1
+slime		slime
+wind		wind
+hfacthun	hfacthun
+fuzzz		fuzzz
+keyuse		keyuse
+barmusic	barmusic
+waterfal	waterfal
+alarm		alarm
+talk		talk
+miswon		miswon
+misfail		misfail
+teslazap	teslazap
+radar		radar
+door3_start	d3_start
+door3_mid	d3_mid
+door3_end	d3_end
+
+$AMBIENT 172 comp01 POINT CONTINUOUS 1.0
+$AMBIENT 173 comp02 POINT CONTINUOUS 1.0
+$AMBIENT 174 drop01 POINT CONTINUOUS 1.0
+$AMBIENT 175 wate01 POINT CONTINUOUS 1.0
+$AMBIENT 176 slime POINT CONTINUOUS 1.0
+$AMBIENT 177 wind POINT CONTINUOUS 1.0
+$AMBIENT 178 hfacthun SURROUND CONTINUOUS 1.0
+$AMBIENT 179 fuzzz POINT CONTINUOUS 1.0
+$AMBIENT 180 barmusic POINT CONTINUOUS 1.0
+$AMBIENT 181 waterfal POINT CONTINUOUS 1.0
+$AMBIENT 182 alarm POINT CONTINUOUS 1.0
+$AMBIENT 183 comp03 POINT CONTINUOUS 1.0
+$AMBIENT 184 laser1 POINT CONTINUOUS 1.0
+$AMBIENT 185 cricket POINT CONTINUOUS 1.0
+
+// CYBERDREAMS
+
+cdrhelper/advice1		CYBDRMS1
+cdrhelper/advice2		CYBDRMS2
+cdrhelper/advice3		CYBDRMS3
+cdrhelper/advice4		CYBDRMS4
+
+// DOOM RESURRECTION
+
+AmbWind1 ASWIND1
+AmbWind2 ASWIND2
+AmbClank ASCLANK
+AmbBuzz1 ASBUZHUM
+AmbSteam ASSTEAM
+AmbAlrm1 ASALARM1
+AmbAlrm2 ASALARM2
+AmbBirdy ASBIRDY
+AmbGrind ASSQUEEK
+AmbFlies ASFLIES
+AmbDrips ASDRIPS
+AmbBurns ASBURNIN
+AmbRadio ASRADIO
+AmbSpark ASSPARK
+AmbWars1 ASBOOM
+AmbWars2 ASFLYOVR
+SndCount GSCOUNT
+Door1BEG DOOR1BEG
+Door1MID DOOR1MID
+Door1END DOOR1END
+Plat1BEG PLAT1BEG
+Plat1MID PLAT1MID
+Plat1END PLAT1END
+Plat2MID PLAT2MID
+Plat2END PLAT2END
+Plat3MID PLAT3MID
+Plat3END PLAT3END
+
+$AMBIENT 186 AmbWind1 POINT RANDOM 10.0 60.0 1.0
+$AMBIENT 187 AmbWind2 POINT CONTINUOUS 1.0
+$AMBIENT 188 AmbClank POINT CONTINUOUS 1.0
+$AMBIENT 189 AmbBuzz1 POINT CONTINUOUS 1.0
+$AMBIENT 190 AmbSteam POINT CONTINUOUS 1.0
+$AMBIENT 191 AmbAlrm1 POINT PERIODIC 1.5 1.0
+$AMBIENT 192 AmbAlrm2 POINT PERIODIC 2.5 1.0
+$AMBIENT 193 AmbBirdy POINT PERIODIC 15.0 1.0
+$AMBIENT 194 AmbGrind POINT CONTINUOUS 0.5
+$AMBIENT 195 AmbFlies POINT RANDOM 5.0 20.0 0.9
+$AMBIENT 196 AmbDrips POINT CONTINUOUS 0.8
+$AMBIENT 197 AmbBurns POINT CONTINUOUS 0.6
+$AMBIENT 198 AmbRadio POINT RANDOM 5.0 30.0 0.5
+$AMBIENT 199 AmbSpark POINT RANDOM 3.0 10.0 0.8
+$AMBIENT 200 AmbWars1 POINT RANDOM 5.0 30.0 1.0
+$AMBIENT 150 AmbWars2 POINT RANDOM 5.0 30.0 1.0
+
+// ENSLAVEMENT
+
+Enslave/Enemy11		ENSND11
+Enslave/Enemy12		ENSND12
+Enslave/Enemy13		ENSND13
+Enslave/Enemy14		ENSND14
+Enslave/Enemy21		ENSND21
+Enslave/Enemy22		ENSND22
+Enslave/Enemy23		ENSND23
+Enslave/Enemy24		ENSND24
+Enslave/Enemy25		ENSND25
+Enslave/Enemy26		ENSND26
+Enslave/Enemy31		ENSND31
+Enslave/Enemy32		ENSND32
+Enslave/Enemy33		ENSND33
+Enslave/Enemy34		ENSND34
+Enslave/Enemy41		ENSND41
+Enslave/Enemy42		ENSND42
+
+$Limit Enslave/Enemy42 0
+
+// BIOTECH
+
+BioTech/Sound1		BIOTEK01
+$random BioTech/Sound2		{ BioTech/Soundx  BioTech/Soundy }
+BioTech/Soundx		BIOTEK02
+BioTech/Soundy		BIOTEK03
+BioTech/Sound3		BIOTEK04
+BioTech/Sound4		BIOTEK05
+BioTech/Sound5		BIOTEK06
+BioTech/Sound6		BIOTEK07
+BioTech/Sound7		BIOTEK08
+BioTech/Sound8		BIOTEK09
+BioTech/Sound9		BIOTEK10
+BioTech/Sound0		BIOTEK11
+
+// PROJECT SLIPGATE
+
+slpamb1   slpamb1
+slpamb2   slpamb2
+slpamb3   slpamb3
+slpamb4   slpamb4
+slpamb5   slpamb5 
+slpamb6   slpamb6
+slpamb7   slpamb7
+slpamb8   slpamb8
+slpamb9   slpamb9
+slpamb10  slpamb10
+slpamb11  slpamb11
+slpamb12  slpamb12
+slpamb13  slpamb13
+slpamb14  slpamb14
+slpamb15  slpamb15
+slpamb16  slpamb16
+slpamb17  slpamb17
+slpamb18  slpamb18
+slpamb19  slpamb19
+slpamb20  slpamb20
+slpamb21  slpamb21
+slpamb22  slpamb22
+slpamb23  slpamb23
+slpamb24  slpamb24
+slpamb25  slpamb25
+slpamb26  slpamb26
+slpamb27  slpamb27
+slpamb28  slpamb28
+slpamb29  slpamb29
+slpamb31  slpamb31
+slpamb32  slpamb32
+slpamb33  slpamb33
+slpamb34  slpamb34
+slpamb35  slpamb35
+slpamb36  slpamb36
+slpamb37  slpamb37
+slpamb38  slpamb38
+slpamb39  slpamb39
+slpamb40  slpamb40
+slpamb41  slpamb41
+slpamb42  slpamb42
+slpamb43  slpamb43
+slpamb44  slpamb44
+slpamb45  slpamb45
+slpamb46  slpamb46
+slpamb47  slpamb47
+slpamb48  slpamb48
+slpamb49  slpamb49
+slpamb50  slpamb50
+slpamb51  slpamb51
+slpamb52  slpamb52
+slpamb53  slpamb53
+slpamb54  slpamb54
+
+// DISSOLUTION OF ETERNITY
+
+DISAMB1   disamb1
+DISAMB2   disamb2
+DISAMB3   disamb3
+DISAMB4   disamb4
+DISAMB5   disamb5
+DISAMB6   disamb6
+DISAMB7   disamb7
+DISAMB8   disamb8
+DISAMB9   disamb9
+DISAMB10  disamb10
+DISAMB11  disamb11
+DISAMB12  disamb12
+DISAMB13  disamb13
+DISAMB14  disamb14
+DISAMB15  disamb15
+DISAMB16  disamb16
+DISAMB17  disamb17
+DISAMB18  disamb18
+DISAMB19  disamb19
+DISAMB20  disamb20
+DISAMB21  disamb21
+DISAMB22  disamb22
+DISAMB23  disamb23
+DISAMB24  disamb24
+DISAMB25  disamb25
+DISAMB26  disamb26
+
+// TWILIGHT ZONE II
+
+twzone2/snd1  TWZ2SND1
+twzone2/snd2  TWZ2SND2
+twzone2/snd3  TWZ2SND3
+twzone2/snd4  TWZ2SND4
+twzone2/snd5  TWZ2SND5
+twzone2/snd6  TWZ2SND6
+twzone2/snd7  TWZ2SND7
+twzone2/snd8  TWZ2SND8
+
+// NEODOOM (Vaccinated Edition)
+
+// Babe
+babe/sight1			dsbabsi1
+babe/sight2			dsbabsi2
+babe/sight2			dsbabsi3
+$random babe/sight		{ babe/sight1 babe/sight2 babe/sight2 }
+babe/teleport			dsbabtel
+babe/pain1			dsbabpn1
+babe/pain2			dsbabpn2
+$random babe/pain		{ babe/pain1 babe/pain2 }
+babe/death1			dsbabdt1
+babe/death2			dsbabdt2
+babe/death3			dsbabdt3
+babe/death4			dsbabdt4
+$random babe/death		{ babe/death1 babe/death2 babe/death3 babe/death4 }
+babe/active			dsbabact
+// Woman
+woman1/active			dswom1a
+woman1/tease			dswom1b
+woman2/active1			dswom2a
+woman2/active2			dswom2b
+woman2/active3			dswom2c
+$random woman2/active		{ woman2/active1 woman2/active2 woman2/active3 }
+woman3/active1			dswom3a
+woman3/active2			dswom3b
+$random woman3/active		{ woman3/active1 woman3/active2 }
+woman4/active			dswom4
+woman5/active			dswom5
+// Objects
+objects/trashbreak		dstrsbrk
+objects/glassbreak		dsglsbrk
+neodoom/explosion       neoexpls
+
+// TITAN
+
+

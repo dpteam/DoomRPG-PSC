@@ -1,0 +1,60 @@
+ACTOR CdrHelper1 18721 // 3004
+{
+	Health 20
+	Radius 20
+	Height 56
+	Speed 8
+	PainChance 200
+	Monster
+	+FLOORCLIP
+	SeeSound "cdrhelper/advice1"
+	DeathSound "cdrhelper/advice1"
+	Obituary "$OB_ZOMBIE"
+	States
+	{
+	Spawn:
+		PLAY AB 10 A_Look
+		Loop
+	See:
+		PLAY AABBCCDD 4 A_Chase
+		Loop
+	Death:
+		PLAY H 5
+		PLAY I 5 A_Scream
+		PLAY J 5 A_NoBlocking
+		PLAY K 5
+		PLAY L -1
+		Stop
+	}
+}
+
+ACTOR CdrHelper2 18722 // 3001
+{
+	Health 60
+	Radius 20
+	Height 56
+	Mass 100
+	Speed 8
+	PainChance 200
+	Monster
+	+FLOORCLIP
+	SeeSound "cdrhelper/advice3"
+	DeathSound "cdrhelper/advice4"
+	Obituary "$OB_IMP"
+	States
+	{
+	Spawn:
+		PLAY AB 10 A_Look
+		Loop
+	See:
+		PLAY AABBCCDD 3 A_Chase
+		Loop
+	Death:
+		PLAY I 8
+		PLAY J 8 A_Scream
+		PLAY K 6
+		PLAY L 6 A_NoBlocking
+		PLAY M -1
+		Stop
+	}
+}

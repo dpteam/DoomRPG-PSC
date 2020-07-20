@@ -1,0 +1,232 @@
+// ENEMIES
+
+ACTOR EnslaveEnemy1 18730 // 3006
+{
+	Health 100
+	Radius 20
+	Height 61
+	Mass 150
+	Speed 8
+	Damage 3
+	PainChance 256
+	ReactionTime 3
+	Monster
+	+FLOAT 
+	+NOGRAVITY 
+	+MISSILEMORE 
+	+DONTFALL 
+	+NOICEDEATH
+	SeeSound "Enslave/Enemy11"
+	AttackSound "Enslave/Enemy14"
+	PainSound "Enslave/Enemy13"
+	DeathSound "skull/death"
+	ActiveSound "Enslave/Enemy12"
+	Obituary "%o was killed by a demon"
+	States
+	{
+	Spawn:
+		ENS1 AB 10 A_Look
+		Loop
+	See:
+		ENS1 AB 6 A_Chase
+		Loop
+	Missile:
+		ENS1 C 10 A_FaceTarget
+		ENS1 D 4 A_SkullAttack
+		ENS1 CD 4 
+		Goto Missile+2
+	Pain:
+		ENS1 E 3
+		ENS1 E 3 A_Pain
+		Goto See
+	Death:
+		ENS1 F 5 BRIGHT
+		ENS1 G 5 BRIGHT A_Scream
+		ENS1 H 5 BRIGHT
+		ENS1 I 5 BRIGHT A_NoBlocking
+		ENS1 J 5 BRIGHT
+		ENS1 K 5 BRIGHT
+		Stop
+	}
+}
+
+ACTOR EnslaveEnemy2 18731 // 3005
+{
+	Health 400
+	Radius 31
+	Height 56
+	Mass 400
+	Speed 8
+	PainChance 128
+	Monster
+	+FLOAT
+	+NOGRAVITY
+	+NOBLOOD
+	SeeSound "Enslave/Enemy21"
+	PainSound "Enslave/Enemy23"
+	DeathSound "Enslave/Enemy24"
+	ActiveSound "Enslave/Enemy22"
+	Obituary "%o was killed by a robotic skull"
+	HitObituary "%o was killed by a robotic skull"
+	States
+	{
+	Spawn:
+		ENS2 A 10 A_Look
+		Loop
+	See:
+		ENS2 A 3 A_Chase
+		Loop
+	Missile:
+		ENS2 B 5 A_FaceTarget
+		ENS2 C 5 BRIGHT A_FaceTarget
+		ENS2 D 5 BRIGHT A_CustomMissile("EnslaveEnemy2Ball", 32.0, 0.0, 0, 0)
+		Goto See
+	Pain:
+		ENS2 E 3
+		ENS2 E 3 BRIGHT A_Pain
+		ENS2 F 6
+		Goto See
+	Death:
+		ENS2 G 5 BRIGHT
+		ENS2 H 5 BRIGHT A_Scream
+		ENS2 I 5 BRIGHT
+		ENS2 J 5 BRIGHT
+		ENS2 K 5 BRIGHT A_NoBlocking
+		ENS2 L 5 BRIGHT
+		ENS2 M 5 BRIGHT
+		Stop
+	}
+}
+
+ACTOR EnslaveEnemy2Ball
+{
+	Radius 14
+	Height 29
+	Speed 10
+	FastSpeed 20
+	Damage 9
+	Projectile 
+	+RANDOMIZE
+	RenderStyle Add
+	Alpha 1
+	SeeSound "Enslave/Enemy25"
+	DeathSound "Enslave/Enemy26"
+	States
+	{
+	Spawn:
+		ENS2 NO 4 BRIGHT
+		Loop
+	Death:
+		ENS2 PQR 6 BRIGHT
+		Stop
+	}
+}
+
+ACTOR EnslaveEnemy3 18732 // 71
+{
+	Health 300
+	Radius 20
+	Height 100
+	Mass 400
+	Speed 7
+	PainChance 128
+	Monster
+	+FLOORCLIP
+	SeeSound "Enslave/Enemy31"
+	PainSound "Enslave/Enemy33"
+	DeathSound "Enslave/Enemy34"
+	ActiveSound "Enslave/Enemy31"
+	States
+	{
+	Spawn:
+		ENS3 A 10 A_Look
+		Loop
+	See:
+		ENS3 AABBCC 3 A_Chase
+		Loop
+	Missile:
+		ENS3 D 5 A_FaceTarget
+		ENS3 E 5 A_FaceTarget
+		ENS3 F 0 A_PlaySound("Enslave/Enemy32")
+		ENS3 F 5 A_FaceTarget
+		ENS3 F 0 A_PainAttack ("EnslaveEnemy1")
+		Goto See
+	Pain:
+		ENS3 G 6 A_Pain
+		ENS3 G 6 
+		Goto See
+	Death:
+		ENS3 H 8
+		ENS3 I 8 A_Scream
+		ENS3 JK 8
+		ENS3 L 8 A_PainDie ("EnslaveEnemy1")
+		ENS3 M 8
+		Stop
+	Raise:
+		ENS3 MLKJIH 8
+		Goto See
+	}
+}
+
+// PROPS
+
+ACTOR EnslaveProp1 18733 // 31
+{
+	Radius 16
+	Height 40
+	ProjectilePassHeight -16
+	-SOLID
+	States
+	{
+	Spawn:
+		ENS4 A -1
+		Stop
+	}
+}
+
+ACTOR EnslaveProp2 18734 // 78
+{
+	Radius 16
+	Height 64
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		ENS4 B -1 BRIGHT
+		Stop
+	}
+}
+
+ACTOR EnslaveProp3 18862 // 88
+{
+	Health 250
+	Mass 10000000
+	PainChance 255
+	+SOLID +SHOOTABLE
+	+NOICEDEATH
+	+OLDRADIUSDMG
+	+BOSS
+	PainSound "Enslave/Enemy41"
+	DeathSound "Enslave/Enemy42"
+	States
+	{
+	BrainExplode:
+		MISL BC 10 Bright
+		MISL D 10 A_BrainExplode
+		Stop
+	Spawn:
+		ENS4 C -1 A_PlaySound("Enslave/Enemy41",CHAN_VOICE,1.0,0,ATTN_NONE)
+		Stop
+	Pain:
+		ENS4 D 36 
+		Goto Spawn
+	Death:
+		ENS4 C 0 A_BrainScream
+		ENS4 C 100 A_Scream
+		ENS4 CC 10
+		ENS4 C -1 A_BrainDie
+		Stop
+	}
+}

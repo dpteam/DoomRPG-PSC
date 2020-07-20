@@ -1,0 +1,57 @@
+ACTOR RebirthSnowman 18588 // 84
+{
+	Health 50
+	Radius 20
+	Height 56
+	Speed 8
+	PainChance 170
+	BloodColor White
+	Monster
+	+FLOORCLIP
+	SeeSound "rebirth/snowman1"
+	PainSound "wolfss/pain"
+	DeathSound "rebirth/snowman2"
+	ActiveSound "wolfss/active"
+	AttackSound "wolfss/attack"
+	Obituary "%o was killed by an Evil Snowman"
+	Dropitem "Clip"
+	States
+	{
+	Spawn:
+		REB1 AB 10 A_Look
+		Loop
+	See:
+		REB1 AABBCCDD 3 A_Chase
+		Loop
+	Missile:
+		REB1 E 10 A_FaceTarget
+		REB1 F 10 A_FaceTarget
+		REB1 G 4 BRIGHT A_CPosAttack
+		REB1 F 6 A_FaceTarget
+		REB1 G 4 BRIGHT A_CPosAttack
+		REB1 F 1 A_CPosRefire
+		Goto Missile+1
+	Pain:
+		REB1 H 3
+		REB1 H 3 A_Pain
+		Goto See
+	Death:
+		REB1 I 5
+		REB1 J 5 A_Scream
+		REB1 K 5 A_NoBlocking
+		REB1 L 5
+		REB1 M -1
+		Stop
+	XDeath:
+		REB1 N 5 
+		REB1 O 5 A_XScream
+		REB1 P 5 A_NoBlocking
+		REB1 QRSTU 5
+		REB1 V -1
+		Stop
+	Raise:
+		REB1 M 5
+		REB1 LKJI 5
+		Goto See 
+	}
+}

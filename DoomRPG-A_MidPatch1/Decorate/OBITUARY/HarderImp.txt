@@ -1,0 +1,53 @@
+ACTOR Obituary_HarderImp 18501
+{
+	Health 60
+	Radius 20
+	Height 56
+	Mass 100
+	Speed 8
+	PainChance 200
+	Monster
+	+FLOORCLIP
+	SeeSound "imp/sight"
+	PainSound "imp/pain"
+	DeathSound "imp/death"
+	ActiveSound "imp/active"
+	HitObituary "%o was slashed by the Harder Imp"
+	Obituary "%o was surprised by the Harder Imp's attacks"
+	States
+	{
+	Spawn:
+		OBT1 AB 10 A_Look
+		Loop
+	See:
+		OBT1 AABBCCDD 3 A_Chase
+		Loop
+	Melee:
+	Missile:
+		OBT1 EF 8 A_FaceTarget
+		OBT1 G 6 A_BruisAttack
+		Goto See
+	Pain:
+		OBT1 H 2
+		OBT1 H 2 A_Pain
+		Goto See
+	Death:
+		OBT1 I 8
+		OBT1 J 8 A_Scream
+		OBT1 K 6
+		OBT1 L 6 A_NoBlocking
+		OBT1 M -1
+		Stop
+	XDeath:
+		OBT1 N 5
+		OBT1 O 5 A_XScream
+		OBT1 P 5
+		OBT1 Q 5 A_NoBlocking
+		OBT1 RST 5
+		OBT1 U -1
+		Stop
+	Raise:
+		OBT1 MLKJI 8
+		Goto See
+	}
+}

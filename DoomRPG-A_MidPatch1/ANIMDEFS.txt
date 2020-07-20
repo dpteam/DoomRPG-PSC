@@ -1,0 +1,5697 @@
+// GENERAL STUFF
+
+texture WFALL1
+    pic WFALL1 tics 8
+    pic WFALL2 tics 8
+    pic WFALL3 tics 8
+	pic WFALL4 tics 8
+	
+texture WFALL2
+    pic WFALL2 tics 8
+    pic WFALL3 tics 8
+    pic WFALL4 tics 8
+	pic WFALL1 tics 8
+	
+texture WFALL3
+    pic WFALL3 tics 8
+    pic WFALL4 tics 8
+    pic WFALL1 tics 8
+	pic WFALL2 tics 8
+	
+texture WFALL4
+    pic WFALL4 tics 8
+    pic WFALL1 tics 8
+    pic WFALL2 tics 8
+	pic WFALL3 tics 8
+	
+texture SLFALL1
+    pic SLFALL1 tics 8
+    pic SLFALL2 tics 8
+    pic SLFALL3 tics 8
+	pic SLFALL4 tics 8
+	
+texture SLFALL2
+    pic SLFALL2 tics 8
+    pic SLFALL3 tics 8
+    pic SLFALL4 tics 8
+	pic SLFALL1 tics 8
+	
+texture SLFALL3
+    pic SLFALL3 tics 8
+    pic SLFALL4 tics 8
+    pic SLFALL1 tics 8
+	pic SLFALL2 tics 8
+	
+texture SLFALL4
+    pic SLFALL4 tics 8
+    pic SLFALL1 tics 8
+    pic SLFALL2 tics 8
+	pic SLFALL3 tics 8
+	
+texture LAVFALL1
+    pic LAVFALL1 tics 8
+    pic LAVFALL2 tics 8
+    pic LAVFALL3 tics 8
+	pic LAVFALL4 tics 8
+	
+texture LAVFALL2
+    pic LAVFALL2 tics 8
+    pic LAVFALL3 tics 8
+    pic LAVFALL4 tics 8
+	pic LAVFALL1 tics 8
+	
+texture LAVFALL3
+    pic LAVFALL3 tics 8
+    pic LAVFALL4 tics 8
+    pic LAVFALL1 tics 8
+	pic LAVFALL2 tics 8
+	
+texture LAVFALL4
+    pic LAVFALL4 tics 8
+    pic LAVFALL1 tics 8
+    pic LAVFALL2 tics 8
+	pic LAVFALL3 tics 8
+	
+texture SLADRIP1
+    pic SLADRIP1 tics 8
+    pic SLADRIP2 tics 8
+    pic SLADRIP3 tics 8
+	
+texture SLADRIP2
+    pic SLADRIP2 tics 8
+    pic SLADRIP3 tics 8
+    pic SLADRIP1 tics 8
+	
+texture SLADRIP3
+    pic SLADRIP3 tics 8
+    pic SLADRIP1 tics 8
+    pic SLADRIP2 tics 8
+
+switch doom 2 SW1SKUL2 on pic SW2SKUL2 tics 0
+switch doom 2 SW2SKUL2 on pic SW1SKUL2 tics 0
+
+switch doom 2 SW1D1S1 on pic SW2D1S1 tics 0
+switch doom 2 SW2D1S1 on pic SW1D1S1 tics 0
+
+switch doom 2 SW1D1S2 on pic SW2D1S2 tics 0
+switch doom 2 SW2D1S2 on pic SW1D1S2 tics 0
+
+switch doom 2 SW1D1S3 on pic SW2D1S3 tics 0
+switch doom 2 SW2D1S3 on pic SW1D1S3 tics 0
+
+// Extra liquids for compatibility with deep water effects
+
+flat SPCIAL01
+    pic SPCIAL01 tics 8
+    pic SPCIAL02 tics 8
+    pic SPCIAL03 tics 8
+    pic SPCIAL04 tics 8
+	
+flat SPCIAL02
+    pic SPCIAL02 tics 8
+    pic SPCIAL03 tics 8
+    pic SPCIAL04 tics 8
+    pic SPCIAL01 tics 8
+
+flat SPCIAL03
+    pic SPCIAL03 tics 8
+    pic SPCIAL04 tics 8
+    pic SPCIAL01 tics 8
+    pic SPCIAL02 tics 8
+
+flat SPCIAL04
+    pic SPCIAL04 tics 8
+    pic SPCIAL01 tics 8
+    pic SPCIAL02 tics 8
+    pic SPCIAL03 tics 8
+
+flat SPCIAL05
+    pic SPCIAL05 tics 8
+    pic SPCIAL06 tics 8
+    pic SPCIAL07 tics 8
+
+flat SPCIAL08
+    pic SPCIAL08 tics 8
+    pic SPCIAL09 tics 8
+    pic SPCIAL10 tics 8
+
+flat SPCIAL11
+    pic SPCIAL11 tics 8
+    pic SPCIAL12 tics 8
+    pic SPCIAL13 tics 8
+    pic SPCIAL14 tics 8
+
+flat SPCIAL15
+    pic SPCIAL15 tics 8
+    pic SPCIAL16 tics 8
+    pic SPCIAL17 tics 8
+    pic SPCIAL18 tics 8
+
+flat SPCIAL19
+    pic SPCIAL19 tics 8
+    pic SPCIAL20 tics 8
+    pic SPCIAL21 tics 8
+    pic SPCIAL22 tics 8
+
+flat SPCIAL23
+    pic SPCIAL23 tics 8
+    pic SPCIAL24 tics 8
+    pic SPCIAL25 tics 8
+    pic SPCIAL26 tics 8
+
+// COMPENDIUM'S OWN STUFF
+
+texture optional ARTITU1
+pic ARTITU1 tics 3
+pic ARTITU2 tics 3
+pic ARTITU3 tics 3
+pic ARTITU4 tics 3
+
+
+		texture WTR_1_1
+    pic WTR_1_1 tics 3
+    pic WTR_1_2 tics 3
+	pic WTR_1_3 tics 3
+	pic WTR_1_4 tics 3
+	pic WTR_1_5 tics 3
+	pic WTR_1_6 tics 3
+	pic WTR_1_7 tics 3
+	pic WTR_1_8 tics 3
+	
+		texture WTR_3_01
+    pic WTR_3_01 tics 3
+    pic WTR_3_02 tics 3
+	pic WTR_3_03 tics 3
+	pic WTR_3_04 tics 3
+	pic WTR_3_05 tics 3
+	pic WTR_3_06 tics 3
+	pic WTR_3_07 tics 3
+	pic WTR_3_08 tics 3
+	pic WTR_3_09 tics 3
+	pic WTR_3_10 tics 3
+	pic WTR_3_11 tics 3
+	pic WTR_3_12 tics 3
+	pic WTR_3_13 tics 3
+	pic WTR_3_14 tics 3
+	pic WTR_3_15 tics 3
+	
+		texture WTR_4_1
+    pic WTR_4_1 tics 3
+    pic WTR_4_2 tics 3
+	pic WTR_4_3 tics 3
+	pic WTR_4_4 tics 3
+	pic WTR_4_5 tics 3
+	pic WTR_4_6 tics 3
+	pic WTR_4_7 tics 3
+	pic WTR_4_8 tics 3
+
+		texture RRWTRA01
+    pic RRWTRA01 tics 3
+    pic RRWTRA02 tics 3
+	pic RRWTRA03 tics 3
+	pic RRWTRA04 tics 3
+	pic RRWTRA05 tics 3
+	pic RRWTRA06 tics 3
+	pic RRWTRA07 tics 3
+	pic RRWTRA08 tics 3
+	pic RRWTRA09 tics 3
+	pic RRWTRA10 tics 3
+	pic RRWTRA11 tics 3
+	pic RRWTRA12 tics 3
+
+		texture RRWTRB01
+    pic RRWTRB01 tics 3
+    pic RRWTRB02 tics 3
+	pic RRWTRB03 tics 3
+	pic RRWTRB04 tics 3
+	pic RRWTRB05 tics 3
+	pic RRWTRB06 tics 3
+	pic RRWTRB07 tics 3
+	pic RRWTRB08 tics 3
+	pic RRWTRB09 tics 3
+	pic RRWTRB10 tics 3
+	pic RRWTRB11 tics 3
+	pic RRWTRB12 tics 3
+
+		texture RRWTRC01
+    pic RRWTRC01 tics 3
+    pic RRWTRC02 tics 3
+	pic RRWTRC03 tics 3
+	pic RRWTRC04 tics 3
+	pic RRWTRC05 tics 3
+	pic RRWTRC06 tics 3
+	pic RRWTRC07 tics 3
+	pic RRWTRC08 tics 3
+	pic RRWTRC09 tics 3
+	pic RRWTRC10 tics 3
+	pic RRWTRC11 tics 3
+	pic RRWTRC12 tics 3
+
+		texture RRWTRD01
+    pic RRWTRD01 tics 3
+    pic RRWTRD02 tics 3
+	pic RRWTRD03 tics 3
+	pic RRWTRD04 tics 3
+	pic RRWTRD05 tics 3
+	pic RRWTRD06 tics 3
+	pic RRWTRD07 tics 3
+	pic RRWTRD08 tics 3
+	pic RRWTRD09 tics 3
+	pic RRWTRD10 tics 3
+	pic RRWTRD11 tics 3
+	pic RRWTRD12 tics 3
+
+		texture RRWTRE01
+    pic RRWTRE01 tics 3
+    pic RRWTRE02 tics 3
+	pic RRWTRE03 tics 3
+	pic RRWTRE04 tics 3
+	pic RRWTRE05 tics 3
+	pic RRWTRE06 tics 3
+	pic RRWTRE07 tics 3
+	pic RRWTRE08 tics 3
+	pic RRWTRE09 tics 3
+	pic RRWTRE10 tics 3
+	pic RRWTRE11 tics 3
+	pic RRWTRE12 tics 3
+
+		texture WTR_5_1
+    pic WTR_5_1 tics 2
+    pic WTR_5_2 tics 2
+	pic WTR_5_3 tics 2
+	pic WTR_5_4 tics 2
+	pic WTR_5_5 tics 2
+	pic WTR_5_6 tics 2
+	pic WTR_5_7 tics 2
+	pic WTR_5_8 tics 2
+	pic WTR_5_9 tics 2
+	pic WTR_5_A tics 2
+	pic WTR_5_B tics 2
+	pic WTR_5_C tics 2
+	pic WTR_5_D tics 2
+	pic WTR_5_E tics 2
+	pic WTR_5_F tics 2
+	pic WTR_5_G tics 2
+
+	
+texture FLAG_01 range FLAG_10 rand 3 7 //flapping flag
+
+texture FLAG_11 range FLAG_20 rand 3 7
+
+		texture CMP_WTR1
+    pic CMP_WTR1 tics 4
+    pic CMP_WTR2 tics 4
+	pic CMP_WTR3 tics 4
+	pic CMP_WTR4 tics 4
+	pic CMP_WTR5 tics 4
+	pic CMP_WTR6 tics 4
+
+texture CMP_TEL1
+    pic CMP_TEL1 tics 8
+    pic CMP_TEL2 tics 8
+    pic CMP_TEL3 tics 8
+	pic CMP_TEL4 tics 8
+
+texture CMP_TEL2
+    pic CMP_TEL2 tics 8
+    pic CMP_TEL3 tics 8
+    pic CMP_TEL4 tics 8
+	pic CMP_TEL1 tics 8
+
+texture CMP_TEL3
+    pic CMP_TEL3 tics 8
+    pic CMP_TEL4 tics 8
+    pic CMP_TEL1 tics 8
+	pic CMP_TEL2 tics 8
+
+texture CMP_TEL4
+    pic CMP_TEL4 tics 8
+    pic CMP_TEL1 tics 8
+    pic CMP_TEL2 tics 8
+	pic CMP_TEL3 tics 8
+
+texture DISPAD1
+    pic DISPAD1 tics 6
+    pic DISPAD2 tics 6
+	pic DISPAD3 tics 6
+
+texture DISPAD2
+    pic DISPAD2 tics 6
+    pic DISPAD3 tics 6
+	pic DISPAD1 tics 6
+
+texture DISPAD3
+    pic DISPAD3 tics 6
+    pic DISPAD1 tics 6
+	pic DISPAD2 tics 6
+
+// MEMENTO MORI
+
+switch doom 2 SW1MM11 on pic SW2MM11 tics 0
+switch doom 2 SW2MM11 on pic SW1MM11 tics 0
+
+switch doom 2 SW1MM12 on pic SW2MM12 tics 0
+switch doom 2 SW2MM12 on pic SW1MM12 tics 0
+
+switch doom 2 SW1MM13 on pic SW2MM13 tics 0
+switch doom 2 SW2MM13 on pic SW1MM13 tics 0
+
+switch doom 2 SW1MM14 on pic SW2MM14 tics 0
+switch doom 2 SW2MM14 on pic SW1MM14 tics 0
+
+switch doom 2 SW1MM15 on pic SW2MM15 tics 0
+switch doom 2 SW2MM15 on pic SW1MM15 tics 0
+
+switch doom 2 SW1MM16 on pic SW2MM16 tics 0
+switch doom 2 SW2MM16 on pic SW1MM16 tics 0
+
+// MEMENTO MORI II
+
+switch doom 2 SW1MM21 on pic SW2MM21 tics 0
+switch doom 2 SW2MM21 on pic SW1MM21 tics 0
+
+texture MM2SLF1
+    pic MM2SLF1 tics 8
+    pic MM2SLF2 tics 8
+    pic MM2SLF3 tics 8
+	pic MM2SLF4 tics 8
+	
+// REQUIEM
+
+switch doom 2 SW1REQ1 on pic SW2REQ1 tics 0
+switch doom 2 SW2REQ1 on pic SW1REQ1 tics 0
+
+switch doom 2 SW1REQ2 on pic SW2REQ2 tics 0
+switch doom 2 SW2REQ2 on pic SW1REQ2 tics 0
+
+switch doom 2 SW1REQ3 on pic SW2REQ3 tics 0
+switch doom 2 SW2REQ3 on pic SW1REQ3 tics 0
+
+switch doom 2 SW1REQ4 on pic SW2REQ4 tics 0
+switch doom 2 SW2REQ4 on pic SW1REQ4 tics 0
+
+switch doom 2 SW1REQ5 on pic SW2REQ5 tics 0
+switch doom 2 SW2REQ5 on pic SW1REQ5 tics 0
+
+switch doom 2 SW1REQ6 on pic SW2REQ6 tics 0
+switch doom 2 SW2REQ6 on pic SW1REQ6 tics 0
+
+switch doom 2 SW1REQ7 on pic SW2REQ7 tics 0
+switch doom 2 SW2REQ7 on pic SW1REQ7 tics 0
+
+switch doom 2 SW1REQ8 on pic SW2REQ8 tics 0
+switch doom 2 SW2REQ8 on pic SW1REQ8 tics 0
+
+flat REQTL01
+    pic REQTL01 tics 4
+	pic REQTL02 tics 4
+	pic REQTL03 tics 4
+	pic REQTL04 tics 4
+	pic REQTL05 tics 4
+	pic REQTL06 tics 4
+	pic REQTL07 tics 4
+	pic REQTL08 tics 4
+
+// OBITUARY
+
+switch doom 2 SW1OBT1 on pic SW2OBT1 tics 0
+switch doom 2 SW2OBT1 on pic SW1OBT1 tics 0
+
+switch doom 2 SW1OBT2 on pic SW2OBT2 tics 0
+switch doom 2 SW2OBT2 on pic SW1OBT2 tics 0
+
+switch doom 2 SW1OBT3 on pic SW2OBT3 tics 0
+switch doom 2 SW2OBT3 on pic SW1OBT3 tics 0
+
+switch doom 2 SW1OBT4 on pic SW2OBT4 tics 0
+switch doom 2 SW2OBT4 on pic SW1OBT4 tics 0
+
+switch doom 2 SW1OBT5 on pic SW2OBT5 tics 0
+switch doom 2 SW2OBT5 on pic SW1OBT5 tics 0
+
+switch doom 2 SW1OBT6 on pic SW2OBT6 tics 0
+switch doom 2 SW2OBT6 on pic SW1OBT6 tics 0
+
+switch doom 2 SW1OBT7 on pic SW2OBT7 tics 0
+switch doom 2 SW2OBT7 on pic SW1OBT7 tics 0
+
+switch doom 2 SW1OBT8 on pic SW2OBT8 tics 0
+switch doom 2 SW2OBT8 on pic SW1OBT8 tics 0
+
+texture OBTRD01
+    pic OBTRD01 tics 8
+    pic OBTRD02 tics 8
+	
+texture OBTRD02
+    pic OBTRD02 tics 8
+    pic OBTRD01 tics 8
+	
+// STRAIN
+
+switch doom 2 SW1STR1 on pic SW2STR1 tics 0
+switch doom 2 SW2STR1 on pic SW1STR1 tics 0
+
+switch doom 2 SW1STR2 on pic SW2STR2 tics 0
+switch doom 2 SW2STR2 on pic SW1STR2 tics 0
+
+switch doom 2 SW1STR3 on pic SW2STR3 tics 0
+switch doom 2 SW2STR3 on pic SW1STR3 tics 0
+
+switch doom 2 SW1STR4 on pic SW2STR4 tics 0
+switch doom 2 SW2STR4 on pic SW1STR4 tics 0
+
+switch doom 2 SW1STR5 on pic SW2STR5 tics 0
+switch doom 2 SW2STR5 on pic SW1STR5 tics 0
+
+switch doom 2 SW1STR6 on pic SW2STR6 tics 0
+switch doom 2 SW2STR6 on pic SW1STR6 tics 0
+
+switch doom 2 SW1STR7 on pic SW2STR7 tics 0
+switch doom 2 SW2STR7 on pic SW1STR7 tics 0
+
+switch doom 2 SW1STR8 on pic SW2STR8 tics 0
+switch doom 2 SW2STR8 on pic SW1STR8 tics 0
+
+switch doom 2 SW1STR9 on pic SW2STR9 tics 0
+switch doom 2 SW2STR9 on pic SW1STR9 tics 0
+
+switch doom 2 SW1STRA on pic SW2STRA tics 0
+switch doom 2 SW2STRA on pic SW1STRA tics 0
+
+switch doom 2 SW1STRB on pic SW2STRB tics 0
+switch doom 2 SW2STRB on pic SW1STRB tics 0
+
+switch doom 2 SW1STRC on pic SW2STRC tics 0
+switch doom 2 SW2STRC on pic SW1STRC tics 0
+
+texture STRAN01
+    pic STRAN01 tics 8
+    pic STRAN02 tics 8
+    pic STRAN03 tics 8
+    pic STRAN04 tics 8
+	
+texture STRAN02
+    pic STRAN02 tics 8
+    pic STRAN03 tics 8
+    pic STRAN04 tics 8
+    pic STRAN01 tics 8
+	
+texture STRAN03
+    pic STRAN03 tics 8
+    pic STRAN04 tics 8
+    pic STRAN01 tics 8
+    pic STRAN02 tics 8
+	
+texture STRAN04
+    pic STRAN04 tics 8
+    pic STRAN01 tics 8
+    pic STRAN02 tics 8
+    pic STRAN03 tics 8
+	
+texture STRAN05
+    pic STRAN05 tics 8
+    pic STRAN06 tics 8
+    pic STRAN07 tics 8
+    pic STRAN08 tics 8
+	
+texture STRAN06
+    pic STRAN06 tics 8
+    pic STRAN07 tics 8
+    pic STRAN08 tics 8
+    pic STRAN05 tics 8
+	
+texture STRAN07
+    pic STRAN07 tics 8
+    pic STRAN08 tics 8
+    pic STRAN05 tics 8
+    pic STRAN06 tics 8
+	
+texture STRAN08
+    pic STRAN08 tics 8
+    pic STRAN05 tics 8
+    pic STRAN06 tics 8
+    pic STRAN07 tics 8
+	
+texture STRAN09
+    pic STRAN09 tics 12
+    pic STRAN10 tics 12
+	
+texture STRAN10
+    pic STRAN10 tics 12
+    pic STRAN09 tics 12
+	
+// BIOWAR
+
+switch doom 2 SW1BIO1 on pic SW2BIO1 tics 0
+switch doom 2 SW2BIO1 on pic SW1BIO1 tics 0
+
+switch doom 2 SW1BIO2 on pic SW2BIO2 tics 0
+switch doom 2 SW2BIO2 on pic SW1BIO2 tics 0
+
+switch doom 2 SW1BIO3 on pic SW2BIO3 tics 0
+switch doom 2 SW2BIO3 on pic SW1BIO3 tics 0
+
+switch doom 2 SW1BIO4 on pic SW2BIO4 tics 0
+switch doom 2 SW2BIO4 on pic SW1BIO4 tics 0
+
+switch doom 2 SW1BIO5 on pic SW2BIO5 tics 0
+switch doom 2 SW2BIO5 on pic SW1BIO5 tics 0
+
+switch doom 2 SW1BIO6 on pic SW2BIO6 tics 0
+switch doom 2 SW2BIO6 on pic SW1BIO6 tics 0
+
+switch doom 2 SW1BIO7 on pic SW2BIO7 tics 0
+switch doom 2 SW2BIO7 on pic SW1BIO7 tics 0
+
+switch doom 2 SW1BIO8 on pic SW2BIO8 tics 0
+switch doom 2 SW2BIO8 on pic SW1BIO8 tics 0
+
+switch doom 2 SW1BIO9 on pic SW2BIO9 tics 0
+switch doom 2 SW2BIO9 on pic SW1BIO9 tics 0
+
+switch doom 2 SW1BIOA on pic SW2BIOA tics 0
+switch doom 2 SW2BIOA on pic SW1BIOA tics 0
+
+switch doom 2 SW1BIOB on pic SW2BIOB tics 0
+switch doom 2 SW2BIOB on pic SW1BIOB tics 0
+
+switch doom 2 SW1BIOC on pic SW2BIOC tics 0
+switch doom 2 SW2BIOC on pic SW1BIOC tics 0
+
+switch doom 2 SW1BIOD on pic SW2BIOD tics 0
+switch doom 2 SW2BIOD on pic SW1BIOD tics 0
+
+switch doom 2 SW1BIOE on pic SW2BIOE tics 0
+switch doom 2 SW2BIOE on pic SW1BIOE tics 0
+
+switch doom 2 SW1BIOF on pic SW2BIOF tics 0
+switch doom 2 SW2BIOF on pic SW1BIOF tics 0
+
+switch doom 2 SW1BIOG on pic SW2BIOG tics 0
+switch doom 2 SW2BIOG on pic SW1BIOG tics 0
+
+switch doom 2 SW1BIOH on pic SW2BIOH tics 0
+switch doom 2 SW2BIOH on pic SW1BIOH tics 0
+
+switch doom 2 SW1BIOI on pic SW2BIOI tics 0
+switch doom 2 SW2BIOI on pic SW1BIOI tics 0
+
+texture BIOAN01
+    pic BIOAN01 tics 8
+    pic BIOAN02 tics 8
+    pic BIOAN03 tics 8
+    pic BIOAN04 tics 8
+
+texture BIOAN02
+    pic BIOAN02 tics 8
+    pic BIOAN03 tics 8
+    pic BIOAN04 tics 8
+    pic BIOAN01 tics 8
+
+texture BIOAN03
+    pic BIOAN03 tics 8
+    pic BIOAN04 tics 8
+    pic BIOAN01 tics 8
+    pic BIOAN02 tics 8
+
+texture BIOAN04
+    pic BIOAN04 tics 8
+    pic BIOAN01 tics 8
+    pic BIOAN02 tics 8
+    pic BIOAN03 tics 8
+
+texture BIOAN05
+    pic BIOAN05 tics 8
+    pic BIOAN06 tics 8
+
+texture BIOAN06
+    pic BIOAN06 tics 8
+    pic BIOAN05 tics 8
+
+texture BIOAN07
+    pic BIOAN07 tics 8
+    pic BIOAN08 tics 8
+    pic BIOAN09 tics 8
+	
+texture BIOAN08
+    pic BIOAN08 tics 8
+    pic BIOAN09 tics 8
+    pic BIOAN07 tics 8
+	
+texture BIOAN09
+    pic BIOAN09 tics 8
+    pic BIOAN07 tics 8
+    pic BIOAN08 tics 8
+
+texture BIOAN10
+    pic BIOAN10 tics 8
+    pic BIOAN11 tics 8
+    pic BIOAN12 tics 8
+    pic BIOAN13 tics 8
+	
+texture BIOAN11
+    pic BIOAN11 tics 8
+    pic BIOAN12 tics 8
+    pic BIOAN13 tics 8
+    pic BIOAN10 tics 8
+	
+texture BIOAN12
+    pic BIOAN12 tics 8
+    pic BIOAN13 tics 8
+    pic BIOAN10 tics 8
+    pic BIOAN11 tics 8
+	
+texture BIOAN13
+    pic BIOAN13 tics 8
+    pic BIOAN10 tics 8
+    pic BIOAN11 tics 8
+    pic BIOAN12 tics 8
+
+flat BIOLV01
+    pic BIOLV01 tics 8
+	pic BIOLV02 tics 8
+	pic BIOLV03 tics 8
+	pic BIOLV04 tics 8
+
+flat BIONK01
+    pic BIONK01 tics 8
+	pic BIONK02 tics 8
+	pic BIONK03 tics 8
+	pic BIONK04 tics 8
+	pic BIONK05 tics 8
+	pic BIONK06 tics 8
+	pic BIONK07 tics 8
+	pic BIONK08 tics 8
+	pic BIONK09 tics 8
+	pic BIONK10 tics 8
+	pic BIONK11 tics 8
+	pic BIONK12 tics 8
+	pic BIONK13 tics 8
+	pic BIONK14 tics 8
+	pic BIONK15 tics 8
+	pic BIONK16 tics 8
+	pic BIONK17 tics 8
+	pic BIONK18 tics 8
+	pic BIONK19 tics 8
+	pic BIONK20 tics 8
+	pic BIONK21 tics 8
+	pic BIONK22 tics 8
+	pic BIONK23 tics 8
+	pic BIONK24 tics 8
+	pic BIONK25 tics 8
+	pic BIONK26 tics 8
+	pic BIONK27 tics 8
+
+flat BIOBM01
+    pic BIOBM01 tics 8
+	pic BIOBM02 tics 8
+	pic BIOBM03 tics 8
+	pic BIOBM04 tics 8
+	pic BIOBM05 tics 8
+	pic BIOBM06 tics 8
+	pic BIOBM07 tics 8
+	pic BIOBM08 tics 8
+	pic BIOBM09 tics 8
+	pic BIOBM10 tics 8
+	pic BIOBM11 tics 8
+	pic BIOBM12 tics 8
+	pic BIOBM13 tics 8
+	pic BIOBM14 tics 8
+	
+flat BIOBL01
+    pic BIOBL01 tics 8
+	pic BIOBL02 tics 8
+	pic BIOBL03 tics 8
+	
+// DARKENING
+
+switch doom 2 SW1DRK1 on pic SW2DRK1 tics 0
+switch doom 2 SW2DRK1 on pic SW1DRK1 tics 0
+
+switch doom 2 SW1DRK2 on pic SW2DRK2 tics 0
+switch doom 2 SW2DRK2 on pic SW1DRK2 tics 0
+
+switch doom 2 SW1DRK3 on pic SW2DRK3 tics 0
+switch doom 2 SW2DRK3 on pic SW1DRK3 tics 0
+
+switch doom 2 SW1DRK4 on pic SW2DRK4 tics 0
+switch doom 2 SW2DRK4 on pic SW1DRK4 tics 0
+
+// THE TROOPER'S PLAYGROUND
+
+switch doom 2 SW1TTP1 on pic SW2TTP1 tics 0
+switch doom 2 SW2TTP1 on pic SW1TTP1 tics 0
+
+texture TTPTX25
+    pic TTPTX25 tics 8
+    pic TTPTX26 tics 8
+    pic TTPTX27 tics 8
+	
+texture TTPTX26
+    pic TTPTX26 tics 8
+    pic TTPTX27 tics 8
+    pic TTPTX25 tics 8
+	
+texture TTPTX27
+    pic TTPTX27 tics 8
+    pic TTPTX25 tics 8
+    pic TTPTX26 tics 8
+	
+// PERDITION'S GATE
+
+texture PGPLAN1
+    pic PGPLAN1 tics 8
+    pic PGPLAN2 tics 8
+    pic PGPLAN3 tics 8
+    pic PGPLAN4 tics 8
+	pic PGPLAN5 tics 8
+    pic PGPLAN6 tics 8
+    pic PGPLAN7 tics 8
+    pic PGPLAN8 tics 8
+
+texture PGWSCR1
+    pic PGWSCR1 tics 8
+    pic PGWSCR2 tics 8
+    pic PGWSCR3 tics 8
+    pic PGWSCR4 tics 8
+
+texture PGWSCR2
+    pic PGWSCR2 tics 8
+    pic PGWSCR3 tics 8
+    pic PGWSCR4 tics 8
+    pic PGWSCR1 tics 8
+
+texture PGWSCR3
+    pic PGWSCR3 tics 8
+    pic PGWSCR4 tics 8
+    pic PGWSCR1 tics 8
+    pic PGWSCR2 tics 8
+
+texture PGWSCR4
+    pic PGWSCR4 tics 8
+    pic PGWSCR1 tics 8
+    pic PGWSCR2 tics 8
+    pic PGWSCR3 tics 8
+
+texture AVPGN01
+    pic AVPGN01 tics 8
+    pic AVPGN02 tics 8
+    pic AVPGN03 tics 8
+    pic AVPGN04 tics 8
+	pic AVPGN05 tics 8
+    pic AVPGN06 tics 8
+
+texture AVPGN02
+    pic AVPGN02 tics 8
+    pic AVPGN03 tics 8
+    pic AVPGN04 tics 8
+    pic AVPGN05 tics 8
+	pic AVPGN06 tics 8
+    pic AVPGN01 tics 8
+	
+texture AVPGN03
+    pic AVPGN03 tics 8
+    pic AVPGN04 tics 8
+    pic AVPGN05 tics 8
+    pic AVPGN06 tics 8
+	pic AVPGN01 tics 8
+    pic AVPGN02 tics 8
+
+texture AVPGN04
+    pic AVPGN04 tics 8
+    pic AVPGN05 tics 8
+    pic AVPGN06 tics 8
+    pic AVPGN01 tics 8
+	pic AVPGN02 tics 8
+    pic AVPGN03 tics 8
+
+texture AVPGN05
+    pic AVPGN05 tics 8
+    pic AVPGN06 tics 8
+    pic AVPGN01 tics 8
+    pic AVPGN02 tics 8
+	pic AVPGN03 tics 8
+    pic AVPGN04 tics 8
+
+texture AVPGN06
+    pic AVPGN06 tics 8
+    pic AVPGN01 tics 8
+    pic AVPGN02 tics 8
+    pic AVPGN03 tics 8
+	pic AVPGN04 tics 8
+    pic AVPGN05 tics 8
+
+texture BIGSCRN1
+    pic BIGSCRN1 tics 8
+    pic BIGSCRN2 tics 8
+
+texture BIGSCRN2
+    pic BIGSCRN2 tics 8
+    pic BIGSCRN1 tics 8
+
+switch doom 2 SW1PGR1 on pic SW2PGR1 tics 0
+switch doom 2 SW2PGR1 on pic SW1PGR1 tics 0
+
+switch doom 2 SW1PGR2 on pic SW2PGR2 tics 0
+switch doom 2 SW2PGR2 on pic SW1PGR2 tics 0
+
+switch doom 2 SW1PGR3 on pic SW2PGR3 tics 0
+switch doom 2 SW2PGR3 on pic SW1PGR3 tics 0
+
+switch doom 2 SW1PGR4 on pic SW2PGR4 tics 0
+switch doom 2 SW2PGR4 on pic SW1PGR4 tics 0
+
+// POST
+
+texture PSTAN01
+    pic PSTAN01 tics 8
+    pic PSTAN02 tics 8
+
+texture PSTAN02
+    pic PSTAN02 tics 8
+    pic PSTAN01 tics 8
+
+texture PSTAN03
+    pic PSTAN03 tics 8
+    pic PSTAN04 tics 8
+
+texture PSTAN04
+    pic PSTAN04 tics 8
+    pic PSTAN03 tics 8
+
+texture PSTAN05
+    pic PSTAN05 tics 8
+    pic PSTAN06 tics 8
+    pic PSTAN07 tics 8
+
+texture PSTAN06
+    pic PSTAN06 tics 8
+    pic PSTAN07 tics 8
+    pic PSTAN05 tics 8
+
+texture PSTAN07
+    pic PSTAN07 tics 8
+    pic PSTAN05 tics 8
+    pic PSTAN06 tics 8
+
+texture PSTAN08
+    pic PSTAN08 tics 8
+    pic PSTAN09 tics 8
+    pic PSTAN10 tics 8
+	pic PSTAN11 tics 8
+
+texture PSTAN09
+    pic PSTAN09 tics 8
+    pic PSTAN10 tics 8
+    pic PSTAN11 tics 8
+	pic PSTAN08 tics 8
+
+texture PSTAN10
+    pic PSTAN10 tics 8
+    pic PSTAN11 tics 8
+    pic PSTAN08 tics 8
+	pic PSTAN09 tics 8
+
+texture PSTAN11
+    pic PSTAN11 tics 8
+    pic PSTAN08 tics 8
+    pic PSTAN09 tics 8
+	pic PSTAN10 tics 8
+
+flat PSTPC01
+    pic PSTPC01 tics 8
+	pic PSTPC02 tics 8
+	pic PSTPC03 tics 8
+	pic PSTPC04 tics 8
+
+flat PSTPC05
+    pic PSTPC05 tics 8
+	pic PSTPC06 tics 8
+	pic PSTPC07 tics 8
+	pic PSTPC08 tics 8
+
+// REVOLUTION1
+
+texture TVRAN01
+    pic TVRAN01 tics 8
+    pic TVRAN02 tics 8
+    pic TVRAN03 tics 8
+
+texture TVRAN02
+    pic TVRAN02 tics 8
+    pic TVRAN03 tics 8
+    pic TVRAN01 tics 8
+
+texture TVRAN03
+    pic TVRAN03 tics 8
+    pic TVRAN01 tics 8
+    pic TVRAN02 tics 8
+
+texture TVRAN04
+    pic TVRAN04 tics 8
+    pic TVRAN05 tics 8
+    pic TVRAN06 tics 8
+
+texture TVRAN05
+    pic TVRAN05 tics 8
+    pic TVRAN06 tics 8
+    pic TVRAN04 tics 8
+
+texture TVRAN06
+    pic TVRAN06 tics 8
+    pic TVRAN04 tics 8
+    pic TVRAN05 tics 8
+
+texture TVRAN07
+    pic TVRAN07 tics 8
+    pic TVRAN08 tics 8
+    pic TVRAN09 tics 8
+
+texture TVRAN08
+    pic TVRAN08 tics 8
+    pic TVRAN09 tics 8
+    pic TVRAN07 tics 8
+
+texture TVRAN09
+    pic TVRAN09 tics 8
+    pic TVRAN07 tics 8
+    pic TVRAN08 tics 8
+
+switch doom 2 SW1TVR1 on pic SW2TVR1 tics 0
+switch doom 2 SW2TVR1 on pic SW1TVR1 tics 0
+
+flat TVRFL13
+    pic TVRFL13 tics 8
+	pic TVRFL14 tics 8
+	pic TVRFL15 tics 8
+	pic TVRFL16 tics 8
+
+flat TVRFL17
+    pic TVRFL17 tics 8
+	pic TVRFL18 tics 8
+	pic TVRFL19 tics 8
+	pic TVRFL20 tics 8
+
+// SCIENTIST 2
+
+texture SCIAN01
+    pic SCIAN01 tics 8
+    pic SCIAN02 tics 8
+    pic SCIAN03 tics 8
+	pic SCIAN04 tics 8
+	
+texture SCIAN02
+    pic SCIAN02 tics 8
+    pic SCIAN03 tics 8
+    pic SCIAN04 tics 8
+	pic SCIAN01 tics 8
+	
+texture SCIAN03
+    pic SCIAN03 tics 8
+    pic SCIAN04 tics 8
+    pic SCIAN01 tics 8
+	pic SCIAN02 tics 8
+	
+texture SCIAN04
+    pic SCIAN04 tics 8
+    pic SCIAN01 tics 8
+    pic SCIAN02 tics 8
+	pic SCIAN03 tics 8
+
+texture SCIAN05
+    pic SCIAN05 tics 8
+    pic SCIAN06 tics 8
+
+texture SCIAN06
+    pic SCIAN06 tics 8
+    pic SCIAN05 tics 8
+
+texture SCIAN07
+    pic SCIAN07 tics 8
+    pic SCIAN08 tics 8
+    pic SCIAN09 tics 8
+	
+texture SCIAN08
+    pic SCIAN08 tics 8
+    pic SCIAN09 tics 8
+    pic SCIAN07 tics 8
+	
+texture SCIAN09
+    pic SCIAN09 tics 8
+    pic SCIAN07 tics 8
+    pic SCIAN08 tics 8
+
+texture SCIAN10
+    pic SCIAN10 tics 8
+    pic SCIAN11 tics 8
+    pic SCIAN12 tics 8
+
+texture SCIAN11
+    pic SCIAN11 tics 8
+    pic SCIAN12 tics 8
+    pic SCIAN10 tics 8
+
+texture SCIAN12
+    pic SCIAN12 tics 8
+    pic SCIAN10 tics 8
+    pic SCIAN11 tics 8
+
+texture SCIAN13
+    pic SCIAN13 tics 8
+    pic SCIAN14 tics 8
+    pic SCIAN15 tics 8
+
+texture SCIAN14
+    pic SCIAN14 tics 8
+    pic SCIAN15 tics 8
+    pic SCIAN13 tics 8
+
+texture SCIAN15
+    pic SCIAN15 tics 8
+    pic SCIAN13 tics 8
+    pic SCIAN14 tics 8
+
+texture SCIAN16
+    pic SCIAN16 tics 8
+    pic SCIAN17 tics 8
+    pic SCIAN18 tics 8
+
+texture SCIAN17
+    pic SCIAN17 tics 8
+    pic SCIAN18 tics 8
+    pic SCIAN16 tics 8
+
+texture SCIAN18
+    pic SCIAN18 tics 8
+    pic SCIAN16 tics 8
+    pic SCIAN17 tics 8
+
+texture SCIAN19
+    pic SCIAN19 tics 8
+    pic SCIAN20 tics 8
+    pic SCIAN21 tics 8
+
+texture SCIAN20
+    pic SCIAN20 tics 8
+    pic SCIAN21 tics 8
+    pic SCIAN19 tics 8
+
+texture SCIAN21
+    pic SCIAN21 tics 8
+    pic SCIAN19 tics 8
+    pic SCIAN20 tics 8
+
+switch doom 2 SW1SCI1 on pic SW2SCI1 tics 0
+switch doom 2 SW2SCI1 on pic SW1SCI1 tics 0
+
+switch doom 2 SW1SCI2 on pic SW2SCI2 tics 0
+switch doom 2 SW2SCI2 on pic SW1SCI2 tics 0
+
+switch doom 2 SW1SCI3 on pic SW2SCI3 tics 0
+switch doom 2 SW2SCI3 on pic SW1SCI3 tics 0
+
+switch doom 2 SW1SCI4 on pic SW2SCI4 tics 0
+switch doom 2 SW2SCI4 on pic SW1SCI4 tics 0
+
+switch doom 2 SW1SCI5 on pic SW2SCI5 tics 0
+switch doom 2 SW2SCI5 on pic SW1SCI5 tics 0
+
+switch doom 2 SW1SCI6 on pic SW2SCI6 tics 0
+switch doom 2 SW2SCI6 on pic SW1SCI6 tics 0
+
+switch doom 2 SW1SCI7 on pic SW2SCI7 tics 0
+switch doom 2 SW2SCI7 on pic SW1SCI7 tics 0
+
+switch doom 2 SW1SCI8 on pic SW2SCI8 tics 0
+switch doom 2 SW2SCI8 on pic SW1SCI8 tics 0
+
+switch doom 2 SW1SCI9 on pic SW2SCI9 tics 0
+switch doom 2 SW2SCI9 on pic SW1SCI9 tics 0
+
+switch doom 2 SW1SCIA on pic SW2SCIA tics 0
+switch doom 2 SW2SCIA on pic SW1SCIA tics 0
+
+switch doom 2 SW1SCIB on pic SW2SCIB tics 0
+switch doom 2 SW2SCIB on pic SW1SCIB tics 0
+
+switch doom 2 SW1SCIC on pic SW2SCIC tics 0
+switch doom 2 SW2SCIC on pic SW1SCIC tics 0
+
+switch doom 2 SW1SCID on pic SW2SCID tics 0
+switch doom 2 SW2SCID on pic SW1SCID tics 0
+
+switch doom 2 SW1SCIE on pic SW2SCIE tics 0
+switch doom 2 SW2SCIE on pic SW1SCIE tics 0
+
+switch doom 2 SW1SCIF on pic SW2SCIF tics 0
+switch doom 2 SW2SCIF on pic SW1SCIF tics 0
+
+switch doom 2 SW1SCIG on pic SW2SCIG tics 0
+switch doom 2 SW2SCIG on pic SW1SCIG tics 0
+
+switch doom 2 SW1SCIH on pic SW2SCIH tics 0
+switch doom 2 SW2SCIH on pic SW1SCIH tics 0
+
+// ICARUS ALIEN VANGUARD
+
+texture ICAWF01
+    pic ICAWF01 tics 8
+    pic ICAWF02 tics 8
+    pic ICAWF03 tics 8
+	pic ICAWF04 tics 8
+	
+texture ICAWF02
+    pic ICAWF02 tics 8
+    pic ICAWF03 tics 8
+    pic ICAWF04 tics 8
+	pic ICAWF01 tics 8
+	
+texture ICAWF03
+    pic ICAWF03 tics 8
+    pic ICAWF04 tics 8
+    pic ICAWF01 tics 8
+	pic ICAWF02 tics 8
+	
+texture ICAWF04
+    pic ICAWF04 tics 8
+    pic ICAWF01 tics 8
+    pic ICAWF02 tics 8
+	pic ICAWF03 tics 8
+
+texture ICAMS01
+    pic ICAMS01 tics 8
+    pic ICAMS02 tics 8
+    pic ICAMS03 tics 8
+	pic ICAMS04 tics 8
+	pic ICAMS05 tics 8
+	pic ICAMS06 tics 8
+	
+texture ICAMS02
+    pic ICAMS02 tics 8
+    pic ICAMS03 tics 8
+    pic ICAMS04 tics 8
+	pic ICAMS05 tics 8
+	pic ICAMS06 tics 8
+	pic ICAMS01 tics 8
+	
+texture ICAMS03
+    pic ICAMS03 tics 8
+    pic ICAMS04 tics 8
+	pic ICAMS05 tics 8
+	pic ICAMS06 tics 8
+    pic ICAMS01 tics 8
+	pic ICAMS02 tics 8
+	
+texture ICAMS04
+    pic ICAMS04 tics 8
+	pic ICAMS05 tics 8
+	pic ICAMS06 tics 8
+    pic ICAMS01 tics 8
+    pic ICAMS02 tics 8
+	pic ICAMS03 tics 8
+
+texture ICAMS05
+    pic ICAMS05 tics 8
+	pic ICAMS06 tics 8
+	pic ICAMS01 tics 8
+    pic ICAMS02 tics 8
+    pic ICAMS03 tics 8
+	pic ICAMS04 tics 8
+
+texture ICAMS06
+    pic ICAMS06 tics 8
+	pic ICAMS01 tics 8
+	pic ICAMS02 tics 8
+    pic ICAMS03 tics 8
+    pic ICAMS04 tics 8
+	pic ICAMS05 tics 8
+
+switch doom 2 SW1ICAR on pic SW2ICAR tics 0
+switch doom 2 SW2ICAR on pic SW1ICAR tics 0
+
+flat ICAFL07
+    pic ICAFL07 tics 8
+	pic ICAFL08 tics 8
+	pic ICAFL09 tics 8
+	pic ICAFL10 tics 8
+
+flat ICAFL08
+    pic ICAFL08 tics 8
+	pic ICAFL09 tics 8
+	pic ICAFL10 tics 8
+	pic ICAFL07 tics 8
+
+flat ICAFL09
+    pic ICAFL09 tics 8
+	pic ICAFL10 tics 8
+	pic ICAFL07 tics 8
+	pic ICAFL08 tics 8
+
+flat ICAFL10
+    pic ICAFL10 tics 8
+	pic ICAFL07 tics 8
+	pic ICAFL08 tics 8
+	pic ICAFL09 tics 8
+
+// HELL TO PAY
+
+texture HTPFLL01
+    pic HTPFLL01 tics 8
+    pic HTPFLL02 tics 8
+    pic HTPFLL03 tics 8
+	pic HTPFLL04 tics 8
+
+texture HTPFLL02
+    pic HTPFLL02 tics 8
+    pic HTPFLL03 tics 8
+    pic HTPFLL04 tics 8
+	pic HTPFLL01 tics 8
+
+texture HTPFLL03
+    pic HTPFLL03 tics 8
+    pic HTPFLL04 tics 8
+    pic HTPFLL01 tics 8
+	pic HTPFLL02 tics 8
+
+texture HTPFLL04
+    pic HTPFLL04 tics 8
+    pic HTPFLL01 tics 8
+    pic HTPFLL02 tics 8
+	pic HTPFLL03 tics 8
+
+texture HTPFLL05
+    pic HTPFLL05 tics 8
+    pic HTPFLL06 tics 8
+    pic HTPFLL07 tics 8
+	pic HTPFLL08 tics 8
+
+texture HTPFLL06
+    pic HTPFLL06 tics 8
+    pic HTPFLL07 tics 8
+    pic HTPFLL08 tics 8
+	pic HTPFLL05 tics 8
+
+texture HTPFLL07
+    pic HTPFLL07 tics 8
+    pic HTPFLL08 tics 8
+    pic HTPFLL05 tics 8
+	pic HTPFLL06 tics 8
+
+texture HTPFLL08
+    pic HTPFLL08 tics 8
+    pic HTPFLL05 tics 8
+    pic HTPFLL06 tics 8
+	pic HTPFLL07 tics 8
+
+
+switch doom 2 SW1HTP1 on pic SW2HTP1 tics 0
+switch doom 2 SW2HTP1 on pic SW1HTP1 tics 0
+
+switch doom 2 SW1HTP2 on pic SW2HTP2 tics 0
+switch doom 2 SW2HTP2 on pic SW1HTP2 tics 0
+
+switch doom 2 SW1HTP3 on pic SW2HTP3 tics 0
+switch doom 2 SW2HTP3 on pic SW1HTP3 tics 0
+
+switch doom 2 SW1HTP4 on pic SW2HTP4 tics 0
+switch doom 2 SW2HTP4 on pic SW1HTP4 tics 0
+
+switch doom 2 SW1HTP5 on pic SW2HTP5 tics 0
+switch doom 2 SW2HTP5 on pic SW1HTP5 tics 0
+
+switch doom 2 SW1HTP6 on pic SW2HTP6 tics 0
+switch doom 2 SW2HTP6 on pic SW1HTP6 tics 0
+
+texture HTPSCR01
+    pic HTPSCR01 tics 8
+    pic HTPSCR02 tics 8
+    pic HTPSCR03 tics 8
+	pic HTPSCR04 tics 8
+	pic HTPSCR05 tics 8
+	pic HTPSCR06 tics 8
+	pic HTPSCR07 tics 8
+	pic HTPSCR08 tics 8
+
+texture HTPHLL01
+    pic HTPHLL01 tics 8
+    pic HTPHLL02 tics 8
+    pic HTPHLL03 tics 8
+	pic HTPHLL04 tics 8
+	pic HTPHLL05 tics 8
+	pic HTPHLL06 tics 8
+	pic HTPHLL07 tics 8
+	pic HTPHLL08 tics 8
+	pic HTPHLL09 tics 8
+	pic HTPHLL10 tics 8
+	pic HTPHLL11 tics 8
+	pic HTPHLL12 tics 8
+	pic HTPHLL13 tics 8
+	pic HTPHLL14 tics 8
+	pic HTPHLL15 tics 8
+	pic HTPHLL16 tics 8
+
+texture HTPTRD01
+    pic HTPTRD01 tics 8
+    pic HTPTRD02 tics 8
+    pic HTPTRD03 tics 8
+	pic HTPTRD04 tics 8
+	pic HTPTRD05 tics 8
+	pic HTPTRD06 tics 8
+	pic HTPTRD07 tics 8
+	pic HTPTRD08 tics 8
+	pic HTPTRD09 tics 8
+
+texture HTPRCR01
+    pic HTPRCR01 tics 8
+    pic HTPRCR02 tics 8
+    pic HTPRCR03 tics 8
+	pic HTPRCR04 tics 8
+	pic HTPRCR05 tics 8
+	pic HTPRCR06 tics 8
+	pic HTPRCR07 tics 8
+	pic HTPRCR08 tics 8
+	pic HTPRCR09 tics 8
+	pic HTPRCR10 tics 8
+	pic HTPRCR11 tics 8
+	pic HTPRCR12 tics 8
+	pic HTPRCR13 tics 8
+	pic HTPRCR14 tics 8
+	pic HTPRCR15 tics 8
+	pic HTPRCR16 tics 8
+
+flat HTPFLR05
+    pic HTPFLR05 tics 4
+	pic HTPFLR06 tics 4
+	pic HTPFLR07 tics 4
+	pic HTPFLR08 tics 4
+	pic HTPFLR09 tics 4
+
+flat HTPFLR06
+    pic HTPFLR06 tics 4
+	pic HTPFLR07 tics 4
+	pic HTPFLR08 tics 4
+	pic HTPFLR09 tics 4
+	pic HTPFLR05 tics 4
+
+flat HTPFLR07
+    pic HTPFLR07 tics 4
+	pic HTPFLR08 tics 4
+	pic HTPFLR09 tics 4
+	pic HTPFLR05 tics 4
+	pic HTPFLR06 tics 4
+
+flat HTPFLR08
+    pic HTPFLR08 tics 4
+	pic HTPFLR09 tics 4
+	pic HTPFLR05 tics 4
+	pic HTPFLR06 tics 4
+	pic HTPFLR07 tics 4
+
+flat HTPFLR09
+    pic HTPFLR09 tics 4
+	pic HTPFLR05 tics 4
+	pic HTPFLR06 tics 4
+	pic HTPFLR07 tics 4
+	pic HTPFLR08 tics 4
+
+// THE ABYSS
+
+texture ABYSTX27
+    pic ABYSTX27 tics 8
+    pic ABYSTX28 tics 8
+    pic ABYSTX29 tics 8
+	
+texture ABYSTX28
+    pic ABYSTX28 tics 8
+    pic ABYSTX29 tics 8
+    pic ABYSTX27 tics 8
+	
+texture ABYSTX29
+    pic ABYSTX29 tics 8
+    pic ABYSTX27 tics 8
+    pic ABYSTX28 tics 8
+
+switch doom 2 SW1ABYSS on pic SW2ABYSS tics 0
+switch doom 2 SW2ABYSS on pic SW1ABYSS tics 0
+
+// ALL HELL IS BREAKING LOOSE!
+
+texture ALHAN01
+    pic ALHAN01 tics 8
+    pic ALHAN02 tics 8
+    pic ALHAN03 tics 8
+	pic ALHAN04 tics 8
+
+texture ALHAN02
+    pic ALHAN02 tics 8
+    pic ALHAN03 tics 8
+    pic ALHAN04 tics 8
+	pic ALHAN01 tics 8
+
+texture ALHAN03
+    pic ALHAN03 tics 8
+    pic ALHAN04 tics 8
+    pic ALHAN01 tics 8
+	pic ALHAN02 tics 8
+
+texture ALHAN04
+    pic ALHAN04 tics 8
+    pic ALHAN01 tics 8
+    pic ALHAN02 tics 8
+	pic ALHAN03 tics 8
+
+texture ALHAN05
+    pic ALHAN05 tics 8
+    pic ALHAN06 tics 8
+    pic ALHAN07 tics 8
+	pic ALHAN08 tics 8
+	
+texture ALHAN06
+    pic ALHAN06 tics 8
+    pic ALHAN07 tics 8
+    pic ALHAN08 tics 8
+	pic ALHAN05 tics 8
+
+texture ALHAN07
+    pic ALHAN07 tics 8
+    pic ALHAN08 tics 8
+    pic ALHAN05 tics 8
+	pic ALHAN06 tics 8
+
+texture ALHAN08
+    pic ALHAN08 tics 8
+    pic ALHAN05 tics 8
+    pic ALHAN06 tics 8
+	pic ALHAN07 tics 8
+
+// DYSTOPIA 3
+
+texture DYSTX35
+    pic DYSTX35 tics 8
+    pic DYSTX36 tics 8
+    pic DYSTX37 tics 8
+	pic DYSTX38 tics 8
+
+texture DYSTX36
+    pic DYSTX36 tics 8
+    pic DYSTX37 tics 8
+    pic DYSTX38 tics 8
+	pic DYSTX35 tics 8
+
+texture DYSTX37
+    pic DYSTX37 tics 8
+    pic DYSTX38 tics 8
+    pic DYSTX35 tics 8
+	pic DYSTX36 tics 8
+
+texture DYSTX38
+    pic DYSTX38 tics 8
+    pic DYSTX35 tics 8
+    pic DYSTX36 tics 8
+	pic DYSTX37 tics 8
+
+switch doom 2 SW1DYS1 on pic SW2DYS1 tics 0
+switch doom 2 SW2DYS1 on pic SW1DYS1 tics 0
+
+switch doom 2 SW1DYS2 on pic SW2DYS2 tics 0
+switch doom 2 SW2DYS2 on pic SW1DYS2 tics 0
+
+switch doom 2 SW1DYS3 on pic SW2DYS3 tics 0
+switch doom 2 SW2DYS3 on pic SW1DYS3 tics 0
+
+switch doom 2 SW1DYS4 on pic SW2DYS4 tics 0
+switch doom 2 SW2DYS4 on pic SW1DYS4 tics 0
+
+switch doom 2 SW1DYS5 on pic SW2DYS5 tics 0
+switch doom 2 SW2DYS5 on pic SW1DYS5 tics 0
+
+switch doom 2 SW1DYS6 on pic SW2DYS6 tics 0
+switch doom 2 SW2DYS6 on pic SW1DYS6 tics 0
+
+switch doom 2 SW1DYS7 on pic SW2DYS7 tics 0
+switch doom 2 SW2DYS7 on pic SW1DYS7 tics 0
+
+// ETERNAL DOOM
+
+texture ETEAN01
+    pic ETEAN01 tics 8
+    pic ETEAN02 tics 8
+    pic ETEAN03 tics 8
+	pic ETEAN04 tics 8
+	
+texture ETEAN02
+    pic ETEAN02 tics 8
+    pic ETEAN03 tics 8
+    pic ETEAN04 tics 8
+	pic ETEAN01 tics 8
+	
+texture ETEAN03
+    pic ETEAN03 tics 8
+    pic ETEAN04 tics 8
+    pic ETEAN01 tics 8
+	pic ETEAN02 tics 8
+	
+texture ETEAN04
+    pic ETEAN04 tics 8
+    pic ETEAN01 tics 8
+    pic ETEAN02 tics 8
+	pic ETEAN03 tics 8
+
+texture ETEAN05
+    pic ETEAN05 tics 8
+    pic ETEAN06 tics 8
+    pic ETEAN07 tics 8
+    pic ETEAN08 tics 8
+	
+texture ETEAN06
+    pic ETEAN06 tics 8
+    pic ETEAN07 tics 8
+    pic ETEAN08 tics 8
+    pic ETEAN05 tics 8
+	
+texture ETEAN07
+    pic ETEAN07 tics 8
+    pic ETEAN08 tics 8
+    pic ETEAN05 tics 8
+    pic ETEAN06 tics 8
+	
+texture ETEAN08
+    pic ETEAN08 tics 8
+    pic ETEAN05 tics 8
+    pic ETEAN06 tics 8
+    pic ETEAN07 tics 8
+
+texture ETEAN09
+    pic ETEAN09 tics 8
+    pic ETEAN10 tics 8
+    pic ETEAN11 tics 8
+    pic ETEAN12 tics 8
+	
+texture ETEAN10
+    pic ETEAN10 tics 8
+    pic ETEAN11 tics 8
+    pic ETEAN12 tics 8
+    pic ETEAN09 tics 8
+
+texture ETEAN11
+    pic ETEAN11 tics 8
+    pic ETEAN12 tics 8
+    pic ETEAN09 tics 8
+    pic ETEAN10 tics 8
+
+texture ETEAN12
+    pic ETEAN12 tics 8
+    pic ETEAN09 tics 8
+    pic ETEAN10 tics 8
+    pic ETEAN11 tics 8
+
+texture ETEAN13
+    pic ETEAN13 tics 8
+    pic ETEAN14 tics 8
+    pic ETEAN15 tics 8
+    pic ETEAN16 tics 8
+
+texture ETEAN14
+    pic ETEAN14 tics 8
+    pic ETEAN15 tics 8
+    pic ETEAN16 tics 8
+    pic ETEAN13 tics 8
+
+texture ETEAN15
+    pic ETEAN15 tics 8
+    pic ETEAN16 tics 8
+    pic ETEAN13 tics 8
+    pic ETEAN14 tics 8
+
+texture ETEAN16
+    pic ETEAN16 tics 8
+    pic ETEAN13 tics 8
+    pic ETEAN14 tics 8
+    pic ETEAN15 tics 8
+
+texture ETEAN17
+    pic ETEAN17 tics 8
+    pic ETEAN18 tics 8
+    pic ETEAN19 tics 8
+    pic ETEAN20 tics 8
+
+texture ETEAN18
+    pic ETEAN18 tics 8
+    pic ETEAN19 tics 8
+    pic ETEAN20 tics 8
+    pic ETEAN17 tics 8
+
+texture ETEAN19
+    pic ETEAN19 tics 8
+    pic ETEAN20 tics 8
+    pic ETEAN17 tics 8
+    pic ETEAN18 tics 8
+
+texture ETEAN20
+    pic ETEAN20 tics 8
+    pic ETEAN17 tics 8
+    pic ETEAN18 tics 8
+    pic ETEAN19 tics 8
+
+texture ETEAN21
+    pic ETEAN21 tics 12
+    pic ETEAN22 tics 12
+
+texture ETEAN22
+    pic ETEAN22 tics 12
+    pic ETEAN21 tics 12
+
+texture ETEAN23
+    pic ETEAN23 tics 8
+    pic ETEAN24 tics 8
+    pic ETEAN25 tics 8
+
+texture ETEAN24
+    pic ETEAN24 tics 8
+    pic ETEAN25 tics 8
+    pic ETEAN23 tics 8
+
+texture ETEAN25
+    pic ETEAN25 tics 8
+    pic ETEAN23 tics 8
+    pic ETEAN24 tics 8
+
+texture ETEAN26
+    pic ETEAN26 tics 8
+    pic ETEAN27 tics 8
+    pic ETEAN28 tics 8
+
+texture ETEAN27
+    pic ETEAN27 tics 8
+    pic ETEAN28 tics 8
+    pic ETEAN26 tics 8
+
+texture ETEAN28
+    pic ETEAN28 tics 8
+    pic ETEAN26 tics 8
+    pic ETEAN27 tics 8
+
+texture ETEAN29
+    pic ETEAN29 tics 8
+    pic ETEAN30 tics 8
+    pic ETEAN31 tics 8
+
+texture ETEAN30
+    pic ETEAN30 tics 8
+    pic ETEAN31 tics 8
+    pic ETEAN29 tics 8
+
+texture ETEAN31
+    pic ETEAN31 tics 8
+    pic ETEAN29 tics 8
+    pic ETEAN30 tics 8
+
+texture ETEAN32
+    pic ETEAN32 tics 8
+    pic ETEAN33 tics 8
+    pic ETEAN34 tics 8
+
+texture ETEAN33
+    pic ETEAN33 tics 8
+    pic ETEAN34 tics 8
+    pic ETEAN32 tics 8
+
+texture ETEAN34
+    pic ETEAN34 tics 8
+    pic ETEAN32 tics 8
+    pic ETEAN33 tics 8
+
+texture ETEAN35
+    pic ETEAN35 tics 8
+    pic ETEAN36 tics 8
+    pic ETEAN37 tics 8
+
+texture ETEAN36
+    pic ETEAN36 tics 8
+    pic ETEAN37 tics 8
+    pic ETEAN35 tics 8
+
+texture ETEAN37
+    pic ETEAN37 tics 8
+    pic ETEAN35 tics 8
+    pic ETEAN36 tics 8
+
+texture ETEAN38
+    pic ETEAN38 tics 8
+    pic ETEAN39 tics 8
+    pic ETEAN40 tics 8
+    pic ETEAN41 tics 8
+	pic ETEAN42 tics 8
+	pic ETEAN43 tics 8
+	pic ETEAN44 tics 8
+	pic ETEAN45 tics 8
+	pic ETEAN46 tics 8
+	pic ETEAN47 tics 8
+	pic ETEAN48 tics 8
+	pic ETEAN49 tics 8
+	pic ETEAN50 tics 8
+	pic ETEAN51 tics 8
+	pic ETEAN52 tics 8
+	pic ETEAN53 tics 8
+
+flat ETEFL051
+    pic ETEFL051 tics 8
+	pic ETEFL052 tics 8
+	pic ETEFL053 tics 8
+
+flat ETEFL052
+    pic ETEFL052 tics 8
+	pic ETEFL053 tics 8
+	pic ETEFL051 tics 8
+
+flat ETEFL053
+    pic ETEFL053 tics 8
+	pic ETEFL051 tics 8
+	pic ETEFL052 tics 8
+
+flat ETEFL066
+    pic ETEFL066 tics 8
+	pic ETEFL067 tics 8
+	pic ETEFL068 tics 8
+	pic ETEFL069 tics 8
+
+flat ETEFL067
+    pic ETEFL067 tics 8
+	pic ETEFL068 tics 8
+	pic ETEFL069 tics 8
+	pic ETEFL066 tics 8
+
+flat ETEFL068
+    pic ETEFL068 tics 8
+	pic ETEFL069 tics 8
+	pic ETEFL066 tics 8
+	pic ETEFL067 tics 8
+
+flat ETEFL069
+    pic ETEFL069 tics 8
+	pic ETEFL066 tics 8
+	pic ETEFL067 tics 8
+	pic ETEFL068 tics 8
+
+flat ETEFL070
+    pic ETEFL070 tics 8
+	pic ETEFL071 tics 8
+	pic ETEFL072 tics 8
+	pic ETEFL073 tics 8
+
+flat ETEFL071
+    pic ETEFL071 tics 8
+	pic ETEFL072 tics 8
+	pic ETEFL073 tics 8
+	pic ETEFL070 tics 8
+
+flat ETEFL072
+    pic ETEFL072 tics 8
+	pic ETEFL073 tics 8
+	pic ETEFL070 tics 8
+	pic ETEFL071 tics 8
+
+flat ETEFL073
+    pic ETEFL073 tics 8
+	pic ETEFL070 tics 8
+	pic ETEFL071 tics 8
+	pic ETEFL072 tics 8
+
+flat ETEFL086
+    pic ETEFL086 tics 8
+	pic ETEFL087 tics 8
+	pic ETEFL088 tics 8
+
+flat ETEFL087
+    pic ETEFL087 tics 8
+	pic ETEFL088 tics 8
+	pic ETEFL086 tics 8
+
+flat ETEFL088
+    pic ETEFL088 tics 8
+	pic ETEFL086 tics 8
+	pic ETEFL087 tics 8
+
+flat ETEFL115
+    pic ETEFL115 tics 8
+	pic ETEFL116 tics 8
+	pic ETEFL117 tics 8
+	pic ETEFL118 tics 8
+
+flat ETEFL116
+    pic ETEFL116 tics 8
+	pic ETEFL117 tics 8
+	pic ETEFL118 tics 8
+	pic ETEFL115 tics 8
+
+flat ETEFL117
+    pic ETEFL117 tics 8
+	pic ETEFL118 tics 8
+	pic ETEFL115 tics 8
+	pic ETEFL116 tics 8
+
+flat ETEFL118
+    pic ETEFL118 tics 8
+	pic ETEFL115 tics 8
+	pic ETEFL116 tics 8
+	pic ETEFL117 tics 8
+
+flat ETEFL131
+    pic ETEFL131 tics 8
+	pic ETEFL132 tics 8
+	pic ETEFL133 tics 8
+	pic ETEFL134 tics 8
+
+flat ETEFL132
+    pic ETEFL132 tics 8
+	pic ETEFL133 tics 8
+	pic ETEFL134 tics 8
+	pic ETEFL131 tics 8
+
+flat ETEFL133
+    pic ETEFL133 tics 8
+	pic ETEFL134 tics 8
+	pic ETEFL131 tics 8
+	pic ETEFL132 tics 8
+
+flat ETEFL134
+    pic ETEFL134 tics 8
+	pic ETEFL131 tics 8
+	pic ETEFL132 tics 8
+	pic ETEFL133 tics 8
+
+flat ETEFL135
+    pic ETEFL135 tics 8
+	pic ETEFL136 tics 8
+	pic ETEFL137 tics 8
+	pic ETEFL138 tics 8
+
+flat ETEFL136
+    pic ETEFL136 tics 8
+	pic ETEFL137 tics 8
+	pic ETEFL138 tics 8
+	pic ETEFL135 tics 8
+
+flat ETEFL137
+    pic ETEFL137 tics 8
+	pic ETEFL138 tics 8
+	pic ETEFL135 tics 8
+	pic ETEFL136 tics 8
+
+flat ETEFL138
+    pic ETEFL138 tics 8
+	pic ETEFL135 tics 8
+	pic ETEFL136 tics 8
+	pic ETEFL137 tics 8
+
+flat ETEFL139
+    pic ETEFL139 tics 8
+	pic ETEFL140 tics 8
+	pic ETEFL141 tics 8
+	pic ETEFL142 tics 8
+
+flat ETEFL140
+    pic ETEFL140 tics 8
+	pic ETEFL141 tics 8
+	pic ETEFL142 tics 8
+	pic ETEFL139 tics 8
+
+flat ETEFL141
+    pic ETEFL141 tics 8
+	pic ETEFL142 tics 8
+	pic ETEFL139 tics 8
+	pic ETEFL140 tics 8
+
+flat ETEFL142
+    pic ETEFL142 tics 8
+	pic ETEFL139 tics 8
+	pic ETEFL140 tics 8
+	pic ETEFL141 tics 8
+
+switch doom 2 SW1ETE01 on pic SW2ETE01 tics 0
+switch doom 2 SW2ETE01 on pic SW1ETE01 tics 0
+
+switch doom 2 SW1ETE02 on pic SW2ETE02 tics 0
+switch doom 2 SW2ETE02 on pic SW1ETE02 tics 0
+
+switch doom 2 SW1ETE03 on pic SW2ETE03 tics 0
+switch doom 2 SW2ETE03 on pic SW1ETE03 tics 0
+
+switch doom 2 SW1ETE04 on pic SW2ETE04 tics 0
+switch doom 2 SW2ETE04 on pic SW1ETE04 tics 0
+
+switch doom 2 SW1ETE05 on pic SW2ETE05 tics 0
+switch doom 2 SW2ETE05 on pic SW1ETE05 tics 0
+
+switch doom 2 SW1ETE06 on pic SW2ETE06 tics 0
+switch doom 2 SW2ETE06 on pic SW1ETE06 tics 0
+
+switch doom 2 SW1ETE07 on pic SW2ETE07 tics 0
+switch doom 2 SW2ETE07 on pic SW1ETE07 tics 0
+
+switch doom 2 SW1ETE08 on pic SW2ETE08 tics 0
+switch doom 2 SW2ETE08 on pic SW1ETE08 tics 0
+
+switch doom 2 SW1ETE09 on pic SW2ETE09 tics 0
+switch doom 2 SW2ETE09 on pic SW1ETE09 tics 0
+
+switch doom 2 SW1ETE10 on pic SW2ETE10 tics 0
+switch doom 2 SW2ETE10 on pic SW1ETE10 tics 0
+
+switch doom 2 SW1ETE11 on pic SW2ETE11 tics 0
+switch doom 2 SW2ETE11 on pic SW1ETE11 tics 0
+
+switch doom 2 SW1ETE12 on pic SW2ETE12 tics 0
+switch doom 2 SW2ETE12 on pic SW1ETE12 tics 0
+
+switch doom 2 SW1ETE13 on pic SW2ETE13 tics 0
+switch doom 2 SW2ETE13 on pic SW1ETE13 tics 0
+
+switch doom 2 SW1ETE14 on pic SW2ETE14 tics 0
+switch doom 2 SW2ETE14 on pic SW1ETE14 tics 0
+
+switch doom 2 SW1ETE15 on pic SW2ETE15 tics 0
+switch doom 2 SW2ETE15 on pic SW1ETE15 tics 0
+
+switch doom 2 SW1ETE16 on pic SW2ETE16 tics 0
+switch doom 2 SW2ETE16 on pic SW1ETE16 tics 0
+
+switch doom 2 SW1ETE17 on pic SW2ETE17 tics 0
+switch doom 2 SW2ETE17 on pic SW1ETE17 tics 0
+
+switch doom 2 SW1ETE18 on pic SW2ETE18 tics 0
+switch doom 2 SW2ETE18 on pic SW1ETE18 tics 0
+
+switch doom 2 SW1ETE19 on pic SW2ETE19 tics 0
+switch doom 2 SW2ETE19 on pic SW1ETE19 tics 0
+
+switch doom 2 SW1ETE20 on pic SW2ETE20 tics 0
+switch doom 2 SW2ETE20 on pic SW1ETE20 tics 0
+
+switch doom 2 SW1ETE21 on pic SW2ETE21 tics 0
+switch doom 2 SW2ETE21 on pic SW1ETE21 tics 0
+
+switch doom 2 SW1ETE22 on pic SW2ETE22 tics 0
+switch doom 2 SW2ETE22 on pic SW1ETE22 tics 0
+
+switch doom 2 SW1ETE23 on pic SW2ETE23 tics 0
+switch doom 2 SW2ETE23 on pic SW1ETE23 tics 0
+
+switch doom 2 SW1ETE24 on pic SW2ETE24 tics 0
+switch doom 2 SW2ETE24 on pic SW1ETE24 tics 0
+
+switch doom 2 SW1ETE25 on pic SW2ETE25 tics 0
+switch doom 2 SW2ETE25 on pic SW1ETE25 tics 0
+
+switch doom 2 SW1ETE26 on pic SW2ETE26 tics 0
+switch doom 2 SW2ETE26 on pic SW1ETE26 tics 0
+
+switch doom 2 SW1ETE27 on pic SW2ETE27 tics 0
+switch doom 2 SW2ETE27 on pic SW1ETE27 tics 0
+
+switch doom 2 SW1ETE28 on pic SW2ETE28 tics 0
+switch doom 2 SW2ETE28 on pic SW1ETE28 tics 0
+
+switch doom 2 SW1ETE29 on pic SW2ETE29 tics 0
+switch doom 2 SW2ETE29 on pic SW1ETE29 tics 0
+
+switch doom 2 SW1ETE30 on pic SW2ETE30 tics 0
+switch doom 2 SW2ETE30 on pic SW1ETE30 tics 0
+
+switch doom 2 SW1ETE31 on pic SW2ETE31 tics 0
+switch doom 2 SW2ETE31 on pic SW1ETE31 tics 0
+
+switch doom 2 SW1ETE32 on pic SW2ETE32 tics 0
+switch doom 2 SW2ETE32 on pic SW1ETE32 tics 0
+
+switch doom 2 SW1ETE33 on pic SW2ETE33 tics 0
+switch doom 2 SW2ETE33 on pic SW1ETE33 tics 0
+
+switch doom 2 SW1ETE34 on pic SW2ETE34 tics 0
+switch doom 2 SW2ETE34 on pic SW1ETE34 tics 0
+
+switch doom 2 SW1ETE35 on pic SW2ETE35 tics 0
+switch doom 2 SW2ETE35 on pic SW1ETE35 tics 0
+
+switch doom 2 SW1ETE36 on pic SW2ETE36 tics 0
+switch doom 2 SW2ETE36 on pic SW1ETE36 tics 0
+
+switch doom 2 SW1ETE37 on pic SW2ETE37 tics 0
+switch doom 2 SW2ETE37 on pic SW1ETE37 tics 0
+
+switch doom 2 SW1ETE38 on pic SW2ETE38 tics 0
+switch doom 2 SW2ETE38 on pic SW1ETE38 tics 0
+
+switch doom 2 SW1ETE39 on pic SW2ETE39 tics 0
+switch doom 2 SW2ETE39 on pic SW1ETE39 tics 0
+
+switch doom 2 SW1ETE40 on pic SW2ETE40 tics 0
+switch doom 2 SW2ETE40 on pic SW1ETE40 tics 0
+
+switch doom 2 SW1ETE41 on pic SW2ETE41 tics 0
+switch doom 2 SW2ETE41 on pic SW1ETE41 tics 0
+
+// REBIRTH
+
+texture REBAN101
+    pic REBAN101 tics 8
+    pic REBAN102 tics 8
+    pic REBAN103 tics 8
+	pic REBAN104 tics 8
+
+texture REBAN102
+    pic REBAN102 tics 8
+    pic REBAN103 tics 8
+    pic REBAN104 tics 8
+	pic REBAN101 tics 8
+
+texture REBAN103
+    pic REBAN103 tics 8
+    pic REBAN104 tics 8
+    pic REBAN101 tics 8
+	pic REBAN102 tics 8
+
+texture REBAN104
+    pic REBAN104 tics 8
+    pic REBAN101 tics 8
+    pic REBAN102 tics 8
+	pic REBAN103 tics 8
+
+texture REBAN201
+    pic REBAN201 tics 5
+    pic REBAN202 tics 5
+    pic REBAN203 tics 5
+	pic REBAN204 tics 5
+	pic REBAN205 tics 5
+	pic REBAN206 tics 5
+	pic REBAN207 tics 5
+	pic REBAN208 tics 5
+	pic REBAN209 tics 5
+	pic REBAN210 tics 5
+	pic REBAN211 tics 5
+	pic REBAN212 tics 5
+	pic REBAN213 tics 5
+	pic REBAN214 tics 5
+	pic REBAN215 tics 5
+	pic REBAN216 tics 5
+	pic REBAN215 tics 5
+	pic REBAN214 tics 5
+	pic REBAN213 tics 5
+	pic REBAN212 tics 5
+	pic REBAN211 tics 5
+	pic REBAN210 tics 5
+	pic REBAN209 tics 5
+	pic REBAN208 tics 5
+	pic REBAN207 tics 5
+	pic REBAN206 tics 5
+	pic REBAN205 tics 5
+	pic REBAN204 tics 5
+	pic REBAN203 tics 5
+	pic REBAN202 tics 5
+
+texture REBAN301
+    pic REBAN301 tics 6
+    pic REBAN302 tics 6
+    pic REBAN303 tics 6
+	pic REBAN304 tics 6
+	pic REBAN305 tics 6
+	pic REBAN306 tics 6
+	pic REBAN307 tics 6
+	pic REBAN308 tics 6
+	pic REBAN309 tics 6
+	pic REBAN310 tics 6
+	pic REBAN311 tics 6
+	pic REBAN312 tics 6
+	pic REBAN313 tics 6
+	pic REBAN314 tics 6
+	pic REBAN315 tics 6
+	pic REBAN316 tics 6
+	pic REBAN317 tics 6
+	pic REBAN318 tics 6
+	pic REBAN319 tics 6
+	pic REBAN320 tics 6
+	pic REBAN321 tics 6
+
+switch doom 2 SW1REB1 on pic SW2REB1 tics 0
+switch doom 2 SW2REB1 on pic SW1REB1 tics 0
+
+switch doom 2 SW1REB2 on pic SW2REB2 tics 0
+switch doom 2 SW2REB2 on pic SW1REB2 tics 0
+
+// SCYTHE
+
+flat SCYFL1
+    pic SCYFL1 tics 8
+	pic SCYFL2 tics 8
+	pic SCYFL3 tics 8
+	pic SCYFL4 tics 8
+
+flat SCYFL2
+    pic SCYFL2 tics 8
+	pic SCYFL3 tics 8
+	pic SCYFL4 tics 8
+	pic SCYFL1 tics 8
+
+flat SCYFL3
+    pic SCYFL3 tics 8
+	pic SCYFL4 tics 8
+	pic SCYFL1 tics 8
+	pic SCYFL2 tics 8
+
+flat SCYFL4
+    pic SCYFL4 tics 8
+	pic SCYFL1 tics 8
+	pic SCYFL2 tics 8
+	pic SCYFL3 tics 8
+
+switch doom 2 SW1SCYTH on pic SW2SCYTH tics 0
+switch doom 2 SW2SCYTH on pic SW1SCYTH tics 0
+
+switch doom 2 SW1SCYTZ on pic SW2SCYTZ tics 0
+switch doom 2 SW2SCYTZ on pic SW1SCYTZ tics 0
+
+// CAVERNS OF DARKNESS
+
+texture CODFAN1
+    pic CODFAN1 tics 3
+    pic CODFAN2 tics 3
+    pic CODFAN3 tics 3
+
+texture CODFAN2
+    pic CODFAN2 tics 3
+    pic CODFAN3 tics 3
+    pic CODFAN1 tics 3
+
+texture CODFAN3
+    pic CODFAN3 tics 3
+    pic CODFAN1 tics 3
+    pic CODFAN2 tics 3
+
+texture CODFALL1
+    pic CODFALL1 tics 8
+    pic CODFALL2 tics 8
+    pic CODFALL3 tics 8
+	pic CODFALL4 tics 8
+
+texture CODFALL2
+    pic CODFALL2 tics 8
+    pic CODFALL3 tics 8
+    pic CODFALL4 tics 8
+	pic CODFALL1 tics 8
+
+texture CODFALL3
+    pic CODFALL3 tics 8
+    pic CODFALL4 tics 8
+    pic CODFALL1 tics 8
+	pic CODFALL2 tics 8
+
+texture CODFALL4
+    pic CODFALL4 tics 8
+    pic CODFALL1 tics 8
+    pic CODFALL2 tics 8
+	pic CODFALL3 tics 8
+
+texture CODFALL5
+    pic CODFALL5 tics 8
+    pic CODFALL6 tics 8
+    pic CODFALL7 tics 8
+	pic CODFALL8 tics 8
+
+texture CODFALL6
+    pic CODFALL6 tics 8
+    pic CODFALL7 tics 8
+    pic CODFALL8 tics 8
+	pic CODFALL5 tics 8
+
+texture CODFALL7
+    pic CODFALL7 tics 8
+    pic CODFALL8 tics 8
+    pic CODFALL5 tics 8
+	pic CODFALL6 tics 8
+
+texture CODFALL8
+    pic CODFALL8 tics 8
+    pic CODFALL5 tics 8
+    pic CODFALL6 tics 8
+	pic CODFALL7 tics 8
+
+texture CODFAN1
+    pic CODFAN1 tics 3
+    pic CODFAN2 tics 3
+    pic CODFAN3 tics 3
+
+texture ELEC1
+    pic ELEC1 tics 3
+    pic ELEC2 tics 3
+    pic ELEC3 tics 3
+
+texture ELEC2
+    pic ELEC2 tics 3
+    pic ELEC3 tics 3
+    pic ELEC1 tics 3
+
+texture ELEC3
+    pic ELEC3 tics 3
+    pic ELEC1 tics 3
+    pic ELEC2 tics 3
+
+// THE DARKENING 2
+
+texture DARK2AN1
+    pic DARK2AN1 tics 8
+    pic DARK2AN2 tics 8
+    pic DARK2AN3 tics 8
+	pic DARK2AN4 tics 8
+	
+texture DARK2AN2
+    pic DARK2AN2 tics 8
+    pic DARK2AN3 tics 8
+    pic DARK2AN4 tics 8
+	pic DARK2AN1 tics 8
+	
+texture DARK2AN3
+    pic DARK2AN3 tics 8
+    pic DARK2AN4 tics 8
+    pic DARK2AN1 tics 8
+	pic DARK2AN2 tics 8
+	
+texture DARK2AN4
+    pic DARK2AN4 tics 8
+    pic DARK2AN1 tics 8
+    pic DARK2AN2 tics 8
+	pic DARK2AN3 tics 8
+
+texture DARK2AN5
+    pic DARK2AN5 tics 8
+    pic DARK2AN6 tics 8
+    pic DARK2AN7 tics 8
+	pic DARK2AN8 tics 8
+	pic DARK2AN9 tics 8
+	pic DARK2ANA tics 8
+	pic DARK2ANB tics 8
+	pic DARK2ANC tics 8
+
+texture DARK2AN6
+    pic DARK2AN6 tics 8
+    pic DARK2AN7 tics 8
+	pic DARK2AN8 tics 8
+	pic DARK2AN9 tics 8
+	pic DARK2ANA tics 8
+	pic DARK2ANB tics 8
+	pic DARK2ANC tics 8
+	pic DARK2AN5 tics 8
+
+texture DARK2AN7
+    pic DARK2AN7 tics 8
+	pic DARK2AN8 tics 8
+	pic DARK2AN9 tics 8
+	pic DARK2ANA tics 8
+	pic DARK2ANB tics 8
+	pic DARK2ANC tics 8
+	pic DARK2AN5 tics 8
+    pic DARK2AN6 tics 8
+
+texture DARK2AN8
+	pic DARK2AN8 tics 8
+	pic DARK2AN9 tics 8
+	pic DARK2ANA tics 8
+	pic DARK2ANB tics 8
+	pic DARK2ANC tics 8
+	pic DARK2AN5 tics 8
+    pic DARK2AN6 tics 8
+    pic DARK2AN7 tics 8
+
+texture DARK2AN9
+	pic DARK2AN9 tics 8
+	pic DARK2ANA tics 8
+	pic DARK2ANB tics 8
+	pic DARK2ANC tics 8
+	pic DARK2AN5 tics 8
+    pic DARK2AN6 tics 8
+    pic DARK2AN7 tics 8
+	pic DARK2AN8 tics 8
+
+texture DARK2ANA
+	pic DARK2ANA tics 8
+	pic DARK2ANB tics 8
+	pic DARK2ANC tics 8
+	pic DARK2AN5 tics 8
+    pic DARK2AN6 tics 8
+    pic DARK2AN7 tics 8
+	pic DARK2AN8 tics 8
+	pic DARK2AN9 tics 8
+
+texture DARK2ANB
+	pic DARK2ANB tics 8
+	pic DARK2ANC tics 8
+	pic DARK2AN5 tics 8
+    pic DARK2AN6 tics 8
+    pic DARK2AN7 tics 8
+	pic DARK2AN8 tics 8
+	pic DARK2AN9 tics 8
+	pic DARK2ANA tics 8
+
+texture DARK2ANC
+	pic DARK2ANC tics 8
+	pic DARK2AN5 tics 8
+    pic DARK2AN6 tics 8
+    pic DARK2AN7 tics 8
+	pic DARK2AN8 tics 8
+	pic DARK2AN9 tics 8
+	pic DARK2ANA tics 8
+	pic DARK2ANB tics 8
+
+texture DARK2AND
+    pic DARK2AND tics 8
+    pic DARK2ANE tics 8
+    pic DARK2ANF tics 8
+	pic DARK2ANG tics 8
+	pic DARK2ANH tics 8
+
+texture DARK2ANE
+    pic DARK2ANE tics 8
+    pic DARK2ANF tics 8
+	pic DARK2ANG tics 8
+	pic DARK2ANH tics 8
+    pic DARK2AND tics 8
+
+texture DARK2ANF
+    pic DARK2ANF tics 8
+	pic DARK2ANG tics 8
+	pic DARK2ANH tics 8
+    pic DARK2AND tics 8
+    pic DARK2ANE tics 8
+
+texture DARK2ANG
+	pic DARK2ANG tics 8
+	pic DARK2ANH tics 8
+    pic DARK2AND tics 8
+    pic DARK2ANE tics 8
+    pic DARK2ANF tics 8
+
+texture DARK2ANH
+	pic DARK2ANH tics 8
+    pic DARK2AND tics 8
+    pic DARK2ANE tics 8
+    pic DARK2ANF tics 8
+	pic DARK2ANG tics 8
+
+switch doom 2 SW1DARK2 on pic SW2DARK2 tics 0
+switch doom 2 SW2DARK2 on pic SW1DARK2 tics 0
+
+switch doom 2 SW3DARK2 on pic SW4DARK2 tics 0
+switch doom 2 SW4DARK2 on pic SW3DARK2 tics 0
+
+// EQUINOX
+
+texture EQUAN01
+    pic EQUAN01 tics 8
+    pic EQUAN02 tics 8
+    pic EQUAN03 tics 8
+	pic EQUAN04 tics 8
+	pic EQUAN05 tics 8
+
+texture EQUAN02
+    pic EQUAN02 tics 8
+    pic EQUAN03 tics 8
+    pic EQUAN04 tics 8
+	pic EQUAN05 tics 8
+	pic EQUAN01 tics 8
+
+texture EQUAN03
+    pic EQUAN03 tics 8
+    pic EQUAN04 tics 8
+    pic EQUAN05 tics 8
+	pic EQUAN01 tics 8
+	pic EQUAN02 tics 8
+
+texture EQUAN04
+    pic EQUAN04 tics 8
+    pic EQUAN05 tics 8
+    pic EQUAN01 tics 8
+	pic EQUAN02 tics 8
+	pic EQUAN03 tics 8
+
+texture EQUAN05
+    pic EQUAN05 tics 8
+    pic EQUAN01 tics 8
+    pic EQUAN02 tics 8
+	pic EQUAN03 tics 8
+	pic EQUAN04 tics 8
+
+texture EQUAN06
+    pic EQUAN06 tics 8
+    pic EQUAN07 tics 8
+    pic EQUAN08 tics 8
+	pic EQUAN09 tics 8
+
+texture EQUAN07
+    pic EQUAN07 tics 8
+    pic EQUAN08 tics 8
+    pic EQUAN09 tics 8
+	pic EQUAN06 tics 8
+
+texture EQUAN08
+    pic EQUAN08 tics 8
+    pic EQUAN09 tics 8
+    pic EQUAN06 tics 8
+	pic EQUAN07 tics 8
+
+texture EQUAN09
+    pic EQUAN09 tics 8
+    pic EQUAN06 tics 8
+    pic EQUAN07 tics 8
+	pic EQUAN08 tics 8
+
+flat EQUAF01
+    pic EQUAF01 tics 8
+	pic EQUAF02 tics 8
+	pic EQUAF03 tics 8
+
+flat EQUAF02
+    pic EQUAF02 tics 8
+	pic EQUAF03 tics 8
+	pic EQUAF01 tics 8
+
+flat EQUAF03
+    pic EQUAF03 tics 8
+	pic EQUAF01 tics 8
+	pic EQUAF02 tics 8
+
+flat EQUAF04
+    pic EQUAF04 tics 8
+	pic EQUAF05 tics 8
+	pic EQUAF06 tics 8
+	pic EQUAF07 tics 8
+
+flat EQUAF05
+    pic EQUAF05 tics 8
+	pic EQUAF06 tics 8
+	pic EQUAF07 tics 8
+	pic EQUAF04 tics 8
+
+flat EQUAF06
+    pic EQUAF06 tics 8
+	pic EQUAF07 tics 8
+	pic EQUAF04 tics 8
+	pic EQUAF05 tics 8
+
+flat EQUAF07
+    pic EQUAF07 tics 8
+	pic EQUAF04 tics 8
+	pic EQUAF05 tics 8
+	pic EQUAF06 tics 8
+
+flat EQUAF08
+    pic EQUAF08 tics 8
+	pic EQUAF09 tics 8
+	pic EQUAF10 tics 8
+	pic EQUAF11 tics 8
+
+flat EQUAF09
+	pic EQUAF09 tics 8
+	pic EQUAF10 tics 8
+	pic EQUAF11 tics 8
+    pic EQUAF08 tics 8
+
+flat EQUAF10
+	pic EQUAF10 tics 8
+	pic EQUAF11 tics 8
+    pic EQUAF08 tics 8
+	pic EQUAF09 tics 8
+
+flat EQUAF11
+	pic EQUAF11 tics 8
+    pic EQUAF08 tics 8
+	pic EQUAF09 tics 8
+	pic EQUAF10 tics 8
+
+flat EQUAF12
+	pic EQUAF12 tics 8
+    pic EQUAF13 tics 8
+	pic EQUAF14 tics 8
+	pic EQUAF15 tics 8
+
+flat EQUAF13
+	pic EQUAF13 tics 8
+    pic EQUAF14 tics 8
+	pic EQUAF15 tics 8
+	pic EQUAF12 tics 8
+
+flat EQUAF14
+	pic EQUAF14 tics 8
+    pic EQUAF15 tics 8
+	pic EQUAF12 tics 8
+	pic EQUAF13 tics 8
+
+flat EQUAF15
+	pic EQUAF15 tics 8
+    pic EQUAF12 tics 8
+	pic EQUAF13 tics 8
+	pic EQUAF14 tics 8
+
+switch doom 2 SW1EQU1 on pic SW2EQU1 tics 0
+switch doom 2 SW2EQU1 on pic SW1EQU1 tics 0
+
+switch doom 2 SW1EQU2 on pic SW2EQU2 tics 0
+switch doom 2 SW2EQU2 on pic SW1EQU2 tics 0
+
+switch doom 2 SW1EQU3 on pic SW2EQU3 tics 0
+switch doom 2 SW2EQU3 on pic SW1EQU3 tics 0
+
+switch doom 2 SW1EQU4 on pic SW2EQU4 tics 0
+switch doom 2 SW2EQU4 on pic SW1EQU4 tics 0
+
+switch doom 2 SW1EQU5 on pic SW2EQU5 tics 0
+switch doom 2 SW2EQU5 on pic SW1EQU5 tics 0
+
+switch doom 2 SW1EQU6 on pic SW2EQU6 tics 0
+switch doom 2 SW2EQU6 on pic SW1EQU6 tics 0
+
+switch doom 2 SW1EQU7 on pic SW2EQU7 tics 0
+switch doom 2 SW2EQU7 on pic SW1EQU7 tics 0
+
+switch doom 2 SW1EQU8 on pic SW2EQU8 tics 0
+switch doom 2 SW2EQU8 on pic SW1EQU8 tics 0
+
+switch doom 2 SW1EQU9 on pic SW2EQU9 tics 0
+switch doom 2 SW2EQU9 on pic SW1EQU9 tics 0
+
+switch doom 2 SW1EQU0 on pic SW2EQU0 tics 0
+switch doom 2 SW2EQU0 on pic SW1EQU0 tics 0
+
+// MARSDOOM
+
+texture GIRLY00
+    pic GIRLY00 tics 8
+    pic GIRLY01 tics 8
+	pic GIRLY02 tics 8
+	pic GIRLY03 tics 8
+	pic GIRLY04 tics 8
+	pic GIRLY05 tics 8
+	pic GIRLY06 tics 8
+	pic GIRLY07 tics 8
+	pic GIRLY07 tics 8
+	pic GIRLY08 tics 8
+	pic GIRLY09 tics 8
+	pic GIRLY10 tics 8
+	pic GIRLY11 tics 8
+	pic GIRLY12 tics 8
+	pic GIRLY13 tics 8
+	pic GIRLY14 tics 8
+	pic GIRLY15 tics 8
+	pic GIRLY16 tics 8
+	pic GIRLY17 tics 8
+	pic GIRLY18 tics 8
+	pic GIRLY19 tics 8
+	pic GIRLY20 tics 8
+	pic GIRLY21 tics 8
+	pic GIRLY22 tics 8
+	pic GIRLY23 tics 8
+	pic GIRLY24 tics 8
+	pic GIRLY25 tics 8
+	pic GIRLY26 tics 8
+	pic GIRLY27 tics 8
+	pic GIRLY28 tics 8
+	pic GIRLY29 tics 8
+	pic GIRLY30 tics 8
+	pic GIRLY31 tics 8
+	pic GIRLY32 tics 8
+	pic GIRLY33 tics 8
+	pic GIRLY34 tics 8
+	pic GIRLY35 tics 8
+	pic GIRLY36 tics 8
+	pic GIRLY37 tics 8
+	pic GIRLY38 tics 8
+	pic GIRLY39 tics 8
+	pic GIRLY40 tics 8
+	pic GIRLY41 tics 8
+	pic GIRLY42 tics 8
+	pic GIRLY43 tics 8
+	pic GIRLY44 tics 8
+	pic GIRLY45 tics 8
+	pic GIRLY46 tics 8
+	pic GIRLY47 tics 8
+	pic GIRLY48 tics 8
+	pic GIRLY49 tics 8
+	pic GIRLY50 tics 8
+	pic GIRLY51 tics 8
+	pic GIRLY52 tics 8
+	pic GIRLY53 tics 8
+	pic GIRLY54 tics 8
+	pic GIRLY55 tics 8
+	pic GIRLY56 tics 8
+	pic GIRLY57 tics 8
+
+texture MARSAN01
+    pic MARSAN01 tics 8
+    pic MARSAN02 tics 8
+    pic MARSAN03 tics 8
+	pic MARSAN04 tics 8
+
+texture MARSAN02
+    pic MARSAN02 tics 8
+    pic MARSAN03 tics 8
+    pic MARSAN04 tics 8
+	pic MARSAN01 tics 8
+
+texture MARSAN03
+    pic MARSAN03 tics 8
+    pic MARSAN04 tics 8
+    pic MARSAN01 tics 8
+	pic MARSAN02 tics 8
+
+texture MARSAN04
+    pic MARSAN04 tics 8
+    pic MARSAN01 tics 8
+    pic MARSAN02 tics 8
+	pic MARSAN03 tics 8
+
+texture MARSAN05
+    pic MARSAN05 tics 4
+    pic MARSAN06 tics 4
+    pic MARSAN07 tics 4
+	pic MARSAN08 tics 4
+
+texture MARSAN06
+    pic MARSAN06 tics 4
+    pic MARSAN07 tics 4
+    pic MARSAN08 tics 4
+	pic MARSAN05 tics 4
+
+texture MARSAN07
+    pic MARSAN07 tics 4
+    pic MARSAN08 tics 4
+    pic MARSAN05 tics 4
+	pic MARSAN06 tics 4
+
+texture MARSAN08
+    pic MARSAN08 tics 4
+    pic MARSAN05 tics 4
+    pic MARSAN06 tics 4
+	pic MARSAN07 tics 4
+
+texture WFALLH1
+    pic WFALLH1 tics 8
+    pic WFALLH2 tics 8
+    pic WFALLH3 tics 8
+
+texture WFALLH2
+    pic WFALLH2 tics 8
+    pic WFALLH3 tics 8
+    pic WFALLH1 tics 8
+
+texture WFALLH3
+    pic WFALLH3 tics 8
+    pic WFALLH1 tics 8
+    pic WFALLH2 tics 8
+
+texture LFALLH1
+    pic LFALLH1 tics 8
+    pic LFALLH2 tics 8
+    pic LFALLH3 tics 8
+
+texture LFALLH2
+    pic LFALLH2 tics 8
+    pic LFALLH3 tics 8
+    pic LFALLH1 tics 8
+
+texture LFALLH3
+    pic LFALLH3 tics 8
+    pic LFALLH1 tics 8
+    pic LFALLH2 tics 8
+
+flat FLATHUH1
+    pic FLATHUH1 tics 8
+	pic FLATHUH2 tics 8
+	pic FLATHUH3 tics 8
+	pic FLATHUH4 tics 8
+
+flat FLATHUH2
+    pic FLATHUH2 tics 8
+	pic FLATHUH3 tics 8
+	pic FLATHUH4 tics 8
+	pic FLATHUH1 tics 8
+
+flat FLATHUH3
+    pic FLATHUH3 tics 8
+	pic FLATHUH4 tics 8
+	pic FLATHUH1 tics 8
+	pic FLATHUH2 tics 8
+
+flat FLATHUH4
+    pic FLATHUH4 tics 8
+	pic FLATHUH1 tics 8
+	pic FLATHUH2 tics 8
+	pic FLATHUH3 tics 8
+
+flat FLTFLWW1
+    pic FLTFLWW1 tics 8
+	pic FLTFLWW2 tics 8
+	pic FLTFLWW3 tics 8
+
+flat FLTFLWW2
+    pic FLTFLWW2 tics 8
+	pic FLTFLWW3 tics 8
+	pic FLTFLWW1 tics 8
+
+flat FLTFLWW3
+    pic FLTFLWW3 tics 8
+	pic FLTFLWW1 tics 8
+	pic FLTFLWW2 tics 8
+
+flat FLTLAVA1
+    pic FLTLAVA1 tics 8
+	pic FLTLAVA2 tics 8
+	pic FLTLAVA3 tics 8
+	pic FLTLAVA4 tics 8
+
+flat FLTLAVA2
+    pic FLTLAVA2 tics 8
+	pic FLTLAVA3 tics 8
+	pic FLTLAVA4 tics 8
+	pic FLTLAVA1 tics 8
+
+flat FLTLAVA3
+    pic FLTLAVA3 tics 8
+	pic FLTLAVA4 tics 8
+	pic FLTLAVA1 tics 8
+	pic FLTLAVA2 tics 8
+
+flat FLTLAVA4
+    pic FLTLAVA4 tics 8
+	pic FLTLAVA1 tics 8
+	pic FLTLAVA2 tics 8
+	pic FLTLAVA3 tics 8
+
+flat FLTSLUD1
+    pic FLTSLUD1 tics 8
+	pic FLTSLUD2 tics 8
+	pic FLTSLUD3 tics 8
+
+flat FLTSLUD2
+    pic FLTSLUD2 tics 8
+	pic FLTSLUD3 tics 8
+	pic FLTSLUD1 tics 8
+
+flat FLTSLUD3
+    pic FLTSLUD3 tics 8
+	pic FLTSLUD1 tics 8
+	pic FLTSLUD2 tics 8
+
+flat FLTTELE1
+    pic FLTTELE1 tics 8
+	pic FLTTELE2 tics 8
+	pic FLTTELE3 tics 8
+	pic FLTTELE4 tics 8
+
+flat FLTTELE2
+    pic FLTTELE2 tics 8
+	pic FLTTELE3 tics 8
+	pic FLTTELE4 tics 8
+	pic FLTTELE1 tics 8
+
+flat FLTTELE3
+    pic FLTTELE3 tics 8
+	pic FLTTELE4 tics 8
+	pic FLTTELE1 tics 8
+	pic FLTTELE2 tics 8
+
+flat FLTTELE4
+    pic FLTTELE4 tics 8
+	pic FLTTELE1 tics 8
+	pic FLTTELE2 tics 8
+	pic FLTTELE3 tics 8
+	
+flat FLTWAWA1
+    pic FLTWAWA1 tics 8
+	pic FLTWAWA2 tics 8
+	pic FLTWAWA3 tics 8
+
+flat FLTWAWA1
+    pic FLTWAWA2 tics 8
+	pic FLTWAWA3 tics 8
+	pic FLTWAWA1 tics 8
+
+flat FLTWAWA1
+    pic FLTWAWA3 tics 8
+	pic FLTWAWA1 tics 8
+	pic FLTWAWA2 tics 8
+
+switch doom 2 SW1MARS1 on pic SW2MARS1 tics 0
+switch doom 2 SW2MARS1 on pic SW1MARS1 tics 0
+
+switch doom 2 SW1MARS2 on pic SW2MARS2 tics 0
+switch doom 2 SW2MARS2 on pic SW1MARS2 tics 0
+
+switch doom 2 SW1MARS3 on pic SW2MARS3 tics 0
+switch doom 2 SW2MARS3 on pic SW1MARS3 tics 0
+
+switch doom 2 SW1MARS4 on pic SW2MARS4 tics 0
+switch doom 2 SW2MARS4 on pic SW1MARS4 tics 0
+
+switch doom 2 SW1MARS5 on pic SW2MARS5 tics 0
+switch doom 2 SW2MARS5 on pic SW1MARS5 tics 0
+
+switch doom 2 SW1MARS6 on pic SW2MARS6 tics 0
+switch doom 2 SW2MARS6 on pic SW1MARS6 tics 0
+
+switch doom 2 SW1MARS7 on pic SW2MARS7 tics 0
+switch doom 2 SW2MARS7 on pic SW1MARS7 tics 0
+
+switch doom 2 SW1MARS8 on pic SW2MARS8 tics 0
+switch doom 2 SW2MARS8 on pic SW1MARS8 tics 0
+
+switch doom 2 SW1MARS9 on pic SW2MARS9 tics 0
+switch doom 2 SW2MARS9 on pic SW1MARS9 tics 0
+
+switch doom 2 SW1MARSA on pic SW2MARSA tics 0
+switch doom 2 SW2MARSA on pic SW1MARSA tics 0
+
+switch doom 2 SW1MARSB on pic SW2MARSB tics 0
+switch doom 2 SW2MARSB on pic SW1MARSB tics 0
+
+switch doom 2 SW1MARSC on pic SW2MARSC tics 0
+switch doom 2 SW2MARSC on pic SW1MARSC tics 0
+
+// BLOODRUST
+
+flat SWATER1
+    pic SWATER1 tics 8
+	pic SWATER2 tics 8
+	pic SWATER3 tics 8
+	pic SWATER4 tics 8
+
+flat SWATER2
+    pic SWATER2 tics 8
+	pic SWATER3 tics 8
+	pic SWATER4 tics 8
+	pic SWATER1 tics 8
+
+flat SWATER3
+    pic SWATER3 tics 8
+	pic SWATER4 tics 8
+	pic SWATER1 tics 8
+	pic SWATER2 tics 8
+
+flat SWATER4
+    pic SWATER4 tics 8
+	pic SWATER1 tics 8
+	pic SWATER2 tics 8
+	pic SWATER3 tics 8
+
+// OSIRIS
+
+texture OSIRAN01
+    pic OSIRAN01 tics 8
+    pic OSIRAN02 tics 8
+    pic OSIRAN03 tics 8
+	pic OSIRAN04 tics 8
+
+texture OSIRAN02
+    pic OSIRAN02 tics 8
+    pic OSIRAN03 tics 8
+    pic OSIRAN04 tics 8
+	pic OSIRAN01 tics 8
+
+texture OSIRAN03
+    pic OSIRAN03 tics 8
+    pic OSIRAN04 tics 8
+    pic OSIRAN01 tics 8
+	pic OSIRAN02 tics 8
+
+texture OSIRAN04
+    pic OSIRAN04 tics 8
+    pic OSIRAN01 tics 8
+    pic OSIRAN02 tics 8
+	pic OSIRAN03 tics 8
+
+texture OSIRAN05
+    pic OSIRAN05 tics 8
+    pic OSIRAN06 tics 8
+    pic OSIRAN07 tics 8
+	pic OSIRAN08 tics 8
+	pic OSIRAN09 tics 8
+
+texture OSIRAN06
+    pic OSIRAN06 tics 8
+    pic OSIRAN07 tics 8
+    pic OSIRAN08 tics 8
+	pic OSIRAN09 tics 8
+	pic OSIRAN05 tics 8
+
+texture OSIRAN07
+    pic OSIRAN07 tics 8
+    pic OSIRAN08 tics 8
+    pic OSIRAN09 tics 8
+	pic OSIRAN05 tics 8
+	pic OSIRAN06 tics 8
+
+texture OSIRAN08
+    pic OSIRAN08 tics 8
+    pic OSIRAN09 tics 8
+    pic OSIRAN05 tics 8
+	pic OSIRAN06 tics 8
+	pic OSIRAN07 tics 8
+
+texture OSIRAN09
+    pic OSIRAN09 tics 8
+    pic OSIRAN05 tics 8
+    pic OSIRAN06 tics 8
+	pic OSIRAN07 tics 8
+	pic OSIRAN08 tics 8
+
+switch doom 2 SW1OSIR1 on pic SW2OSIR1 tics 0
+switch doom 2 SW2OSIR1 on pic SW1OSIR1 tics 0
+
+switch doom 2 SW1OSIR2 on pic SW2OSIR2 tics 0
+switch doom 2 SW2OSIR2 on pic SW1OSIR2 tics 0
+
+switch doom 2 SW1OSIR3 on pic SW2OSIR3 tics 0
+switch doom 2 SW2OSIR3 on pic SW1OSIR3 tics 0
+
+switch doom 2 SW1OSIR4 on pic SW2OSIR4 tics 0
+switch doom 2 SW2OSIR4 on pic SW1OSIR4 tics 0
+
+switch doom 2 SW1OSIR5 on pic SW2OSIR5 tics 0
+switch doom 2 SW2OSIR5 on pic SW1OSIR5 tics 0
+
+switch doom 2 SW1OSIR6 on pic SW2OSIR6 tics 0
+switch doom 2 SW2OSIR6 on pic SW1OSIR6 tics 0
+
+// BROTHERHOOD OF RUIN
+
+texture RUINAN01
+    pic RUINAN01 tics 8
+    pic RUINAN02 tics 8
+    pic RUINAN03 tics 8
+	pic RUINAN04 tics 8
+	pic RUINAN05 tics 8
+	pic RUINAN06 tics 8
+
+texture RUINAN02
+    pic RUINAN02 tics 8
+    pic RUINAN03 tics 8
+    pic RUINAN04 tics 8
+	pic RUINAN05 tics 8
+	pic RUINAN06 tics 8
+	pic RUINAN01 tics 8
+
+texture RUINAN03
+    pic RUINAN03 tics 8
+    pic RUINAN04 tics 8
+    pic RUINAN05 tics 8
+	pic RUINAN06 tics 8
+	pic RUINAN01 tics 8
+	pic RUINAN02 tics 8
+
+texture RUINAN04
+    pic RUINAN04 tics 8
+    pic RUINAN05 tics 8
+    pic RUINAN06 tics 8
+	pic RUINAN01 tics 8
+	pic RUINAN02 tics 8
+	pic RUINAN03 tics 8
+
+texture RUINAN05
+    pic RUINAN05 tics 8
+    pic RUINAN06 tics 8
+    pic RUINAN01 tics 8
+	pic RUINAN02 tics 8
+	pic RUINAN03 tics 8
+	pic RUINAN04 tics 8
+
+texture RUINAN06
+    pic RUINAN06 tics 8
+    pic RUINAN01 tics 8
+    pic RUINAN02 tics 8
+	pic RUINAN03 tics 8
+	pic RUINAN04 tics 8
+	pic RUINAN05 tics 8
+
+texture RUINAN07
+    pic RUINAN07 tics 8
+	pic RUINAN08 tics 8
+	pic RUINAN09 tics 8
+	pic RUINAN10 tics 8
+	pic RUINAN11 tics 8
+	pic RUINAN12 tics 8
+	pic RUINAN13 tics 8
+	pic RUINAN14 tics 8
+	pic RUINAN15 tics 8
+	pic RUINAN16 tics 8
+	pic RUINAN17 tics 8
+	pic RUINAN18 tics 8
+	pic RUINAN19 tics 8
+	pic RUINAN20 tics 8
+	pic RUINAN21 tics 8
+	pic RUINAN22 tics 8
+	pic RUINAN23 tics 8
+	pic RUINAN24 tics 8
+	pic RUINAN25 tics 8
+	
+texture RUINAN26
+    pic RUINAN26 tics 8
+    pic RUINAN27 tics 8
+    pic RUINAN28 tics 8
+	pic RUINAN29 tics 8
+
+texture RUINAN27
+    pic RUINAN27 tics 8
+    pic RUINAN28 tics 8
+    pic RUINAN29 tics 8
+	pic RUINAN26 tics 8
+
+texture RUINAN28
+    pic RUINAN28 tics 8
+    pic RUINAN29 tics 8
+    pic RUINAN26 tics 8
+	pic RUINAN27 tics 8
+
+texture RUINAN29
+    pic RUINAN29 tics 8
+    pic RUINAN26 tics 8
+    pic RUINAN27 tics 8
+	pic RUINAN28 tics 8
+
+
+flat RUINFL67
+    pic RUINFL67 tics 8
+	pic RUINFL68 tics 8
+	pic RUINFL69 tics 8
+	pic RUINFL70 tics 8
+
+flat RUINFL68
+    pic RUINFL68 tics 8
+	pic RUINFL69 tics 8
+	pic RUINFL70 tics 8
+	pic RUINFL67 tics 8
+
+flat RUINFL69
+    pic RUINFL69 tics 8
+	pic RUINFL70 tics 8
+	pic RUINFL67 tics 8
+	pic RUINFL68 tics 8
+
+flat RUINFL70
+    pic RUINFL70 tics 8
+	pic RUINFL67 tics 8
+	pic RUINFL68 tics 8
+	pic RUINFL69 tics 8
+
+flat RUINFL71
+    pic RUINFL71 tics 8
+	pic RUINFL72 tics 8
+	pic RUINFL73 tics 8
+	pic RUINFL74 tics 8
+
+flat RUINFL72
+    pic RUINFL72 tics 8
+	pic RUINFL73 tics 8
+	pic RUINFL74 tics 8
+	pic RUINFL71 tics 8
+
+flat RUINFL73
+    pic RUINFL73 tics 8
+	pic RUINFL74 tics 8
+	pic RUINFL71 tics 8
+	pic RUINFL72 tics 8
+
+flat RUINFL74
+    pic RUINFL74 tics 8
+	pic RUINFL71 tics 8
+	pic RUINFL72 tics 8
+	pic RUINFL73 tics 8
+
+flat RUINFL75
+    pic RUINFL75 tics 8
+	pic RUINFL76 tics 8
+	pic RUINFL77 tics 8
+
+flat RUINFL76
+    pic RUINFL76 tics 8
+	pic RUINFL77 tics 8
+	pic RUINFL75 tics 8
+
+flat RUINFL77
+    pic RUINFL77 tics 8
+	pic RUINFL75 tics 8
+	pic RUINFL76 tics 8
+
+switch doom 2 SW1RUIN1 on pic SW2RUIN1 tics 0
+switch doom 2 SW2RUIN1 on pic SW1RUIN1 tics 0
+
+switch doom 2 SW1RUIN2 on pic SW2RUIN2 tics 0
+switch doom 2 SW2RUIN2 on pic SW1RUIN2 tics 0
+
+switch doom 2 SW1RUIN3 on pic SW2RUIN3 tics 0
+switch doom 2 SW2RUIN3 on pic SW1RUIN3 tics 0
+
+// ENJAY ZDOOM
+
+Flat	Optional	NJCONVY1	Range	NJCONVY2	Tics 4
+Flat	Optional	NJFFAN1 	Range	NJFFAN2 	Tics 2
+Texture	Optional	NJBELL1 	Range	NJBELL4 	Tics 16
+Texture	Optional	NJBULL1 	Range	NJBULL7 	Tics 4
+Texture	Optional	NJBUB1  	Range	NJBUB4  	Tics 8
+Texture	Optional	NJFF1   	Range	NJFF4   	Tics 4
+Texture	Optional	NJLFALL1	Range	NJLFALL4	Tics 8
+Texture	Optional	NJPULSE1	Range	NJPULSE4	Tics 2
+Texture	Optional	NJQAN1  	Range	NJQAN3  	Tics 4
+Texture	Optional	NJSFALL1	Range	NJSFALL4	Tics 4
+Texture	Optional	NJWFALL1	Range	NJWFALL4	Tics 2
+Texture	Optional	SW1FAN1A	Range	SW1FAN1B	Tics 2
+Texture	Optional	SW1FAN2A	Range	SW1FAN2B	Tics 2
+Texture	Optional	SW2FAN2A	Range	SW2FAN2B	Tics 2
+
+Switch	Doom 3		SW1SKULL	On Pic	SW2SKULL	Tics 0
+Switch	Doom 3		SW1FAN1A	On Pic	SW2FAN1A	Tics 0
+Switch	Doom 3		SW1FAN1B	On Pic	SW2FAN1B	Tics 0
+Switch	Doom 3		SW1FAN2A	On Pic	SW2FAN2A	Tics 0
+Switch	Doom 3		SW1FAN2B	On Pic	SW2FAN2B	Tics 0
+Switch	Doom 3		SW1MDOR 	On Pic	SW2MDOR 	Tics 0
+Switch	Doom 3		SW1PIP2 	On Pic	SW2PIP2 	Tics 0
+Switch	Doom 3		SW1Q1   	On Pic	SW2Q1   	Tics 0
+Switch	Doom 3		SW1SHOT 	On Pic	SW2SHOT 	Tics 0
+Switch	Doom 3		SW1WIN1 	On Pic	SW2WIN1 	Tics 0
+Switch	Doom 3		SW1WIN2 	On Pic	SW2WIN2 	Tics 0
+Switch	Doom 3		SW1WIN3 	On Pic	SW2WIN3 	Tics 0
+Switch	Doom 3		SW1WIN4 	On Pic	SW2WIN4 	Tics 0
+Switch	Doom 3		SW1ELD  	On Pic	SW2ELD  	Tics 0
+Switch	Doom 3		SW1ELU  	On Pic	SW2ELU  	Tics 0
+Switch	Doom 3		SW1BLUE2	On Pic	SW2BLUE2	Tics 0
+Switch	Doom 3		SW1GSTN2	On Pic	SW2GSTN2	Tics 0
+Switch	Doom 3		SW1HOT2 	On Pic	SW2HOT2 	Tics 0
+Switch	Doom 3		SW1HOT3 	On Pic	SW2HOT3 	Tics 0
+Switch	Doom 3		SW1MARB2	On Pic	SW2MARB2	Tics 0
+Switch	Doom 3		SW1PAN2 	On Pic	SW2PAN2 	Tics 0
+Switch	Doom 3		SW1ROK2 	On Pic	SW2ROK2 	Tics 0
+Switch	Doom 3		SW1WOOD2	On Pic	SW2WOOD2	Tics 0
+Switch	Doom 3		SW1ZIM2 	On Pic	SW2ZIM2 	Tics 0
+Switch	Doom 3		SW1WOLF 	On Pic	SW2WOLF 	Tics 0
+
+// DAEDALUS
+
+// (reference syntax)
+
+//switch hexen SW_1_UP on sound Switch1 pic SW_1_DN tics 0
+
+// ====================================================
+// Daedalus rework of D2KSWAN.DAT into ANIMDEFS format
+// ====================================================
+
+// SWITCHES
+
+// Sliding door
+switch doom 3 0wmsht05 on pic 0wmsht04 tics 0
+// Brown wall
+switch doom 3 0wmshp42 on pic 0wmshp43 tics 0
+switch doom 3 0wmshp44 on pic 0wmshp45 tics 0
+switch doom 3 0wmshp79 on pic 0wmshp7a tics 0
+// 16x16 switches
+switch doom 3 0swgryn on pic 0swgryy tics 0
+switch doom 3 0swgrnn on pic 0swgrny tics 0
+switch doom 3 0swredn on pic 0swredy tics 0
+switch doom 3 0swblun on pic 0swbluy tics 0
+switch doom 3 0swyeln on pic 0swyely tics 0
+switch doom 3 0sworgn on pic 0sworgy tics 0
+// Computer console
+// (note this will switch into an animated sequence)
+switch doom 3 01COMP0 on pic 01COMP1 tics 0
+     
+// ----------------------------------------------------
+// ANIMATED FLATS
+// ----------------------------------------------------
+
+// Plasma floor
+// 4    0APLAS16    0APLAS01
+flat 0aplas01
+ pic 0aplas01 tics 4
+ pic 0aplas02 tics 4
+ pic 0aplas03 tics 4
+ pic 0aplas04 tics 4
+ pic 0aplas05 tics 4
+ pic 0aplas06 tics 4
+ pic 0aplas07 tics 4
+ pic 0aplas08 tics 4
+ pic 0aplas09 tics 4
+ pic 0aplas10 tics 4
+ pic 0aplas11 tics 4
+ pic 0aplas12 tics 4
+ pic 0aplas13 tics 4
+ pic 0aplas14 tics 4
+ pic 0aplas15 tics 4
+ pic 0aplas16 tics 4
+
+// Additional versions 5, 8, 9, 10, 11, 14, 15:
+flat 0aplas05
+ pic 0aplas05 tics 4
+ pic 0aplas06 tics 4
+ pic 0aplas07 tics 4
+ pic 0aplas08 tics 4
+ pic 0aplas09 tics 4
+ pic 0aplas10 tics 4
+ pic 0aplas11 tics 4
+ pic 0aplas12 tics 4
+ pic 0aplas13 tics 4
+ pic 0aplas14 tics 4
+ pic 0aplas15 tics 4
+ pic 0aplas16 tics 4
+ pic 0aplas01 tics 4
+ pic 0aplas02 tics 4
+ pic 0aplas03 tics 4
+ pic 0aplas04 tics 4
+
+flat 0aplas08
+ pic 0aplas08 tics 4
+ pic 0aplas09 tics 4
+ pic 0aplas10 tics 4
+ pic 0aplas11 tics 4
+ pic 0aplas12 tics 4
+ pic 0aplas13 tics 4
+ pic 0aplas14 tics 4
+ pic 0aplas15 tics 4
+ pic 0aplas16 tics 4
+ pic 0aplas01 tics 4
+ pic 0aplas02 tics 4
+ pic 0aplas03 tics 4
+ pic 0aplas04 tics 4
+ pic 0aplas05 tics 4
+ pic 0aplas06 tics 4
+ pic 0aplas07 tics 4
+
+flat 0aplas09
+ pic 0aplas09 tics 4
+ pic 0aplas10 tics 4
+ pic 0aplas11 tics 4
+ pic 0aplas12 tics 4
+ pic 0aplas13 tics 4
+ pic 0aplas14 tics 4
+ pic 0aplas15 tics 4
+ pic 0aplas16 tics 4
+ pic 0aplas01 tics 4
+ pic 0aplas02 tics 4
+ pic 0aplas03 tics 4
+ pic 0aplas04 tics 4
+ pic 0aplas05 tics 4
+ pic 0aplas06 tics 4
+ pic 0aplas07 tics 4
+ pic 0aplas08 tics 4
+
+flat 0aplas10
+ pic 0aplas10 tics 4
+ pic 0aplas11 tics 4
+ pic 0aplas12 tics 4
+ pic 0aplas13 tics 4
+ pic 0aplas14 tics 4
+ pic 0aplas15 tics 4
+ pic 0aplas16 tics 4
+ pic 0aplas01 tics 4
+ pic 0aplas02 tics 4
+ pic 0aplas03 tics 4
+ pic 0aplas04 tics 4
+ pic 0aplas05 tics 4
+ pic 0aplas06 tics 4
+ pic 0aplas07 tics 4
+ pic 0aplas08 tics 4
+ pic 0aplas09 tics 4
+
+flat 0aplas11
+ pic 0aplas11 tics 4
+ pic 0aplas12 tics 4
+ pic 0aplas13 tics 4
+ pic 0aplas14 tics 4
+ pic 0aplas15 tics 4
+ pic 0aplas16 tics 4
+ pic 0aplas01 tics 4
+ pic 0aplas02 tics 4
+ pic 0aplas03 tics 4
+ pic 0aplas04 tics 4
+ pic 0aplas05 tics 4
+ pic 0aplas06 tics 4
+ pic 0aplas07 tics 4
+ pic 0aplas08 tics 4
+ pic 0aplas09 tics 4
+ pic 0aplas10 tics 4
+
+flat 0aplas14
+ pic 0aplas14 tics 4
+ pic 0aplas15 tics 4
+ pic 0aplas16 tics 4
+ pic 0aplas01 tics 4
+ pic 0aplas02 tics 4
+ pic 0aplas03 tics 4
+ pic 0aplas04 tics 4
+ pic 0aplas05 tics 4
+ pic 0aplas06 tics 4
+ pic 0aplas07 tics 4
+ pic 0aplas08 tics 4
+ pic 0aplas09 tics 4
+ pic 0aplas10 tics 4
+ pic 0aplas11 tics 4
+ pic 0aplas12 tics 4
+ pic 0aplas13 tics 4
+
+flat 0aplas15
+ pic 0aplas15 tics 4
+ pic 0aplas16 tics 4
+ pic 0aplas01 tics 4
+ pic 0aplas02 tics 4
+ pic 0aplas03 tics 4
+ pic 0aplas04 tics 4
+ pic 0aplas05 tics 4
+ pic 0aplas06 tics 4
+ pic 0aplas07 tics 4
+ pic 0aplas08 tics 4
+ pic 0aplas09 tics 4
+ pic 0aplas10 tics 4
+ pic 0aplas11 tics 4
+ pic 0aplas12 tics 4
+ pic 0aplas13 tics 4
+ pic 0aplas14 tics 4
+
+// Ttube transition floor
+// 4    0APLAZ16    0APLAZ01
+flat 0aplaz01
+ pic 0aplaz01 tics 4
+ pic 0aplaz02 tics 4
+ pic 0aplaz03 tics 4
+ pic 0aplaz04 tics 4
+ pic 0aplaz05 tics 4
+ pic 0aplaz06 tics 4
+ pic 0aplaz07 tics 4
+ pic 0aplaz08 tics 4
+ pic 0aplaz09 tics 4
+ pic 0aplaz10 tics 4
+ pic 0aplaz11 tics 4
+ pic 0aplaz12 tics 4
+ pic 0aplaz13 tics 4
+ pic 0aplaz14 tics 4
+ pic 0aplaz15 tics 4
+ pic 0aplaz16 tics 4
+
+// Additional versions 3, 9:
+
+flat 0aplaz03
+ pic 0aplaz03 tics 4
+ pic 0aplaz04 tics 4
+ pic 0aplaz05 tics 4
+ pic 0aplaz06 tics 4
+ pic 0aplaz07 tics 4
+ pic 0aplaz08 tics 4
+ pic 0aplaz09 tics 4
+ pic 0aplaz10 tics 4
+ pic 0aplaz11 tics 4
+ pic 0aplaz12 tics 4
+ pic 0aplaz13 tics 4
+ pic 0aplaz14 tics 4
+ pic 0aplaz15 tics 4
+ pic 0aplaz16 tics 4
+ pic 0aplaz01 tics 4
+ pic 0aplaz02 tics 4
+
+flat 0aplaz09
+ pic 0aplaz09 tics 4
+ pic 0aplaz10 tics 4
+ pic 0aplaz11 tics 4
+ pic 0aplaz12 tics 4
+ pic 0aplaz13 tics 4
+ pic 0aplaz14 tics 4
+ pic 0aplaz15 tics 4
+ pic 0aplaz16 tics 4
+ pic 0aplaz01 tics 4
+ pic 0aplaz02 tics 4
+ pic 0aplaz03 tics 4
+ pic 0aplaz04 tics 4
+ pic 0aplaz05 tics 4
+ pic 0aplaz06 tics 4
+ pic 0aplaz07 tics 4
+ pic 0aplaz08 tics 4
+
+// Ttube step-on floor
+// 4    0ATTUBE6    0ATTUBE1
+flat 0attube1
+ pic 0attube1 tics 4
+ pic 0attube2 tics 4
+ pic 0attube3 tics 4
+ pic 0attube4 tics 4
+ pic 0attube5 tics 4
+ pic 0attube6 tics 4
+
+// Additional version 2:
+
+flat 0attube2
+ pic 0attube2 tics 4
+ pic 0attube3 tics 4
+ pic 0attube4 tics 4
+ pic 0attube5 tics 4
+ pic 0attube6 tics 4
+ pic 0attube1 tics 4
+
+// Computer consoles
+// 4       0FCOMP4N    0FCOMP1N
+flat 0fcomp1n
+ pic 0fcomp1n rand 4 16
+ pic 0fcomp2n rand 4 16
+ pic 0fcomp3n rand 4 16
+ pic 0fcomp4n rand 4 16
+
+// Additional versions 2, 3, 4:
+
+flat 0fcomp2n
+ pic 0fcomp2n rand 4 16
+ pic 0fcomp3n rand 4 16
+ pic 0fcomp4n rand 4 16
+ pic 0fcomp1n rand 4 16
+
+flat 0fcomp3n
+ pic 0fcomp3n rand 4 16
+ pic 0fcomp4n rand 4 16
+ pic 0fcomp1n rand 4 16
+ pic 0fcomp2n rand 4 16
+
+flat 0fcomp4n
+ pic 0fcomp4n rand 4 16
+ pic 0fcomp1n rand 4 16
+ pic 0fcomp2n rand 4 16
+ pic 0fcomp3n rand 4 16
+
+// 4       0FCOMP4S    0FCOMP1S
+flat 0fcomp1s
+ pic 0fcomp1s rand 4 16
+ pic 0fcomp2s rand 4 16
+ pic 0fcomp3s rand 4 16
+ pic 0fcomp4s rand 4 16
+
+// Additional versions 2, 3, 4:
+
+flat 0fcomp2s
+ pic 0fcomp2s rand 4 16
+ pic 0fcomp3s rand 4 16
+ pic 0fcomp4s rand 4 16
+ pic 0fcomp1s rand 4 16
+
+flat 0fcomp3s
+ pic 0fcomp3s rand 4 16
+ pic 0fcomp4s rand 4 16
+ pic 0fcomp1s rand 4 16
+ pic 0fcomp2s rand 4 16
+
+flat 0fcomp4s
+ pic 0fcomp4s rand 4 16
+ pic 0fcomp1s rand 4 16
+ pic 0fcomp2s rand 4 16
+ pic 0fcomp3s rand 4 16
+
+// 4       0FCOMP4E    0FCOMP1E
+flat 0fcomp1e
+ pic 0fcomp1e rand 4 16
+ pic 0fcomp2e rand 4 16
+ pic 0fcomp3e rand 4 16
+ pic 0fcomp4e rand 4 16
+
+// Additional versions 2, 3, 4:
+
+flat 0fcomp2e
+ pic 0fcomp2e rand 4 16
+ pic 0fcomp3e rand 4 16
+ pic 0fcomp4e rand 4 16
+ pic 0fcomp1e rand 4 16
+
+flat 0fcomp3e
+ pic 0fcomp3e rand 4 16
+ pic 0fcomp4e rand 4 16
+ pic 0fcomp1e rand 4 16
+ pic 0fcomp2e rand 4 16
+
+flat 0fcomp4e
+ pic 0fcomp4e rand 4 16
+ pic 0fcomp1e rand 4 16
+ pic 0fcomp2e rand 4 16
+ pic 0fcomp3e rand 4 16
+
+// 4       0FCOMP4W    0FCOMP1W
+flat 0fcomp1w
+ pic 0fcomp1w rand 4 16
+ pic 0fcomp2w rand 4 16
+ pic 0fcomp3w rand 4 16
+ pic 0fcomp4w rand 4 16
+
+// Additional versions 2, 3, 4:
+
+flat 0fcomp2w
+ pic 0fcomp2w rand 4 16
+ pic 0fcomp3w rand 4 16
+ pic 0fcomp4w rand 4 16
+ pic 0fcomp1w rand 4 16
+
+flat 0fcomp3w
+ pic 0fcomp3w rand 4 16
+ pic 0fcomp4w rand 4 16
+ pic 0fcomp1w rand 4 16
+ pic 0fcomp2w rand 4 16
+
+flat 0fcomp4w
+ pic 0fcomp4w rand 4 16
+ pic 0fcomp1w rand 4 16
+ pic 0fcomp2w rand 4 16
+ pic 0fcomp3w rand 4 16
+
+// ----------------------------------------------------
+// ANIMATED TEXTURES
+// ----------------------------------------------------
+
+// Force field
+// 4    0XFLD04A    0XFLD01A
+texture 0xfld01a
+    pic 0xfld01a tics 4
+    pic 0xfld02a tics 4
+    pic 0xfld03a tics 4
+    pic 0xfld04a tics 4
+// 4    0XFLD14A    0XFLD11A
+texture 0xfld11a
+    pic 0xfld11a tics 4
+    pic 0xfld12a tics 4
+    pic 0xfld13a tics 4
+    pic 0xfld14a tics 4
+
+// New fluids - changed from 8 tics to 4 - 11:29 PM 11/8/2003
+// 4    0AFLUN1H    0AFLUN1A
+texture 0aflun1a
+    pic 0aflun1a tics 4
+    pic 0aflun1b tics 4
+    pic 0aflun1c tics 4
+    pic 0aflun1d tics 4
+    pic 0aflun1e tics 4
+    pic 0aflun1f tics 4
+    pic 0aflun1g tics 4
+    pic 0aflun1h tics 4
+// 4    0AFLUN2H    0AFLUN2A
+texture 0aflun2a
+    pic 0aflun2a tics 4
+    pic 0aflun2b tics 4
+    pic 0aflun2c tics 4
+    pic 0aflun2d tics 4
+    pic 0aflun2e tics 4
+    pic 0aflun2f tics 4
+    pic 0aflun2g tics 4
+    pic 0aflun2h tics 4
+// 4    0AFLUN3H    0AFLUN3A
+texture 0aflun3a
+    pic 0aflun3a tics 4
+    pic 0aflun3b tics 4
+    pic 0aflun3c tics 4
+    pic 0aflun3d tics 4
+    pic 0aflun3e tics 4
+    pic 0aflun3f tics 4
+    pic 0aflun3g tics 4
+    pic 0aflun3h tics 4
+// 4    0AFLUN4H    0AFLUN4A
+texture 0aflun4a
+    pic 0aflun4a tics 4
+    pic 0aflun4b tics 4
+    pic 0aflun4c tics 4
+    pic 0aflun4d tics 4
+    pic 0aflun4e tics 4
+    pic 0aflun4f tics 4
+    pic 0aflun4g tics 4
+    pic 0aflun4h tics 4
+// 4    0AFLUN5H    0AFLUN5A
+texture 0aflun5a
+    pic 0aflun5a tics 4
+    pic 0aflun5b tics 4
+    pic 0aflun5c tics 4
+    pic 0aflun5d tics 4
+    pic 0aflun5e tics 4
+    pic 0aflun5f tics 4
+    pic 0aflun5g tics 4
+    pic 0aflun5h tics 4
+// 4    0AFLUN6H    0AFLUN6A
+texture 0aflun6a
+    pic 0aflun6a tics 4
+    pic 0aflun6b tics 4
+    pic 0aflun6c tics 4
+    pic 0aflun6d tics 4
+    pic 0aflun6e tics 4
+    pic 0aflun6f tics 4
+    pic 0aflun6g tics 4
+    pic 0aflun6h tics 4
+// 4    0AFLUN7H    0AFLUN7A
+texture 0aflun7a
+    pic 0aflun7a tics 4
+    pic 0aflun7b tics 4
+    pic 0aflun7c tics 4
+    pic 0aflun7d tics 4
+    pic 0aflun7e tics 4
+    pic 0aflun7f tics 4
+    pic 0aflun7g tics 4
+    pic 0aflun7h tics 4
+// 4    0AFLUN8H    0AFLUN8A
+texture 0aflun8a
+    pic 0aflun8a tics 4
+    pic 0aflun8b tics 4
+    pic 0aflun8c tics 4
+    pic 0aflun8d tics 4
+    pic 0aflun8e tics 4
+    pic 0aflun8f tics 4
+    pic 0aflun8g tics 4
+    pic 0aflun8h tics 4
+
+// Space computer panels
+
+// 8    0WCPAN1D    0WCPAN1A
+texture 0wcpan1a
+    pic 0wcpan1a rand 4 16
+    pic 0wcpan1b rand 4 16
+    pic 0wcpan1c rand 4 16
+    pic 0wcpan1d rand 4 16
+  allowdecals
+
+// Additional versions b-d
+
+texture 0wcpan1b
+    pic 0wcpan1b rand 4 16
+    pic 0wcpan1c rand 4 16
+    pic 0wcpan1d rand 4 16
+    pic 0wcpan1a rand 4 16
+  allowdecals
+
+texture 0wcpan1c
+    pic 0wcpan1c rand 4 16
+    pic 0wcpan1d rand 4 16
+    pic 0wcpan1a rand 4 16
+    pic 0wcpan1b rand 4 16
+  allowdecals
+
+texture 0wcpan1d
+    pic 0wcpan1d rand 4 16
+    pic 0wcpan1a rand 4 16
+    pic 0wcpan1b rand 4 16
+    pic 0wcpan1c rand 4 16
+  allowdecals
+
+// 8    0WCPAN9D    0WCPAN9A
+texture 0wcpan9a
+    pic 0wcpan9a rand 4 16
+    pic 0wcpan9b rand 4 16
+    pic 0wcpan9c rand 4 16
+    pic 0wcpan9d rand 4 16
+  allowdecals
+
+// Additional versions b-d
+
+texture 0wcpan9b
+    pic 0wcpan9b rand 4 16
+    pic 0wcpan9c rand 4 16
+    pic 0wcpan9d rand 4 16
+    pic 0wcpan9a rand 4 16
+  allowdecals
+
+texture 0wcpan9c
+    pic 0wcpan9c rand 4 16
+    pic 0wcpan9d rand 4 16
+    pic 0wcpan9a rand 4 16
+    pic 0wcpan9b rand 4 16
+  allowdecals
+
+texture 0wcpan9d
+    pic 0wcpan9d rand 4 16
+    pic 0wcpan9a rand 4 16
+    pic 0wcpan9b rand 4 16
+    pic 0wcpan9c rand 4 16
+  allowdecals
+
+//  Computer console wall units
+// 8       01COMP4     01COMP1
+texture 01comp1
+    pic 01comp1 rand 4 16
+    pic 01comp2 rand 4 16
+    pic 01comp3 rand 4 16
+    pic 01comp4 rand 4 16
+  allowdecals
+
+// Computer hint panels (scrolling text)
+// 8    0AHINT8    0AHINT1
+texture 0ahint1
+    pic 0ahint1 tics 8
+    pic 0ahint2 tics 8
+    pic 0ahint3 tics 8
+    pic 0ahint4 tics 8
+    pic 0ahint5 tics 8
+    pic 0ahint6 tics 8
+    pic 0ahint7 tics 8
+    pic 0ahint8 tics 8
+
+// Plasma floor texture for the walls
+// 4    01PLAS16    01PLAS01
+texture 01plas01
+    pic 01plas01 tics 4
+    pic 01plas02 tics 4
+    pic 01plas03 tics 4
+    pic 01plas04 tics 4
+    pic 01plas05 tics 4
+    pic 01plas06 tics 4
+    pic 01plas07 tics 4
+    pic 01plas08 tics 4
+    pic 01plas09 tics 4
+    pic 01plas10 tics 4
+    pic 01plas11 tics 4
+    pic 01plas12 tics 4
+    pic 01plas13 tics 4
+    pic 01plas14 tics 4
+    pic 01plas15 tics 4
+    pic 01plas16 tics 4
+
+// Additional versions 09, 11:
+
+texture 01plas09
+    pic 01plas09 tics 4
+    pic 01plas10 tics 4
+    pic 01plas11 tics 4
+    pic 01plas12 tics 4
+    pic 01plas13 tics 4
+    pic 01plas14 tics 4
+    pic 01plas15 tics 4
+    pic 01plas16 tics 4
+    pic 01plas01 tics 4
+    pic 01plas02 tics 4
+    pic 01plas03 tics 4
+    pic 01plas04 tics 4
+    pic 01plas05 tics 4
+    pic 01plas06 tics 4
+    pic 01plas07 tics 4
+    pic 01plas08 tics 4
+
+texture 01plas11
+    pic 01plas11 tics 4
+    pic 01plas12 tics 4
+    pic 01plas13 tics 4
+    pic 01plas14 tics 4
+    pic 01plas15 tics 4
+    pic 01plas16 tics 4
+    pic 01plas01 tics 4
+    pic 01plas02 tics 4
+    pic 01plas03 tics 4
+    pic 01plas04 tics 4
+    pic 01plas05 tics 4
+    pic 01plas06 tics 4
+    pic 01plas07 tics 4
+    pic 01plas08 tics 4
+    pic 01plas09 tics 4
+    pic 01plas10 tics 4
+
+// ----------------------------------------------------
+// Warped flats
+// ----------------------------------------------------
+
+warp flat 0AFLUX1D
+warp flat 0AFLUX2D
+warp flat 0AFLUX3D
+warp flat 0AFLUX4D
+warp flat 0AFLUX5D
+warp flat 0AFLUX6D
+warp flat 0AFLUX7D
+warp flat 0AFLUX8D
+warp flat 0AFLUX9D
+warp flat 0AFLUXAD
+warp flat 0AFLUXBD
+warp flat 0Asgrn04
+warp flat 0Asbrn04
+warp flat 0Asgry04
+warp flat 0Asred04
+warp flat 0APLAW01
+warp flat 0APLAW02
+warp flat 0APLAW03
+warp flat 0APLAW04
+warp flat 0APLAW05
+warp flat 0APLAW06
+warp flat 0APLAW07
+warp flat 0APLAW08
+warp flat 0APLAW09
+warp flat 0APLAW10
+warp flat 0APLAW11
+warp flat 0APLAW12
+warp flat 0APLAW13
+warp flat 0APLAW14
+warp flat 0APLAW15
+warp flat 0APLAW16
+warp flat 0FLAVA
+
+// ----------------------------------------------------
+// -- end of DAEDALUS ANIMDEFS
+// ----------------------------------------------------
+
+// CLEIMOS
+
+texture CLPAN1A
+    pic CLPAN1A tics 8
+    pic CLPAN2A tics 8
+    pic CLPAN3A tics 8
+	pic CLPAN4A tics 8
+
+texture CLPAN2A
+    pic CLPAN2A tics 8
+    pic CLPAN3A tics 8
+    pic CLPAN4A tics 8
+	pic CLPAN1A tics 8
+
+texture CLPAN3A
+    pic CLPAN3A tics 8
+    pic CLPAN4A tics 8
+    pic CLPAN1A tics 8
+	pic CLPAN2A tics 8
+
+texture CLPAN4A
+    pic CLPAN4A tics 8
+    pic CLPAN1A tics 8
+    pic CLPAN2A tics 8
+	pic CLPAN3A tics 8
+
+texture CLTANK1A
+    pic CLTANK1A tics 8
+    pic CLTANK2A tics 8
+    pic CLTANK3A tics 8
+	pic CLTANK4A tics 8
+
+texture CLTANK2A
+    pic CLTANK2A tics 8
+    pic CLTANK3A tics 8
+    pic CLTANK4A tics 8
+	pic CLTANK1A tics 8
+
+texture CLTANK3A
+    pic CLTANK3A tics 8
+    pic CLTANK4A tics 8
+    pic CLTANK1A tics 8
+	pic CLTANK2A tics 8
+
+texture CLTANK4A
+    pic CLTANK4A tics 8
+    pic CLTANK1A tics 8
+    pic CLTANK2A tics 8
+	pic CLTANK3A tics 8
+
+switch doom 2 SW1CLEIM on pic SW2CLEIM tics 0
+switch doom 2 SW2CLEIM on pic SW1CLEIM tics 0
+
+// PLEIADES
+
+texture "uacswn1"
+pic 1 tics 8
+pic 2 tics 8
+pic 3 tics 8
+pic 4 tics 8
+pic 5 tics 8
+pic 6 tics 8
+pic 7 tics 8
+pic 8 tics 8
+
+
+texture "fanbld01"
+pic 1 tics 2
+pic 2 tics 2
+pic 3 tics 2
+pic 4 tics 2
+pic 5 tics 2
+pic 6 tics 2
+pic 7 tics 2
+pic 8 tics 2
+pic 9 tics 2
+pic 10 tics 2
+
+texture "RCKT01"
+pic 1 tics 1
+pic 2 tics 1
+pic 3 tics 1
+pic 4 tics 1
+pic 5 tics 1
+pic 6 tics 1
+pic 7 tics 1
+pic 8 tics 1
+pic 9 tics 1
+pic 10 tics 1
+pic 11 tics 1
+pic 12 tics 1
+pic 13 tics 1
+pic 14 tics 1
+pic 15 tics 1
+pic 16 tics 1
+
+texture "wtrfal1"
+pic 1 tics 8
+pic 2 tics 8
+pic 3 tics 8
+pic 4 tics 8
+
+texture "wtrspl1"
+pic 1 tics 8
+pic 2 tics 8
+pic 3 tics 8
+pic 4 tics 8
+
+texture "sparks01"
+pic 1 tics 4
+pic 2 tics 4
+pic 3 tics 4
+pic 4 tics 4
+pic 5 tics 4
+pic 6 tics 4
+pic 7 tics 4
+pic 8 tics 4
+
+texture "arcsA01"
+pic 1 tics 5
+pic 2 tics 2
+pic 3 tics 7
+pic 4 tics 2
+pic 5 tics 8
+pic 6 tics 2
+pic 7 tics 10
+pic 8 tics 3
+pic 9 tics 6
+pic 10 tics 2
+
+texture "arcsB01"
+pic 1 tics 9
+pic 2 tics 2
+pic 3 tics 6
+pic 4 tics 3
+pic 5 tics 7
+pic 6 tics 2
+pic 7 tics 9
+pic 8 tics 3
+pic 9 tics 10
+pic 10 tics 2
+
+texture "arcsC01"
+pic 1 tics 7
+pic 2 tics 3
+pic 3 tics 10
+pic 4 tics 2
+pic 5 tics 8
+pic 6 tics 2
+pic 7 tics 9
+pic 8 tics 2
+pic 9 tics 14
+pic 10 tics 2
+
+texture "lecspkA1"
+pic 1 tics 2
+pic 2 tics 2
+pic 3 tics 2
+pic 4 tics 1
+pic 5 tics 2
+pic 6 tics 2
+pic 7 tics 2
+pic 8 tics 2
+pic 9 tics 2
+
+texture "lecspkB1"
+pic 1 tics 2
+pic 2 tics 3
+pic 3 tics 2
+pic 4 tics 3
+pic 5 tics 2
+pic 6 tics 2
+pic 7 tics 3
+pic 8 tics 3
+pic 9 tics 3
+
+texture "PLEWTR1"
+pic 1 tics 8
+pic 2 tics 8
+pic 3 tics 8
+pic 4 tics 8
+pic 5 tics 8
+pic 6 tics 8
+pic 7 tics 8
+
+texture "PLELSR1"
+pic 1 tics 6
+pic 2 tics 6
+pic 3 tics 6
+pic 4 tics 6
+
+texture "CONTRL01"
+pic 1 tics 8
+pic 2 tics 8
+pic 3 tics 8
+pic 4 tics 8
+pic 5 tics 8
+pic 6 tics 8
+pic 7 tics 8
+pic 8 tics 8
+pic 9 tics 8
+pic 10 tics 8
+pic 11 tics 8
+pic 12 tics 8
+pic 13 tics 8
+pic 14 tics 8
+pic 15 tics 8
+pic 16 tics 8
+pic 17 tics 8
+pic 18 tics 8
+pic 19 tics 8
+pic 20 tics 8
+pic 21 tics 8
+
+Texture	Optional	PLEAIR1	Range	PLEAIR4	Tics 8
+Texture	Optional	PLESCR01	Range	PLESCR24	Tics 8
+Texture	Optional	PLECMP01	Range	PLECMP21	Tics 8
+Texture	Optional	PLEHOL01	Range	PLEHOL64	Tics 8
+
+switch doom 2 SW1PLE1 on pic SW2PLE1 tics 0
+switch doom 2 SW2PLE1 on pic SW1PLE1 tics 0
+
+switch doom 2 SW1PLE2 on pic SW2PLE2 tics 0
+switch doom 2 SW2PLE2 on pic SW1PLE2 tics 0
+
+switch doom 2 SW1PLE3 on pic SW2PLE3 tics 0
+switch doom 2 SW2PLE3 on pic SW1PLE3 tics 0
+
+switch doom 2 SW1PLE4 on pic SW2PLE4 tics 0
+switch doom 2 SW2PLE4 on pic SW1PLE4 tics 0
+
+switch doom 2 SW1PLE5 on pic SW2PLE5 tics 0
+switch doom 2 SW2PLE5 on pic SW1PLE5 tics 0
+
+switch doom 2 SW1PLE6 on pic SW2PLE6 tics 0
+switch doom 2 SW2PLE6 on pic SW1PLE6 tics 0
+
+switch doom 2 SW1PLE7 on pic SW2PLE7 tics 0
+switch doom 2 SW2PLE7 on pic SW1PLE7 tics 0
+
+switch doom 2 SW1PLE8 on pic SW2PLE8 tics 0
+switch doom 2 SW2PLE8 on pic SW1PLE8 tics 0
+
+switch doom 2 SW1PLE9 on pic SW2PLE9 tics 0
+switch doom 2 SW2PLE9 on pic SW1PLE9 tics 0
+
+switch doom 2 SW1PLE0 on pic SW2PLE0 tics 0
+switch doom 2 SW2PLE0 on pic SW1PLE0 tics 0
+
+// EVILUTION
+
+Texture	Optional	BLIP1	Range	BLIP4	Tics 8
+
+Texture	Optional	BIGTV1	Range	BIGTV4	Tics 8
+
+Texture	Optional	CMPSTA_1	Range	CMPSTA_6	Tics 8
+	
+Texture REEL1
+	allowdecals
+	pic REEL1 tics 8
+	pic REEL1Z tics 8
+	pic REEL2 tics 8
+	pic REEL3 tics 8
+	pic REEL3Z tics 8
+	pic REEL4 tics 8
+	pic REEL4Z tics 8
+	pic REEL5 tics 8
+	pic REEL3Y tics 8
+	pic REEL3X tics 8
+	pic REEL3W tics 8
+	pic REEL3V tics 8
+
+Texture REEL2
+	allowdecals
+	pic REEL2 tics 8
+	pic REEL3 tics 8
+	pic REEL3Z tics 8
+	pic REEL4 tics 8
+	pic REEL4Z tics 8
+	pic REEL5 tics 8
+	pic REEL3Y tics 8
+	pic REEL3X tics 8
+	pic REEL3W tics 8
+	pic REEL3V tics 8
+	pic REEL1 tics 8
+	pic REEL1Z tics 8
+
+Texture REEL3
+	allowdecals
+	pic REEL3 tics 8
+	pic REEL3Z tics 8
+	pic REEL4 tics 8
+	pic REEL4Z tics 8
+	pic REEL5 tics 8
+	pic REEL3Y tics 8
+	pic REEL3X tics 8
+	pic REEL3W tics 8
+	pic REEL3V tics 8
+	pic REEL1 tics 8
+	pic REEL1Z tics 8
+	pic REEL2 tics 8
+
+Texture REEL4
+	allowdecals
+	pic REEL4 tics 8
+	pic REEL4Z tics 8
+	pic REEL5 tics 8
+	pic REEL3Y tics 8
+	pic REEL3X tics 8
+	pic REEL3W tics 8
+	pic REEL3V tics 8
+	pic REEL1 tics 8
+	pic REEL1Z tics 8
+	pic REEL2 tics 8
+	pic REEL3 tics 8
+	pic REEL3Z tics 8
+
+Texture REEL5
+	allowdecals
+	pic REEL5 tics 8
+	pic REEL3Y tics 8
+	pic REEL3X tics 8
+	pic REEL3W tics 8
+	pic REEL3V tics 8
+	pic REEL1 tics 8
+	pic REEL1Z tics 8
+	pic REEL2 tics 8
+	pic REEL3 tics 8
+	pic REEL3Z tics 8
+	pic REEL4 tics 8
+	pic REEL4Z tics 8
+
+Texture	Optional	SAW1	Range	SAW6	Tics 8
+
+Texture SPIDER1
+	pic SPIDER1 tics 8
+	pic SPIDER2 tics 8
+	pic SPIDER3 tics 8
+	pic SPIDER2 tics 8
+	pic SPIDER3 tics 8
+	pic SPIDER4 tics 8
+
+Texture SPIDER2
+	pic SPIDER2 tics 8
+	pic SPIDER3 tics 8
+	pic SPIDER2 tics 8
+	pic SPIDER3 tics 8
+	pic SPIDER4 tics 8
+	pic SPIDER1 tics 8
+
+Texture SPIDER3
+	pic SPIDER3 tics 8
+	pic SPIDER2 tics 8
+	pic SPIDER3 tics 8
+	pic SPIDER4 tics 8
+	pic SPIDER1 tics 8
+	pic SPIDER2 tics 8
+
+Texture SPIDER4
+	pic SPIDER4 tics 8
+	pic SPIDER1 tics 8
+	pic SPIDER2 tics 8
+	pic SPIDER3 tics 8
+	pic SPIDER2 tics 8
+	pic SPIDER3 tics 8
+
+Texture SW1FSK1
+	allowdecals
+	pic SW1FSK1 tics 8
+	pic SW1FSK2 tics 8
+	pic SW1FSK3 tics 8
+	pic SW1FSK4 tics 8
+
+Texture SW2FSK1
+	allowdecals
+	pic SW2FSK1 tics 8
+	pic SW2FSK2 tics 8
+	pic SW2FSK3 tics 8
+	pic SW2FSK4 tics 8
+
+Texture SW1FSW1
+	allowdecals
+	pic SW1FSW1 tics 8
+	pic SW1FSW2 tics 8
+	pic SW1FSW3 tics 8
+	pic SW1FSW4 tics 8
+
+Texture SW2FSK1
+	allowdecals
+	pic SW2FSK1 tics 8
+	pic SW2FSK2 tics 8
+	pic SW2FSK3 tics 8
+	pic SW2FSK4 tics 8
+	
+Texture SW2FSW1
+	allowdecals
+	pic SW2FSW1 tics 8
+	pic SW2FSW2 tics 8
+	pic SW2FSW3 tics 8
+	pic SW2FSW4 tics 8
+
+Texture	Optional	SILVR1_1	Range	SILVR1_4	Tics 8
+
+Texture	Optional	SILVR2_1	Range	SILVR2_4	Tics 8
+	
+Texture	Optional	TV1	Range	TV4	Tics 8
+
+Texture TNTCNS1
+	allowdecals
+	pic TNTCNS1 tics 8
+	pic TNTCNS2 tics 8
+	pic TNTCNS3 tics 8
+	pic TNTCNS4 tics 8
+	pic TNTCNS5 tics 8
+	pic TNTCNS6 tics 8
+	pic TNTCNS7 tics 8
+	pic TNTCNS8 tics 8
+	pic TNTCNS9 tics 8
+	pic TNTCNS10 tics 8
+	pic TNTCNS11 tics 8
+	pic TNTCNS12 tics 8
+
+Texture TNTCNS2
+	allowdecals
+	pic TNTCNS2 tics 8
+	pic TNTCNS3 tics 8
+	pic TNTCNS4 tics 8
+	pic TNTCNS5 tics 8
+	pic TNTCNS6 tics 8
+	pic TNTCNS7 tics 8
+	pic TNTCNS8 tics 8
+	pic TNTCNS9 tics 8
+	pic TNTCNS10 tics 8
+	pic TNTCNS11 tics 8
+	pic TNTCNS12 tics 8
+	pic TNTCNS1 tics 8
+
+Texture TNTCNS3
+	allowdecals
+	pic TNTCNS3 tics 8
+	pic TNTCNS4 tics 8
+	pic TNTCNS5 tics 8
+	pic TNTCNS6 tics 8
+	pic TNTCNS7 tics 8
+	pic TNTCNS8 tics 8
+	pic TNTCNS9 tics 8
+	pic TNTCNS10 tics 8
+	pic TNTCNS11 tics 8
+	pic TNTCNS12 tics 8
+	pic TNTCNS1 tics 8
+	pic TNTCNS2 tics 8
+
+Texture TNTCNS4
+	allowdecals
+	pic TNTCNS4 tics 8
+	pic TNTCNS5 tics 8
+	pic TNTCNS6 tics 8
+	pic TNTCNS7 tics 8
+	pic TNTCNS8 tics 8
+	pic TNTCNS9 tics 8
+	pic TNTCNS10 tics 8
+	pic TNTCNS11 tics 8
+	pic TNTCNS12 tics 8
+	pic TNTCNS1 tics 8
+	pic TNTCNS2 tics 8
+	pic TNTCNS3 tics 8
+
+Texture TNTCNS5
+	allowdecals
+	pic TNTCNS5 tics 8
+	pic TNTCNS6 tics 8
+	pic TNTCNS7 tics 8
+	pic TNTCNS8 tics 8
+	pic TNTCNS9 tics 8
+	pic TNTCNS10 tics 8
+	pic TNTCNS11 tics 8
+	pic TNTCNS12 tics 8
+	pic TNTCNS1 tics 8
+	pic TNTCNS2 tics 8
+	pic TNTCNS3 tics 8
+	pic TNTCNS4 tics 8
+
+Texture TNTCNS6
+	allowdecals
+	pic TNTCNS6 tics 8
+	pic TNTCNS7 tics 8
+	pic TNTCNS8 tics 8
+	pic TNTCNS9 tics 8
+	pic TNTCNS10 tics 8
+	pic TNTCNS11 tics 8
+	pic TNTCNS12 tics 8
+	pic TNTCNS1 tics 8
+	pic TNTCNS2 tics 8
+	pic TNTCNS3 tics 8
+	pic TNTCNS4 tics 8
+	pic TNTCNS5 tics 8
+
+Texture TNTCNS7
+	allowdecals
+	pic TNTCNS7 tics 8
+	pic TNTCNS8 tics 8
+	pic TNTCNS9 tics 8
+	pic TNTCNS10 tics 8
+	pic TNTCNS11 tics 8
+	pic TNTCNS12 tics 8
+	pic TNTCNS1 tics 8
+	pic TNTCNS2 tics 8
+	pic TNTCNS3 tics 8
+	pic TNTCNS4 tics 8
+	pic TNTCNS5 tics 8
+	pic TNTCNS6 tics 8
+
+Texture TNTCNS8
+	allowdecals
+	pic TNTCNS8 tics 8
+	pic TNTCNS9 tics 8
+	pic TNTCNS10 tics 8
+	pic TNTCNS11 tics 8
+	pic TNTCNS12 tics 8
+	pic TNTCNS1 tics 8
+	pic TNTCNS2 tics 8
+	pic TNTCNS3 tics 8
+	pic TNTCNS4 tics 8
+	pic TNTCNS5 tics 8
+	pic TNTCNS6 tics 8
+	pic TNTCNS7 tics 8
+
+Texture TNTCNS9
+	allowdecals
+	pic TNTCNS9 tics 8
+	pic TNTCNS10 tics 8
+	pic TNTCNS11 tics 8
+	pic TNTCNS12 tics 8
+	pic TNTCNS1 tics 8
+	pic TNTCNS2 tics 8
+	pic TNTCNS3 tics 8
+	pic TNTCNS4 tics 8
+	pic TNTCNS5 tics 8
+	pic TNTCNS6 tics 8
+	pic TNTCNS7 tics 8
+	pic TNTCNS8 tics 8
+
+Texture TNTCNS10
+	allowdecals
+	pic TNTCNS10 tics 8
+	pic TNTCNS11 tics 8
+	pic TNTCNS12 tics 8
+	pic TNTCNS1 tics 8
+	pic TNTCNS2 tics 8
+	pic TNTCNS3 tics 8
+	pic TNTCNS4 tics 8
+	pic TNTCNS5 tics 8
+	pic TNTCNS6 tics 8
+	pic TNTCNS7 tics 8
+	pic TNTCNS8 tics 8
+	pic TNTCNS9 tics 8
+
+Texture TNTCNS11
+	allowdecals
+	pic TNTCNS11 tics 8
+	pic TNTCNS12 tics 8
+	pic TNTCNS1 tics 8
+	pic TNTCNS2 tics 8
+	pic TNTCNS3 tics 8
+	pic TNTCNS4 tics 8
+	pic TNTCNS5 tics 8
+	pic TNTCNS6 tics 8
+	pic TNTCNS7 tics 8
+	pic TNTCNS8 tics 8
+	pic TNTCNS9 tics 8
+	pic TNTCNS10 tics 8
+
+Texture TNTCNS12
+	allowdecals
+	pic TNTCNS12 tics 8
+	pic TNTCNS1 tics 8
+	pic TNTCNS2 tics 8
+	pic TNTCNS3 tics 8
+	pic TNTCNS4 tics 8
+	pic TNTCNS5 tics 8
+	pic TNTCNS6 tics 8
+	pic TNTCNS7 tics 8
+	pic TNTCNS8 tics 8
+	pic TNTCNS9 tics 8
+	pic TNTCNS10 tics 8
+	pic TNTCNS11 tics 8
+
+switch doom SW1FSK1 on pic SW2FSK1 tics 0
+
+switch doom SW1FSW1 on pic SW2FSW1 tics 0
+
+// HELL FACTORY
+
+Texture A_mtvn1
+
+pic 1 tics 3
+pic 2 tics 3
+pic 3 tics 3
+pic 4 tics 3
+
+warp flat qwater1
+
+// THE FINAL GATHERING
+
+texture SHRINE2M
+    pic SHRINE2M tics 8
+    pic SHRINE2N tics 8
+    pic SHRINE2O tics 8
+	
+texture SHRINE2N
+    pic SHRINE2N tics 8
+    pic SHRINE2O tics 8
+    pic SHRINE2M tics 8
+	
+texture SHRINE2O
+    pic SHRINE2O tics 8
+    pic SHRINE2M tics 8
+    pic SHRINE2N tics 8
+
+// EARTH
+
+Texture	Optional	ERTAN101	Range	ERTAN112	Tics 8
+Texture	Optional	ERTAN201	Range	ERTAN219	Tics 8
+Texture	Optional	ERTAN301	Range	ERTAN319	Tics 8
+Texture	Optional	ERTAN401	Range	ERTAN419	Tics 8
+Texture	Optional	ERTAN501	Range	ERTAN504	Tics 8
+
+// DOOM RESURRECTION
+
+texture DRESAN01
+    pic DRESAN01 tics 8
+    pic DRESAN02 tics 8
+    pic DRESAN03 tics 8
+    pic DRESAN04 tics 8
+
+texture DRESAN02
+    pic DRESAN02 tics 8
+    pic DRESAN03 tics 8
+    pic DRESAN04 tics 8
+    pic DRESAN01 tics 8
+
+texture DRESAN03
+    pic DRESAN03 tics 8
+    pic DRESAN04 tics 8
+    pic DRESAN01 tics 8
+    pic DRESAN02 tics 8
+
+texture DRESAN04
+    pic DRESAN04 tics 8
+    pic DRESAN01 tics 8
+    pic DRESAN02 tics 8
+    pic DRESAN03 tics 8
+
+texture DRESAN05
+    pic DRESAN05 tics 8
+    pic DRESAN06 tics 8
+    pic DRESAN07 tics 8
+    pic DRESAN08 tics 8
+
+texture DRESAN06
+    pic DRESAN06 tics 8
+    pic DRESAN07 tics 8
+    pic DRESAN08 tics 8
+    pic DRESAN05 tics 8
+
+texture DRESAN07
+    pic DRESAN07 tics 8
+    pic DRESAN08 tics 8
+    pic DRESAN05 tics 8
+    pic DRESAN06 tics 8
+
+texture DRESAN08
+    pic DRESAN08 tics 8
+    pic DRESAN05 tics 8
+    pic DRESAN06 tics 8
+    pic DRESAN07 tics 8
+
+switch doom SW1DRES on pic SW2DRES tics 0
+switch doom SW2DRES on pic SW1DRES tics 0
+
+switch doom SW1STBNW on pic SW2STBNW tics 0
+switch doom SW2STBNW on pic SW1STBNW tics 0
+
+// BIOTECH
+
+texture BIOTECH5
+    pic BIOTECH5 tics 8
+    pic BIOTECH6 tics 8
+    pic BIOTECH7 tics 8
+
+texture BIOTECH6
+    pic BIOTECH6 tics 8
+    pic BIOTECH7 tics 8
+    pic BIOTECH5 tics 8
+
+texture BIOTECH7
+    pic BIOTECH7 tics 8
+    pic BIOTECH5 tics 8
+    pic BIOTECH6 tics 8
+
+switch doom BIOTECH3 on pic BIOTECH4 tics 0
+switch doom BIOTECH4 on pic BIOTECH3 tics 0
+
+// CITY OF DOOM
+
+Texture	Optional	CIODA001	Range	CIODA004	Tics 8
+Texture	Optional	CIODA005	Range	CIODA008	Tics 8
+Texture	Optional	CIODA009	Range	CIODA012	Tics 8
+Texture	Optional	CIODA013	Range	CIODA015	Tics 8
+Texture	Optional	CIODA016	Range	CIODA022	Tics 8
+Texture	Optional	CIODA023	Range	CIODA031	Tics 8
+Texture	Optional	CIODA032	Range	CIODA034	Tics 8
+
+switch doom SW1CIOD1 on pic SW2CIOD1 tics 0
+switch doom SW2CIOD1 on pic SW1CIOD1 tics 0
+
+switch doom SW1CIOD2 on pic SW2CIOD2 tics 0
+switch doom SW2CIOD2 on pic SW1CIOD2 tics 0
+
+switch doom SW1CIOD3 on pic SW2CIOD3 tics 0
+switch doom SW2CIOD3 on pic SW1CIOD3 tics 0
+
+switch doom SW1CIOD4 on pic SW2CIOD4 tics 0
+switch doom SW2CIOD4 on pic SW1CIOD4 tics 0
+
+switch doom SW1CIOD5 on pic SW2CIOD5 tics 0
+switch doom SW2CIOD5 on pic SW1CIOD5 tics 0
+
+switch doom SW1CIOD6 on pic SW2CIOD6 tics 0
+switch doom SW2CIOD6 on pic SW1CIOD6 tics 0
+
+switch doom SW1CIOD7 on pic SW2CIOD7 tics 0
+switch doom SW2CIOD7 on pic SW1CIOD7 tics 0
+
+switch doom SW1CIOD8 on pic SW2CIOD8 tics 0
+switch doom SW2CIOD8 on pic SW1CIOD8 tics 0
+
+switch doom SW1CIOD9 on pic SW2CIOD9 tics 0
+switch doom SW2CIOD9 on pic SW1CIOD9 tics 0
+
+switch doom SW1CIOD1 on pic SW2CIOD1 tics 0
+switch doom SW2CIOD1 on pic SW1CIOD1 tics 0
+
+switch doom SW1CIODA on pic SW2CIODA tics 0
+switch doom SW2CIODA on pic SW1CIODA tics 0
+
+switch doom SW1CIODB on pic SW2CIODB tics 0
+switch doom SW2CIODB on pic SW1CIODB tics 0
+
+switch doom SW1CIODC on pic SW2CIODC tics 0
+switch doom SW2CIODC on pic SW1CIODC tics 0
+
+switch doom SW1CIODD on pic SW2CIODD tics 0
+switch doom SW2CIODD on pic SW1CIODD tics 0
+
+switch doom SW1CIODE on pic SW2CIODE tics 0
+switch doom SW2CIODE on pic SW1CIODE tics 0
+
+switch doom SW1CIODF on pic SW2CIODF tics 0
+switch doom SW2CIODF on pic SW1CIODF tics 0
+
+switch doom SW1CIODG on pic SW2CIODG tics 0
+switch doom SW2CIODG on pic SW1CIODG tics 0
+
+switch doom SW1CIODH on pic SW2CIODH tics 0
+switch doom SW2CIODH on pic SW1CIODH tics 0
+
+switch doom SW1CIODI on pic SW2CIODI tics 0
+switch doom SW2CIODI on pic SW1CIODI tics 0
+
+switch doom SW1CIODJ on pic SW2CIODJ tics 0
+switch doom SW2CIODJ on pic SW1CIODJ tics 0
+
+switch doom SW1CIODK on pic SW2CIODK tics 0
+switch doom SW2CIODK on pic SW1CIODK tics 0
+
+// PROJECT SLIPGATE
+
+warp flat qfwater1
+warp flat qflava1
+warp flat qfslime1
+warp flat qwater0
+warp flat qwater2
+
+texture SLPFLD1
+    pic SLPFLD1 tics 8
+    pic SLPFLD2 tics 8
+	pic SLPFLD3 tics 8
+	pic SLPFLD4 tics 8
+
+texture SLPFLD2
+    pic SLPFLD2 tics 8
+    pic SLPFLD3 tics 8
+	pic SLPFLD4 tics 8
+	pic SLPFLD1 tics 8
+
+texture SLPFLD3
+    pic SLPFLD3 tics 8
+    pic SLPFLD4 tics 8
+	pic SLPFLD1 tics 8
+	pic SLPFLD2 tics 8
+
+texture SLPFLD4
+    pic SLPFLD4 tics 8
+    pic SLPFLD1 tics 8
+	pic SLPFLD2 tics 8
+	pic SLPFLD3 tics 8
+
+flat QFSLIP1
+    pic QFSLIP1 tics 8
+    pic QFSLIP2 tics 8
+	pic QFSLIP3 tics 8
+	pic QFSLIP4 tics 8
+	pic QFSLIP5 tics 8
+	pic QFSLIP6 tics 8
+	pic QFSLIP7 tics 8
+	pic QFSLIP6 tics 8
+	pic QFSLIP5 tics 8
+	pic QFSLIP4 tics 8
+	pic QFSLIP3 tics 8
+	pic QFSLIP2 tics 8
+
+texture qmtlsw1
+pic 1 tics 5
+pic 2 tics 5
+pic 3 tics 5
+pic 4 tics 5
+pic 5 tics 5
+
+texture qskull1
+pic 1 tics 5
+pic 2 tics 5
+pic 3 tics 5
+
+texture qbuta1
+pic 1 tics 5
+pic 2 tics 5
+pic 3 tics 5
+
+texture qbutb1
+pic 1 tics 5
+pic 2 tics 5
+pic 3 tics 5
+
+texture qplanet1
+pic 1 tics 5
+pic 2 tics 5
+pic 3 tics 5
+pic 4 tics 5
+
+texture qshoot1
+pic 1 tics 8
+pic 2 tics 8
+
+texture qstar1
+pic 1 tics 8
+pic 2 tics 8
+
+texture qstar3
+pic 1 tics 8
+pic 2 tics 8
+
+texture deadguy1
+pic 1 tics 8
+pic 2 tics 8
+
+// DISSOLUTION OF ETERNITY
+
+texture DISTTX20
+    pic DISTTX20 tics 8
+    pic DISTTX21 tics 8
+
+texture DISTTX21
+    pic DISTTX21 tics 8
+    pic DISTTX20 tics 8
+
+texture DISTTX22
+    pic DISTTX22 tics 8
+    pic DISTTX23 tics 8
+	pic DISTTX24 tics 8
+
+texture DISTTX23
+    pic DISTTX23 tics 8
+    pic DISTTX24 tics 8
+	pic DISTTX22 tics 8
+
+texture DISTTX24
+    pic DISTTX24 tics 8
+    pic DISTTX22 tics 8
+	pic DISTTX23 tics 8
+
+texture DISTTX25
+    pic DISTTX25 tics 8
+    pic DISTTX26 tics 8
+	pic DISTTX27 tics 8
+	pic DISTTX28 tics 8
+
+texture DISTTX26
+    pic DISTTX26 tics 8
+    pic DISTTX27 tics 8
+	pic DISTTX28 tics 8
+	pic DISTTX25 tics 8
+
+texture DISTTX27
+    pic DISTTX27 tics 8
+    pic DISTTX28 tics 8
+	pic DISTTX25 tics 8
+	pic DISTTX26 tics 8
+
+texture DISTTX28
+    pic DISTTX28 tics 8
+    pic DISTTX25 tics 8
+	pic DISTTX26 tics 8
+	pic DISTTX27 tics 8
+
+warp flat clouds
+warp flat qslime2
+warp flat qslime15
+warp flat qwater01
+warp flat qlava01
+
+// SUSPENDED IN DUSK
+
+texture SIDTX174
+    pic SIDTX174 tics 8
+    pic SIDTX175 tics 8
+	pic SIDTX176 tics 8
+	pic SIDTX177 tics 8
+	pic SIDTX178 tics 8
+	pic SIDTX179 tics 8
+
+texture SIDTX175
+    pic SIDTX175 tics 8
+    pic SIDTX176 tics 8
+	pic SIDTX177 tics 8
+	pic SIDTX178 tics 8
+	pic SIDTX179 tics 8
+	pic SIDTX174 tics 8
+
+texture SIDTX176
+    pic SIDTX176 tics 8
+    pic SIDTX177 tics 8
+	pic SIDTX178 tics 8
+	pic SIDTX179 tics 8
+	pic SIDTX174 tics 8
+	pic SIDTX175 tics 8
+
+texture SIDTX177
+    pic SIDTX177 tics 8
+    pic SIDTX178 tics 8
+	pic SIDTX179 tics 8
+	pic SIDTX174 tics 8
+	pic SIDTX175 tics 8
+	pic SIDTX176 tics 8
+
+texture SIDTX178
+    pic SIDTX178 tics 8
+    pic SIDTX179 tics 8
+	pic SIDTX174 tics 8
+	pic SIDTX175 tics 8
+	pic SIDTX176 tics 8
+	pic SIDTX177 tics 8
+
+texture SIDTX179
+    pic SIDTX179 tics 8
+    pic SIDTX174 tics 8
+	pic SIDTX175 tics 8
+	pic SIDTX176 tics 8
+	pic SIDTX177 tics 8
+	pic SIDTX178 tics 8
+
+texture SIDTX180
+    pic SIDTX180 tics 8
+    pic SIDTX181 tics 8
+	pic SIDTX182 tics 8
+	pic SIDTX183 tics 8
+
+texture SIDTX181
+    pic SIDTX181 tics 8
+    pic SIDTX182 tics 8
+	pic SIDTX183 tics 8
+	pic SIDTX180 tics 8
+
+texture SIDTX182
+    pic SIDTX182 tics 8
+    pic SIDTX183 tics 8
+	pic SIDTX180 tics 8
+	pic SIDTX181 tics 8
+
+texture SIDTX183
+    pic SIDTX183 tics 8
+    pic SIDTX180 tics 8
+	pic SIDTX181 tics 8
+	pic SIDTX182 tics 8
+
+texture SIDTX184
+    pic SIDTX184 tics 8
+    pic SIDTX185 tics 8
+	pic SIDTX186 tics 8
+	pic SIDTX187 tics 8
+
+texture SIDTX185
+    pic SIDTX185 tics 8
+    pic SIDTX186 tics 8
+	pic SIDTX187 tics 8
+	pic SIDTX184 tics 8
+
+texture SIDTX186
+    pic SIDTX186 tics 8
+    pic SIDTX187 tics 8
+	pic SIDTX184 tics 8
+	pic SIDTX185 tics 8
+
+texture SIDTX187
+    pic SIDTX187 tics 8
+    pic SIDTX184 tics 8
+	pic SIDTX185 tics 8
+	pic SIDTX186 tics 8
+
+flat SIDFL071
+    pic SIDFL071 tics 8
+    pic SIDFL072 tics 8
+	pic SIDFL073 tics 8
+	pic SIDFL074 tics 8
+	pic SIDFL075 tics 8
+	pic SIDFL076 tics 8
+	pic SIDFL077 tics 8
+	pic SIDFL078 tics 8
+
+flat SIDFL072
+    pic SIDFL072 tics 8
+	pic SIDFL073 tics 8
+	pic SIDFL074 tics 8
+	pic SIDFL075 tics 8
+	pic SIDFL076 tics 8
+	pic SIDFL077 tics 8
+	pic SIDFL078 tics 8
+    pic SIDFL071 tics 8
+
+flat SIDFL073
+	pic SIDFL073 tics 8
+	pic SIDFL074 tics 8
+	pic SIDFL075 tics 8
+	pic SIDFL076 tics 8
+	pic SIDFL077 tics 8
+	pic SIDFL078 tics 8
+    pic SIDFL071 tics 8
+    pic SIDFL072 tics 8
+
+flat SIDFL074
+	pic SIDFL074 tics 8
+	pic SIDFL075 tics 8
+	pic SIDFL076 tics 8
+	pic SIDFL077 tics 8
+	pic SIDFL078 tics 8
+    pic SIDFL071 tics 8
+    pic SIDFL072 tics 8
+	pic SIDFL073 tics 8
+
+flat SIDFL075
+	pic SIDFL075 tics 8
+	pic SIDFL076 tics 8
+	pic SIDFL077 tics 8
+	pic SIDFL078 tics 8
+    pic SIDFL071 tics 8
+    pic SIDFL072 tics 8
+	pic SIDFL073 tics 8
+	pic SIDFL074 tics 8
+
+flat SIDFL076
+	pic SIDFL076 tics 8
+	pic SIDFL077 tics 8
+	pic SIDFL078 tics 8
+    pic SIDFL071 tics 8
+    pic SIDFL072 tics 8
+	pic SIDFL073 tics 8
+	pic SIDFL074 tics 8
+	pic SIDFL075 tics 8
+
+flat SIDFL077
+	pic SIDFL077 tics 8
+	pic SIDFL078 tics 8
+    pic SIDFL071 tics 8
+    pic SIDFL072 tics 8
+	pic SIDFL073 tics 8
+	pic SIDFL074 tics 8
+	pic SIDFL075 tics 8
+	pic SIDFL076 tics 8
+
+flat SIDFL078
+	pic SIDFL078 tics 8
+    pic SIDFL071 tics 8
+    pic SIDFL072 tics 8
+	pic SIDFL073 tics 8
+	pic SIDFL074 tics 8
+	pic SIDFL075 tics 8
+	pic SIDFL076 tics 8
+	pic SIDFL077 tics 8
+
+flat SIDFL079
+	pic SIDFL079 tics 8
+    pic SIDFL080 tics 8
+    pic SIDFL081 tics 8
+	pic SIDFL082 tics 8
+	pic SIDFL083 tics 8
+	pic SIDFL084 tics 8
+	pic SIDFL085 tics 8
+	pic SIDFL086 tics 8
+	pic SIDFL087 tics 8
+	pic SIDFL088 tics 8
+
+flat SIDFL080
+    pic SIDFL080 tics 8
+    pic SIDFL081 tics 8
+	pic SIDFL082 tics 8
+	pic SIDFL083 tics 8
+	pic SIDFL084 tics 8
+	pic SIDFL085 tics 8
+	pic SIDFL086 tics 8
+	pic SIDFL087 tics 8
+	pic SIDFL088 tics 8
+	pic SIDFL079 tics 8
+
+flat SIDFL081
+    pic SIDFL081 tics 8
+	pic SIDFL082 tics 8
+	pic SIDFL083 tics 8
+	pic SIDFL084 tics 8
+	pic SIDFL085 tics 8
+	pic SIDFL086 tics 8
+	pic SIDFL087 tics 8
+	pic SIDFL088 tics 8
+	pic SIDFL079 tics 8
+    pic SIDFL080 tics 8
+
+flat SIDFL082
+	pic SIDFL082 tics 8
+	pic SIDFL083 tics 8
+	pic SIDFL084 tics 8
+	pic SIDFL085 tics 8
+	pic SIDFL086 tics 8
+	pic SIDFL087 tics 8
+	pic SIDFL088 tics 8
+	pic SIDFL079 tics 8
+    pic SIDFL080 tics 8
+    pic SIDFL081 tics 8
+
+flat SIDFL083
+	pic SIDFL083 tics 8
+	pic SIDFL084 tics 8
+	pic SIDFL085 tics 8
+	pic SIDFL086 tics 8
+	pic SIDFL087 tics 8
+	pic SIDFL088 tics 8
+	pic SIDFL079 tics 8
+    pic SIDFL080 tics 8
+    pic SIDFL081 tics 8
+	pic SIDFL082 tics 8
+
+flat SIDFL084
+	pic SIDFL084 tics 8
+	pic SIDFL085 tics 8
+	pic SIDFL086 tics 8
+	pic SIDFL087 tics 8
+	pic SIDFL088 tics 8
+	pic SIDFL079 tics 8
+    pic SIDFL080 tics 8
+    pic SIDFL081 tics 8
+	pic SIDFL082 tics 8
+	pic SIDFL083 tics 8
+
+flat SIDFL085
+	pic SIDFL085 tics 8
+	pic SIDFL086 tics 8
+	pic SIDFL087 tics 8
+	pic SIDFL088 tics 8
+	pic SIDFL079 tics 8
+    pic SIDFL080 tics 8
+    pic SIDFL081 tics 8
+	pic SIDFL082 tics 8
+	pic SIDFL083 tics 8
+	pic SIDFL084 tics 8
+
+flat SIDFL086
+	pic SIDFL086 tics 8
+	pic SIDFL087 tics 8
+	pic SIDFL088 tics 8
+	pic SIDFL079 tics 8
+    pic SIDFL080 tics 8
+    pic SIDFL081 tics 8
+	pic SIDFL082 tics 8
+	pic SIDFL083 tics 8
+	pic SIDFL084 tics 8
+	pic SIDFL085 tics 8
+
+flat SIDFL087
+	pic SIDFL087 tics 8
+	pic SIDFL088 tics 8
+	pic SIDFL079 tics 8
+    pic SIDFL080 tics 8
+    pic SIDFL081 tics 8
+	pic SIDFL082 tics 8
+	pic SIDFL083 tics 8
+	pic SIDFL084 tics 8
+	pic SIDFL085 tics 8
+	pic SIDFL086 tics 8
+
+flat SIDFL088
+	pic SIDFL088 tics 8
+	pic SIDFL079 tics 8
+    pic SIDFL080 tics 8
+    pic SIDFL081 tics 8
+	pic SIDFL082 tics 8
+	pic SIDFL083 tics 8
+	pic SIDFL084 tics 8
+	pic SIDFL085 tics 8
+	pic SIDFL086 tics 8
+	pic SIDFL087 tics 8
+	
+flat SIDFL089
+	pic SIDFL089 tics 8
+	pic SIDFL090 tics 8
+    pic SIDFL091 tics 8
+    pic SIDFL092 tics 8
+	pic SIDFL093 tics 8
+	pic SIDFL094 tics 8
+	pic SIDFL095 tics 8
+	pic SIDFL096 tics 8
+	pic SIDFL097 tics 8
+	pic SIDFL098 tics 8
+
+flat SIDFL090
+	pic SIDFL090 tics 8
+    pic SIDFL091 tics 8
+    pic SIDFL092 tics 8
+	pic SIDFL093 tics 8
+	pic SIDFL094 tics 8
+	pic SIDFL095 tics 8
+	pic SIDFL096 tics 8
+	pic SIDFL097 tics 8
+	pic SIDFL098 tics 8
+	pic SIDFL089 tics 8
+
+flat SIDFL091
+    pic SIDFL091 tics 8
+    pic SIDFL092 tics 8
+	pic SIDFL093 tics 8
+	pic SIDFL094 tics 8
+	pic SIDFL095 tics 8
+	pic SIDFL096 tics 8
+	pic SIDFL097 tics 8
+	pic SIDFL098 tics 8
+	pic SIDFL089 tics 8
+	pic SIDFL090 tics 8
+
+flat SIDFL092
+    pic SIDFL092 tics 8
+	pic SIDFL093 tics 8
+	pic SIDFL094 tics 8
+	pic SIDFL095 tics 8
+	pic SIDFL096 tics 8
+	pic SIDFL097 tics 8
+	pic SIDFL098 tics 8
+	pic SIDFL089 tics 8
+	pic SIDFL090 tics 8
+    pic SIDFL091 tics 8
+
+flat SIDFL093
+	pic SIDFL093 tics 8
+	pic SIDFL094 tics 8
+	pic SIDFL095 tics 8
+	pic SIDFL096 tics 8
+	pic SIDFL097 tics 8
+	pic SIDFL098 tics 8
+	pic SIDFL089 tics 8
+	pic SIDFL090 tics 8
+    pic SIDFL091 tics 8
+    pic SIDFL092 tics 8
+
+flat SIDFL094
+	pic SIDFL094 tics 8
+	pic SIDFL095 tics 8
+	pic SIDFL096 tics 8
+	pic SIDFL097 tics 8
+	pic SIDFL098 tics 8
+	pic SIDFL089 tics 8
+	pic SIDFL090 tics 8
+    pic SIDFL091 tics 8
+    pic SIDFL092 tics 8
+	pic SIDFL093 tics 8
+
+flat SIDFL095
+	pic SIDFL095 tics 8
+	pic SIDFL096 tics 8
+	pic SIDFL097 tics 8
+	pic SIDFL098 tics 8
+	pic SIDFL089 tics 8
+	pic SIDFL090 tics 8
+    pic SIDFL091 tics 8
+    pic SIDFL092 tics 8
+	pic SIDFL093 tics 8
+	pic SIDFL094 tics 8
+
+flat SIDFL096
+	pic SIDFL096 tics 8
+	pic SIDFL097 tics 8
+	pic SIDFL098 tics 8
+	pic SIDFL089 tics 8
+	pic SIDFL090 tics 8
+    pic SIDFL091 tics 8
+    pic SIDFL092 tics 8
+	pic SIDFL093 tics 8
+	pic SIDFL094 tics 8
+	pic SIDFL095 tics 8
+
+flat SIDFL097
+	pic SIDFL097 tics 8
+	pic SIDFL098 tics 8
+	pic SIDFL089 tics 8
+	pic SIDFL090 tics 8
+    pic SIDFL091 tics 8
+    pic SIDFL092 tics 8
+	pic SIDFL093 tics 8
+	pic SIDFL094 tics 8
+	pic SIDFL095 tics 8
+	pic SIDFL096 tics 8
+
+flat SIDFL098
+	pic SIDFL098 tics 8
+	pic SIDFL089 tics 8
+	pic SIDFL090 tics 8
+    pic SIDFL091 tics 8
+    pic SIDFL092 tics 8
+	pic SIDFL093 tics 8
+	pic SIDFL094 tics 8
+	pic SIDFL095 tics 8
+	pic SIDFL096 tics 8
+	pic SIDFL097 tics 8
+
+flat SIDFL099
+	pic SIDFL099 tics 8
+	pic SIDFL100 tics 8
+	pic SIDFL101 tics 8
+    pic SIDFL102 tics 8
+    pic SIDFL103 tics 8
+	pic SIDFL104 tics 8
+	pic SIDFL105 tics 8
+	pic SIDFL106 tics 8
+	pic SIDFL107 tics 8
+	pic SIDFL108 tics 8
+
+flat SIDFL100
+	pic SIDFL100 tics 8
+	pic SIDFL101 tics 8
+    pic SIDFL102 tics 8
+    pic SIDFL103 tics 8
+	pic SIDFL104 tics 8
+	pic SIDFL105 tics 8
+	pic SIDFL106 tics 8
+	pic SIDFL107 tics 8
+	pic SIDFL108 tics 8
+	pic SIDFL099 tics 8
+
+flat SIDFL101
+	pic SIDFL101 tics 8
+    pic SIDFL102 tics 8
+    pic SIDFL103 tics 8
+	pic SIDFL104 tics 8
+	pic SIDFL105 tics 8
+	pic SIDFL106 tics 8
+	pic SIDFL107 tics 8
+	pic SIDFL108 tics 8
+	pic SIDFL099 tics 8
+	pic SIDFL100 tics 8
+
+flat SIDFL102
+    pic SIDFL102 tics 8
+    pic SIDFL103 tics 8
+	pic SIDFL104 tics 8
+	pic SIDFL105 tics 8
+	pic SIDFL106 tics 8
+	pic SIDFL107 tics 8
+	pic SIDFL108 tics 8
+	pic SIDFL099 tics 8
+	pic SIDFL100 tics 8
+	pic SIDFL101 tics 8
+
+flat SIDFL103
+    pic SIDFL103 tics 8
+	pic SIDFL104 tics 8
+	pic SIDFL105 tics 8
+	pic SIDFL106 tics 8
+	pic SIDFL107 tics 8
+	pic SIDFL108 tics 8
+	pic SIDFL099 tics 8
+	pic SIDFL100 tics 8
+	pic SIDFL101 tics 8
+    pic SIDFL102 tics 8
+
+flat SIDFL104
+	pic SIDFL104 tics 8
+	pic SIDFL105 tics 8
+	pic SIDFL106 tics 8
+	pic SIDFL107 tics 8
+	pic SIDFL108 tics 8
+	pic SIDFL099 tics 8
+	pic SIDFL100 tics 8
+	pic SIDFL101 tics 8
+    pic SIDFL102 tics 8
+    pic SIDFL103 tics 8
+
+flat SIDFL105
+	pic SIDFL105 tics 8
+	pic SIDFL106 tics 8
+	pic SIDFL107 tics 8
+	pic SIDFL108 tics 8
+	pic SIDFL099 tics 8
+	pic SIDFL100 tics 8
+	pic SIDFL101 tics 8
+    pic SIDFL102 tics 8
+    pic SIDFL103 tics 8
+	pic SIDFL104 tics 8
+
+flat SIDFL106
+	pic SIDFL106 tics 8
+	pic SIDFL107 tics 8
+	pic SIDFL108 tics 8
+	pic SIDFL099 tics 8
+	pic SIDFL100 tics 8
+	pic SIDFL101 tics 8
+    pic SIDFL102 tics 8
+    pic SIDFL103 tics 8
+	pic SIDFL104 tics 8
+	pic SIDFL105 tics 8
+
+flat SIDFL107
+	pic SIDFL107 tics 8
+	pic SIDFL108 tics 8
+	pic SIDFL099 tics 8
+	pic SIDFL100 tics 8
+	pic SIDFL101 tics 8
+    pic SIDFL102 tics 8
+    pic SIDFL103 tics 8
+	pic SIDFL104 tics 8
+	pic SIDFL105 tics 8
+	pic SIDFL106 tics 8
+
+flat SIDFL108
+	pic SIDFL108 tics 8
+	pic SIDFL099 tics 8
+	pic SIDFL100 tics 8
+	pic SIDFL101 tics 8
+    pic SIDFL102 tics 8
+    pic SIDFL103 tics 8
+	pic SIDFL104 tics 8
+	pic SIDFL105 tics 8
+	pic SIDFL106 tics 8
+	pic SIDFL107 tics 8
+
+switch doom SW1SID1 on pic SW2SID1 tics 0
+switch doom SW2SID1 on pic SW1SID1 tics 0
+
+switch doom SW1SID2 on pic SW2SID2 tics 0
+switch doom SW2SID2 on pic SW1SID2 tics 0
+
+switch doom SW1SID3 on pic SW2SID3 tics 0
+switch doom SW2SID3 on pic SW1SID3 tics 0
+
+switch doom SW1SID4 on pic SW2SID4 tics 0
+switch doom SW2SID4 on pic SW1SID4 tics 0
+
+switch doom SW1SID5 on pic SW2SID5 tics 0
+switch doom SW2SID5 on pic SW1SID5 tics 0
+
+switch doom SW1SID6 on pic SW2SID6 tics 0
+switch doom SW2SID6 on pic SW1SID6 tics 0
+
+switch doom SW1SID7 on pic SW2SID7 tics 0
+switch doom SW2SID7 on pic SW1SID7 tics 0
+
+// MANCUBUS
+
+
+texture MANCTX56
+	pic MANCTX56 tics 8
+	pic MANCTX57 tics 8
+	pic MANCTX58 tics 8
+	pic MANCTX59 tics 8
+
+texture MANCTX57
+	pic MANCTX57 tics 8
+	pic MANCTX58 tics 8
+	pic MANCTX59 tics 8
+	pic MANCTX56 tics 8
+
+texture MANCTX58
+	pic MANCTX58 tics 8
+	pic MANCTX59 tics 8
+	pic MANCTX56 tics 8
+	pic MANCTX57 tics 8
+
+texture MANCTX59
+	pic MANCTX59 tics 8
+	pic MANCTX56 tics 8
+	pic MANCTX57 tics 8
+	pic MANCTX58 tics 8
+
+texture MANCTX60
+	pic MANCTX60 tics 8
+	pic MANCTX61 tics 8
+	pic MANCTX62 tics 8
+	pic MANCTX63 tics 8
+
+texture MANCTX61
+	pic MANCTX61 tics 8
+	pic MANCTX62 tics 8
+	pic MANCTX63 tics 8
+	pic MANCTX60 tics 8
+
+texture MANCTX62
+	pic MANCTX62 tics 8
+	pic MANCTX63 tics 8
+	pic MANCTX60 tics 8
+	pic MANCTX61 tics 8
+
+texture MANCTX63
+	pic MANCTX63 tics 8
+	pic MANCTX60 tics 8
+	pic MANCTX61 tics 8
+	pic MANCTX62 tics 8
+
+// LAST DAY ON EARTH
+
+texture LEPTXT14
+	pic LEPTXT14 tics 8
+	pic LEPTXT15 tics 8
+	pic LEPTXT16 tics 8
+	pic LEPTXT17 tics 8
+
+texture LEPTXT15
+	pic LEPTXT15 tics 8
+	pic LEPTXT16 tics 8
+	pic LEPTXT17 tics 8
+	pic LEPTXT14 tics 8
+
+texture LEPTXT16
+	pic LEPTXT16 tics 8
+	pic LEPTXT17 tics 8
+	pic LEPTXT14 tics 8
+	pic LEPTXT15 tics 8
+
+texture LEPTXT17
+	pic LEPTXT17 tics 8
+	pic LEPTXT14 tics 8
+	pic LEPTXT15 tics 8
+	pic LEPTXT16 tics 8
+
+switch doom LEPTXT04 on pic LEPTXT05 tics 0
+switch doom LEPTXT05 on pic LEPTXT04 tics 0
+
+// RECLAMATION
+
+texture 2WA_T01
+	pic 2WA_T01 tics 8
+	pic 2WA_T02 tics 8
+	pic 2WA_T03 tics 8
+	pic 2WA_T04 tics 8
+
+texture 2WA_T02
+	pic 2WA_T02 tics 8
+	pic 2WA_T03 tics 8
+	pic 2WA_T04 tics 8
+	pic 2WA_T01 tics 8
+
+texture 2WA_T03
+	pic 2WA_T03 tics 8
+	pic 2WA_T04 tics 8
+	pic 2WA_T01 tics 8
+	pic 2WA_T02 tics 8
+
+texture 2WA_T04
+	pic 2WA_T04 tics 8
+	pic 2WA_T01 tics 8
+	pic 2WA_T02 tics 8
+	pic 2WA_T03 tics 8
+
+texture 2WA_T11
+	pic 2WA_T11 tics 8
+	pic 2WA_T12 tics 8
+	pic 2WA_T13 tics 8
+	pic 2WA_T14 tics 8
+
+texture 2WA_T12
+	pic 2WA_T12 tics 8
+	pic 2WA_T13 tics 8
+	pic 2WA_T14 tics 8
+	pic 2WA_T11 tics 8
+
+texture 2WA_T13
+	pic 2WA_T13 tics 8
+	pic 2WA_T14 tics 8
+	pic 2WA_T11 tics 8
+	pic 2WA_T12 tics 8
+
+texture 2WA_T14
+	pic 2WA_T14 tics 8
+	pic 2WA_T11 tics 8
+	pic 2WA_T12 tics 8
+	pic 2WA_T13 tics 8
+
+texture 2WX_AQ01
+	pic 2WX_AQ01 tics 8
+	pic 2WX_AQ02 tics 8
+	pic 2WX_AQ03 tics 8
+	pic 2WX_AQ04 tics 8
+
+texture 2WX_AQ02
+	pic 2WX_AQ02 tics 8
+	pic 2WX_AQ03 tics 8
+	pic 2WX_AQ04 tics 8
+	pic 2WX_AQ01 tics 8
+
+texture 2WX_AQ03
+	pic 2WX_AQ03 tics 8
+	pic 2WX_AQ04 tics 8
+	pic 2WX_AQ01 tics 8
+	pic 2WX_AQ02 tics 8
+
+texture 2WX_AQ04
+	pic 2WX_AQ04 tics 8
+	pic 2WX_AQ01 tics 8
+	pic 2WX_AQ02 tics 8
+	pic 2WX_AQ03 tics 8
+
+texture 2WX_ATQ1
+	pic 2WX_ATQ1 tics 8
+	pic 2WX_ATQ2 tics 8
+	pic 2WX_ATQ3 tics 8
+	pic 2WX_ATQ4 tics 8
+
+texture 2WX_ATQ2
+	pic 2WX_ATQ2 tics 8
+	pic 2WX_ATQ3 tics 8
+	pic 2WX_ATQ4 tics 8
+	pic 2WX_ATQ1 tics 8
+
+texture 2WX_ATQ3
+	pic 2WX_ATQ3 tics 8
+	pic 2WX_ATQ4 tics 8
+	pic 2WX_ATQ1 tics 8
+	pic 2WX_ATQ2 tics 8
+
+texture 2WX_ATQ4
+	pic 2WX_ATQ4 tics 8
+	pic 2WX_ATQ1 tics 8
+	pic 2WX_ATQ2 tics 8
+	pic 2WX_ATQ3 tics 8
+
+flat 2FL_AQ01
+    pic 2FL_AQ01 tics 8
+	pic 2FL_AQ02 tics 8
+	pic 2FL_AQ03 tics 8
+	pic 2FL_AQ04 tics 8
+
+flat 2FL_AQ02
+    pic 2FL_AQ02 tics 8
+	pic 2FL_AQ03 tics 8
+	pic 2FL_AQ04 tics 8
+	pic 2FL_AQ01 tics 8
+
+flat 2FL_AQ03
+    pic 2FL_AQ03 tics 8
+	pic 2FL_AQ04 tics 8
+	pic 2FL_AQ01 tics 8
+	pic 2FL_AQ02 tics 8
+
+flat 2FL_AQ04
+    pic 2FL_AQ04 tics 8
+	pic 2FL_AQ01 tics 8
+	pic 2FL_AQ02 tics 8
+	pic 2FL_AQ03 tics 8
+
+flat 2FL_AT01
+    pic 2FL_AT01 tics 8
+	pic 2FL_AT02 tics 8
+	pic 2FL_AT03 tics 8
+	pic 2FL_AT04 tics 8
+
+flat 2FL_AT02
+    pic 2FL_AT02 tics 8
+	pic 2FL_AT03 tics 8
+	pic 2FL_AT04 tics 8
+	pic 2FL_AT01 tics 8
+
+flat 2FL_AT03
+    pic 2FL_AT03 tics 8
+	pic 2FL_AT04 tics 8
+	pic 2FL_AT01 tics 8
+	pic 2FL_AT02 tics 8
+
+flat 2FL_AT04
+    pic 2FL_AT04 tics 8
+	pic 2FL_AT01 tics 8
+	pic 2FL_AT02 tics 8
+	pic 2FL_AT03 tics 8
+
+flat 2FX_AT21
+    pic 2FX_AT21 tics 8
+	pic 2FX_AT22 tics 8
+	pic 2FX_AT23 tics 8
+	pic 2FX_AT24 tics 8
+
+flat 2FX_AT22
+    pic 2FX_AT22 tics 8
+	pic 2FX_AT23 tics 8
+	pic 2FX_AT24 tics 8
+	pic 2FX_AT21 tics 8
+
+flat 2FX_AT23
+    pic 2FX_AT23 tics 8
+	pic 2FX_AT24 tics 8
+	pic 2FX_AT21 tics 8
+	pic 2FX_AT22 tics 8
+
+flat 2FX_AT24
+    pic 2FX_AT24 tics 8
+	pic 2FX_AT21 tics 8
+	pic 2FX_AT22 tics 8
+	pic 2FX_AT23 tics 8
+
+flat 2FL_AW01
+    pic 2FL_AW01 tics 8
+	pic 2FL_AW02 tics 8
+	pic 2FL_AW03 tics 8
+	pic 2FL_AW04 tics 8
+
+flat 2FL_AW02
+    pic 2FL_AW02 tics 8
+	pic 2FL_AW03 tics 8
+	pic 2FL_AW04 tics 8
+	pic 2FL_AW01 tics 8
+
+flat 2FL_AW03
+    pic 2FL_AW03 tics 8
+	pic 2FL_AW04 tics 8
+	pic 2FL_AW01 tics 8
+	pic 2FL_AW02 tics 8
+
+flat 2FL_AW04
+    pic 2FL_AW04 tics 8
+	pic 2FL_AW01 tics 8
+	pic 2FL_AW02 tics 8
+	pic 2FL_AW03 tics 8
+
+switch doom 2WM_ST41 on pic 2WM_ST42 tics 0
+switch doom 2WM_ST42 on pic 2WM_ST41 tics 0
+
+switch doom 2WMSSM1A on pic 2WMSSM1B tics 0
+switch doom 2WMSSM1B on pic 2WMSSM1A tics 0
+
+switch doom 2WX_SQ01 on pic 2WX_SQ02 tics 0
+switch doom 2WX_SQ02 on pic 2WX_SQ01 tics 0
+
+switch doom 2WX_SQ03 on pic 2WX_SQ04 tics 0
+switch doom 2WX_SQ04 on pic 2WX_SQ03 tics 0
+
+switch doom 2WX_SQ05 on pic 2WX_SQ06 tics 0
+switch doom 2WX_SQ06 on pic 2WX_SQ05 tics 0
+
+switch doom 2WX_ST01 on pic 2WX_ST02 tics 0
+switch doom 2WX_ST02 on pic 2WX_ST01 tics 0
+
+switch doom 2WX_ST03 on pic 2WX_ST04 tics 0
+switch doom 2WX_ST04 on pic 2WX_ST03 tics 0
+
+// TWILIGHT ZONE II
+
+texture TW2TX146
+	pic TW2TX146 tics 8
+	pic TW2TX147 tics 8
+	pic TW2TX148 tics 8
+	pic TW2TX149 tics 8
+
+texture TW2TX147
+	pic TW2TX147 tics 8
+	pic TW2TX148 tics 8
+	pic TW2TX149 tics 8
+	pic TW2TX146 tics 8
+
+texture TW2TX148
+	pic TW2TX148 tics 8
+	pic TW2TX149 tics 8
+	pic TW2TX146 tics 8
+	pic TW2TX147 tics 8
+
+texture TW2TX149
+	pic TW2TX149 tics 8
+	pic TW2TX146 tics 8
+	pic TW2TX147 tics 8
+	pic TW2TX148 tics 8
+
+switch doom TW2SWA1 on pic TW2SWB1 tics 0
+switch doom TW2SWB1 on pic TW2SWA1 tics 0
+
+switch doom TW2SWA2 on pic TW2SWB2 tics 0
+switch doom TW2SWB2 on pic TW2SWA2 tics 0
+
+switch doom TW2SWA3 on pic TW2SWB3 tics 0
+switch doom TW2SWB3 on pic TW2SWA3 tics 0
+
+switch doom TW2SWA4 on pic TW2SWB4 tics 0
+switch doom TW2SWB4 on pic TW2SWA4 tics 0
+
+switch doom TW2SWA5 on pic TW2SWB5 tics 0
+switch doom TW2SWB5 on pic TW2SWA5 tics 0
+
+switch doom TW2SWA6 on pic TW2SWB6 tics 0
+switch doom TW2SWB6 on pic TW2SWA6 tics 0
+
+switch doom TW2SWA7 on pic TW2SWB7 tics 0
+switch doom TW2SWB7 on pic TW2SWA7 tics 0
+
+// NEODOOM (Vaccinated Edition)
+
+Flat	Optional	GTSLIME1	Range	GTSLIME4	Tics 8
+Flat	Optional	LEGO_SL1	Range	LEGO_SL4	Tics 8
+Texture	Optional	DBRAIN1 	Range	DBRAIN4 	Tics 8
+Texture	Optional	BRAFLG01	Range	BRAFLG12	Tics 4
+Texture	Optional	GTCLOCK1	Range	GTCLOCK8	Tics 6
+Texture	Optional	HEFIRE1 	Range	HEFIRE3 	Tics 6
+Texture	Optional	HEFIRE4 	Range	HEFIRE5 	Tics 8
+Texture	Optional	HEROCK05	Range	HEROCK06	Tics 8
+Texture	Optional	INANIME1	Range	INANIME8	Tics 8
+Texture	Optional	INCOMP1 	Range	INCOMP8 	Tics 4
+Texture	Optional	INDOOR41	Range	INDOOR43	Tics 6
+Texture	Optional	INSCRN1 	Range	INSCRN4 	Tics 4
+Texture	Optional	TELE1   	Range	TELE9   	Tics 3
+
+switch doom SW1NEO1 on pic SW2NEO1 tics 0
+switch doom SW2NEO1 on pic SW1NEO1 tics 0
+
+switch doom SW1NEO2 on pic SW2NEO2 tics 0
+switch doom SW2NEO2 on pic SW1NEO2 tics 0
+
+switch doom SW1NEO3 on pic SW2NEO3 tics 0
+switch doom SW2NEO3 on pic SW1NEO3 tics 0
+
+switch doom SW1NEO4 on pic SW2NEO4 tics 0
+switch doom SW2NEO4 on pic SW1NEO4 tics 0
+
+// DAMNATIO MEMORIAE
+
+switch doom 2 DMSW3_1 on pic DMSW3_2 tics 0
+switch doom 2 DMSW3_2 on pic DMSW3_1 tics 0

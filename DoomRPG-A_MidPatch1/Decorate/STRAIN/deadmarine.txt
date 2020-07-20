@@ -1,0 +1,15 @@
+actor DeadStrainMarine 20012 {
+	States {
+		Spawn:
+			STRN A -1
+			Stop
+	}
+}
+
+actor DeadStrainMess 20013 {
+	States {
+		Spawn:
+			STRN B -1
+			Stop
+	}
+}

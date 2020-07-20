@@ -1,0 +1,43 @@
+ACTOR RebirthProp1 18590 // 32
+{
+	Radius 16
+	Height 52
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		REB2 N -1
+		Stop
+	}
+}
+
+ACTOR RebirthProp2 18591 // 33
+{
+	Radius 16
+	Height 40
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		REB2 O -1
+		Stop
+	}
+}
+
+ACTOR RebirthProp3 18592 // 45
+{
+	Radius 16
+	Height 68
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		REB2 PQRS 4 BRIGHT
+		Loop
+	}
+}
+
+

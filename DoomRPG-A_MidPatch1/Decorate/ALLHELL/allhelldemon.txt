@@ -1,0 +1,46 @@
+ACTOR AllHellDemon 18559 // 3002
+{
+	Health 200
+	PainChance 180
+	Speed 10
+	Radius 30
+	Height 56
+	Mass 400
+	Monster
+	+FLOORCLIP
+	SeeSound "demon/sight"
+	AttackSound "demon/melee"
+	PainSound "demon/pain"
+	DeathSound "demon/death"
+	ActiveSound "demon/active"
+	Obituary "%o was bitten by a demon on fire!"
+	States
+	{
+	Spawn:
+		ALH1 AB 10 BRIGHT A_Look
+		Loop
+	See:
+		ALH1 AABBCCDD 2 BRIGHT A_Chase
+		Loop
+	Melee:
+		ALH1 EF 8 BRIGHT A_FaceTarget
+		ALH1 G 8 BRIGHT A_SargAttack
+		Goto See
+	Pain:
+		ALH1 H 2 BRIGHT
+		ALH1 H 2 BRIGHT A_Pain
+		Goto See
+	Death:
+		ALH1 I 8 BRIGHT
+		ALH1 J 8 BRIGHT A_Scream
+		ALH1 K 4 BRIGHT
+		ALH1 L 4 BRIGHT A_NoBlocking
+		ALH1 M 4 BRIGHT
+		ALH1 N -1
+		Stop
+	Raise:
+		ALH1 N 5
+		ALH1 MLKJI 5 BRIGHT
+		Goto See
+	}
+}

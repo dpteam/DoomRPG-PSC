@@ -1,0 +1,55 @@
+ACTOR AllHellHugeCyber 18568 // 67
+{
+	Health 6000
+	Radius 48
+	Height 110
+	Mass 1000
+	Speed 16
+	PainChance 20
+	Monster
+	MinMissileChance 160
+	+BOSS 
+	+MISSILEMORE
+	+FLOORCLIP
+	+NORADIUSDMG
+	+DONTMORPH
+	+BOSSDEATH
+	+DONTRIP
+	SeeSound "cyber/sight"
+	PainSound "cyber/pain"
+	DeathSound "cyber/death"
+	ActiveSound "cyber/active"
+	Obituary "%o was annihilated by a huge Cyberdemon"
+	States
+	{
+	Spawn:
+		ALH8 AB 10 A_Look
+		Loop
+	See:
+		ALH8 A 3 A_Hoof
+		ALH8 ABBCC 3 A_Chase
+		ALH8 D 3 A_Metal
+		ALH8 D 3 A_Chase
+		Loop
+	Missile:
+		ALH8 E 6 A_FaceTarget
+		ALH8 F 12 A_FatAttack1("Rocket")
+		ALH8 E 12 A_FaceTarget
+		ALH8 F 12 A_FatAttack2("Rocket")
+		ALH8 E 12 A_FaceTarget
+		ALH8 F 12 A_FatAttack3("Rocket")
+		Goto See
+	Pain:
+		ALH8 G 10 A_Pain
+		Goto See
+	Death:
+		ALH8 H 10
+		ALH8 I 10 A_Scream
+		ALH8 JKL 10
+		ALH8 M 10 A_NoBlocking
+		ALH8 NO 10
+		ALH8 P 30
+		ALH8 P -1 A_BossDeath
+		Stop
+	}
+}

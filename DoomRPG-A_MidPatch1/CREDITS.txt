@@ -1,0 +1,388 @@
+COMPENDIUM is a project conceived and assembled by me, Dynamo, and my friend Omegamax. The vast majority of the work in adapting the mappacks has been done by Dynamo, whereas the hub map is largely the work of Omegamax.
+The resources used in the hub map largely come from Unreal Gold, whereas the skyboxes used come from the Quake 3 skybox community pack.
+The font used is the Memento Mori II-styled font made by Jimmy on Realm667. Big thanks to him and to the Memento Mori II team for it.
+The menu graphics come from the NDCP megawad, in part edited and expanded by myself. Huge thanks to the authors of it as well as to the NewDoom community in general. The sounds come from the AMC TC for Eduke32, huge thanks to the AMC team for the sounds as well as for producing one of the best mods ever made for a classic FPS, you really should check it out. Thanks in particular go to JBlade35. The intermission sounds are from Street Fighter II.
+Compendium was made for use with (G)ZDoom and derived ports, so massive thanks go to Randy Heit, Graf Zahl, Blzut3 and all the other programmers and administrators that helped build this great port.
+
+This mod, being a compilation, uses content made by other mappers during the period of Doom modding that ranges from 1994 to about 2004-2005, what I refer to as the "golden era" of Doom modding. As a result it is these people that should receive the highest accolades for they are the ones that, with their effort, created not only a large amount of fun, creative maps, but also served as an example to follow for all future generations of mappers and modders.
+Below is a list of people whose work has been featured in Compendium. I literally cannot thank them enough for their amazing contributions to this game's legacy.
+
+THE MEMENTO MORI CREW AND THE INNOCENT CREW - for their work on Memento Mori I, Memento Mori II, Obituary, Insertion and The Trooper's Playground.
+- Denis Moller
+- Thomas Moller
+- Mark Klem
+- Tom Mustaine
+- Dario Casali
+- Milo Casali
+- David Shaw
+- Jens Nielsen
+- David Davidson
+- Alden Bates
+- Orin Flaharty
+- Eric Sargent
+- Mackey McCandlish
+- Kurt Schmid
+- Eric Sambach
+- Scott Lampert
+- William Sullivan
+- Andy Badorek
+- Michael Rapp
+- Henrik Ratje
+- Florian Helmberger
+- Eric Reuter
+- Michiel Rutting
+- Matthias Worch
+- Paul Noble
+- David Kuykendall
+- Rhys Hughes
+- Adam Windsor
+- Jeremy Statz
+- Alden Bates
+- Sean Birkel
+- Stephen Watson
+- Jim Wraith
+- Steve Towle
+- Thomas Evans
+- Adam Williamson
+- John W. Anderson
+- Raphael Quinet
+
+THE REQUIEM TEAM - first two people also made Dystopia 3 and contributed to STRAIN
+- Anthony Czerwonka
+- Iikka Keranen
+- Dario Casali
+- Orin Flaharty
+- Anthony Galica
+- Florian Helmberger
+- Bill McClendon
+- Thomas Moller
+- Jens Nielsen
+- Ian Quick
+- Michael Rapp
+- Eric Sambach
+- Adam Williamson
+- Adam Windsor
+- Matthias Worch
+- Mark Klem
+- David Shaw
+- Jeremy Doyle
+- Chris Thornton
+
+THE ALPHA DOG ALLIANCE - creators of the amazing STRAIN megawad
+- Ron Allen
+- Andy Badorek
+- Stuart Burke
+- Brian Burke
+- Frank Buckley
+- "Bishop"
+- "Chainsaw"
+- Arthur Chang
+- Anthony Czerwonka
+- Darrell Esau
+- Reid Harmon
+- Florian Helmberger
+- Bjorn Hermans
+- Rich Johnston
+- Iikka Keranen
+- Aaron Koller
+- Jon Landis
+- Bob Lindemann
+- Bill McClendon
+- Holger Nathrath
+- Charlie Patterson
+- Justin Patterson
+- Eric James Roberts
+- David Rotramel
+- David Shaw
+- Mark Klem
+- Will Vale
+- Adam Windsor
+- "Xenos"
+- Chris Shullenbarger
+- Richard Church
+- John Walker
+- "Mister Bungle"
+- David Graves
+
+Special thanks also go out to the authors of Strainfix.pk3, which I used as a base. However I cannot find any information as to who made it. Whoever it was, thanks a lot!
+
+THE CREATORS OF OPERATION BIOWAR:
+- Chris Harbin
+- Paul Corfiatis (also the author of the Twilight Zone II megawad)
+- John Bishop
+- Mark Klem
+
+THE MACINTOSH TEAM , creators of Realm of Chaos
+- Rob Berkowitz
+- Antoni Chan
+- Clint Sago
+- Jim Bagrow
+- Slava Pestov
+- Steve Duff
+- Jason Fowler
+
+THE DARKENING TEAM, for The Darkening and The Darkening Episode 2:
+- Jan Van der Veken
+- Ola Bjorling
+- John Bye
+- Travers Dunne
+- Mark Klem
+- Nick Baker
+- Adam Windsor
+- Ben Davies
+- Anthony Soto
+- Derek MacDonald
+- Lee Szymanski
+- Richard Wiles
+- Adam Windsor
+- Peter Tomaselli
+- Sam Woodman
+
+POST, the mini-episode
+- By Tony Sideris
+
+REVOLUTION!
+- By Thomas van der Velden - and make sure to check out Harmony as well ;)
+- The Midi Pack has been made by Jimmy Paddock. Thanks a lot for bringing excellent MIDI music to a classic mappack :D
+
+SCIENTIST 2
+- By Roland van der Velden - brother of the author of TVR! Small world :D
+
+TEAMTNT - perhaps the true legends of Doom modding. Featured here are Icarus, Daedalus and Eternal Doom. Evilution is also featured in theory but I cannot release it alongside these sooo let's just pretend it's also in I guess even though it isn't?
+I hope I'm not missing anyone...
+- Ty Halderman (God bless his soul)
+- Jim Lowell
+- Brian Kidby
+- Gary Gossom
+- Rand Phares
+- Steve McCrea
+- Jonathan El-Bizri
+- Mike Marcotte
+- Christopher Buteau
+- David Hill
+- Steven Phares
+- Mike Reute
+- Jim Dethlefsen
+- Dean Johnson
+- Charles Li
+- Kram Llens
+- Robin Patenall
+- Robert Taylor
+- Tom Mustaine
+- Tom Grieve
+- Gregg Anderson
+- David Shaw
+- Jim Kennedy
+- Andrew Dowswell
+- Jeremy Doyle
+- John Minadeo
+- John Wakelin
+- Michael Bristol
+- Josh Martel
+- Jimmy Sieben
+- L.A. Sieben (same as the above?)
+- William D. Whitaker
+- Dario Casali
+- Milo Casali
+- Andre Arsenault
+- Drake O'Brien
+- Paul Turnbull
+- Mark Snell
+- Rich Nagel
+- Alex Mayberry
+- Adam Landefeld
+- Dietmar Westerteicher
+- Sverre Kvernmo
+- Paul Schmitz
+- Christopher Couleur
+- Kathy Bruni
+- David Bruni
+- Dave Brachman
+- Bob Evans
+- Jim Flynn (also created the Enigma Episode)
+- Matt Bollier
+- Gary Gosson
+- Jeromy Visser
+- Jani Saksa
+- Don Howard
+- Rick Clark
+- Dale Harris
+- Andrew Griffiths
+- David Nordlund
+- Mattias Johansson
+- David Wood
+- Steve Noonan
+- Tommie Quick
+- Richard Jaspars
+That should be it as far as Compendium is concerned, but my thanks of course extend to all those who were ever part of TeamTNT. I encourage you to check their (now archived) webpage for more information: https://web.archive.org/web/20160304071748/http://www.teamtnt.com/teaminfo.htm
+
+WRAITH CORPORATION - authors of the excellent Perdition's Gate and Hell to Pay. There is a lot of overlap between Wraith Corporation and TeamTNT.
+- Bob Mustaine
+- Tom Mustaine
+- Jimmy Sieben
+- Mackey McCandlish
+- Jim Elson
+- Pavel Hodek
+
+THE ABYSS
+- Jan Paul van Waveren (RIP)
+- Miklos de Rijk
+
+BLACK STAR COVEN, authors of The Talosian Incident. The atmospheric midis reign supreme.
+- John Bye
+- Malcolm Sailor
+- Ola Bjorling
+- Dan Huff
+- Brian Owens
+- Patrick Martin
+- "Myscha"
+- "Tolwyn"
+
+ALL HELL IS BREAKING LOOSE!!!
+- by Joel Huenink
+
+THE REBIRTH
+- by Bjorn Ostmann (Vader)
+
+SCYTHE
+- Erik Alm
+- Kim Bach
+
+THE CHAOS CREW - the masterminds behind Caverns of Darkness
+- G.B. Jackson
+- Joel Murdoch,
+- Christopher Lutz, 
+- Lord Nokturnus,
+- Emil Brundage, 
+- Justus Johnson
+
+EQUINOX
+- B.P.R.D
+
+MARS DOOM, the revolutionary masterpiece
+- Berthold Beckschafer
+- Thomas Lokum
+
+ENDGAME - a short and little known gem of a collab mappack
+- Erik Alm
+- Joe Pallai
+- Anthony Soto
+- Lee Szymanski 
+- Jan Van der Veken
+- Josh Zylstra
+
+BLOODRUST
+- Simon Judd
+
+OSIRIS
+- Marshal Bostwick 
+- Glen Payne
+- Jeremy Doyle
+
+BROTHERHOOD OF RUIN
+- Kristian Aro
+
+ENJAY ZDOOM 2001
+- By Enjay himself :) Cheers man.
+
+EARTH AND PLEIADES
+- Roger Ritenour
+
+CLEIMOS 2.0
+- Rand Phares
+- Steven Phares
+
+ASDOOM 2
+- Andy Sheppard (see what he did there?)
+
+THE FINAL GATHERING
+- Daniel Norman
+
+DARK COVENANT
+- Keith Phipps
+
+SLAYER
+- Richard Wiles
+
+HELL FACTORY
+- Tomi Rajala
+
+CYBERDREAMS
+- Gonzalo Perez de la Ossa 
+- Albert Valls
+
+DOOM RESURRECTION
+- Thomas "Fatal" Quick (also a member of TeamTNT, and also the author of the Trust No One zdoom wad, worth checking as well)
+
+ENSLAVEMENT
+- Kurt Emch
+
+BIOTECH
+- Beaverbeat
+- Protium
+- Khalad
+- TheRedOmen
+- Mark The Artist
+- Kyle Kylin.
+
+LAST DAY ON EARTH
+- Laurent Remy
+- Jonathan Croce
+- Micah Joyner 
+- Tom White
+- Tomi Rajala
+- Jamie Robertson
+
+CITY OF DOOM
+- Paul Maurone
+
+PROJECT SLIPGATE & DISSOLUTION OF ETERNITY
+- Bryant Robinson
+- Kevin Robinson
+
+SUSPENDED IN DUSK:
+- Esa "Espi" Repo (Rest in Peace)
+
+MANCUBUS
+- Shitbag (see also Happy Time Circus)
+
+VILE FLESH
+- Gwyn Williams
+
+THE VILECORE
+- Darren Finch
+
+NEODOOM
+- By Daniel
+- Vaccinated Edition was made by me several months before I started Compendium. I didn't really change anything but I simply removed all custom enemies and weapons. The thing is, the wad works without said custom enemies and weapons on other source ports, so... It just defaults to that.
+
+
+
+Below is a lsit of people, groups, associations and websites whose work and contributions hav been invaluable in allowing this project to become a reality.
+
+Big thanks go to the ZDoom forums and community, the DoomWorld forums and community, the Zandronum forums and community, the DoomWadStation site, the Idgames database, the wadsinprogress site and all the other places which cherished and documented Doom modding for so long. 
+Thanks to the idgames database mantainers, both current and previous, who have ensured the preservation of Doom modding. Without idgames, we all would be living in darker times.
+Thanks to Robert Larkin for having mantained the DoomWadStation site for a very long time despite the many difficulties faced along the path.
+Thanks to Simon Judd (sirjuddington) and Gez for having created and mantained Slade 3, the main program that I used to create this project. Without its advanced features and .pk3 support none of this would have been possible.
+Thanks to the webmasters, programmers and administrators of the ZDoom sites and source ports, without which none of this could have been even remotely imaginable. In particular thanks to wildweasel for his logo contribution and feedback/advice.
+Thanks to Ty Halderman (RIP) and TeamTNT for having created the Boom source port and having contributed so much to the Doom modding scene that quantifying it alone is a hard task. You guys rock.
+Thanks to those who did re-uploads and repackagings of certain mods on the Idgames archive, such as Sparky of KISS Software and The Green Herring, and whoever else I may be forgetting right now.
+Thanks to all those people who gave me a ton of advice and feedback regarding this project, in particular lupinx-kassman, Doomkid, Lunick, Playe, Aquasa, Mikolah and all the others.
+Thanks to the Memento Mori Team and The Innocent Crew for having established firm and effective standards early on regarding what Doom mods should strive to be. Originally Compendium was going to feature exclusively content by those people, but I got a little carried away, I guess. :P That being said, their work is definitely the main focus of this project even still.
+Thanks to Mark Klem and David Shaw for having created the most legendary MIDI compositions of all time. That stuff is so good it's hard to believe sometimes.
+Thanks to Jive, who, even though using different methods, also understood early on the need to document and preserve doom mods. His work has certainly been an inspiration for many in the community. May he rest in peace.
+Further thanks to all those unknown people in the Skulltag/Zandronum community who released fixes (mostly for multiplayer compatibility) for a lot of the wads featured here.
+Thanks to those people who put up resources on the ZDoom forums for others to use in their mods: I've made use of some very nice sky textures from there. In particular thanks to Mechadon, Bloax, abbuw and Gez. Hope I'm not forgetting anyone :)
+Thanks to all the beta testers who helped me greatly in ensuring this project is (hopefully) perfectly playable from start to finish). Thanks a lot to Yagotzirck in particular.
+Thanks to the Mechanix Union for advice and encouragement, and in general for being a very good team of mappers whose work has certainly been an inspiration. Thanks to Decay in particular for the support.
+Thanks to Remmirath for being a great director of gangster films.
+Thanks to ID Software for having created one of the best games ever and for their invaluable lessons in game design. Thanks to John Romero in particular.
+Thanks to Raven Software, 3D Realms, Rogue Entertainment and all the companies that back in the day made those amazing Doom-style games, which allowed to keep this style of game alive for many years to come. I do definitely recommend to play all of the (good) Doom clones out there!
+Thanks to NightFright for his Duke Nukem 3D addon compilation, which has been the main inspiration when creating this project. 
+Thanks to TheUnbeholden, whose work was the base for the Brightmaps found in Compendium
+Thanks to the UG community for helping us understand the importance of preservation in retro games.
+Special thanks go to Zelse, Tiny, VileR and others for the support and proofreading help.
+
+Thank YOU for playing and keeping the spirit of Doom modding alive and well. May you have pleasant gaming (and beyond) experiences ahead. May we all have more fun and more knowledge/documentation in the coming years, in gaming and beyond. May we never forget those who came before us, while always forging forward.
+
+- Dynamo

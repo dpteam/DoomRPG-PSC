@@ -1,0 +1,752 @@
+// ENJAY ZDOOM
+
+:ESmsh
+	DOOR		51
+	PLATFORM	51
+	playuntildone	ELEC
+	nostopcutoff
+end
+
+:NJDoor1
+	door		52
+	playuntildone	NJstart
+	playrepeat	NJmid
+	stopsound	NJend
+end
+
+:GSmsh
+	DOOR		53
+	PLATFORM	53
+	playuntildone	GLASS
+	nostopcutoff
+end
+
+:MSmsh
+	DOOR		54
+	PLATFORM	54
+	playuntildone	MET2
+	nostopcutoff
+end
+
+:WDOOR1
+	DOOR		55
+	PLATFORM	55
+	playuntildone	WDOOR
+	stopsound	WSTOP
+end
+
+:FDOOR1
+	DOOR		56
+	PLATFORM	56
+	playuntildone	DOORO2
+	nostopcutoff
+end
+
+:HEVVY
+	DOOR		57
+	PLATFORM	57
+	playrepeat	njmid
+	stopsound	WSTOP
+end
+
+:Silent
+	DOOR 58
+	PLATFORM 58
+	play	NJMT
+end
+
+:FFDOWN
+	DOOR		59
+	PLATFORM	59
+	playuntildone	REDFF
+	nostopcutoff
+end
+
+// DAEDALUS
+
+//Door sound definitions.
+
+:Door1
+        door            0
+        playuntildone   door1_start
+        playrepeat      door1_mid
+        stopsound       door1_end
+end
+
+:Door2
+        door            1
+        playrepeat      hum1
+end
+
+:Door3
+        door            2
+        playrepeat      boiling
+end
+
+:Door4
+	door		3
+        playrepeat      DOOR1
+
+end
+
+:Door5
+	door		4
+	playrepeat 	MOTOR1
+end
+
+:Door6
+	door		5
+	playrepeat 	MOTOR2
+end
+
+:Door7
+	door		6
+	playrepeat 	MOTOR3
+end
+
+:Door8
+	door		7
+	playrepeat 	MOTOR4
+end
+
+:Door9
+	door		8
+	playrepeat 	MOTOR5
+end
+
+:Door10
+	door		9
+	playrepeat 	MOTOR6
+end
+
+:Door11
+	door		10
+	playrepeat 	MOTOR6
+end
+
+:Door12
+	door		11
+	playrepeat 	PRESS1
+end
+
+:Door13
+	door		12
+	playrepeat 	PRESS2
+end
+
+:Door14
+	door		13
+	playrepeat 	PRESS3
+end
+
+:Door15
+	door		14
+	playrepeat 	EQUIP1
+end
+
+:Door16
+	door		15
+	playrepeat 	EQUIP2
+end
+
+:Door17
+	door		16
+	playrepeat 	EQUIP3
+end
+
+:Door18
+	door		17
+	playrepeat 	EQUIP4
+end
+
+:Door19
+	door		18
+	playrepeat 	EQUIP5
+end
+
+:Door20
+	door		19
+	playrepeat 	EQUIP6
+end
+
+:Door21
+	door		20
+	playrepeat 	EQUIP7
+end
+
+:Door22
+	door		21
+	playrepeat 	EQUIP8
+end
+
+//Platform definitions.
+
+:Plat1
+        platform        0
+        playrepeat      cement
+        stopsound       door1_end
+end
+
+:Plat2
+	platform	1
+	playrepeat 	MOTOR1
+end
+
+:Plat3
+	platform	2
+	playrepeat 	MOTOR2
+end
+
+:Plat4
+	platform	3
+	playrepeat 	MOTOR3
+end
+
+:Plat5
+	platform	4
+	playrepeat 	MOTOR4
+end
+
+:Plat6
+	platform	5
+	playrepeat 	MOTOR5
+end
+
+:Plat7
+	platform	6
+	playrepeat 	MOTOR6
+end
+
+:Plat8
+	platform	7
+	playrepeat 	MOTOR6
+end
+
+:Plat9
+	platform	8
+	playrepeat 	PRESS1
+end
+
+:Plat10
+	platform	9
+	playrepeat 	PRESS2
+end
+
+:Plat11
+	platform	10
+	playrepeat 	PRESS3
+end
+
+:Plat12
+	platform	11
+	playrepeat 	EQUIP1
+end
+
+:Plat13
+	platform	12
+	playrepeat 	EQUIP2
+end
+
+:Plat14
+	platform	13
+	playrepeat 	EQUIP3
+end
+
+:Plat15
+	platform	14
+	playrepeat 	EQUIP4
+end
+
+:Plat16
+	platform	15
+	playrepeat 	EQUIP5
+end
+
+:Plat17
+	platform	16
+	playrepeat 	EQUIP6
+end
+
+:Plat18
+	platform	21
+	playrepeat 	EQUIP7
+end
+
+:Plat19
+	platform	22
+	playrepeat 	EQUIP8
+end
+
+:Plat20
+	platform	23
+	playrepeat	air
+end
+
+
+:air           
+        playrepeat  air
+end
+:boiling       
+        playrepeat  boiling
+end
+:fan1          
+        playrepeat  fan1
+end
+:gratebrk      
+        playrepeat  gratebrk
+end
+:glassbrk      
+        playrepeat  glassbrk
+end
+:asteriod      
+        playrepeat  asteriod
+end
+:suck          
+        playrepeat  suck
+end
+:switch        
+        playrepeat  switch
+end
+:cement        
+        playrepeat  cement
+end
+:hum1          
+        playrepeat  hum1
+end
+:ALARM1        
+        playrepeat  ALARM1
+end
+:ALARM2        
+        playrepeat  ALARM2
+end
+:ALARM3        
+        playrepeat  ALARM3
+end
+:ALARM4        
+        playrepeat  ALARM4
+end
+:CRASH1        
+        playrepeat  CRASH1
+end
+:CRASH2        
+        playrepeat  CRASH2
+end
+:CRASH3        
+        playrepeat  CRASH3
+end
+:CRASH4        
+        playrepeat  CRASH4
+end
+:CRASH5        
+        playrepeat  CRASH5
+end
+:DOORS1        
+        playrepeat  DOORS1
+end
+:ELECT1        
+        playrepeat  ELECT1
+end
+:ELECT2        
+        playrepeat  ELECT2
+end
+:ELECT3        
+        playrepeat  ELECT3
+end
+:ELECT4        
+        playrepeat  ELECT4
+end
+:ELECT5        
+        playrepeat  ELECT5
+end
+:ELECT6        
+        playrepeat  ELECT6
+end
+:EQUIP1        
+        playrepeat  EQUIP1
+end
+:EQUIP2        
+        playrepeat  EQUIP2
+end
+:EQUIP3        
+        playrepeat  EQUIP3
+end
+:EQUIP4        
+        playrepeat  EQUIP4
+end
+:EQUIP5        
+        playrepeat  EQUIP5
+end
+:EQUIP6        
+        playrepeat  EQUIP6
+end
+:EQUIP7        
+        playrepeat  EQUIP7
+end
+:EQUIP8        
+        playrepeat  EQUIP8
+end
+:EQUIP9       
+        playrepeat  EQUIP9
+end
+:FLUID1        
+        playrepeat  FLUID1
+end
+:FLUID2        
+        playrepeat  FLUID2
+end
+:FLUID3        
+        playrepeat  FLUID3
+end
+:FLUID4        
+        playrepeat  FLUID4
+end
+:FLUID7        
+        playrepeat  FLUID7
+end
+:FLUID8        
+        playrepeat  FLUID8
+end
+:PRESS1        
+        playrepeat  PRESS1
+end
+:PRESS2        
+        playrepeat  PRESS2
+end
+:PRESS3        
+        playrepeat  PRESS3
+end
+:MOTOR1        
+        playrepeat  MOTOR1
+end
+:MOTOR2        
+        playrepeat  MOTOR2
+end
+:MOTOR3        
+        playrepeat  MOTOR3
+end
+:MOTOR4        
+        playrepeat  MOTOR4
+end
+:MOTOR5        
+        playrepeat  MOTOR5
+end
+:MOTOR6        
+        playrepeat  MOTOR6
+end
+:SPACE1        
+        playrepeat  SPACE1
+end
+:SPACE2        
+        playrepeat  SPACE2
+end
+:SPACE3        
+        playrepeat  SPACE3
+end
+:SPACE4        
+        playrepeat  SPACE4
+end
+:SPACE5        
+        playrepeat  SPACE5
+end
+:SPACE6        
+        playrepeat  SPACE6
+end
+:ALARM2H       
+        playrepeat  ALARM2H
+end
+:ALARM2Q       
+        playrepeat  ALARM2Q
+end
+:SPACE5H       
+        playrepeat  SPACE5H
+end
+:SPACE5Q       
+        playrepeat  SPACE5Q
+end
+:SPACE5E       
+        playrepeat  SPACE5E
+end
+:SPACE5S       
+        playrepeat  SPACE5S
+end
+:TTUBE1
+        playrepeat  TTUBE1
+end
+:COMPAMB
+	playrepeat  COMPAMB
+end
+:MULTSHOT
+	playrepeat MULTSHOT
+end
+:MULTSHOT
+	playrepeat MULTSHOT
+end
+:HARTBEAT
+	playrepeat HARTBEAT
+end
+:BLEEP01
+	playrepeat BLEEP01
+end
+:BLEEP02
+	playrepeat BLEEP02
+end
+:BLEEP03
+	playrepeat BLEEP03
+end
+:BLEEP04
+	playrepeat BLEEP04
+end
+:BLEEP05
+	playrepeat BLEEP05
+end
+:BLEEP06
+	playrepeat BLEEP06
+end
+:BLEEP07
+	playrepeat BLEEP07
+end
+:BLEEP08
+	playrepeat BLEEP08
+end
+:BLEEP09
+	playrepeat BLEEP09
+end
+:BLEEP10
+	playrepeat BLEEP10
+end
+:BLEEP11
+	playrepeat BLEEP11
+end
+:BLEEP12
+	playrepeat BLEEP12
+end
+:BLEEP13
+	playrepeat BLEEP13
+end
+:BLEEP14
+	playrepeat BLEEP14
+end
+:COREEXPL
+	playrepeat COREEXPL
+end
+:FIREBURN
+	playrepeat FIREBURN
+end
+:PRIZE1
+	playrepeat PRIZE1
+end
+:CLOSE1
+	playrepeat CLOSE1
+end
+:CRACK1
+	playrepeat CRACK1
+end
+:ENGINE1
+	playrepeat ENGINE1
+end
+:ENGINE2
+	playrepeat ENGINE2
+end
+:ENGINE3
+	playrepeat ENGINE3
+end
+:WATRFALL
+	playrepeat WATRFALL
+end
+:CONVEY
+	playrepeat CONVEY
+end
+
+:TreeBurn
+	playuntildone TREEBURN
+end
+
+; New ambient sounds - build 39
+:1CAVE1
+	playrepeat 1CAVE1
+end
+:1CAVE2
+	playrepeat 1CAVE2
+end
+:1CAVE3
+	playrepeat 1CAVE3
+end
+:1CAVE4
+	playrepeat 1CAVE4
+end
+:1FANON
+	playrepeat 1FANON
+end
+:1FANRUN
+	playrepeat 1FANRUN
+end
+:1FANSTOP
+	playrepeat 1FANSTOP
+end
+:1GEN1
+	playrepeat 1GEN1
+end
+:1LASER1
+	playrepeat 1LASER1
+end
+:1LASER2
+	playrepeat 1LASER2
+end
+:1LASER3
+	playrepeat 1LASER3
+end
+:1LASER4
+	playrepeat 1LASER4
+end
+:1LASER5
+	playrepeat 1LASER5
+end
+:1WATER1
+	playrepeat 1WATER1
+end
+:1WATER2
+	playrepeat 1WATER2
+end
+:1WATER3
+	playrepeat 1WATER3
+end
+:GLOOP
+	playrepeat GLOOP
+end
+
+// PLEIADES
+
+:discharge
+	platform	61
+	stopsound	sparks7
+end
+
+:grate1
+	platform	62
+	stopsound	break1
+end
+
+:grate2
+	platform	63
+	stopsound	break2
+end
+
+// HELL FACTORY
+
+:HFacDoor
+	door		60
+	playuntildone	door3_start
+	playrepeat	door3_mid
+	stopsound	door3_end
+end
+
+// DOOM RESURRECTION
+
+:Seq1Door
+  door 27
+  playuntildone Door1BEG
+  playrepeat Door1MID
+  stopsound Door1END
+end
+:Seq2Door
+  door 28
+  playuntildone Door1BEG
+  playrepeat Door1MID
+  stopsound Door1END
+end
+:Seq1Door
+  door 29
+  playuntildone Door1BEG
+  playrepeat Door1MID
+  stopsound Door1END
+end
+:Seq2Plat
+  platform 27
+  playuntildone Plat1BEG
+  playrepeat Plat1MID
+  stopsound Plat1END
+end
+:Seq3Plat
+  platform 28
+  playrepeat Plat2MID
+  stopsound Plat2END
+end
+:Seq4Plat
+  platform 29
+  playrepeat Plat3MID
+  stopsound Plat3END
+end
+
+// PROJECT SLIPGATE
+
+:slpdoor1
+    door		44
+    
+    playrepeat      slpamb45
+    
+
+
+end
+
+    
+
+:slpplat2
+    platform            45
+        
+        playrepeat     slpamb46
+	
+	
+end
+
+    
+
+// DISSOLUTION OF ETERNITY
+
+:disdoor1
+    door		46
+    
+    playrepeat      disamb12
+    
+
+
+end
+
+    
+
+:displatform2
+    platform            47
+        
+        playrepeat     disamb15
+	
+	
+end
+
+    
+// DAMNATIO MEMORIAE
+
+:DamnatioD1
+	door		60
+	playrepeat	polyobject/move1
+end
+
+:DamnatioD0
+	door		61
+	playrepeat	DSNONE
+end
+
+//:DamnatioD2
+//	door		62
+//	0		DoorOpenBlazing
+// 	1		DoorCloseBlazing
+// 	2		DoorOpenBlazing
+// 	3		DoorCloseBlazing
+//	nostopcutoff
+//end
+
+[DamnatioD2
+ door		62
+ 0		DoorOpenBlazing
+ 1		DoorCloseBlazing
+ 2		DoorOpenBlazing
+ 3		DoorCloseBlazing
+]

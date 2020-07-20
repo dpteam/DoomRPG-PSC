@@ -1,0 +1,199 @@
+// NEW TORCHES
+
+Actor YellowTorch 10712
+{
+	//$Category "Light sources"
+	//$Title "Tall yellow firestick"
+	Game Doom
+	Radius 16
+	Height 68
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		YELT ABCD 4 BRIGHT
+		Loop
+	}
+}
+
+Actor WhiteTorch 10713
+{
+	//$Category "Light sources"
+	//$Title "Tall white firestick"
+	Game Doom
+	Radius 16
+	Height 68
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		TGRY ABCD 4 BRIGHT
+		Loop
+	}
+}
+
+Actor PurpleTorch 10714
+{
+	//$Category "Light sources"
+	//$Title "Tall purple firestick"
+	Game Doom
+	Radius 16
+	Height 68
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		PRPT ABCD 4 BRIGHT
+		Loop
+	}
+}
+
+Actor ShortYellowTorch 10715
+{
+	//$Category "Light sources"
+	//$Title "Short yellow firestick"
+	Game Doom
+	Radius 16
+	Height 37
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		SYLT ABCD 4 BRIGHT
+		Loop
+	}
+}
+
+Actor ShortWhiteTorch 10716
+{
+	//$Category "Light sources"
+	//$Title "Short white firestick"
+	Game Doom
+	Radius 16
+	Height 37
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		SGYT ABCD 4 BRIGHT
+		Loop
+	}
+}
+
+Actor ShortPurpleTorch 10717
+{
+	//$Category "Light sources"
+	//$Title "Short purple firestick"
+	Game Doom
+	Radius 16
+	Height 37
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		SPRT ABCD 4 BRIGHT
+		Loop
+	}
+}
+
+ACTOR BlueWallTorch 12500
+{
+  //$Category "Light sources"
+  //$Title "Wall blue firestick"
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +FIXMAPTHINGPOS
+  Radius 6.5
+  States
+  {
+  Spawn:
+    BWTR ABCD 4 Bright
+    Loop
+  }
+}
+
+ACTOR RedWallTorch 12501
+{
+  //$Category "Light sources"
+  //$Title "Wall red firestick"
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +FIXMAPTHINGPOS
+  Radius 6.5
+  States
+  {
+  Spawn:
+    YWTR ABCD 4 Bright
+    Loop
+  }
+}
+
+ACTOR GreenWallTorch 12502
+{
+  //$Category "Light sources"
+  //$Title "Wall green firestick"
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +FIXMAPTHINGPOS
+  Radius 6.5
+  States
+  {
+  Spawn:
+    GWTR ABCD 4 Bright
+    Loop
+  }
+}
+
+ACTOR YellowWallTorch 12503
+{
+  //$Category "Light sources"
+  //$Title "Wall yellow firestick"
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +FIXMAPTHINGPOS
+  Radius 6.5
+  States
+  {
+  Spawn:
+    OWTR ABCD 4 Bright
+    Loop
+  }
+}
+
+ACTOR WhiteWallTorch 12504
+{
+  //$Category "Light sources"
+  //$Title "Wall white firestick"
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +FIXMAPTHINGPOS
+  Radius 6.5
+  States
+  {
+  Spawn:
+    WWTR ABCD 4 Bright
+    Loop
+  }
+}
+
+ACTOR PurpleWallTorch 12505
+{
+  //$Category "Light sources"
+  //$Title "Wall purple firestick"
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +FIXMAPTHINGPOS
+  Radius 6.5
+  States
+  {
+  Spawn:
+    PWTR ABCD 4 Bright
+    Loop
+  }
+}

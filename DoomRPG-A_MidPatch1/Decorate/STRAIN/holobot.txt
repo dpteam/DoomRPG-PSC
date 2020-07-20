@@ -1,0 +1,84 @@
+actor Holobot 20007 {
+	obituary "%o was killed by a Holobot"
+	hitobituary "%o was kissed by a Holobot"
+	health 200
+	radius 31
+	height 56
+	mass 300
+	speed 10
+	painchance 128
+	seesound "holobot/sight"
+	attacksound "holobot/melee"
+	painsound ""
+	deathsound "holobot/death"
+	activesound "holobot/active"
+	missiletype "HolobotTracer"
+	MONSTER
+	+SOLID
+	+SHOOTABLE
+	+NOGRAVITY
+	+NOBLOOD
+	+FLOAT
+	+FLOORCLIP
+	+LONGMELEERANGE
+	+MISSILEMORE
+	states {
+		Spawn:
+			FBOT A 3 A_Look
+			loop
+		See:
+			FBOT ABCDEF 3 A_Chase
+			loop
+		Melee:
+			FBOT A 20 A_FaceTarget
+			FBOT G 2 A_SkelFist
+			goto See
+		Missile:
+			FBOT AA 5 A_FaceTarget
+			FBOT A 5 bright A_MissileAttack
+			goto See
+		Pain:
+			FBOT A 3
+			FBOT A 3 A_Pain
+			FBOT A 6 A_Pain
+			goto See
+		Death:
+			FBOT HI 10 bright
+			FBOT J 10 bright A_Scream
+			FBOT K 10 bright A_NoBlocking
+			FBOT LM 10 bright
+			FBOT M -1 A_HideThing
+			stop
+	}
+}
+
+actor HolobotInvisable : Holobot 20008 {
+	obituary "%o was killed by an invisible Holobot"
+	hitobituary "%o didn't see the Holobot"
+	renderstyle OptFuzzy
+	alpha 0.2
+	+SHADOW
+}
+
+actor HolobotTracer {
+	radius 11
+	height 8
+	speed 4
+	damage 10
+	renderstyle Add
+	seesound "holobot/attack"
+	deathsound "holobot/tracex"
+	PROJECTILE
+	+SEEKERMISSILE
+	+RANDOMIZE
+	states {
+		Spawn:
+			H_BT AB 2 bright A_Tracer
+			loop
+		Death:
+			H_BT C 8 bright
+			H_BT D 6 bright
+			H_BT E 4 bright
+			stop
+	}
+}

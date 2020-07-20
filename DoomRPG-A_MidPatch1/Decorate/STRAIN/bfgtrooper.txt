@@ -1,0 +1,67 @@
+actor BFGtrooper 20004 {
+	obituary "%o was surprised by a BFG Trooper."
+	health 20
+	radius 20
+	height 56
+	mass 100
+	speed 8
+	painchance 200
+	seesound "bfgtrooper/sight"
+	attacksound "bfgtrooper/attack"
+	painsound "bfgtrooper/pain"
+	deathsound "bfgtrooper/death"
+	activesound "bfgtrooper/active"
+	missiletype "BFGTrooperBall"
+	MONSTER
+	+SOLID
+	+SHOOTABLE
+	+FLOORCLIP
+	states {
+		Spawn:
+			POSS AB 10 A_Look
+			loop
+		See:
+			POSS AABBCCDD 4 A_Chase
+			loop
+		Melee:
+			goto Missile
+		Missile:
+			POSS E 0 A_FaceTarget
+			POSS E 25 A_PlayWeaponSound("bfgtrooper/attack")
+			POSS F 8 A_FaceTarget
+			POSS E 8 A_MissileAttack
+			goto See
+		Pain:
+			POSS G 3
+			POSS G 3 A_Pain
+			goto See
+		Death:
+			POSS H 5
+			POSS I 5 A_Scream
+			POSS J 5 A_Fall
+			POSS K 5
+			POSS L -1
+			stop
+		XDeath:
+			POSS M 5
+			POSS N 5 A_XScream
+			POSS O 5 A_Fall
+			POSS PQRST 5
+			POSS U -1
+			stop
+		Raise:
+			POSS KJIH 5
+			goto See
+	}
+}
+
+actor BFGTrooperBall : BFGBall {
+	speed 8
+	seesound "weapons/nfgf"
+	states {
+		Death:
+			BFE1 A 4 bright A_Explode(200, 200, 0)
+			BFE1 BCDEF 4 bright
+			stop
+	}
+}

@@ -1,0 +1,453 @@
+ACTOR BioTechEnemy1 18735 // 3004
+{
+	Health 20
+	Radius 20
+	Height 56
+	Speed 8
+	PainChance 200
+	Monster
+	+FLOORCLIP
+	+MISSILEEVENMORE
+	+QUICKTORETALIATE
+	SeeSound "grunt/sight"
+	AttackSound "grunt/attack"
+	PainSound "grunt/pain"
+	DeathSound "grunt/death"
+	ActiveSound "BioTech/Sound1"
+	Obituary "%o was killed by a prisoner"
+	DropItem "Clip"
+	States
+	{
+	Spawn:
+		BT01 AB 10 A_Look
+		Loop
+	See:
+		BT01 AABBCCDD 4 A_Chase
+		Loop
+	Missile:
+    	BT01 E 10 A_FaceTarget
+    	BT01 F 8 A_PosAttack
+    	BT01 E 8
+    	Goto See
+	Pain:
+		BT01 G 3
+		BT01 G 3 A_Pain
+		Goto See
+	Death:
+		BT01 H 5
+		BT01 I 5 A_Scream
+		BT01 J 5 A_NoBlocking
+		BT01 K 5
+		BT01 L -1
+		Stop
+	XDeath:
+		BT01 M 5
+		BT01 N 5 A_XScream
+		BT01 O 5 A_NoBlocking
+		BT01 PQRST 5
+		BT01 U -1
+		Stop
+	Raise:
+		BT01 K 5
+		BT01 JIH 5
+		Goto See
+	}
+}
+
+ACTOR BioTechEnemy2 18736 // 9
+{
+	Health 30
+	Radius 20
+	Height 56
+	Mass 100
+	Speed 8
+	PainChance 170
+	Monster
+	+FLOORCLIP
+	SeeSound "shotguy/sight"
+	AttackSound "shotguy/attack"
+	PainSound "shotguy/pain"
+	DeathSound "shotguy/death"
+	ActiveSound "BioTech/Sound1"
+	Obituary "%o was killed by a prisoner"
+	DropItem "Shotgun"
+	States
+	{
+	Spawn:
+		BT02 AB 10 A_Look
+		Loop
+	See:
+		BT02 AABBCCDD 3 A_Chase
+		Loop
+	Missile:
+		BT02 E 10 A_FaceTarget
+		BT02 F 10 BRIGHT A_SposAttackUseAtkSound
+		BT02 E 10
+		Goto See
+	Pain:
+		BT02 G 3
+		BT02 G 3 A_Pain
+		Goto See
+	Death:
+		BT02 H 5
+		BT02 I 5 A_Scream
+		BT02 J 5 A_NoBlocking
+		BT02 K 5
+		BT02 L -1
+		Stop
+	XDeath:
+		BT02 M 5
+		BT02 N 5 A_XScream
+		BT02 O 5 A_NoBlocking
+		BT02 PQRST 5
+		BT02 U -1
+		Stop
+	Raise:
+		BT02 L 5
+		BT02 KJIH 5
+		Goto See
+	}
+}
+
+ACTOR BioTechEnemy3 18737 // 3001
+{
+	Health 60
+	Radius 20
+	Height 56
+	Mass 100
+	Speed 8
+	PainChance 200
+	Bloodcolor Green
+	Monster
+	+FLOORCLIP
+	SeeSound "imp/sight"
+	PainSound "imp/pain"
+	DeathSound "BioTech/Sound2"
+	ActiveSound "imp/active"
+	HitObituary "$OB_IMPHIT"
+	Obituary "$OB_IMP"
+	States
+	{
+	Spawn:
+		BT03 AB 10 A_Look
+		Loop
+	See:
+		BT03 AABBCCDD 3 A_Chase
+		Loop
+	Melee:
+	Missile:
+		BT03 EF 8 A_FaceTarget
+		BT03 G 6 A_CustomComboAttack("BioTechEnemy3Ball", 32, 3 * random(1, 8), "imp/melee")
+		Goto See
+	Pain:
+		BT03 H 2
+		BT03 H 2 A_Pain
+		Goto See
+	Death:
+		BT03 I 8
+		BT03 J 8 A_Scream
+		BT03 K 6
+		BT03 L 6 A_NoBlocking
+		BT03 M -1
+		Stop
+	XDeath:
+		BT03 N 5
+		BT03 O 5 A_XScream
+		BT03 P 5
+		BT03 Q 5 A_NoBlocking
+		BT03 RST 5
+		BT03 U -1
+		Stop
+	Raise:
+		BT03 MLKJI 8
+		Goto See
+	}
+}
+
+ACTOR BioTechEnemy3Ball
+{
+	Radius 6
+	Height 8
+	Speed 10
+	FastSpeed 20
+	Damage 3
+	Projectile
+	+RANDOMIZE
+	RenderStyle Add
+	Alpha 1
+	SeeSound "imp/attack"
+	DeathSound "imp/shotx"
+	States
+	{
+	Spawn:
+		BT03 VW 4 BRIGHT
+		Loop
+	Death:
+		BT03 XYZ 6 BRIGHT
+		Stop
+	}
+}
+
+ACTOR BioTechEnemy4 18738 // 3002
+{
+	Health 150
+	PainChance 180
+	Speed 10
+	Radius 30
+	Height 56
+	Mass 400
+	Bloodcolor Green
+	Monster
+	+FLOORCLIP
+	SeeSound "demon/sight"
+	AttackSound "demon/melee"
+	PainSound "demon/pain"
+	DeathSound "BioTech/Sound3"
+	ActiveSound "demon/active"
+	Obituary "$OB_DEMONHIT"
+	States
+	{
+	Spawn:
+		BT04 AB 10 A_Look
+		Loop
+	See:
+		BT04 AABBCCDD 2 A_Chase
+		Loop
+	Melee:
+		BT04 EF 8 A_FaceTarget
+		BT04 G 8 A_SargAttack
+		Goto See
+	Pain:
+		BT04 H 2
+		BT04 H 2 A_Pain
+		Goto See
+	Death:
+		BT04 I 8
+		BT04 J 8 A_Scream
+		BT04 K 4
+		BT04 L 4 A_NoBlocking
+		BT04 M 4
+		BT04 N -1
+		Stop
+	Raise:
+		BT04 N 5
+		BT04 MLKJI 5
+		Goto See
+	}
+}
+
+ACTOR BioTechEnemy5 18739 // 68
+{
+	Health 1200
+	Radius 64
+	Height 64
+	Mass 600
+	Speed 12
+	PainChance 128
+	BloodColor blue
+	Monster
+	+FLOORCLIP
+	+BOSSDEATH
+	SeeSound "baby/sight"
+	PainSound "baby/pain"
+	DeathSound "BioTech/Sound4"
+	ActiveSound "baby/active"
+	Obituary "$OB_BABY"
+	States
+	{
+	Spawn:
+		BT07 AB 10 A_Look
+		Loop
+	See:
+		BT07 A 20
+		BT07 A 3 A_BabyMetal
+		BT07 ABBCC 3 A_Chase
+		BT07 D 3 A_BabyMetal
+		BT07 DEEFF 3 A_Chase
+		Goto See+1
+	Missile:
+		BT07 A 20 BRIGHT A_FaceTarget
+		BT07 G 4 BRIGHT A_CustomMissile("BioTechEnemy5Ball", 32.0, 0.0, 0, 0)
+		BT07 H 4 BRIGHT
+		BT07 H 1 BRIGHT A_SpidRefire
+		Goto Missile+1
+	Pain:
+		BT07 I 3
+		BT07 I 3 A_Pain
+		Goto See+1
+	Death:
+		BT07 J 20 A_Scream
+		BT07 K 7 A_NoBlocking
+		BT07 LMNO 7
+		BT07 P -1 A_BossDeath
+		Stop
+    Raise:
+		BT07 P 5
+		BT07 ONMLKJ 5
+		Goto See+1
+	}
+}
+
+ACTOR BioTechEnemy5Ball
+{
+	Radius 13
+	Height 8
+	Speed 25
+	Damage 5
+	Projectile 
+	+RANDOMIZE
+	RenderStyle Add 
+	SeeSound "BioTech/Sound0"
+	DeathSound "baby/shotx"
+	States
+	{
+	Spawn:
+		BT07 QR 10 Bright A_SpawnItemEx("BioTechEnemy5Trail", 0, 0, 0, 0, 0, 0, Random(-10, 10), 128)
+    	Loop
+	Death:
+		BT07 UVZT 3 Bright
+		Stop
+	}
+}
+
+Actor BioTechEnemy5Trail
+{
+	Radius 4
+	Height 8
+	Speed 0
+	Damage 0
+	Scale 1.0 
+	RenderStyle Add 
+	Projectile
+	states
+	{
+	Spawn:
+		TNT1 A 2
+		BT07 ST 6 Bright A_FadeOut
+		Stop
+  }
+}
+
+ACTOR BioTechEnemy6 18740 // 3006
+{
+	Health 200
+	Radius 16
+	Height 56
+	Mass 50
+	Speed 14
+	Damage 5
+	PainChance 256
+	Monster
+	+FLOAT
+	+NOGRAVITY
+	+MISSILEMORE
+	+DONTFALL
+	+NOICEDEATH
+	+NOBLOOD
+	AttackSound "BioTech/Sound5"
+	PainSound "marsdoom/dronepain"
+	DeathSound "skull/death"
+	Obituary "%o was killed by a sec droid"
+	States
+	{
+	Spawn:
+		BT05 AB 10 A_Look
+		Loop
+	See:
+		BT05 AB 6 A_Chase
+		Loop
+	Missile:
+		BT05 C 10 A_FaceTarget
+		BT05 D 4 A_SkullAttack
+		BT05 CD 4
+		Goto Missile+2
+	Pain:
+		BT05 E 3
+		BT05 E 3 A_Pain
+		Goto See
+	Death:
+		BT05 F 6 BRIGHT
+		BT05 G 6 BRIGHT A_Scream
+		BT05 H 6 BRIGHT
+		BT05 I 6 BRIGHT A_NoBlocking
+		BT05 J 6 BRIGHT
+		BT05 K 6 BRIGHT
+		Stop
+	}
+}
+
+ACTOR BioTechEnemy7 18741 // 3005
+{
+	Health 350
+	Radius 31
+	Height 56
+	Mass 400
+	Speed 8
+	PainChance 128
+	BloodColor yellow
+	Monster
+	+FLOORCLIP
+	SeeSound "BioTech/Sound6"
+	PainSound "BioTech/Sound8"
+	DeathSound "BioTech/Sound9"
+	ActiveSound "BioTech/Sound7"
+	Obituary "%o was killed by a stalker"
+	HitObituary "%o was killed by a stalker"
+	States
+	{
+	Spawn:
+		BT06 A 10 A_Look
+		Loop
+	See:
+		BT06 A 3 A_Chase
+		Loop
+	Missile:
+		BT06 B 5 A_FaceTarget
+		BT06 C 5 A_FaceTarget
+		BT06 D 5 BRIGHT A_CustomMissile("BioTechEnemy7Ball", 32.0, 0.0, 0, 0)
+		Goto See
+	Pain:
+		BT06 E 3
+		BT06 E 3 A_Pain
+		BT06 F 6
+		Goto See
+	Death:
+		BT06 G 8
+		BT06 H 8 A_Scream
+		BT06 I 8
+		BT06 J 8
+		BT06 K 8 A_NoBlocking
+		BT06 L -1 A_SetFloorClip
+		Stop
+	Raise:
+		BT06 L 8 A_UnSetFloorClip
+		BT06 KJIHG 8
+		Goto See
+	}
+}
+
+ACTOR BioTechEnemy7Ball
+{
+	Radius 6
+	Height 8
+	Speed 10
+	FastSpeed 20
+	Damage 3
+	Projectile 
+	+RANDOMIZE
+	RenderStyle Add
+	Alpha 1
+	SeeSound "baron/attack"
+	DeathSound "baron/shotx"
+	Decal "BaronScorch"
+	States
+	{
+	Spawn:
+		BAL7 AB 4 BRIGHT
+		Loop
+	Death:
+		BAL7 CDE 6 BRIGHT
+		Stop
+	}
+}
+

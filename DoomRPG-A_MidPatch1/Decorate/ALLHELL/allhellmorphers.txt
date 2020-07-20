@@ -1,0 +1,57 @@
+Actor AllHellMorpher0 18569 // 64
+{
+    Radius 20
+	Height 56
+	Mass 100
+	MONSTER
+	-COUNTKILL
+	+INVULNERABLE
+	+FLOORCLIP
+	+LOOKALLAROUND
+	Speed 0
+    states
+    {
+    Spawn:
+	ALH9 Y 10 A_Look 
+	loop
+	See:
+	ALH9 Y 8
+	Goto Eliminated
+    Eliminated:
+	ALH9 QRSTUVWX 3
+	TNT1 A 0 A_UnsetSolid
+	TNT1 A 0 A_SpawnItemEx("Archvile",0,0,0)
+	TNT1 A 0
+	stop
+    }
+}
+
+Actor AllHellMorpher1 18570 // 41
+{
+    Radius 20
+	Height 56
+	Mass 100
+	MONSTER
+	-COUNTKILL
+	+INVULNERABLE
+	+FLOORCLIP
+	+LOOKALLAROUND
+	Speed 0
+    states
+    {
+    Spawn:
+	ALH9 A 10 A_Look 
+	loop
+	See:
+	ALH9 A 1
+	Goto Eliminated
+    Eliminated:
+	ALH9 ABCDEFGHIJKLM 3
+	ALH9 NO 5
+	ALH9 P 7
+	TNT1 A 0 A_UnsetSolid
+	TNT1 A 0 A_SpawnItemEx("DoomImp",0,0,0)
+	TNT1 A 0
+	stop
+    }
+}

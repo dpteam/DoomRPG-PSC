@@ -1,0 +1,52 @@
+ACTOR Obituary_BazookaMan 18502
+{
+	Health 50
+	Radius 20
+	Height 56
+	Mass 100
+	Speed 8
+	PainChance 200
+	Monster
+	+FLOORCLIP
+	SeeSound "grunt/sight"
+	PainSound "grunt/pain"
+	DeathSound "grunt/death"
+	ActiveSound "grunt/active"
+	Obituary "%o was splattered by a Bazooka Man"
+	States
+	{
+	Spawn:
+		OBT2 AB 10 A_Look
+		Loop
+	See:
+		OBT2 AABBCCDD 3 A_Chase
+		Loop
+	Missile:
+		OBT2 E 14 A_FaceTarget
+		OBT2 F 12 bright A_FaceTarget
+		OBT2 G 9 A_CyberAttack
+		Goto See
+	Pain:
+		OBT2 H 2
+		OBT2 H 2 A_Pain
+		Goto See
+	Death:
+		OBT2 I 8
+		OBT2 J 8 A_Scream
+		OBT2 K 6
+		OBT2 L 6 A_NoBlocking
+		OBT2 M -1
+		Stop
+	XDeath:
+		OBT2 N 5
+		OBT2 O 5 A_XScream
+		OBT2 P 5
+		OBT2 Q 5 A_NoBlocking
+		OBT2 RST 5
+		OBT2 U -1
+		Stop
+	Raise:
+		OBT2 MLKJI 8
+		Goto See
+	}
+}

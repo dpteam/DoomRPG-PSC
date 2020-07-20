@@ -1,0 +1,55 @@
+actor PolyDrone 20003 {
+	obituary "%o was torn to shreds by the PolyDrone."
+	hitobituary "%o was burned to death by the remains of a PolyDrone."
+	health 160
+	radius 18
+	height 30
+	mass 80
+	speed 8
+	painchance 128
+	seesound "polydrone/sight"
+	attacksound "polydrone/attack"
+	painsound ""
+	deathsound "polydrone/death" 
+	activesound ""
+	MONSTER
+	+DONTHURTSPECIES
+	+SOLID
+	+SHOOTABLE
+	+SPAWNCEILING
+	+NOBLOOD
+	+NOGRAVITY
+	+FLOAT
+	+FLOORCLIP
+	+MISSILEMORE
+	states {
+		Spawn:
+			POLY A 10 A_Look
+			loop
+		See:
+			POLY A 50 A_Chase
+			POLY A 3 A_PlaySound("polydrone/active")
+			POLY ABBCCDD 3 A_Chase
+			loop
+		Missile:
+			POLY E 20 A_FaceTarget
+			POLY FF 4 bright A_CPosAttack
+			POLY E 1 A_CPosRefire
+			goto Missile+1
+		Pain:
+			POLY E 3 A_Chase 
+			POLY E 3 A_Pain
+			goto See
+		Death:
+			POLY E 10 bright A_Scream
+			POLY H 10 bright A_Explode
+			POLY I 10 bright A_Fall
+			POLY K 4 bright A_Fall
+			POLY J 4 bright
+			POLY L 4 bright A_SargAttack
+			POLY MNJKL 4 bright
+			POLY MN 3 bright
+			POLY K 4 bright A_Fall
+			goto Death+4
+	}
+}

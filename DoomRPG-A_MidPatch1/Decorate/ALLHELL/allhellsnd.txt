@@ -1,0 +1,39 @@
+ACTOR Allhellsnd1 14031 // 38
+
+ACTOR Allhellsnd3 14032 // 39
+
+ACTOR Allhellsnd3 14033 // 40
+
+ACTOR Allhellprop1 18554 // 2035
+
+ACTOR Allhellprop2 18555 // 29
+
+ACTOR Allhellprop3 18556 // 25
+
+ACTOR Allhellprop4 18557 // 47
+
+ACTOR Allhellprop5 18558 // 80
+
+ACTOR AllHellDemon 18559 // 3002
+
+ACTOR AllHellTwoFace 18560 // 84
+
+ACTOR AllHellArachnotron 18561 //68
+
+ACTOR AllHellFlyingBaron 18562 // 3003
+
+ACTOR AllHellEvilMarine 18563 // 12
+
+Actor AllHellHelicopter 18564 // 71
+
+ACTOR AllHellWingedDemon1 18565 // 23
+
+ACTOR AllHellWingedDemon2 18566 // 69
+
+ACTOR AllHellWingedDemon3 18567 // 72
+
+ACTOR AllHellHugeCyber 18568 // 67
+
+Actor AllHellMorpher0 18569 // 64
+
+Actor AllHellMorpher1 18570 // 41

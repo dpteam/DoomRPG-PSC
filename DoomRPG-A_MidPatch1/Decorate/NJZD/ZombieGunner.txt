@@ -1,0 +1,56 @@
+ACTOR EnjayZombieGunner 18681 // 84
+{
+	Health 50
+	Radius 20
+	Height 56
+	Speed 8
+	PainChance 170
+	Monster
+	+FLOORCLIP
+	SeeSound "grunt/sight"
+	AttackSound "grunt/attack"
+	PainSound "grunt/pain"
+	DeathSound "grunt/death"
+	ActiveSound "grunt/active"
+	Obituary "%o was killed by a new kind of zombie"
+	Dropitem "Clip"
+	States
+	{
+	Spawn:
+		NJDZ AB 10 A_Look
+		Loop
+	See:
+		NJDZ AABBCCDD 3 A_Chase
+		Loop
+	Missile:
+		NJDZ E 5 A_FaceTarget
+		NJDZ F 5 A_FaceTarget
+		NJDZ G 4 BRIGHT A_CPosAttack
+		NJDZ F 6 A_FaceTarget
+		NJDZ G 4 BRIGHT A_CPosAttack
+		NJDZ F 1 A_CPosRefire
+		Goto Missile+1
+	Pain:
+		NJDZ H 3
+		NJDZ H 3 A_Pain
+		Goto See
+	Death:
+		NJDZ I 5
+		NJDZ J 5 A_Scream
+		NJDZ K 5 A_NoBlocking
+		NJDZ L 5
+		NJDZ M -1
+		Stop
+	XDeath:
+		NJDZ N 5 
+		NJDZ O 5 A_XScream
+		NJDZ P 5 A_NoBlocking
+		NJDZ QRSTU 5
+		NJDZ V -1
+		Stop
+	Raise:
+		NJDZ M 5
+		NJDZ LKJI 5
+		Goto See 
+	}
+}

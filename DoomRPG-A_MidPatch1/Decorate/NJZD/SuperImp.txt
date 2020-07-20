@@ -1,0 +1,53 @@
+ACTOR EnjaySuperImp 18680 // 23
+{
+	Health 80
+	Radius 20
+	Height 56
+	Mass 100
+	Speed 10
+	PainChance 180
+	Monster
+	+FLOORCLIP
+	SeeSound "imp/sight"
+	PainSound "imp/pain"
+	DeathSound "imp/death"
+	ActiveSound "imp/active"
+	HitObituary "$OB_IMPHIT"
+	Obituary "%o was killed by a new kind of imp"
+	States
+	{
+	Spawn:
+		NJZD AB 10 A_Look
+		Loop
+	See:
+		NJZD AABBCCDD 3 A_Chase
+		Loop
+	Melee:
+	Missile:
+		NJZD EF 8 A_FaceTarget
+		NJZD G 6 A_BruisAttack 
+		Goto See
+	Pain:
+		NJZD H 2
+		NJZD H 2 A_Pain
+		Goto See
+	Death:
+		NJZD I 8
+		NJZD J 8 A_Scream
+		NJZD K 6
+		NJZD L 6 A_NoBlocking
+		NJZD M -1
+		Stop
+	XDeath:
+		NJZD N 5
+		NJZD O 5 A_XScream
+		NJZD P 5
+		NJZD Q 5 A_NoBlocking
+		NJZD RST 5
+		NJZD U -1
+		Stop
+	Raise:
+		NJZD MLKJI 8
+		Goto See
+	}
+}

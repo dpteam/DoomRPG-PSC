@@ -1,0 +1,100 @@
+ACTOR HexenDeadLaid1 30367
+{
+  //$Category "Decoration"
+  Radius 16
+  Height 24
+  -SOLID
+  States
+  {
+  Spawn:
+    CPS4 A -1
+    Stop
+  }
+}
+
+ACTOR HexenDeadLaid2 30368
+{
+  //$Category "Decoration"
+  Radius 16
+  Height 24
+  -SOLID
+  States
+  {
+  Spawn:
+    CPS5 A -1
+    Stop
+  }
+}
+
+ACTOR HexenDeadSitting1 30369
+{
+  //$Category "Decoration"
+  Radius 16
+  Height 24
+  -SOLID
+  States
+  {
+  Spawn:
+    CPS6 A -1
+    Stop
+  }
+}
+
+ACTOR HexenDeadSitting2 30370
+{
+  //$Category "Decoration"
+  Radius 16
+  Height 24
+  -SOLID
+  States
+  {
+  Spawn:
+    CPS7 A -1
+    Stop
+  }
+}
+
+ACTOR HexenDeadHanged1 30371
+{
+  //$Category "Decoration"
+	Radius 16
+	Height 64
+	-SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		CPS8 A -1
+		Stop
+	}
+}
+
+ACTOR HexenDeadHanged2 30372
+{
+  //$Category "Decoration"
+	Radius 16
+	Height 64
+	-SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		CPS9 A -1
+		Stop
+	}
+}
+
+ACTOR BonePile 30373
+{
+  Radius 24
+  Height 24
+  -SOLID
+  States
+  {
+  Spawn:
+    SBON A -1
+    Stop
+  }
+}

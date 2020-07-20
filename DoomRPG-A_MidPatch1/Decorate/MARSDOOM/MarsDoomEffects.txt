@@ -1,0 +1,107 @@
+// MARS DOOM EFFECTS
+
+Actor MarsDoomExplosion1 18620
+{
+	+NOINTERACTION
+	+FORCEXYBILLBOARD
+	Obituary "%o was caught in an explosion"
+	States
+	{
+	  Spawn:
+	    TNT1 A 0
+	    TNT1 A 0 A_PlaySound("weapons/rocklx")
+		MISL B 8 Bright A_Explode(72,92)
+        MISL C 6 Bright
+        MISL D 4 Bright
+        Stop
+    }
+}
+
+
+Actor MarsDoomTrapBarrelExp
+{
+	+NOINTERACTION
+	+FORCEXYBILLBOARD
+	HitObituary "%o was caught in an explosive barrel's blast."
+	Obituary "%o was caught in an explosive barrel's blast."
+	States
+	{
+	  Spawn:
+	    TNT1 A 0
+		TNT1 A 1 A_Explode
+        Stop
+    }
+}
+
+ACTOR MarsDoomExplosion2 18630 // 75
+{
+	Health 1
+	Radius 0
+	Height 0
+	Mass 10000
+	-SOLID
+	+THRUACTORS
+	+SHOOTABLE
+	+NOBLOOD
+	+NONSHOOTABLE
+	+DONTGIB
+	+NOICEDEATH
+	+NOGRAVITY
+	DeathSound "marsdoom/explosion"
+	RenderStyle Add
+	Scale 0.90
+	States
+	{
+	Spawn:
+		TNT1 A 5
+		Loop
+	Death:
+		TNT1 A 0 A_NoGravity
+		TNT1 A 0 A_Scream
+		C_TJ ABCDEFGHIJKLMNOPQ 3 bright
+		Stop
+	}
+}
+
+ACTOR MarsDoomEileen 18634 // 57
+{
+	Health 100
+	Radius 14
+	Height 56
+	Speed 8
+	Monster
+	+FLOORCLIP
+	+MISSILEEVENMORE
+	-SHOOTABLE
+	-COUNTKILL
+	+INVULNERABLE
+	+NOINFIGHTING
+	+NOBLOCKMONST
+	+PUSHABLE
+	SeeSound "marsdoomeileen/sight"
+	ActiveSound "marsdoomeileen/active"
+	MaxDropOffHeight 32
+	MaxStepHeight 32
+	States
+	{
+	Spawn:
+		MRS4 EE 10 A_Look
+		Loop
+	See:
+		MRS4 AABBCCDD 4 A_Chase
+		Loop
+	Melee:
+		MRS4 E 4 A_FaceTarget
+		Goto See
+	}
+}
+
+actor MarsDoomForceField 18638 // 12
+{
+	States
+	{
+	Spawn:
+		MRS1 NOPQ 4 bright
+		Loop
+	}
+}

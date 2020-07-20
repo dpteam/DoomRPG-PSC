@@ -1,0 +1,53 @@
+actor Smokeeffect1spawner
+{
+- SOLID
++NOCLIP
++NOBLOCKMAP
++NOGRAVITY
+States
+{
+Spawn:
+TNT1 A 1
+TNT1 A 0 A_PlaySound("ambient/wreck01")
+TNT1 AAAAAAAAAAAA 0 A_CustomMissile("Smokeeffect1", random(0,10), 0, random(0,360), 2, random(-2,20))
+TNT1 AAAAAAAAAAAA 0 A_CustomMissile("Minismokeeffect", random(0,10), 0, random(0,360), 2, random(-2,20))
+TNT1 AAAAAAAAAAAA 0 A_CustomMissile("Minismokeeffect2", 0, 0, random(0,360), 2, random(0,90))
+Stop
+}
+}
+
+actor Smokeeffect1
+{
+renderstyle translucent
+speed 8
++DONTSPLASH
+alpha 0.8
+radius 4
+height 4
++DOOMBOUNCE
+damage 0
++RIPPER
++NOBLOOD
+Scale 0.5
+States
+{
+Spawn:
+SMOK ABCDEFGHIJKLMNOPQ 2
+Stop
+}
+}
+
+actor Minismokeeffect : Smokeeffect1
+{
+speed 14
+Scale 0.20
+alpha 0.5
+}
+
+actor Minismokeeffect2 : Smokeeffect1
+{
+Scale 0.35
+speed 10
+alpha 0.7
+}
+

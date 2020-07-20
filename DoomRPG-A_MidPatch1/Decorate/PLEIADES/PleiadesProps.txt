@@ -1,0 +1,140 @@
+ACTOR PleiadesProp1 18709 // 30
+{
+	Radius 16
+	Height 52
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		PLEI A -1
+		Stop
+	}
+}
+
+ACTOR PleiadesProp2 18710 // 31
+{
+	Radius 16
+	Height 40
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		PLEI B -1
+		Stop
+	}
+}
+
+ACTOR PleiadesProp3 18711 // 32
+{
+	Radius 16
+	Height 52
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		PLEI C -1
+		Stop
+	}
+}
+
+ACTOR PleiadesProp4 18712 // 33
+{
+	Radius 16
+	Height 40
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		PLEI D -1
+		Stop
+	}
+}
+
+ACTOR PleiadesProp5 18713 // 37
+{
+	Radius 16
+	Height 40
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		PLEI E -1
+		Stop
+	}
+}
+
+ACTOR PleiadesProp6 18714 // 54
+{
+	Radius 32
+	Height 108
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		PLEI F -1
+		Stop
+	}
+}
+
+ACTOR PleiadesProp7 18715 // 28
+{
+	Radius 16
+	Height 64
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		PLEI G -1
+		Stop
+	}
+}
+
+ACTOR PleiadesProp8 18716 // 41
+{
+	Radius 16
+	Height 54
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		PLEI HIJI 6 BRIGHT
+		Loop
+	}
+}
+
+ACTOR PleiadesProp9 18717 // 2035
+{
+	Health 20
+	Radius 10
+	Height 34
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
+	+ACTIVATEMCROSS
+	+DONTGIB
+	+NOICEDEATH
+	+OLDRADIUSDMG
+	DeathSound "world/barrelx"
+	Obituary "%o was blown up"
+	States
+	{
+	Spawn:
+		PLEI KL 6
+		Loop
+	Death:
+		PLEI L 5 BRIGHT
+		PLEI M 5 BRIGHT A_Scream
+		PLEI N 5 BRIGHT
+		PLEI O 5 BRIGHT A_Explode
+		PLEI P 10 BRIGHT
+		Stop
+	}
+}

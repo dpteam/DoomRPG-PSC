@@ -1,0 +1,486 @@
+// MARS DOOM ENEMIES AND OBSTACLES
+
+actor MarsDoomTurret 18621 // 19
+{
+  obituary "%o was shot down by an automated defence."
+  health 250
+  radius 10
+  height 24
+  mass 10000
+  speed 0
+  PainChance 10
+  MinMissileChance 1
+  MONSTER
+  +FLOORCLIP
+  +NOBLOOD
+  +LOOKALLAROUND
+  +INVULNERABLE
+  //+ALLOWPAIN
+  -COUNTKILL
+  states
+  {
+  Spawn:
+    MRS1 AAAAAABBBBBBCCCCCCBBBBBB 1 Bright A_Look
+    loop
+  See:
+    MRS1 AAAAAABBBBBBCCCCCCBBBBBB 1 Bright A_Chase
+    loop
+  Missile:
+	MRS1 A 4 Bright A_FaceTarget
+	MRS1 A 4 Bright A_BspiAttack
+	MRS1 B 4 Bright A_FaceTarget
+	MRS1 B 4 Bright A_BspiAttack
+	MRS1 C 4 Bright A_FaceTarget
+	MRS1 C 3 Bright A_BspiAttack
+	MRS1 C 1 Bright A_SpidRefire
+	Goto Missile
+  Pain:
+    Goto See
+  Death:
+    TNT1 A 1
+	TNT1 A 1
+    stop
+  }
+}
+
+ACTOR MarsDoomTurretOff 18622 // 84
+{
+	radius 20
+    height 24
+	+SOLID
+	States
+	{
+	Spawn:
+		MRS1 D 6
+		Loop
+	}
+}
+
+ACTOR SpectreImp : DoomImp 18625 // 74
+{
+	+SHADOW
+	RenderStyle OptFuzzy
+	BloodType "SpectreBlood"
+	Alpha 0.5
+	Obituary "$OB_STEALTHIMP"
+	HitObituary "$OB_STEALTHIMP"
+}
+
+ACTOR SpectreHellKnight : HellKnight 18626 // 72
+{
+	+SHADOW
+	RenderStyle OptFuzzy
+	BloodType "SpectreBlood"
+	Alpha 0.5
+	Obituary "$OB_STEALTHIMP"
+	HitObituary "$OB_STEALTHIMP"
+}
+
+ACTOR MarsDoomMissile 18627 // 47
+{
+	Health 15
+	Speed 16
+	Radius 16
+	Height 16
+	Mass 800
+	Monster
+	+FLOORCLIP
+	+DONTRIP
+	+NOBLOOD
+	+FLOAT
+	+NOGRAVITY
+	+LOOKALLAROUND
+	Obituary "%o was blown up by a rocket"
+	States
+	{
+	Spawn:
+		MRS1 F 10 Bright A_Look
+		Loop
+	See:
+		MRS1 FF 1 Bright A_Chase
+		Loop
+	Melee:
+		MRS1 F 1 Bright A_Die
+		Goto See
+	Death:
+		TNT1 A 0 A_NoGravity
+		TNT1 A 0 A_PlaySound("weapons/rocklx")
+		MISL B 8 Bright A_Explode(82,92)
+        MISL C 6 Bright
+        MISL D 4 Bright
+		Stop
+	}
+}
+
+ACTOR MarsDoomSecurityDrone 18631 // 73
+{
+	Health 110
+	Radius 16
+	Height 32
+	Mass 800
+	Speed 12
+	PainChance 90
+	Monster
+	+FLOORCLIP
+	+NOBLOOD
+	+FLOAT
+	+NOGRAVITY
+	SeeSound "marsdoom/dronesight"
+	PainSound "marsdoom/dronepain"
+	DeathSound "weapons/rocklx"
+	AttackSound "marsdoom/dronefire"
+	Obituary "%o was shot by a security drone"
+	States
+	{
+	Spawn:
+		MRS2 AABB 10 A_Look
+		Loop
+	See:
+		MRS2 AABB 3 A_Chase
+		Loop
+	Missile:
+		MRS2 C 7 A_FaceTarget
+		MRS2 D 3 BRIGHT A_CPosAttack
+		MRS2 C 2 A_FaceTarget
+		MRS2 C 1 A_CPosRefire
+		Goto Missile+1
+	Pain:
+		MRS2 B 3 A_Pain
+		Goto See
+	Death:
+		MRS2 E 2 Bright A_NoGravity
+		MRS2 F 3 Bright
+		MRS2 F 2 Bright A_Scream
+		MRS2 G 6 Bright 
+		MRS2 H 5 Bright A_NoBlocking
+		MRS2 I 4 Bright
+		Stop
+	}
+}
+
+Actor MarsDoomEvilGirl 18633 // 2047
+{
+    Health 140
+	Mass 800
+    Radius 20
+	Height 56
+    Speed 10
+    Painchance 100
+	Obituary "%o was killed by a demonic girl"
+	MeleeRange 64
+    MONSTER
+	+FLOORCLIP
+	-SHOOTABLE
+	+FLOAT
+	+NOGRAVITY
+	+LOOKALLAROUND
+    SeeSound "marsdoomevilgirl/sight"
+    ActiveSound "marsdoomevilgirl/active"
+    PainSound "marsdoomevilgirl/pain"
+    DeathSound "marsdoomevilgirl/death"
+    States
+    {
+    Spawn:
+	    TNT1 A 0
+		TNT1 A 0 A_ChangeFlag(SHOOTABLE,0)
+        TNT1 A 10 A_Look
+        Loop
+	See:
+		TNT1 A 0 A_ChangeFlag(SHOOTABLE,0)
+		TNT1 A 3 A_Chase
+		Loop
+	Melee:
+		MRS3 O 3 A_FaceTarget
+		MRS3 P 3 A_FaceTarget
+		MRS3 Q 3 A_FaceTarget
+		TNT1 A 0 A_JumpIfCloser (84, "MeleeLoop")
+		goto Retreat
+	MeleeLoop:
+		TNT1 A 0 A_ChangeFlag(SHOOTABLE,1)
+		MRS3 A 6 A_FaceTarget
+		TNT1 A 0 A_PlaySound("marsdoomevilgirl/whip")
+		MRS3 B 4 A_FaceTarget
+		MRS3 C 4 A_CustomMeleeAttack(random(3, 6) * 5, "marsdoomevilgirl/hit")
+		MRS3 D 4 A_FaceTarget
+		TNT1 A 0 A_JumpIfCloser (84, "MeleeLoop")
+		Goto Retreat
+	Missile:
+		MRS3 O 3 A_FaceTarget
+		MRS3 P 3 A_FaceTarget
+		MRS3 Q 3 A_FaceTarget
+		Goto Attack
+    Attack:
+		TNT1 A 0 A_ChangeFlag(SHOOTABLE,1)
+		MRS3 E 5 A_FaceTarget
+		MRS3 F 4 A_FaceTarget
+		MRS3 G 4 A_CustomMissile("MarsDoomGirlProj",32,0,0)
+		MRS3 H 6 A_FaceTarget
+		Goto Retreat
+	Retreat:
+	    TNT1 A 0 A_ChangeFlag(SHOOTABLE,0)
+		MRS3 Q 3 A_FaceTarget
+		MRS3 P 3 A_FaceTarget
+		MRS3 O 3 A_FaceTarget
+		Goto See
+    Pain:
+		MRS3 I 5 A_Pain
+		MRS3 K 5
+		Goto Retreat
+	Death:	
+		TNT1 A 0 A_ChangeFlag(SHOOTABLE,0)
+		MRS3 I 5
+		MRS3 J 5 A_Scream
+		MRS3 KL 6
+		MRS3 M 6 A_NoBlocking
+		MRS3 N -1
+		Stop
+	Raise:
+		MRS3 M 6
+		MRS3 LK 6
+		MRS3 JI 5
+		Goto See
+    }
+}
+
+ACTOR MarsDoomGirlProj
+{
+	Radius 6
+	Height 16
+	Speed 15
+	FastSpeed 20
+	Damage 4
+	Projectile 
+	+RANDOMIZE
+	SeeSound "baron/attack"
+	DeathSound "baron/shotx"
+	States
+	{
+	Spawn:
+		MRS3 RS 4 BRIGHT
+		Loop
+	Death:
+		MRS3 TUV 6 BRIGHT
+		MRS3 W 4 BRIGHT
+		MRS3 W 1 BRIGHT A_SetTranslucent(0.8,0)
+		MRS3 W 1 BRIGHT A_SetTranslucent(0.6,0)
+		MRS3 W 1 BRIGHT A_SetTranslucent(0.4,0)
+		MRS3 W 1 BRIGHT A_SetTranslucent(0.2,0)
+		Stop
+	}
+}
+
+ACTOR MarsDoomMarineShotgun 18635 // 49
+{
+	Health 150
+	Radius 16
+	Height 56
+	Mass 100
+	Speed 9
+	Painchance 100
+	MONSTER
+	+FLOORCLIP
+	+NOINFIGHTING
+	SeeSound "marsdoommarine/sight"
+	DeathSound "marsdoommarine/death"
+	PainSound "marsdoommarine/pain"
+	ActiveSound "marsdoommarine/active"
+	Obituary "%o was killed by a space marine."
+	States
+	{
+	Spawn:
+		MRS5 A 4 A_Look
+		Loop
+	See:
+		MRS5 ABCD 2 A_Chase
+		Loop
+	Missile:
+		MRS5 E 10 A_FaceTarget
+		TNT1 A 0 bright A_PlaySound("shotguy/attack", CHAN_WEAPON)
+		TNT1 A 0 bright A_CustomBulletAttack(22.5, 0, 3, random(1,5)*3, "BulletPuff", 0, CBAF_NORANDOM)
+		MRS5 F 10 bright A_CustomBulletAttack(22.5, 0, 3, random(1,5)*3, "BulletPuff", 0, CBAF_NORANDOM)
+		MRS5 E 10
+		Goto See
+	Pain:
+		MRS5 G 4
+		MRS5 G 4 A_Pain
+		Goto See
+	Death:
+		MRS5 H 10
+		MRS5 I 10 A_Scream
+		MRS5 J 10 A_NoBlocking
+		MRS5 KLM 10
+		MRS5 N -1
+		Stop
+	XDeath:
+		MRS5 O 5
+		MRS5 P 5 A_XScream
+		MRS5 Q 5 A_NoBlocking
+		MRS5 RSTUV 5
+		MRS5 W -1
+		Stop
+	Raise:
+		MRS5 MLKJIH 5
+		Goto See
+	}
+}
+
+ACTOR MarsDoomMarinePlasma 18636 // 50
+{
+	Health 300
+	Radius 16
+	Height 56
+	Mass 100
+	Speed 9
+	Painchance 100
+	MONSTER
+	+FLOORCLIP
+	+NOINFIGHTING
+	SeeSound "marsdoommarine/sight"
+	DeathSound "marsdoommarine/death"
+	PainSound "marsdoommarine/pain"
+	ActiveSound "marsdoommarine/active"
+	Obituary "%o was killed by a space marine."
+	States
+	{
+	Spawn:
+		MRS6 A 4 A_Look
+		Loop
+	See:
+		MRS6 ABCD 2 A_Chase
+		Loop
+	Missile:
+		MRS6 E 4 A_FaceTarget
+		MRS6 F 3 bright A_CustomMissile("PlasmaBall",32,0,0)
+		MRS6 E 2 A_FaceTarget
+		MRS6 F 3 bright A_CustomMissile("PlasmaBall",32,0,0)
+		MRS6 E 2 A_FaceTarget
+		MRS6 F 3 bright A_CustomMissile("PlasmaBall",32,0,0)
+		MRS6 E 4
+		Goto See
+	Pain:
+		MRS6 G 4
+		MRS6 G 4 A_Pain
+		Goto See
+	Death:
+		MRS6 H 10
+		MRS6 I 10 A_Scream
+		MRS6 J 10 A_NoBlocking
+		MRS6 KLM 10
+		MRS6 N -1
+		Stop
+	XDeath:
+		MRS6 O 5
+		MRS6 P 5 A_XScream
+		MRS6 Q 5 A_NoBlocking
+		MRS6 RSTUV 5
+		MRS6 W -1
+		Stop
+	Raise:
+		MRS6 MLKJIH 5
+		Goto See
+	}
+}
+
+ACTOR MarsDoomMarineRocket 18637 // 51
+{
+	Health 350
+	Radius 16
+	Height 56
+	Mass 100
+	Speed 9
+	Painchance 100
+	MONSTER
+	+FLOORCLIP
+	+NOINFIGHTING
+	SeeSound "marsdoommarine/sight"
+	DeathSound "marsdoommarine/death"
+	PainSound "marsdoommarine/pain"
+	ActiveSound "marsdoommarine/active"
+	Obituary "%o was killed by a space marine."
+	States
+	{
+	Spawn:
+		MRS7 A 4 A_Look
+		Loop
+	See:
+		MRS7 ABCD 2 A_Chase
+		Loop
+	Missile:
+		MRS7 E 10 A_FaceTarget 
+		MRS7 E 7 A_FaceTarget 
+		MRS7 F 3 bright A_FaceTarget
+		MRS7 F 5 bright A_CyberAttack
+		MRS7 E 13 A_FaceTarget
+		Goto See
+	Pain:
+		MRS7 G 4
+		MRS7 G 4 A_Pain
+		Goto See
+	Death:
+		MRS7 H 10
+		MRS7 I 10 A_Scream
+		MRS7 J 10 A_NoBlocking
+		MRS7 KLM 10
+		MRS7 N -1
+		Stop
+	XDeath:
+		MRS7 O 5
+		MRS7 P 5 A_XScream
+		MRS7 Q 5 A_NoBlocking
+		MRS7 RSTUV 5
+		MRS7 W -1
+		Stop
+	Raise:
+		MRS7 MLKJIH 5
+		Goto See
+	}
+}
+
+ACTOR MarsDoomGargoyle : HereticImp 18640 // 56
+{
+	Health 40
+	Radius 16
+	Height 36
+	Mass 200
+	Speed 10
+	Painchance 200
+	Monster
+	+FLOAT
+	+NOGRAVITY
+	+SPAWNFLOAT
+	+DONTOVERLAP
+	+MISSILEMORE
+	SeeSound "marsdoomheretic/sight"
+	PainSound "marsdoomheretic/pain"
+	DeathSound "misc/gibbed"
+	ActiveSound "marsdoomheretic/sight"
+	Obituary "$OB_HERETICIMP"
+	States
+	{
+	Spawn:
+		MRS8 ABCB 10 A_Look
+		Loop
+	See:
+		MRS8 AABBCCBB 3 A_Chase
+		Loop
+	Melee:
+	Missile:
+		MRS8 DE 6 A_FaceTarget
+		MRS8 F 6 A_TroopAttack 
+		Goto See
+	Pain:
+		MRS8 G 3
+		MRS8 G 3 A_Pain
+		Goto See
+	Death:
+		MRS8 G 4 A_ImpDeath
+		MRS8 H 5
+		Wait
+	Crash:
+		MRS8 I 7 A_ImpExplode
+		MRS8 J 7 A_Scream
+		MRS8 K 7
+		MRS8 L -1
+		Stop
+	}
+}		

@@ -1,0 +1,36 @@
+ACTOR TalosMarine 18551
+{
+	Health 100
+	Radius 16
+	Height 72
+	Mass 10000000
+	PainChance 256
+	+SOLID 
+	+SPAWNCEILING 
+	+NOGRAVITY 
+	+SHOOTABLE 
+	+COUNTKILL 
+	+NOICEDEATH
+	+ISMONSTER
+	PainSound "TALOS/mpain"
+	DeathSound "TALOS/mdeath"
+	States
+	{
+	Spawn:
+		TALO A   -1
+		Loop
+	Death:
+		TALO AB	6
+		TALO C	6 A_Scream
+		TALO DEFGH	6
+		TALO I	6
+		TALO J	6
+		TALO K	6 A_KeenDie
+		TALO L   -1
+		Stop
+	Pain:
+		TALO M	4
+		TALO M	8 A_Pain
+		Goto Spawn
+	}
+}

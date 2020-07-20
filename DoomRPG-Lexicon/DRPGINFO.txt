@@ -1,2 +1,1 @@
 Name=Lexicon
-Mods=Lexicon-beta-build-137.pk3

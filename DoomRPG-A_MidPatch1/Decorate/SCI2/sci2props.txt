@@ -1,0 +1,41 @@
+ACTOR SCI2Prop1 18532 // 31
+{
+	Radius 16
+	Height 40
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		SCI2 R -1
+		Stop
+	}
+}
+
+ACTOR SCI2Prop2 18533 // 42
+{
+	Radius 16
+	Height 26
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		SCI2 STU 6 BRIGHT
+		Loop
+	}
+}
+
+ACTOR SCI2Prop3 18534 // 41
+{
+	Radius 16
+	Height 54
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		SCI2 VWXW 6 BRIGHT
+		Loop
+	}
+}

@@ -1,0 +1,230 @@
+// PROPS FOR ETERNAL DOOM
+
+ACTOR EternalDoomProp1 18571 // 30
+{
+	Radius 16
+	Height 52
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		ETE_ A -1
+		Stop
+	}
+}
+
+ACTOR EternalDoomProp2 18572 // 32
+{
+	Radius 16
+	Height 52
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		ETE_ B -1
+		Stop
+	}
+}
+
+ACTOR EternalDoomProp3 18573 // 28
+{
+	Radius 16
+	Height 64
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		ETE_ C -1
+		Stop
+	}
+}
+
+ACTOR EternalDoomProp4 18574 // 43
+{
+	Radius 16
+	Height 56
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		ETE_ D -1
+		Stop
+	}
+}
+
+ACTOR EternalDoomProp5 18575  // 47
+{
+	Radius 16
+	Height 40
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		ETE_ E -1
+		Stop
+	}
+}
+
+ACTOR EternalDoomProp6 18576  // 54
+{
+	Radius 32
+	Height 108
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		ETE_ F -1
+		Stop
+	}
+}
+
+ACTOR EternalDoomProp7 18577 // 27
+{
+	Radius 16
+	Height 56
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		ETE_ G -1
+		Stop
+	}
+}
+
+ACTOR EternalDoomProp8 18578 // 31
+{
+	Radius 16
+	Height 40
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		ETE_ H -1
+		Stop
+	}
+}
+
+ACTOR EternalDoomProp9 18579 // 33
+{
+	Radius 16
+	Height 40
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		ETE_ I -1
+		Stop
+	}
+}
+
+ACTOR EternalDoomProp10 18580 // 37
+{
+	Radius 16
+	Height 40
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		ETE_ J -1
+		Stop
+	}
+}
+
+ACTOR EternalDoomProp11 18581 // 49
+{
+	Radius 16
+	Height 68
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		ETE_ L 10 BRIGHT
+		ETE_ M 15 BRIGHT
+		ETE_ N 8 BRIGHT
+		ETE_ M 6 BRIGHT
+		Loop
+	}
+}
+
+ACTOR EternalDoomProp12 18582 // 50
+{
+	Radius 16
+	Height 84
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		ETE_ O -1
+		Stop
+	}
+}
+
+ACTOR EternalDoomProp13 : EternalDoomProp12 18583 // 59
+{
+	-SOLID
+	Radius 20
+}
+
+
+ACTOR EternalDoomProp14 18584 // 53
+{
+	Radius 16
+	Height 52
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		ETE_ P -1
+		Stop
+	}
+}
+
+ACTOR EternalDoomProp15 : EternalDoomProp14 18585 // 62
+{
+	-SOLID
+	Radius 20
+}
+
+ACTOR EternalDoomProp16 18586 // 85
+{
+	Radius 16
+	Height 80
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		ETE_ QRST 4 BRIGHT
+		Loop
+	}
+}
+
+ACTOR EternalDoomProp17 18587 // 86
+{
+	Radius 16
+	Height 60
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		ETE_ UVWX 4 BRIGHT
+		Loop
+	}
+}

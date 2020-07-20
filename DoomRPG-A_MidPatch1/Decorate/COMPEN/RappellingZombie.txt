@@ -1,0 +1,73 @@
+actor RappellingZombie1 32123
+{
+  Health 20
+  Radius 20
+  Height 56
+  Mass 0x7fffffff
+  Speed 0
+  PainChance 200
+  SeeSound "grunt/sight"
+  AttackSound "grunt/attack"
+  PainSound "grunt/pain"
+  DeathSound "grunt/death"
+  ActiveSound "grunt/active"
+  Obituary "Not even in their wildest dreams could %o have expected rappelling zombies."
+  DropItem "Clip"
+  MONSTER
+  +FLOORCLIP
+  +NOGRAVITY
+  +SPAWNCEILING
+  +LOOKALLAROUND
+  +NOINFIGHTING
+  states
+  {
+  Spawn:
+    RPZO A 10 A_Look
+    loop
+  See:
+    RPZO A 1 A_FaceTarget
+    RPZO A 0 A_Chase
+    loop
+  Missile:
+	TNT1 A 0 A_Jump(8, "Missile3")
+	TNT1 A 0 A_Jump(48, "Missile2")
+	RPZO A 10 A_FaceTarget
+	RPZO B 8 Bright A_CustomBulletAttack (11.5, 0, 1, random(2,5) * 3, "BulletPuff", 0, CBAF_NORANDOM)
+	RPZO A 8
+	Goto See
+  Missile2:
+	RPZO A 10 A_FaceTarget
+	RPZO B 8 Bright A_CustomBulletAttack (18.5, 0, 1, random(2,5) * 3, "BulletPuff", 0, CBAF_NORANDOM)
+	RPZO A 7 A_FaceTarget 
+	RPZO B 8 Bright A_CustomBulletAttack (13.5, 0, 1, random(2,5) * 3, "BulletPuff", 0, CBAF_NORANDOM)
+	RPZO A 8
+	Goto See
+  Missile3:
+	RPZO A 10 A_FaceTarget
+	RPZO B 8 Bright A_CustomBulletAttack (18.5, 0, 1, random(2,5) * 3, "BulletPuff", 0, CBAF_NORANDOM)
+	RPZO A 7 A_FaceTarget
+	RPZO B 8 Bright A_CustomBulletAttack (13.5, 0, 1, random(2,5) * 3, "BulletPuff", 0, CBAF_NORANDOM)
+	RPZO A 7 A_FaceTarget
+	RPZO B 8 Bright A_CustomBulletAttack (7.5, 0, 1, random(2,5) * 3, "BulletPuff", 0, CBAF_NORANDOM)
+	RPZO A 8
+	Goto See
+  Pain:
+    RPZO C 3
+    RPZO C 3 A_Pain
+    goto See
+  Death:
+    RPZO C 5
+	RPZO D 5 A_Scream
+	RPZO E 5 A_NoBlocking
+	RPZO F 5
+	RPZO G -1
+	Stop
+  XDeath:
+	POSS M 5
+	POSS N 5 A_XScream
+	POSS O 5 A_NoBlocking
+	POSS PQRST 5
+	POSS U -1
+	Stop
+  }
+}

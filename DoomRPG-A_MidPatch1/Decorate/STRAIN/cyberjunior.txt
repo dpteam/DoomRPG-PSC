@@ -1,0 +1,47 @@
+actor Cyberdemonjr 20001 {
+	obituary "%o was splattered by a cyberdemon jr."
+	health 300
+	radius 20
+	height 55
+	scale 0.5
+	mass 300
+	speed 9
+	painchance 40
+	seesound "cyberjr/sight"
+	painsound "cyberjr/pain"
+	deathsound "cyberjr/death"
+	activesound "cyberjr/active"
+	attacksound ""
+	MONSTER
+	+FLOORCLIP
+	+NORADIUSDMG
+	+MISSILEMORE
+	states {
+		Spawn:
+			CYBR AB 10 A_Look
+			loop
+		See:
+			CYBR A 3 A_PlaySound("cyberjr/hoof")
+			CYBR ABBCC 3 A_Chase
+			CYBR D 3 A_PlaySound("cyberjr/hoof")
+			CYBR D 3 A_Chase
+			loop
+		Missile:
+			CYBR E 15 A_FaceTarget
+			CYBR F 12 A_CyberAttack
+			CYBR E 12 A_FaceTarget
+			goto See
+		Pain:
+			CYBR G 10 A_Pain
+			goto See
+		Death:
+			CYBR H 10
+			CYBR I 10 A_Scream
+			CYBR JKL 10
+			CYBR M 10 A_Fall
+			CYBR NO 10
+			CYBR P 30
+			CYBR P -1 A_BossDeath
+			stop
+	}
+}

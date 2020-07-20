@@ -1,0 +1,68 @@
+actor DemonLord 20002 {
+	obituary "%o didn't stand a chance against the Demon Lord!"
+	health 1400
+	radius 24
+	height 64
+	mass 1000
+	speed 8
+	painchance 50
+	BloodColor darkolivegreen
+	seesound "demonlord/sight"
+	painsound "demonlord/pain"
+	deathsound "demonlord/death"
+	activesound "demonlord/active"
+	attacksound ""
+	MONSTER
+	+FLOORCLIP
+	states {
+		Spawn:
+			BOS3 AB 15 A_Look
+			loop
+		See:
+			BOS3 AABBCCDD 3 A_Chase
+			loop
+		Missile:
+			BOS3 E 8 A_FaceTarget
+			BOS3 F 1 A_FatAttack1 ("DemonLordBall")
+			BOS3 G 1 A_FatAttack2 ("DemonLordBall")
+			BOS3 G 1 A_FatAttack3 ("DemonLordBall")
+			goto See
+		Pain:
+			BOS3 H 2
+			BOS3 H 2 A_Pain
+			goto See
+		Death:
+			BOS3 I 8
+			BOS3 J 8 A_Scream
+			BOS3 K 8 A_NoBlocking
+			BOS3 LMN 8
+			BOS3 O -1 A_BossDeath
+			stop
+		Raise:
+			BOS3 ONMLKJI 5
+			goto See
+	}
+}
+
+actor DemonLordBall {
+ 	height 8
+	radius 6
+	damage 5
+	speed 15 
+	renderstyle Add
+	alpha 1
+	seesound "demonlord/attack"
+	deathsound "demonlord/shotx"
+	PROJECTILE
+	+RANDOMIZE
+	states {
+		Spawn:
+			BAL7 AB 4 bright
+			loop
+		Death:
+			BAL7 C 8 bright
+			BAL7 D 6 bright
+			BAL7 E 4 bright
+			stop
+	}
+}

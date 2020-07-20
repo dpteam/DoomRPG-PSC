@@ -1,0 +1,111 @@
+include mapinfo/doom1_levels.txt
+include mapinfo/doom2_levels.txt
+include mapinfo/doom2_secret_levels.txt
+include mapinfo/masterlevels.txt
+include mapinfo/tnt_levels.txt
+include mapinfo/plutonia_levels.txt
+include mapinfo/sigil_levels.txt
+
+gameinfo
+{
+	creditpage = "CREDIT"
+	titlemusic = "$MUSIC_DM2TTL"
+	titletime = 11
+	pagetime = 5
+	finalemusic = "$MUSIC_VICTOR"
+	finaleflat = "FLOOR4_8"
+	finalepage = "CREDIT", "VICTORY2", "ENDPIC"
+	infopage = "HELP", "CREDIT"
+	quitsound = "menu/quit1"
+	borderflat = "FLOOR7_2"
+	drawreadthis = false
+	intermissionmusic = "$MUSIC_DM2INT"
+	quitmessages = "$QUITMSG", "$QUITMSG1", "$QUITMSG2", "$QUITMSG3", "$QUITMSG4", "$QUITMSG5", "$QUITMSG6", "$QUITMSG7",
+				   "$QUITMSG8", "$QUITMSG9", "$QUITMSG10", "$QUITMSG11", "$QUITMSG12", "$QUITMSG13", "$QUITMSG14"
+}
+
+clearepisodes
+episode e1m1
+{
+	picname = "M_EPI1"
+	name = "$TXT_D1E1"
+	key = "k"
+	optional
+}
+
+episode e2m1
+{
+	picname = "M_EPI2"
+	name = "$TXT_D1E2"
+	key = "s"
+	optional
+}
+
+episode e3m1
+{
+	picname = "M_EPI3"
+	name = "$TXT_D1E3"
+	key = "i"
+	optional
+}
+
+episode e4m1
+{
+	picname = "M_EPI4"
+	name = "$TXT_D1E4"
+	key = "f"
+	optional
+}
+
+episode e5m1
+{
+	picname = "M_EPI5"
+	name = "$HUSTR_EPI5"
+	key = "s"
+	optional
+}
+
+episode map01
+{
+	picname = "M_HELL"
+	name = "$TXT_D2E1"
+	key = "h"
+	optional
+}
+
+episode nv_map01
+{
+	picname = "M_NOREST"
+	name = "$TXT_D2E2"
+	key = "n"
+	optional
+}
+
+episode ml_map01
+{
+	picname = "M_MASTER"
+	name = "$D2MLNAME"
+	key = "m"
+	optional
+}
+
+episode tn_map01
+{
+	picname = "M_TNT"
+	name = "$TXT_TNT_EP"
+	key = "t"
+	optional
+}
+
+episode pl_map01
+{
+	picname = "M_PLUT"
+	name = "$TXT_PLUT_EP"
+	key = "p"
+	optional
+}
+
+defaultmap
+{
+	sucktime = 1
+}

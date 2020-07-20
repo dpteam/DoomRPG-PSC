@@ -1,0 +1,335 @@
+// Nuke --------------------------------------------------------------------
+
+ACTOR WaterSplash2
+{
+	Radius 2
+	Height 4
+	+NOBLOCKMAP 
+	+MISSILE 
+	+DROPOFF
+	+NOTELEPORT
+	+LOWGRAVITY
+	+CANNOTPUSH
+	+DONTSPLASH
+	+DONTBLAST
+	States
+	{
+	Spawn:
+		SPSH ABC 8
+		SPSH D 16
+		Stop
+	Death:
+		SPSH D 10
+		Stop
+	}
+}
+
+ACTOR WaterSplash2Base
+{
+	+NOBLOCKMAP
+	+NOCLIP
+	+NOGRAVITY
+	+DONTSPLASH
+	+DONTBLAST
+	States
+	{
+	Spawn:
+		SPSH EFGHIJK 5
+		Stop
+	}
+}
+
+// Nuke --------------------------------------------------------------------
+
+ACTOR NukeSplash
+{
+	Radius 2
+	Height 4
+	+NOBLOCKMAP 
+	+MISSILE 
+	+DROPOFF
+	+NOTELEPORT
+	+LOWGRAVITY
+	+CANNOTPUSH
+	+DONTSPLASH
+	+DONTBLAST
+	States
+	{
+	Spawn:
+		NUSH ABC 8
+		NUSH D 16
+		Stop
+	Death:
+		NUSH D 10
+		Stop
+	}
+}
+
+ACTOR NukeSplashBase
+{
+	+NOBLOCKMAP
+	+NOCLIP
+	+NOGRAVITY
+	+DONTSPLASH
+	+DONTBLAST
+	States
+	{
+	Spawn:
+		NUSH EFGHIJK 5
+		Stop
+	}
+}
+
+// Mud --------------------------------------------------------------------
+
+ACTOR MudSplash
+{
+	Radius 2
+	Height 4
+	+NOBLOCKMAP 
+	+MISSILE 
+	+DROPOFF
+	+NOTELEPORT
+	+LOWGRAVITY
+	+CANNOTPUSH
+	+DONTSPLASH
+	+DONTBLAST
+	States
+	{
+	Spawn:
+		SLI2 ABC 8
+		SLI2 D 16
+		Stop
+	Death:
+		SLI2 D 10
+		Stop
+	}
+}
+
+
+ACTOR MudSplashBase
+{
+	+NOBLOCKMAP
+	+NOCLIP
+	+NOGRAVITY
+	+DONTSPLASH
+	+DONTBLAST
+	States
+	{
+	Spawn:
+		SLI2 EFGHIJK 5
+		Stop
+	}
+}
+
+// Lava2 --------------------------------------------------------------------
+
+ACTOR Lava2Splash
+{
+	Radius 2
+	Height 4
+	+NOBLOCKMAP 
+	+MISSILE 
+	+DROPOFF
+	+NOTELEPORT
+	+LOWGRAVITY
+	+CANNOTPUSH
+	+DONTSPLASH
+	+DONTBLAST
+	States
+	{
+	Spawn:
+		LVAS GHI 8
+		LVAS J 16
+		Stop
+	Death:
+		LVAS K 10
+		Stop
+	}
+}
+
+
+ACTOR Lava2SplashBase
+{
+	+NOBLOCKMAP
+	+NOCLIP
+	+NOGRAVITY
+	+DONTSPLASH
+	+DONTBLAST
+	States
+	{
+	Spawn:
+		LVAS ABCDEF 5
+		Stop
+	}
+}
+
+
+// Blood --------------------------------------------------------------------
+
+ACTOR BloodSplash2
+{
+	Radius 2
+	Height 4
+	+NOBLOCKMAP 
+	+MISSILE 
+	+DROPOFF
+	+NOTELEPORT
+	+LOWGRAVITY
+	+CANNOTPUSH
+	+DONTSPLASH
+	+DONTBLAST
+	States
+	{
+	Spawn:
+		LAVA ABC 8
+		LAVA D 16
+		Stop
+	Death:
+		LAVA D 10
+		Stop
+	}
+}
+
+
+ACTOR BloodSplash2Base
+{
+	+NOBLOCKMAP
+	+NOCLIP
+	+NOGRAVITY
+	+DONTSPLASH
+	+DONTBLAST
+	States
+	{
+	Spawn:
+		LAVA EFGHIJK 5
+		Stop
+	}
+}
+
+// White liquid --------------------------------------------------------------------
+
+ACTOR WhiteSplash
+{
+	Radius 2
+	Height 4
+	+NOBLOCKMAP 
+	+MISSILE 
+	+DROPOFF
+	+NOTELEPORT
+	+LOWGRAVITY
+	+CANNOTPUSH
+	+DONTSPLASH
+	+DONTBLAST
+	States
+	{
+	Spawn:
+		SPLW ABC 8
+		SPLW D 16
+		Stop
+	Death:
+		SPLW D 10
+		Stop
+	}
+}
+
+
+ACTOR WhiteSplashBase
+{
+	+NOBLOCKMAP
+	+NOCLIP
+	+NOGRAVITY
+	+DONTSPLASH
+	+DONTBLAST
+	States
+	{
+	Spawn:
+		SPLW EFGHIJK 5
+		Stop
+	}
+}
+
+// Dark liquid --------------------------------------------------------------------
+
+ACTOR DarkSplash
+{
+	Radius 2
+	Height 4
+	+NOBLOCKMAP 
+	+MISSILE 
+	+DROPOFF
+	+NOTELEPORT
+	+LOWGRAVITY
+	+CANNOTPUSH
+	+DONTSPLASH
+	+DONTBLAST
+	States
+	{
+	Spawn:
+		SPLB ABC 8
+		SPLB D 16
+		Stop
+	Death:
+		SPLB D 10
+		Stop
+	}
+}
+
+
+ACTOR DarkSplashBase
+{
+	+NOBLOCKMAP
+	+NOCLIP
+	+NOGRAVITY
+	+DONTSPLASH
+	+DONTBLAST
+	States
+	{
+	Spawn:
+		SPLB EFGHIJK 5
+		Stop
+	}
+}
+
+// Rust liquid --------------------------------------------------------------------
+
+ACTOR RustSplash
+{
+	Radius 2
+	Height 4
+	+NOBLOCKMAP 
+	+MISSILE 
+	+DROPOFF
+	+NOTELEPORT
+	+LOWGRAVITY
+	+CANNOTPUSH
+	+DONTSPLASH
+	+DONTBLAST
+	States
+	{
+	Spawn:
+		SPLR ABC 8
+		SPLR D 16
+		Stop
+	Death:
+		SPLR D 10
+		Stop
+	}
+}
+
+
+ACTOR RustSplashBase
+{
+	+NOBLOCKMAP
+	+NOCLIP
+	+NOGRAVITY
+	+DONTSPLASH
+	+DONTBLAST
+	States
+	{
+	Spawn:
+		SPLR EFGHIJK 5
+		Stop
+	}
+}
+

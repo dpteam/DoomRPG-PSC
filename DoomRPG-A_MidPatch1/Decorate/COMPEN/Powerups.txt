@@ -1,0 +1,223 @@
+ACTOR Biosphere : PowerupGiver 12476
+{
+  //$Category "Powerups"
+  //$Title "Biosphere"
+  +COUNTITEM
+  +INVENTORY.AUTOACTIVATE
+  +INVENTORY.ALWAYSPICKUP
+  +INVENTORY.FANCYPICKUPSOUND
+  Inventory.MaxAmount 0
+  Inventory.PickupMessage "BioSphere!"
+  Powerup.Type "IronFeet"
+  Powerup.Duration -75
+  States
+  {
+  Spawn:
+    BIOS AB 12 Bright
+    Loop
+  }
+}
+
+actor VisionSphere : PowerupGiver 12477
+{
+ //$Category "Powerups"
+ //$Title "Visionsphere"
+ inventory.pickupmessage "Vision Sphere!"
+ inventory.maxamount 0
+ inventory.usesound "misc/p_pkup"
+ powerup.type "LightAmp"
+ powerup.duration 4200
+ +COUNTITEM
+ +AUTOACTIVATE
+ +INVENTORY.ALWAYSPICKUP
+   states
+ {
+ Spawn:
+   VISN ABCD 7 bright
+   loop
+ }
+}
+
+Actor PowerQuarterDamageST : PowerProtection
+{
+Damagefactor "Normal", 0.25
+}
+
+Actor GuardsphereST : PowerupGiver 12478
+{
+  //$Category "Powerups"
+  //$Title "Guardsphere"
+  +CountItem
+  +NoGravity
+  +Inventory.AutoActivate
+  +Inventory.AlwaysPickup
+  Inventory.MaxAmount 0
+  Powerup.Type QuarterDamageST
+  Powerup.Color GreenMap
+  Inventory.PickupMessage "Guard Sphere!"
+  States
+  {
+  Spawn:
+    GARD ABCD 6 Bright
+    Loop
+  }
+}
+
+Actor PowerTurboST : PowerSpeed
+{
+  Inventory.Icon "ARTITU1"
+}
+
+Actor TurbosphereST : PowerupGiver 12479
+{
+  //$Category "Powerups"
+  //$Title "Turbosphere"
+  +CountItem
+  +NoGravity
+  +Inventory.AutoActivate
+  +Inventory.AlwaysPickup
+  Inventory.MaxAmount 0
+  Powerup.Type TurboST
+  Powerup.Duration 1050
+  Inventory.PickupMessage "Turbo Sphere!"
+  States
+  {
+  Spawn:
+    TURB ABCD 3 Bright
+    Loop
+  }
+}
+
+Actor PowerQuadDamageST : PowerDamage
+{
+Damagefactor "Normal", 4
+}
+
+Actor DoomsphereST : PowerupGiver 12480
+{
+  //$Category "Powerups"
+  //$Title "Doomsphere"
+  +CountItem
+  +NoGravity
+  +Inventory.AutoActivate
+  +Inventory.AlwaysPickup
+  Inventory.MaxAmount 0
+  Powerup.Type QuadDamageST
+  Powerup.Color RedMap
+  Inventory.PickupMessage "Doom Sphere!"
+  States
+  {
+  Spawn:
+    DOOM A 10 Bright
+    DOOM B 15 Bright
+    DOOM C 8 Bright
+    DOOM D 6 Bright
+    Loop
+  }
+}
+
+ACTOR RageSphere : PowerupGiver 12481
+{
+  //$Category "Powerups"
+  //$Title "Ragesphere"
+  +COUNTITEM
+  +INVENTORY.AUTOACTIVATE
+  +INVENTORY.ALWAYSPICKUP
+  +INVENTORY.BIGPOWERUP
+  Inventory.MaxAmount 0
+  Powerup.Duration -60
+  Powerup.Color 255, 0, 0, 0.125
+  Inventory.PickupMessage "Rage Sphere!"
+  Powerup.Type "PowerDoubleFiringSpeed"
+  States
+  {
+  Spawn:
+    BLDS ABCDCB 6 Bright
+    Loop
+  }
+}
+
+ACTOR TerrorSphere : PowerupGiver 12482
+{
+   //$Category "Powerups"
+   //$Title "Terrorsphere"
+   +COUNTITEM
+   +INVENTORY.AUTOACTIVATE
+   +INVENTORY.ALWAYSPICKUP
+   +INVENTORY.BIGPOWERUP
+   Inventory.MaxAmount 0
+   Powerup.Type Frightener
+   Powerup.Color GoldMap
+   Powerup.Duration 1600
+   Inventory.PickupMessage "Terror Sphere!"
+   States
+   {
+   Spawn:
+       TERR ABCD 6 Bright
+       Loop
+   }
+}
+
+actor RegenSphere : PowerupGiver 12483
+{
+    //$Category "Powerups"
+    //$Title "Regenerationsphere"
+	Game Doom
+	inventory.pickupmessage "Regeneration Sphere!"
+	inventory.maxamount 0
+	powerup.duration -60
+	powerup.color "FF FF FF", 0.1
+	powerup.type Regeneration
+	+COUNTITEM
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	States
+	{
+	Spawn:
+		REGN ABCD 6 Bright
+		Loop
+	}
+}
+
+Actor TimeFreezeSphereST : PowerupGiver 12484
+{
+  //$Category "Powerups"
+  //$Title "Timefreezesphere"
+  +CountItem
+  +NoGravity
+  +Inventory.AutoActivate
+  Inventory.MaxAmount 0
+  Powerup.Type TimeFreezer
+  powerup.duration -10
+  Powerup.Color GoldMap
+  Inventory.PickupMessage "Timefreeze Sphere!"
+  States
+  {
+  Spawn:
+    TIME ABCD 6 Bright
+    Loop
+  }
+}
+
+Actor InvisibilitySphereST : PowerupGiver 12485
+{
+  //$Category "Powerups"
+  //$Title "Invisibilitysphere"
+  +CountItem
+  +NoGravity
+  +VisibilityPulse
+  +Inventory.AutoActivate
+  +Inventory.AlwaysPickup
+  Inventory.MaxAmount 0
+  Powerup.Type Invisibility
+  Powerup.Mode Translucent
+  Powerup.Strength 80
+  RenderStyle Translucent
+  Inventory.PickupMessage "Invisibility"
+  States
+  {
+  Spawn:
+    SINV ABCD 6 Bright
+    Loop
+  }
+}	

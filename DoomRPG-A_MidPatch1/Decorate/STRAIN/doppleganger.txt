@@ -1,0 +1,50 @@
+actor Doppleganger 20009 {
+	obituary "%o was burned by a doppleganger."
+	hitobituary "%o was attacked by a doppleganger."
+	health 100
+	radius 16
+	height 48
+	mass 50
+	speed 8
+	damage 2
+	painchance 200
+	renderstyle SoulTrans
+	seesound ""
+	attacksound "doppleganger/attack"
+	painsound "doppleganger/pain"
+	deathsound "doppleganger/death"
+	activesound "doppleganger/active"
+	MONSTER
+	+FLOAT
+	+SOLID
+	+SHOOTABLE
+	+NOGRAVITY
+	+MISSILEMORE
+	states {
+		Spawn:
+			SKU2 AB 10 bright A_Look
+			loop
+		See:
+			SKU2 AB 6 bright A_Chase
+			loop
+		Missile:
+			SKU2 CD 10 bright A_FaceTarget
+			SKU2 C 4 bright A_TroopAttack
+			SKU2 D 20 bright A_FaceTarget
+			SKU2 C 4 bright A_SkullAttack
+			SKU2 D 1 bright A_CPosRefire
+			goto See
+		Pain:
+			SKU2 E 3 bright
+			SKU2 E 3 bright A_Pain
+			goto See
+		Death:
+			SKU2 F 6 bright
+			SKU2 G 6 bright A_Scream
+			SKU2 H 6 bright A_NoBlocking
+			SKU2 I 6 bright A_Fall
+			SKU2 JK 6
+			SKU2 K -1 A_HideThing
+			stop
+	}
+}

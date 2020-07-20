@@ -1,0 +1,65 @@
+Actor DMExplosion 30374
+{
+	+FORCEXYBILLBOARD
+	+NOGRAVITY
+	+NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_PlaySound("weapons/rocklx")
+		DMSL E 4 Bright A_Explode(72,92)
+		DMSL F 4 Bright 
+		DMSL G 3 Bright
+		DMSL H 3 Bright
+		DMSL I 2 Bright
+		DMSL J 2 Bright
+		Stop
+	}
+}
+
+Actor DMExplosionHarmless 30375
+{
+	+FORCEXYBILLBOARD
+	+NOGRAVITY
+	+NOBLOCKMAP
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_PlaySound("weapons/rocklx")
+		DMSL E 4 Bright
+		DMSL F 4 Bright 
+		DMSL G 3 Bright
+		DMSL H 3 Bright
+		DMSL I 2 Bright
+		DMSL J 2 Bright
+		Stop
+	}
+}
+
+ACTOR DMExplodeTrigger 30376
+{
+	Health 1
+	Radius 0
+	Height 0
+	Mass 10000
+	-SOLID
+	+THRUACTORS
+	+SHOOTABLE
+	+NOBLOOD
+	+NONSHOOTABLE
+	+DONTGIB
+	+NOICEDEATH
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		TNT1 A 5
+		Loop
+	Death:
+		TNT1 A 0
+		TNT1 A 1
+		Stop
+	}
+}

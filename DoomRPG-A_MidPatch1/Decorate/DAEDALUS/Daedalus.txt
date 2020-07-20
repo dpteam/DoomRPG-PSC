@@ -1,0 +1,1583 @@
+// ALL ITEMS AS DECORATIONS
+// Last updated 6:27 AM 11/26/2003
+
+// Things that can be picked up 
+// (to use these without picking them up, do not assign the Thing a special)
+
+// Keys and passes 20100
+
+Pickup DAD_EngineeringPassKey
+{
+	// Key to Engineering
+	DoomEdNum 20101
+	SpawnNum 255
+	Sprite 0KEN
+	Frames "10:AB"
+	// graphic PASSKEY[12].BMP
+	Radius 8
+	Height 16
+	PickupMessage "Engineering Key"
+	Solid
+}
+
+Pickup DAD_EngineRoomPassKey
+{
+	// Key to the Engine Room
+	DoomEdNum 20102
+	SpawnNum 254
+	Sprite 0KER
+	Frames "10:AB"
+	// graphic PASSKEY[34].BMP
+	Radius 8
+	Height 16
+	PickupMessage "Engine Room Key"
+	Solid
+}
+
+Pickup DAD_StudentBasicPass
+{
+	// Basic Student Pass
+	DoomEdNum 20103
+	SpawnNum 253
+	Sprite 0KSB
+	Frames "A"
+	// graphic PASSKEYB.BMP
+	Radius 8
+	Height 16
+	PickupMessage ""
+	Solid
+	FloatBob
+}
+
+Pickup DAD_StudentAdvancedPass
+{
+	// Advanced Student Pass
+	DoomEdNum 20104
+	SpawnNum 252
+	Sprite 0KSA
+	Frames "A"
+	// graphic PASSKEYA.BMP
+	Radius 8
+	Height 16
+	PickupMessage ""
+	Solid
+	FloatBob
+}
+
+Pickup DAD_TeacherPass
+{
+	// Teacher's Pass
+	DoomEdNum 20105
+	SpawnNum 251
+	Sprite 0KST
+	Frames "A"
+	// graphic PASSKEYT.BMP
+	Radius 8
+	Height 16
+	PickupMessage ""
+	Solid
+	FloatBob
+}
+
+// Misc items 20200
+
+Pickup DAD_EnviroSuit
+{
+	// Environmental Suit
+	DoomEdNum 20201
+	SpawnNum 250
+	Sprite 0ENV
+	Frames "A"
+	// graphic ENVIRO1.BMP
+	// TODO: Need to add animation for additional frames:
+	// Frames "10:A,3:B,4:C"
+	Radius 16
+	Height 64
+	PickupMessage ""
+	Solid
+	FloatBob
+}
+
+Pickup DAD_MGen
+{
+	// Working Microgen
+	DoomEdNum 20202
+	SpawnNum 249
+	Sprite 0MGN
+	Frames "ABCD"
+	// graphic MGX0[1234].BMP
+	Radius 32
+	Height 64
+	PickupMessage ""
+	Solid
+}
+
+Pickup DAD_MGenDead
+{
+	// Dead Microgen 
+	// Replaces Thing 93 TGRN (Burnt out Microgen)
+	DoomEdNum 20203
+	SpawnNum 248
+	Sprite 0MGX
+	Frames "A"
+	// Graphics MGX00.BMP
+	Radius 32
+	Height 64
+	PickupMessage ""
+	Solid
+}
+
+Pickup DAD_MGenBurnt
+{
+	// Burnt up Microgen 
+	// 
+	DoomEdNum 20207
+	SpawnNum 214
+	Sprite 0MGX
+	Frames "Z"
+	// Graphics MGX99.BMP
+	Radius 32
+	Height 64
+	PickupMessage ""
+	Solid
+}
+
+Pickup DAD_PlasmaBox
+{
+	// Plasma Box
+	DoomEdNum 20204
+	SpawnNum 247
+	Sprite 0PLS
+	Frames "10:AB"
+	// graphic PLASMA[12].BMP
+	// TODO: Fix this graphic--it sucks
+	Radius 8
+	Height 16
+	PickupMessage ""
+	Solid
+}
+
+Pickup DAD_ExpWeapon
+{
+	// Experimental weapon
+	DoomEdNum 20205
+	SpawnNum 246
+	Sprite 0CLO
+	Frames "90:A,7:BCDEF,20:G"
+	// graphic DADGUN-ITEM-[0-6].BMP
+        Radius 24
+        Height 32
+	PickupMessage "Your DNA has been Registered"
+	//Solid
+}
+
+Pickup DAD_Power
+{
+        // Powerup gems
+        DoomEdNum 20206
+        SpawnNum 215
+        Sprite 0PWR
+        Frames "A*B*C*D*E*F*"
+        // graphic DADGUN3-0000[0-5]
+        Radius 4
+        Height 64  // easier to pick up
+        PickupMessage "Got a cloner power source"
+	Scale 0.3
+}
+
+// Asteroids and Debris 20300
+
+Breakable DAD_Asteroid1
+{
+	// Asteroid 1
+	// Replaces Thing 104 GOR3A One-legged Body ID 51
+	DoomEdNum 20301
+	SpawnNum 245
+	Sprite 0AS1
+	Frames "A"
+	// graphic ASTER3A.BMP
+	Radius 32
+	Height 64
+        ActivateMCross 
+        ActivateImpact
+	Solid
+	// Bits = MCROSS + SHOOTABLE
+        Health 1
+	Mass 1000
+	Deathframes "A"
+        // DeathFrames "2:ABCDE"
+	NoBlood
+        DiesAway
+}
+
+Breakable DAD_Asteroid2
+{
+	// Asteroid 2
+	// Replaces Thing 111 GOR1A Swaying Body 2 ID 63
+	DoomEdNum 20302
+	SpawnNum 244
+	Sprite 0AS2
+	Frames "A"
+	// graphic ASTER3B.BMP
+	Radius 32
+	Height 64
+        ActivateMCross 
+        ActivateImpact
+	Solid
+	// Bits = MCROSS + SHOOTABLE
+        Health 1
+	Mass 1000
+	Deathframes "A"
+        // DeathFrames "2:ABCDE"
+	NoBlood
+        DiesAway
+}
+
+Breakable DAD_Asteroid3
+{
+	// Asteroid 3
+	// Replaces Thing 110 GOR5A Hanging Leg 2 ID 62
+	DoomEdNum 20303
+	SpawnNum 243
+	Sprite 0AS3
+	Frames "A"
+	// graphic ASTER3C.BMP
+	Radius 32
+	Height 64
+        ActivateMCross 
+        ActivateImpact
+	Solid
+	// Bits = MCROSS + SHOOTABLE
+	Health 1
+	Mass 1000
+	Deathframes "A"
+        // DeathFrames "2:ABCDE"
+	NoBlood
+	DiesAway
+}
+
+Breakable DAD_Asteroid4
+{
+	// Asteroid 4
+	// Replaces Thing 109 GOR3A One-legged Body 2 ID 61
+	DoomEdNum 20304
+	SpawnNum 242
+	Frames "A"
+	Sprite 0AS4
+	// graphic ASTER128.BMP
+	Radius 32
+	Height 64
+        ActivateMCross 
+        ActivateImpact
+	Solid
+	// Bits = MCROSS + SHOOTABLE
+	Health 1
+	Mass 1000
+	Deathframes "A"
+        // DeathFrames "2:ABCDE"
+	NoBlood
+	DiesAway
+}
+
+DAD_Debris1
+{
+	// Spawnable debris for explosions - type 1
+	// Replaces Thing 84 COL2A Short Green Pillar ID 31
+	DoomEdNum 20305
+	SpawnNum 241
+	Sprite 0DB1
+	Frames "A"
+	// Graphics DBRS2220.BMP
+	Radius 8
+	Height 16
+	LowGravity
+	// Bits = LOGRAVITY
+}
+
+DAD_Debris2
+{
+	// Spawnable debris for explosions - type 2
+	// Replaces Thing 85 COL3A = Tall Red Pillar ID 32
+	DoomEdNum 20306
+	SpawnNum 240
+	Sprite 0DB2
+	Frames "A"
+	// Graphics DBRS2512.BMP
+	Radius 8
+	Height 16
+	LowGravity
+	// Bits = LOGRAVITY
+}
+
+DAD_Debris3
+{
+	// Spawnable debris for explosions - type 3
+	// Replaces Thing 88 COL5A/B Pillar w/Heart ID 36
+	DoomEdNum 20307
+	SpawnNum 239
+	Sprite 0DB3
+	Frames "A"
+	// Graphics DBRS2822.BMP
+	Radius 8
+	Height 16
+	LowGravity
+	// Bits = LOGRAVITY
+}
+
+// K2 Bridges 20400
+
+DAD_Bridge16
+{
+	// "K2" Bridge, 16 wide
+	// Replaces Thing 105 GOR4A Hanging Torso ID 52
+	DoomEdNum 20401
+	SpawnNum 238
+	Sprite 0BRG
+	Frames "A"
+	// Graphics TRANSP.BMP
+	Radius 8
+	Height 1
+	Solid
+	SpawnCeiling
+	NoGravity
+	NoSector
+}
+
+DAD_Bridge32
+{
+	// "K2" Bridge, 32 wide
+	// Replaces Thing 106 GOR5A Hanging Leg ID 53
+	DoomEdNum 20402
+	SpawnNum 237
+	Sprite 0BRG
+	Frames "A"
+	// Graphics TRANSP.BMP
+	Radius 16
+	Height 1
+	Solid
+	SpawnCeiling
+	NoGravity
+	NoSector
+}
+
+DAD_Bridge64
+{
+	// "K2" Bridge, 64 wide
+	// Replaces Thing 107 GOR2A Hanging Arms Out2 ID 59
+	DoomEdNum 20403
+	SpawnNum 236
+	Sprite 0BRG
+	Frames "A"
+	// Graphics TRANSP.BMP
+	Radius 32
+	Height 1
+	Solid
+	SpawnCeiling
+	NoGravity
+	NoSector
+}
+
+DAD_Bridge128
+{
+	// "K2" Bridge, 128 wide
+	// Replaces Thing 108 GOR4A Hanging Torso 2 ID 60
+	DoomEdNum 20404
+	SpawnNum 235
+	Sprite 0BRG
+	Frames "A"
+	// Graphics TRANSP.BMP
+	Radius 64
+	Height 1
+	Solid
+	SpawnCeiling
+	NoGravity
+	NoSector
+}
+
+// Garbage bales 20500
+
+DAD_Garbage32 
+{
+	// Garbage bale, 32 wide
+	// Replaces Thing 99 ELECA Technical Column ID 48
+	DoomEdNum 20501
+	SpawnNum 234
+	Sprite 0GB1
+	Frames "A"
+	// graphic GBALE032.BMP
+	Radius 16
+	Height 32
+	Solid
+	Pushable
+	LowGravity
+}	
+
+DAD_Garbage64
+{
+	// Garbage bale, 64 wide
+	// Replaces Thing 100 CANDA Candle ID 34
+	DoomEdNum 20502
+	SpawnNum 233
+	Sprite 0GB2
+	Frames "A"
+	// graphic GBALE064.BMP
+	Radius 32
+	Height 64
+	Solid
+	Pushable
+	LowGravity
+}
+	
+DAD_Garbage96
+{
+	// Garbage bale, 96 wide
+	// Replaces Thing 101 CBRAA Candelabra ID 35
+	DoomEdNum 20503
+	SpawnNum 232
+	Sprite 0GB3
+	Frames "A"
+	// graphic GBALE096.BMP
+	Radius 48
+	Height 96
+	Solid
+	Pushable
+	LowGravity
+}
+
+DAD_Garbage128
+{
+	// Garbage bale, 128 wide
+	// Replaces Thing 102 GOR1A Swaying Body ID 49
+	DoomEdNum 20504
+	SpawnNum 231
+	Sprite 0GB4
+	Frames "A"
+	// graphic GBALE128.BMP
+	Radius 64
+	Height 128
+	Solid
+	Pushable
+	LowGravity
+}	
+
+DAD_GarbageBall
+{
+	// Garbage ball-shaped bale, 128 wide
+	// Replaces Thing 87 COL6A Pillar w/Skull ID 37
+	DoomEdNum 20505
+	SpawnNum 230
+	Sprite 0GB5
+	Frames "A"
+	// graphic GBALL128.BMP
+	Radius 64
+	Height 128
+	Solid
+}
+
+// Active things (multi-frame) 20600
+
+DAD_SteamFloor
+{
+	// Steam rising from the floor
+	// Replaces Thing 95 SMBTA Small Blue Torch ID 55
+	DoomEdNum 20601
+	SpawnNum 229
+	Sprite 0STF
+	Frames "ABCD"
+	// Graphics STEAM[1234].BMP
+	Radius 16
+	Height 32
+	RenderStyle STYLE_Translucent
+	Alpha 0.50
+}
+
+DAD_SteamCeiling
+{
+	// Steam down from the ceiling
+	// Replaces Thing 96 SMGTA Small Green Torch ID 56
+	DoomEdNum 20602
+	SpawnNum 228
+	Sprite 0STC
+	Frames "ABCD"
+	// Graphics RSTEAM[1234].BMP
+	Radius 16 
+	Height 32
+	RenderStyle STYLE_Translucent
+	Alpha 0.50
+	SpawnCeiling
+	NoGravity
+}
+
+DAD_Fire128
+{
+	// 128-high flames
+	// Replaces Thing 92 TBLUA Tall Blue TOrch ID 44
+	DoomEdNum 20603
+	SpawnNum 227
+	Sprite 0F28
+	Frames "A*B*C*D*C*B*"
+	// Graphics FLAMES[1234].BMP
+	Radius 1
+	Height 128
+	RenderStyle STYLE_Add
+	Alpha 0.25
+	NoGravity
+	Solid
+}
+DAD_Fire64
+{
+	// 64-high flames
+	// Replaces Thing 97 SMRTA Small Red Torch ID 57
+	DoomEdNum 20604
+	SpawnNum 226
+	Sprite 0F64
+	Frames "A*B*C*D*C*B*"
+	// Graphics FLAMESS[1234].BMP
+	Radius 4
+	Height 64
+	RenderStyle STYLE_Add
+	Alpha 0.25
+	Solid
+	NoGravity
+}
+
+DAD_SecurityCam
+{
+	// Security camera, seems to follow player
+	// Replaces Thing 124 POL3A Pile of Skulls ID 29
+	DoomEdNum 20605
+	SpawnNum 225
+	Sprite 0SEC
+	Frames "7:A,4:B"
+	// Graphics CAMERA[01].BMP
+	Radius 8
+	Height 16
+	SpawnCeiling
+	NoGravity
+}
+
+Breakable DAD_LavaLampRed
+{
+	// Red Lava Lamp for shooting gallery
+	DoomEdNum 20606
+	SpawnNum 218
+	Sprite 0LVR
+	Frames "6:A,7:B,4:CDE,6:F"
+	// Graphics LAVAR[1-6].BMP
+	DeathSprite 0LVR
+        DeathFrames "8:G*H*I*J*K*L*"
+	DeathSound GLOOP
+	// Graphics LAVARX[1-6].BMP
+	Radius 12
+	Height 64
+	RenderStyle STYLE_Translucent
+	Alpha 0.80
+	Solid
+	Health 1
+	Mass 100
+	NoBlood
+	DiesAway
+}
+
+Breakable DAD_LavaLampPurple
+{
+	// Purple Lava Lamp for shooting gallery
+	DoomEdNum 20607
+	SpawnNum 217
+	Sprite 0LVV
+	Frames "6:A,7:B,4:CDE,6:F"
+	// Graphics LAVAV[1-6].BMP
+	DeathSprite 0LVV
+        DeathFrames "8:G*H*I*J*K*L*"
+	// Graphics LAVAVX[1-6].BMP
+	DeathSound GLOOP
+	Radius 12
+	Height 64
+	RenderStyle STYLE_Translucent
+	Alpha 0.80
+	Solid
+	Health 1
+	Mass 100
+	NoBlood
+	DiesAway
+}
+
+Breakable DAD_LavaLampGreen
+{
+	// Green Lava Lamp for shooting gallery
+	DoomEdNum 20608
+	SpawnNum 216
+	Sprite 0LVG
+	Frames "6:A,7:B,4:CDE,6:F"
+	// Graphics LAVAG[1-6].BMP
+	DeathSprite 0LVG
+        DeathFrames "8:G*H*I*J*K*L*"
+	// Graphics LAVAGX[1-6].BMP
+	DeathSound GLOOP
+	Radius 12
+	Height 64
+	RenderStyle STYLE_Translucent
+	Alpha 0.80
+	Solid
+	Health 1
+	Mass 100
+	NoBlood
+	DiesAway
+}
+
+DAD_ExitBall
+{
+	DoomEdNum 20609
+	SpawnNum 190
+	Sprite XBAL
+	Frames "A*B*C*D*"
+	RenderStyle STYLE_Translucent
+	Alpha 0.80
+	Radius 64
+	Height 128
+	Floorclip
+}
+
+Pickup DAD_StartExitBall
+{
+	DoomEdNum 20610
+	SpawnNum 189
+	Sprite XBAL
+	Frames "A*B*C*D*"
+	RenderStyle STYLE_Translucent
+	Alpha 0.80
+	Radius 64
+	Height 128
+	PickupMessage ""
+	Floorclip
+}
+
+// Flora and Fauna 20700
+
+DAD_Plant1
+{
+	// Leaves and flowers 
+	// Replaces Thing 129 HDB1A Hanging Body 1 ID 73
+	DoomEdNum 20701
+	SpawnNum 224
+	Sprite 0PL1
+	Frames "A"
+	// Graphics PLANT1.BMP
+	Radius 16
+	Height 64
+	Solid
+	// Bits = SOLID
+}
+
+DAD_Plant2
+{
+	// Purple flowers on tall stem
+	// Replaces Thing 130 HDB2A Hanging Body 2 ID 74
+	DoomEdNum 20702
+	SpawnNum 223
+	Sprite 0PL2
+	Frames "A"
+	// Graphics PLANT2.BMP
+	Radius 16
+	Height 64
+	Solid
+	// Bits = SOLID
+}
+
+
+breakable DAD_TreeTall
+{
+	// Tall straight tree
+	DoomEdNUm 20703
+	SpawnNum 222
+	Sprite 0TR1
+	Frames "A"
+	// Graphics TREES\0TALL1.BMP
+	Radius 32
+	Height 128
+	Solid
+	Health 100
+	Mass 1000
+	NoBlood
+	//ExplosionRadius 1024
+	//ExplosionDamage 16
+	BurnDeathFrames "6:B*C*D*E*F*G*,5:HIHIHIJI,6:HIJ,30:KL"
+	BurnDeathSound Treeburn
+	DeathFrames "6:B*C*D*E*F*G*,5:HIHIHIJI,6:HIJ,30:KL"
+	DeathSound Treeburn
+	BurnHeight 40
+	SolidOnBurn
+}
+
+breakable DAD_TreeWide
+{
+	// Wide curved tree
+	DoomEdNum 20704
+	SpawnNum 221
+	Sprite 0TR2
+	Frames "A"
+	// Graphics TREES\0HTWIST2.BMP
+	Radius 64
+	Height 128
+	Solid
+	Health 100
+	Mass 1000
+	NoBlood
+	//ExplosionRadius 1024
+	//ExplosionDamage 16
+	BurnDeathFrames "7:B*C*D*E*F*G*,6:HIHIHIJI,7:HIJ,30:K,50:L"
+	BurnDeathSound Treeburn
+	DeathFrames "7:B*C*D*E*F*G*,6:HIHIHIJI,7:HIJ,30:K,50:L"
+	DeathSound Treeburn
+	BurnHeight 40
+	SolidOnBurn
+}
+
+breakable DAD_TreeYoung
+{
+	// Shorter young tree
+	DoomEdNum 20705
+	SpawnNum 220
+	Sprite 0TR3
+	Frames "A"
+	// Graphics TREES\0FAT1.BMP
+	Radius 32
+	Height 64
+	Solid
+	Health 100
+	Mass 1000
+	NoBlood
+	//ExplosionRadius 1024
+	//ExplosionDamage 16
+	BurnDeathFrames "6:B*C*D*E*F*G*,5:HIHIHIJI,6:HIJ,30:KL"
+	BurnDeathSound Treeburn
+	DeathFrames "6:B*C*D*E*F*G*,5:HIHIHIJI,6:HIJ,30:KL"
+	DeathSound Treeburn
+	BurnHeight 20
+	SolidOnBurn
+}
+
+DAD_TreeStump
+{
+	// Broken off stump of short tree
+	DoomEdNum 20706
+	SpawnNum 219
+	Sprite 0TR4
+	Frames "A"
+	// Graphics TREES\0STUMP1.BMP
+	Radius 8
+	Height 32
+}
+
+breakable DAD_TreeTall60
+{
+	// Tall straight tree at 60% size
+	DoomEdNUm 20707
+	SpawnNum 201
+	Sprite 0TR1
+	Frames "A"
+	// Graphics TREES\0TALL1.BMP
+	Radius 32
+	Height 128
+	Solid
+	Health 100
+	Mass 1000
+	NoBlood
+	BurnDeathFrames "6:B*C*D*E*F*G*,5:HIHIHIJI,6:HIJ,30:KL"
+	BurnDeathSound Treeburn
+	DeathFrames "6:B*C*D*E*F*G*,5:HIHIHIJI,6:HIJ,30:KL"
+	DeathSound Treeburn
+	BurnHeight 40
+	SolidOnBurn
+	Scale 0.6
+}
+
+breakable DAD_TreeWide60
+{
+	// Wide curved tree at 60% size
+	DoomEdNum 20708
+	SpawnNum 200
+	Sprite 0TR2
+	Frames "A"
+	// Graphics TREES\0HTWIST2.BMP
+	Radius 64
+	Height 128
+	Solid
+	Health 100
+	Mass 1000
+	NoBlood
+	BurnDeathFrames "7:B*C*D*E*F*G*,6:HIHIHIJI,7:HIJ,30:K,50:L"
+	BurnDeathSound Treeburn
+	DeathFrames "7:B*C*D*E*F*G*,6:HIHIHIJI,7:HIJ,30:K,50:L"
+	DeathSound Treeburn
+	BurnHeight 40
+	SolidOnBurn
+	Scale 0.6
+}
+
+breakable DAD_TreeYoung60
+{
+	// Shorter young tree at 60% size
+	DoomEdNum 20709
+	SpawnNum 199
+	Sprite 0TR3
+	Frames "A"
+	// Graphics TREES\0FAT1.BMP
+	Radius 32
+	Height 64
+	Solid
+	Health 100
+	Mass 1000
+	NoBlood
+	BurnDeathFrames "6:B*C*D*E*F*G*,5:HIHIHIJI,6:HIJ,30:KL"
+	BurnDeathSound Treeburn
+	DeathFrames "6:B*C*D*E*F*G*,5:HIHIHIJI,6:HIJ,30:KL"
+	DeathSound Treeburn
+	SolidOnBurn
+	Scale 0.6
+}
+
+DAD_TreeStump60
+{
+	// Broken off stump of short tree at 60% size
+	DoomEdNum 20710
+	SpawnNum 198
+	Sprite 0TR4
+	Frames "A"
+	// Graphics TREES\0STUMP1.BMP
+	Radius 8
+	Height 32
+	Scale 0.6
+}
+
+breakable DAD_TreeTall80
+{
+	// Tall straight tree at 80% size
+	DoomEdNUm 20711
+	SpawnNum 197
+	Sprite 0TR1
+	Frames "A"
+	// Graphics TREES\0TALL1.BMP
+	Radius 32
+	Height 128
+	Solid
+	Health 100
+	Mass 1000
+	NoBlood
+	BurnDeathFrames "6:B*C*D*E*F*G*,5:HIHIHIJI,6:HIJ,30:KL"
+	BurnDeathSound Treeburn
+	DeathFrames "6:B*C*D*E*F*G*,5:HIHIHIJI,6:HIJ,30:KL"
+	DeathSound Treeburn
+	BurnHeight 40
+	SolidOnBurn
+	Scale 0.8
+}
+
+breakable DAD_TreeWide80
+{
+	// Wide curved tree at 80% size
+	DoomEdNum 20712
+	SpawnNum 196
+	Sprite 0TR2
+	Frames "A"
+	// Graphics TREES\0HTWIST2.BMP
+	Radius 64
+	Height 128
+	Solid
+	Health 100
+	Mass 1000
+	NoBlood
+	BurnDeathFrames "7:B*C*D*E*F*G*,6:HIHIHIJI,7:HIJ,30:K,50:L"
+	BurnDeathSound Treeburn
+	DeathFrames "7:B*C*D*E*F*G*,6:HIHIHIJI,7:HIJ,30:K,50:L"
+	DeathSound Treeburn
+	BurnHeight 40
+	SolidOnBurn
+	Scale 0.8
+}
+
+breakable DAD_TreeYoung80
+{
+	// Shorter young tree at 80% size
+	DoomEdNum 20713
+	SpawnNum 195
+	Sprite 0TR3
+	Frames "A"
+	// Graphics TREES\0FAT1.BMP
+	Radius 32
+	Height 64
+	Solid
+	Health 100
+	Mass 1000
+	NoBlood
+	BurnDeathFrames "6:B*C*D*E*F*G*,5:HIHIHIJI,6:HIJ,30:KL"
+	BurnDeathSound Treeburn
+	DeathFrames "6:B*C*D*E*F*G*,5:HIHIHIJI,6:HIJ,30:KL"
+	DeathSound Treeburn
+	BurnHeight 20
+	SolidOnBurn
+	Scale 0.8
+}
+
+DAD_TreeStump80
+{
+	// Broken off stump of short tree at 80% size
+	DoomEdNum 20714
+	SpawnNum 194
+	Sprite 0TR4
+	Frames "A"
+	// Graphics TREES\0STUMP1.BMP
+	Radius 8
+	Height 32
+	Scale 0.8
+}
+
+breakable DAD_TreeTall140
+{
+	// Tall straight tree at 140% size
+	DoomEdNUm 20715
+	SpawnNum 193
+	Sprite 0TR1
+	Frames "A"
+	// Graphics TREES\0TALL1.BMP
+	Radius 32
+	Height 128
+	Solid
+	Health 100
+	Mass 1000
+	NoBlood
+	BurnDeathFrames "6:B*C*D*E*F*G*,5:HIHIHIJI,6:HIJ,30:KL"
+	BurnDeathSound Treeburn
+	DeathFrames "6:B*C*D*E*F*G*,5:HIHIHIJI,6:HIJ,30:KL"
+	DeathSound Treeburn
+	BurnHeight 40
+	SolidOnBurn
+	Scale 1.4
+}
+
+breakable DAD_TreeWide140
+{
+	// Wide curved tree at 140% size
+	DoomEdNum 20716
+	SpawnNum 192
+	Sprite 0TR2
+	Frames "A"
+	// Graphics TREES\0HTWIST2.BMP
+	Radius 64
+	Height 128
+	Solid
+	Health 100
+	Mass 1000
+	NoBlood
+	BurnDeathFrames "7:B*C*D*E*F*G*,6:HIHIHIJI,7:HIJ,30:K,50:L"
+	BurnDeathSound Treeburn
+	DeathFrames "7:B*C*D*E*F*G*,6:HIHIHIJI,7:HIJ,30:K,50:L"
+	DeathSound Treeburn
+	BurnHeight 40
+	SolidOnBurn
+	Scale 1.4
+}
+
+breakable DAD_TreeYoung140
+{
+	// Shorter young tree at 140% size
+	DoomEdNum 20717
+	SpawnNum 195
+	Sprite 0TR3
+	Frames "A"
+	// Graphics TREES\0FAT1.BMP
+	Radius 32
+	Height 64
+	Solid
+	Health 100
+	Mass 1000
+	NoBlood
+	BurnDeathFrames "6:B*C*D*E*F*G*,5:HIHIHIJI,6:HIJ,30:KL"
+	BurnDeathSound Treeburn
+	DeathFrames "6:B*C*D*E*F*G*,5:HIHIHIJI,6:HIJ,30:KL"
+	DeathSound Treeburn
+	BurnHeight 20
+	SolidOnBurn
+	Scale 1.4
+}
+
+DAD_TreeStump140
+{
+	// Broken off stump of short tree at 140% size
+	DoomEdNum 20718
+	SpawnNum 194
+	Sprite 0TR4
+	Frames "A"
+	// Graphics TREES\0STUMP1.BMP
+	Radius 8
+	Height 32
+	Scale 1.4
+}
+
+
+// Next available SpawnNum 188 (counting toward zero)
+
+
+///////////////////////////////////////////
+// Stuff to replace existing or Hexen items
+// Start at DoomEdNum 22000+ and replace existing SpawnNums
+///////////////////////////////////////////
+
+// 10 Glass shards
+DAD_Glass1
+{
+	DoomEdNum 22001
+	SpawnNum 54
+	Sprite 0GLS
+	Frames "A"
+	// Graphics GLASS\0GLASS1.BMP
+	Radius 8
+	Height 8
+	RenderStyle STYLE_Translucent
+	Alpha 0.50
+}
+DAD_Glass2
+{
+	DoomEdNum 22002
+	SpawnNum 55
+	Sprite 0GLS
+	Frames "B"
+	// Graphics GLASS\0GLASS2.BMP
+	Radius 8
+	Height 8
+	RenderStyle STYLE_Translucent
+	Alpha 0.50
+}
+DAD_Glass3
+{
+	DoomEdNum 22003
+	SpawnNum 56
+	Sprite 0GLS
+	Frames "C"
+	// Graphics GLASS\0GLASS3.BMP
+	Radius 8
+	Height 8
+	RenderStyle STYLE_Translucent
+	Alpha 0.50
+}
+DAD_Glass4
+{
+	DoomEdNum 22004
+	SpawnNum 57
+	Sprite 0GLS
+	Frames "D"
+	// Graphics GLASS\0GLASS4.BMP
+	Radius 8
+	Height 8
+	RenderStyle STYLE_Translucent
+	Alpha 0.50
+}
+DAD_Glass5
+{
+	DoomEdNum 22005
+	SpawnNum 58
+	Sprite 0GLS
+	Frames "E"
+	// Graphics GLASS\0GLASS5.BMP
+	Radius 8
+	Height 8
+	RenderStyle STYLE_Translucent
+	Alpha 0.50
+}
+DAD_Glass6
+{
+	DoomEdNum 22006
+	SpawnNum 59
+	Sprite 0GLS
+	Frames "F"
+	// Graphics GLASS\0GLASS6.BMP
+	Radius 8
+	Height 8
+	RenderStyle STYLE_Translucent
+	Alpha 0.50
+}
+DAD_Glass7
+{
+	DoomEdNum 22007
+	SpawnNum 60
+	Sprite 0GLS
+	Frames "G"
+	// Graphics GLASS\0GLASS7.BMP
+	Radius 8
+	Height 8
+	RenderStyle STYLE_Translucent
+	Alpha 0.50
+}
+DAD_Glass8
+{
+	DoomEdNum 22008
+	SpawnNum 61
+	Sprite 0GLS
+	Frames "H"
+	// Graphics GLASS\0GLASS8.BMP
+	Radius 8
+	Height 8
+	RenderStyle STYLE_Translucent
+	Alpha 0.50
+}
+DAD_Glass9
+{
+	DoomEdNum 22009
+	SpawnNum 62
+	Sprite 0GLS
+	Frames "I"
+	// Graphics GLASS\0GLASS9.BMP
+	Radius 8
+	Height 8
+	RenderStyle STYLE_Translucent
+	Alpha 0.50
+}
+DAD_GlassA
+{
+	DoomEdNum 22010
+	SpawnNum 63
+	Sprite 0GLS
+	Frames "J"
+	// Graphics GLASS\0GLASSA.BMP
+	Radius 8
+	Height 8
+	RenderStyle STYLE_Translucent
+	Alpha 0.50
+}
+
+// ==========================================================
+// ITEMS BEYOND THIS POINT DO NOT HAVE DOOMEDNUMS AND ARE NOT
+// EXPECTED TO BE USED IN AN EDITOR
+// ==========================================================
+
+projectile FooShot
+{
+SpawnNum 213  // temporary use for Ty's testing
+Sprite PLSS
+Frames "24:A*B*"
+DeathSprite PLSE
+DeathFrames "A*BC*DE"
+Radius 13
+Height 8
+Speed 50
+Damage 1
+NoBlockmap
+NoGravity
+ActivatePCross
+ActivateImpact
+NoTeleport
+SpawnSound "weapons/plasmaf"
+DeathSound "weapons/rocklx"
+// ExplosionRadius 1024
+ExplosionRadius 128
+// ExplosionDamage 16
+ExplosionDamage 4
+DamageType Fire
+DoNotHurtShooter
+}
+
+Projectile DAD_Antiroid
+{
+	// Asteroid killer
+	SpawnNum 212
+	Sprite 0ASX
+	Frames "16:A*B"
+	DeathSprite 0ASX
+	DeathFrames "6:C*D*,4:E*F*G*HI"
+	Radius 16
+	Height 16
+	Damage 1000
+	Speed 50
+	NoBlockmap
+	NoGravity
+	ActivatePCross
+	NoTeleport
+	ActivateImpact
+	SpawnSound "MULTSHOT"
+	DeathSound "weapons/rocklx"
+	ExplosionRadius 128
+	ExplosionDamage 4
+	DamageType Fire
+	Scale 2
+	RenderStyle STYLE_Translucent
+	Alpha 0.60
+}
+	
+Projectile DAD_FinaleShot
+{
+	// Shot from the ships during the finale
+	SpawnNum 191
+	Sprite 0ASX
+	Frames "8:A*B*"
+	DeathSprite 0ASX
+	DeathFrames "6:C*D*,3:HI"
+	Radius 16
+	Height 16
+	Damage 10
+	Speed 50
+	NoBlockmap
+	NoGravity
+	ActivatePCross
+	NoTeleport
+	ActivateImpact
+	SpawnSound "MULTSHOT"
+	DeathSound "weapons/rocklx"
+	ExplosionRadius 128
+	ExplosionDamage 10
+	DamageType Fire
+	Scale 0.5
+//	RenderStyle STYLE_Translucent
+//	Alpha 0.60
+}
+
+Breakable DAD_BERSERK
+{
+	SpawnNum 211
+	Sprite PSTR
+	Frames "A"
+	// graphic 
+	Radius 16
+	Height 16
+        ActivateMCross 
+        ActivateImpact
+        Health 1
+	Mass 1000
+        DeathFrames "A"
+	NoBlood
+        DiesAway
+}
+
+Breakable DAD_MEDKIT
+{
+	SpawnNum 210
+	Sprite MEDI
+	Frames "A"
+	// graphic 
+	Radius 16
+	Height 16
+        ActivateMCross 
+        ActivateImpact
+        Health 1
+	Mass 1000
+        DeathFrames "A"
+	NoBlood
+        DiesAway
+}
+
+Breakable DAD_STIMPACK
+{
+	SpawnNum 209
+	Sprite STIM
+	Frames "A"
+	// graphic 
+	Radius 16
+	Height 16
+        ActivateMCross 
+        ActivateImpact
+        Health 1
+	Mass 1000
+        DeathFrames "A"
+	NoBlood
+        DiesAway
+}
+
+Breakable DAD_BATTERY
+{
+	SpawnNum 208
+	Sprite CELP
+	Frames "A"
+	// graphic 
+	Radius 16
+	Height 16
+        ActivateMCross 
+        ActivateImpact
+        Health 1
+	Mass 1000
+        DeathFrames "A"
+	NoBlood
+        DiesAway
+}
+
+Breakable DAD_SHELLBOX
+{
+	SpawnNum 207
+	Sprite SBOX
+	Frames "A"
+	// graphic 
+	Radius 16
+	Height 16
+        ActivateMCross 
+        ActivateImpact
+        Health 1
+	Mass 1000
+        DeathFrames "A"
+	NoBlood
+        DiesAway
+}
+
+Breakable DAD_ROCKETBOX
+{
+	SpawnNum 206
+	Sprite BROK
+	Frames "A"
+	// graphic 
+	Radius 16
+	Height 16
+        ActivateMCross 
+        ActivateImpact
+        Health 1
+	Mass 1000
+        DeathFrames "A"
+	NoBlood
+        DiesAway
+}
+
+Breakable DAD_AMMOBOX
+{
+	SpawnNum 205
+	Sprite AMMO
+	Frames "A"
+	// graphic 
+	Radius 16
+	Height 16
+        ActivateMCross 
+        ActivateImpact
+        Health 1
+	Mass 1000
+        DeathFrames "A"
+	NoBlood
+        DiesAway
+}
+
+Breakable DAD_ARMORBONUS
+{
+	SpawnNum 204
+	Sprite BON2
+	Frames "A"
+	// graphic 
+	Radius 16
+	Height 16
+        ActivateMCross 
+        ActivateImpact
+        Health 1
+	Mass 1000
+        DeathFrames "A"
+	NoBlood
+        DiesAway
+}
+
+Breakable DAD_GREENARMOR
+{
+	SpawnNum 203
+	Sprite ARM1
+	Frames "A"
+	// graphic 
+	Radius 16
+	Height 16
+        ActivateMCross 
+        ActivateImpact
+        Health 1
+	Mass 1000
+        DeathFrames "A"
+	NoBlood
+        DiesAway
+}
+
+Breakable DAD_BLUEARMOR
+{
+	SpawnNum 202
+	Sprite ARM2
+	Frames "A"
+	// graphic 
+	Radius 16
+	Height 16
+        ActivateMCross 
+        ActivateImpact
+        Health 1
+	Mass 1000
+        DeathFrames "A"
+	NoBlood
+        DiesAway
+}
+
+ACTOR DaedalusAlien1 : Wizard replaces Wizard
+{
+	Health 180
+	Radius 16
+	Height 68
+	Mass 100
+	Speed 12
+	Painchance 64
+	Monster
+	+FLOAT
+	+NOGRAVITY
+	+DONTOVERLAP
+	SeeSound "daedalus/alien1/sight"
+	AttackSound "daedalus/alien1/attack"
+	PainSound "daedalus/alien1/pain"
+	DeathSound "daedalus/alien1/death"
+	ActiveSound "daedalus/alien1/active"
+	Obituary "%o was killed by an alien"
+	Obituary "%o was killed by an alien"
+
+	States
+	{
+	Spawn:
+		DAE1 AB 10 A_Look
+		Loop
+	See:
+		DAE1 A 3 A_Chase
+		DAE1 A 4 A_Chase
+		DAE1 A 3 A_Chase
+		DAE1 A 4 A_Chase
+		DAE1 B 3 A_Chase
+		DAE1 B 4 A_Chase
+		DAE1 B 3 A_Chase
+		DAE1 B 4 A_Chase
+		Loop
+	Missile:
+		DAE1 C 4 A_WizAtk1
+		DAE1 C 4 A_WizAtk2
+		DAE1 C 4 A_WizAtk1
+		DAE1 C 4 A_WizAtk2
+		DAE1 C 4 A_WizAtk1
+		DAE1 C 4 A_WizAtk2
+		DAE1 C 4 A_WizAtk1
+		DAE1 C 4 A_WizAtk2
+		DAE1 D 0 A_GhostOff
+		DAE1 D 0 A_CustomMissile("DaedalusAlien1Proj", 24, 0, 0, 1)
+		DAE1 D 0 A_CustomMissile("DaedalusAlien1Proj", 24, 0, -8, 1)
+		DAE1 D 12 A_CustomMissile("DaedalusAlien1Proj", 24, 0, 8, 1)
+		Goto See
+	Pain:
+		DAE1 E 3 A_GhostOff
+		DAE1 E 3 A_Pain
+		Goto See
+	Death:
+		DAE1 F 6 A_GhostOff
+		DAE1 G 6 A_Scream
+		DAE1 HI 6
+		DAE1 J 6 A_NoBlocking
+		DAE1 KL 6
+		DAE1 M -1 A_SetFloorClip
+		Stop
+	}
+}
+
+ACTOR DaedalusAlien1Proj
+{
+	Radius 10
+	Height 6
+	Speed 18
+	FastSpeed 24
+	Damage 3
+	Projectile
+	-ACTIVATEIMPACT
+	-ACTIVATEPCROSS
+	Alpha 0.85
+	States
+	{
+	Spawn:
+		DAE1 NO 6 BRIGHT
+		Loop
+	Death:
+		DAE1 PQR 5 BRIGHT
+		Stop
+	}
+}
+
+ACTOR DaedalusAlien2 : Clink replaces Clink
+{
+	Health 150
+	Radius 20
+	Height 64
+	Mass 75
+	Speed 14
+	Painchance 32
+	Monster
+	+NOBLOOD
+	+FLOORCLIP
+	SeeSound "daedalus/alien2/sight"
+	AttackSound "daedalus/alien2/attack"
+	PainSound "daedalus/alien2/pain"
+	DeathSound "daedalus/alien2/death"
+	ActiveSound "daedalus/alien2/active"
+	Obituary "%o was killed by an alien"
+	States
+	{
+	Spawn:
+		DAE2 AB 10 A_Look
+		Loop
+	See:
+		DAE2 ABCD 3 A_Chase
+		Loop
+	Melee:
+		DAE2 E 5 A_FaceTarget
+		DAE2 F 4 A_FaceTarget
+		DAE2 G 7 A_CustomMeleeAttack(random[ClinkAttack](3,9), "clink/attack", "clink/attack")
+		Goto See
+	Pain:
+		DAE2 H 3
+		DAE2 H 3 A_Pain
+		Goto See
+	Death:
+		DAE2 IJ 6
+		DAE2 K 5 A_Scream
+		DAE2 L 5 A_NoBlocking
+		DAE2 MN 5
+		DAE2 O -1
+		Stop
+	}
+}
+
+ACTOR DaedalusAlien3 18718 // 41
+{
+	Health 3000
+	Radius 64
+	Height 128
+	Mass 1500
+	Speed 16
+	PainChance 70
+	Monster
+	+FLOORCLIP
+	+BOSSDEATH
+	+SOLID 
+	+SHOOTABLE 
+	+JUSTATTACKED 
+	+DROPOFF 
+	+NOBLOOD 
+	+COUNTKILL
+	SeeSound "spider/sight"
+	PainSound "pain/pain"
+	DeathSound "spider/death"
+	ActiveSound "spider/active"
+	Obituary "%o was killed by an alien"
+	States
+	{
+	Spawn:
+		DAE3 AB 10 A_Look
+		Loop
+	See:
+		DAE3 AABBCCDDEEFF 3 A_Chase
+		Loop
+	Missile:
+		DAE3 I 12 BRIGHT A_FaceTarget
+		DAE3 G 12 BRIGHT A_FaceTarget
+		DAE3 H 8 BRIGHT A_FatAttack1
+		DAE3 H 8 BRIGHT A_FatAttack2
+		DAE3 G 2 BRIGHT A_SpidRefire
+		Goto Missile
+	Pain:
+		DAE3 J 3
+		DAE3 J 3 A_Pain
+		Goto See+1
+	Death:
+		DAE3 J 10 A_Scream
+		DAE3 K 7 A_NoBlocking
+		DAE3 LMNOPQRS 7
+		DAE3 T -1 A_BossDeath
+		Stop
+	}
+}
+
+

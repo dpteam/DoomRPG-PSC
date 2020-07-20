@@ -1,0 +1,36 @@
+ACTOR HangedMario 18589 // 72
+{
+	Health 100
+	Radius 16
+	Height 72
+	Mass 10000000
+	PainChance 256
+	+SOLID 
+	+SPAWNCEILING 
+	+NOGRAVITY 
+	+SHOOTABLE 
+	+COUNTKILL 
+	+NOICEDEATH
+	+ISMONSTER
+	PainSound "rebirth/mario1"
+	DeathSound "rebirth/mario2"
+	States
+	{
+	Spawn:
+		REB2 A   -1
+		Loop
+	Death:
+		REB2 AB	6
+		REB2 C	6 A_Scream
+		REB2 DEFGH	6
+		REB2 I	6
+		REB2 J	6
+		REB2 K	6 A_KeenDie
+		REB2 L   -1
+		Stop
+	Pain:
+		REB2 M	4
+		REB2 M	8 A_Pain
+		Goto Spawn
+	}
+}

@@ -1,0 +1,7 @@
+actor DeadStrainDemon 20014 {
+	States {
+		Spawn:
+			SAR2 N -1
+			stop
+	}
+}
